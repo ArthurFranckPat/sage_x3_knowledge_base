@@ -1,7 +1,7 @@
 {
   "name": "@arthurfranckpat/sage-x3-mcp",
-  "version": "1.1.0",
-  "description": "MCP Server pour base de connaissance Sage X3 - Accès aux tables, champs et menus locaux",
+  "version": "1.2.0",
+  "description": "MCP Server pour base de connaissance Sage X3 - Acc\u00e8s aux tables, champs et menus locaux",
   "main": "bin/sage-x3-mcp.js",
   "bin": {
     "sage-x3-mcp": "./bin/sage-x3-mcp.js"
@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node bin/sage-x3-mcp.js",
     "serve": "node bin/sage-x3-mcp.js server",
-    "test": "python3 test_server.py"
+    "test": "python3 test_server.py",
+    "update": "node bin/sage-x3-mcp.js --update"
   },
   "keywords": [
     "mcp",

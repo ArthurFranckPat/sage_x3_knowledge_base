@@ -1,0 +1,10 @@
+# Configuration npm pour publication
+
+# Si vous utilisez 2FA (Two-Factor Authentication)
+# otp=123456
+
+# Pour publier sur un registry privé
+# registry=https://npm.pkg.github.com/
+
+# Pour publier en public (par défaut)
+access=public
