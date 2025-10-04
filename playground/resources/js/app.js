@@ -29,8 +29,8 @@ up.layer.config.drawer.size = 'medium'
 // Global editor instance
 window.sqlEditor = null
 
-// Monaco Editor Compiler
-up.compiler('#monaco-editor', function(element) {
+// Function to initialize Monaco Editor
+function initMonacoEditor(element) {
   const editor = monaco.editor.create(element, {
     value: localStorage.getItem('lastSQL') || 'SELECT * FROM itmmaster LIMIT 10',
     language: 'sql',
@@ -73,10 +73,25 @@ up.compiler('#monaco-editor', function(element) {
     localStorage.setItem('lastSQL', editor.getValue())
   })
 
-  // Cleanup
+  return editor
+}
+
+// Monaco Editor Compiler for Unpoly
+up.compiler('#monaco-editor', function(element) {
+  const editor = initMonacoEditor(element)
+  
+  // Cleanup when element is removed
   return () => {
     editor.dispose()
     window.sqlEditor = null
+  }
+})
+
+// Initialize Monaco Editor on page load (for initial page load, not Unpoly navigation)
+document.addEventListener('DOMContentLoaded', () => {
+  const editorElement = document.getElementById('monaco-editor')
+  if (editorElement && !window.sqlEditor) {
+    window.sqlEditor = initMonacoEditor(editorElement)
   }
 })
 
