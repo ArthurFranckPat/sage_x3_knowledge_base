@@ -190,7 +190,8 @@ window.showToast = function(message, type = 'info') {
 
 // Success notification after query execution
 up.on('up:fragment:inserted', '#results', (event) => {
-  const rowCount = event.fragment.querySelector('[data-row-count]')
+  const fragment = event.target || event.fragment
+  const rowCount = fragment?.querySelector('[data-row-count]')
   if (rowCount) {
     const count = rowCount.dataset.rowCount
     showToast(`✓ Query executed: ${count} rows`, 'success')
@@ -199,7 +200,10 @@ up.on('up:fragment:inserted', '#results', (event) => {
 
 // Error notification
 up.on('up:fragment:inserted', '#validation.error', (event) => {
-  showToast('✗ Validation failed', 'error')
+  const fragment = event.target || event.fragment
+  if (fragment) {
+    showToast('✗ Validation failed', 'error')
+  }
 })
 
 // History management
