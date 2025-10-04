@@ -1,0 +1,15 @@
+[project]
+name = "sage-x3-mcp-server"
+version = "1.0.0"
+description = "MCP Server pour la base de connaissance Sage X3"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=0.9.0"
+]
+
+[project.scripts]
+sage-x3-mcp = "server:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

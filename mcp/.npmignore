@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+*.log
+.env
+.venv
+venv/
+node_modules/
+test_server.py
+claude_desktop_config.example.json

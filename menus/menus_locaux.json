@@ -1,0 +1,6777 @@
+{
+  "261": {
+    "menu_num": 261,
+    "title": "Répartition",
+    "values": {
+      "1": "Non",
+      "2": "Valeur",
+      "3": "Quantité"
+    }
+  },
+  "301": {
+    "menu_num": 301,
+    "title": "Code Unité de Temps",
+    "values": {
+      "1": "Heures",
+      "2": "Minutes"
+    }
+  },
+  "302": {
+    "menu_num": 302,
+    "title": "Mode de gestion des OF",
+    "values": {
+      "1": "Pas de modification",
+      "2": "Modification matières",
+      "3": "Modification opérations",
+      "4": "Modif matières et opérations"
+    }
+  },
+  "303": {
+    "menu_num": 303,
+    "title": "Code temps opération",
+    "values": {
+      "1": "Temps pour 1",
+      "2": "Temps pour 100",
+      "3": "Temps pour 1000",
+      "4": "Temps par lot"
+    }
+  },
+  "304": {
+    "menu_num": 304,
+    "title": "Fractionnement",
+    "values": {
+      "1": "Aucun",
+      "2": "Qtés égales",
+      "3": "Tps opératoires égaux",
+      "4": "Tps opératoires égaux / 1 régl.",
+      "5": "Qtés égales + efficience"
+    }
+  },
+  "305": {
+    "menu_num": 305,
+    "title": "Code Jalonnement",
+    "values": {
+      "1": "Successeur absolu",
+      "2": "Chevauchement attente = lots",
+      "3": "Chevauchement attente = temps",
+      "4": "Chevauchement attente = qté",
+      "5": "Synchro début",
+      "6": "Synchro fin",
+      "7": "Parallèle ttes opé de l'ordre",
+      "8": "Synchro sous-traitance",
+      "9": "Successeur simple"
+    }
+  },
+  "306": {
+    "menu_num": 306,
+    "title": "Type Ordre",
+    "values": {
+      "1": "Commande Client",
+      "2": "Commande Fournisseur",
+      "3": "Matière Sous-traitance",
+      "4": "Service Sous-traitance",
+      "5": "Ordre de Fabrication",
+      "6": "Besoin Matière",
+      "7": "Ordre inter-site",
+      "8": "Demande inter-site",
+      "9": "Sous-produit",
+      "10": "Demandes diverses",
+      "11": "Ressources diverses",
+      "12": "Réservation client",
+      "13": "Ordre sous-traitance",
+      "14": "Demande affaire"
+    }
+  },
+  "307": {
+    "menu_num": 307,
+    "title": "Ordres à traiter",
+    "values": {
+      "1": "Fabrications suggérées",
+      "2": "Fabrications planifiées"
+    }
+  },
+  "308": {
+    "menu_num": 308,
+    "title": "Statut opération",
+    "values": {
+      "1": "En attente",
+      "2": "Précédente en cours",
+      "3": "Précédente soldée",
+      "4": "En cours",
+      "5": "Soldée",
+      "6": "Exclue",
+      "7": "Commandée"
+    }
+  },
+  "309": {
+    "menu_num": 309,
+    "title": "Nouveau statut",
+    "values": {
+      "1": "Planifié",
+      "2": "Ferme"
+    }
+  },
+  "310": {
+    "menu_num": 310,
+    "title": "Utilisation nomenclature",
+    "values": {
+      "1": "Fabrication",
+      "2": "Coûts",
+      "3": "CBN",
+      "4": "PDP"
+    }
+  },
+  "311": {
+    "menu_num": 311,
+    "title": "Sous-traitance",
+    "values": {
+      "1": "Non",
+      "2": "Structurelle",
+      "3": "Conjoncturelle"
+    }
+  },
+  "312": {
+    "menu_num": 312,
+    "title": "Type temps opératoire",
+    "values": {
+      "1": "Proportionnel",
+      "2": "Cadence",
+      "3": "Forfaitaire"
+    }
+  },
+  "313": {
+    "menu_num": 313,
+    "title": "Type poste de charge (abrev)",
+    "values": {
+      "1": "MA",
+      "2": "MO",
+      "3": "ST"
+    }
+  },
+  "314": {
+    "menu_num": 314,
+    "title": "Type de coûts",
+    "values": {
+      "1": "Horaire",
+      "2": "Forfaitaire"
+    }
+  },
+  "315": {
+    "menu_num": 315,
+    "title": "Type poste charge",
+    "values": {
+      "1": "Tous",
+      "2": "Machine",
+      "3": "Main-d'oeuvre",
+      "4": "Sous-traitance"
+    }
+  },
+  "316": {
+    "menu_num": 316,
+    "title": "Famille coût section",
+    "values": {
+      "1": "Sous-total 1",
+      "2": "Sous-total 2",
+      "3": "Sous-total 3",
+      "4": "Sous-total 4",
+      "5": "Sous-total 5",
+      "6": "Sous-total 6",
+      "7": "Sous-total 7",
+      "8": "Sous-total 8",
+      "9": "Sous-total 9",
+      "10": "Sous-total 10",
+      "11": "Sous-total 11",
+      "12": "Sous-total 12",
+      "13": "Sous-total 13",
+      "14": "Sous-total 14",
+      "15": "Sous-total 15"
+    }
+  },
+  "317": {
+    "menu_num": 317,
+    "title": "Statut encours",
+    "values": {
+      "1": "Ferme",
+      "2": "Planifié",
+      "3": "Suggéré",
+      "4": "Clos"
+    }
+  },
+  "318": {
+    "menu_num": 318,
+    "title": "Message CBN",
+    "values": {
+      "1": "Pas d'action",
+      "2": "Avancer",
+      "3": "Retarder",
+      "4": "Augmenter",
+      "5": "Diminuer",
+      "6": "Inutile",
+      "7": "Avancer/augmenter",
+      "8": "Avancer/diminuer",
+      "9": "Retarder/augmenter",
+      "10": "Retarder/diminuer",
+      "11": "Retard sur objectif",
+      "12": "Article obsolète (fin de vie)",
+      "13": "Surstock",
+      "14": "Version de gamme invalide"
+    }
+  },
+  "319": {
+    "menu_num": 319,
+    "title": "Groupe édition coûts",
+    "values": {
+      "1": "Matière",
+      "2": "Machine",
+      "3": "Main d'oeuvre",
+      "4": "Sous-traitance",
+      "5": "Frais Généraux",
+      "6": "Coût calculé"
+    }
+  },
+  "320": {
+    "menu_num": 320,
+    "title": "Intitulés formules FG",
+    "values": {
+      "1": "Formule A",
+      "2": "Formule B",
+      "3": "Formule C",
+      "4": "Formule D"
+    }
+  },
+  "321": {
+    "menu_num": 321,
+    "title": "Mode calcul FG",
+    "values": {
+      "1": "Cumul",
+      "2": "Cascade"
+    }
+  },
+  "322": {
+    "menu_num": 322,
+    "title": "Intitulés forfaits FG",
+    "values": {
+      "1": "Fixe A",
+      "2": "Fixe B",
+      "3": "Fixe C",
+      "4": "Fixe D"
+    }
+  },
+  "323": {
+    "menu_num": 323,
+    "title": "Mode répartition coûts fixes",
+    "values": {
+      "1": "Prorata",
+      "2": "Total"
+    }
+  },
+  "324": {
+    "menu_num": 324,
+    "title": "Choix Taux section",
+    "values": {
+      "1": "Standard",
+      "2": "Standard actualisé",
+      "3": "Budget",
+      "4": "Simulation"
+    }
+  },
+  "325": {
+    "menu_num": 325,
+    "title": "Famille coût matière",
+    "values": {
+      "1": "Coût matière 1",
+      "2": "Coût matière 2",
+      "3": "Coût matière 3",
+      "4": "Coût matière 4",
+      "5": "Coût matière 5",
+      "6": "Coût matière 6",
+      "7": "Coût matière 7",
+      "8": "Coût matière 8",
+      "9": "Coût matière 9",
+      "10": "Coût matière 10",
+      "11": "Coût matière 11",
+      "12": "Coût matière 12",
+      "13": "Coût matière 13",
+      "14": "Coût matière 14",
+      "15": "Coût matière 15",
+      "16": "Coût matière 16",
+      "17": "Coût matière 17",
+      "18": "Coût matière 18",
+      "19": "Coût matière 19",
+      "20": "Coût matière 20"
+    }
+  },
+  "326": {
+    "menu_num": 326,
+    "title": "Type d'écart",
+    "values": {
+      "1": "en Pourcentage (%)",
+      "2": "en Montant"
+    }
+  },
+  "327": {
+    "menu_num": 327,
+    "title": "Base calcul frais gén. réels",
+    "values": {
+      "1": "Prévu",
+      "2": "Réel"
+    }
+  },
+  "328": {
+    "menu_num": 328,
+    "title": "Choix coût matière",
+    "values": {
+      "1": "Prix standard",
+      "2": "Prix std actualisé",
+      "3": "Prix budget",
+      "4": "Prix simulé",
+      "5": "Dernier prix",
+      "6": "Prix moyen pondéré",
+      "7": "Dernier prix d'achat",
+      "8": "Prix tarif"
+    }
+  },
+  "329": {
+    "menu_num": 329,
+    "title": "Prix valorisation matière/ PRF",
+    "values": {
+      "1": "Prix standard",
+      "2": "Prix std actualisé",
+      "3": "Dernier prix",
+      "4": "Prix moyen pondéré",
+      "5": "Prix mouvement"
+    }
+  },
+  "330": {
+    "menu_num": 330,
+    "title": "Prix valorisation semifini/PRF",
+    "values": {
+      "1": "Prix standard",
+      "2": "Prix std actualisé"
+    }
+  },
+  "331": {
+    "menu_num": 331,
+    "title": "Mode applic. frais généraux",
+    "values": {
+      "1": "Entrée stock",
+      "2": "Sortie stock"
+    }
+  },
+  "332": {
+    "menu_num": 332,
+    "title": "Tri historique",
+    "values": {
+      "1": "Par Date",
+      "2": "Par Quantité"
+    }
+  },
+  "333": {
+    "menu_num": 333,
+    "title": "Mode lancement",
+    "values": {
+      "1": "Complet",
+      "2": "Matières seules",
+      "3": "Opérations seules"
+    }
+  },
+  "334": {
+    "menu_num": 334,
+    "title": "Mode jalonnement",
+    "values": {
+      "1": "Amont",
+      "2": "Aval"
+    }
+  },
+  "335": {
+    "menu_num": 335,
+    "title": "Etat jalonnement",
+    "values": {
+      "1": "Non jalonné",
+      "2": "Jalonné",
+      "3": "A rejalonner",
+      "4": "Optimisé"
+    }
+  },
+  "336": {
+    "menu_num": 336,
+    "title": "Etat allocation OF",
+    "values": {
+      "1": "Non alloué",
+      "2": "Partielle",
+      "3": "Complète",
+      "4": "Partielle/rupture",
+      "5": "Complète/rupture"
+    }
+  },
+  "337": {
+    "menu_num": 337,
+    "title": "Type allocation OF",
+    "values": {
+      "1": "Aucune",
+      "2": "Globale",
+      "3": "Mixte",
+      "4": "Détail"
+    }
+  },
+  "338": {
+    "menu_num": 338,
+    "title": "Etat préparation OF",
+    "values": {
+      "1": "Non préparé",
+      "2": "Partielle",
+      "3": "Complète"
+    }
+  },
+  "339": {
+    "menu_num": 339,
+    "title": "Situation OF",
+    "values": {
+      "1": "En attente",
+      "2": "A l'étude",
+      "3": "Edité",
+      "4": "En cours",
+      "5": "Soldé",
+      "6": "Prix de revient calculé"
+    }
+  },
+  "340": {
+    "menu_num": 340,
+    "title": "Etat allocation matière",
+    "values": {
+      "1": "Aucune",
+      "2": "Globale avec rupture",
+      "3": "Globale",
+      "4": "Détaillée avec rupture",
+      "5": "Détaillée"
+    }
+  },
+  "341": {
+    "menu_num": 341,
+    "title": "Codes en-cours no translation!",
+    "values": {
+      "1": "SO",
+      "2": "PO",
+      "3": "MS",
+      "4": "SC",
+      "5": "WO",
+      "6": "MW",
+      "7": "TR",
+      "8": "TP",
+      "9": "BW",
+      "10": "VD",
+      "11": "VR",
+      "12": "CR",
+      "13": "EO",
+      "14": "MT"
+    }
+  },
+  "342": {
+    "menu_num": 342,
+    "title": "Statuts en-cours no translat",
+    "values": {
+      "1": "F",
+      "2": "P",
+      "3": "S",
+      "4": "C"
+    }
+  },
+  "343": {
+    "menu_num": 343,
+    "title": "Type poste de charge (long)",
+    "values": {
+      "1": "Machine",
+      "2": "Main d'oeuvre",
+      "3": "Sous-traitance"
+    }
+  },
+  "344": {
+    "menu_num": 344,
+    "title": "Documents GPAO",
+    "values": {
+      "1": "Ordre fabrication",
+      "2": "Suggestions",
+      "3": "Suivi fabrication",
+      "4": "Non utilisé",
+      "5": "Encours opération",
+      "6": "Suggestion opération",
+      "7": "Valorisation d'encours sans OF"
+    }
+  },
+  "345": {
+    "menu_num": 345,
+    "title": "Type de filtre",
+    "values": {
+      "1": "Non",
+      "2": "Filtre non exclusif",
+      "3": "Filtre exclusif"
+    }
+  },
+  "346": {
+    "menu_num": 346,
+    "title": "Tri Prix de revient",
+    "values": {
+      "1": "Par date",
+      "2": "Par N° ordre",
+      "3": "Par montant réalisé",
+      "4": "Par % écart",
+      "5": "Par type",
+      "6": "Par quantité réalisée"
+    }
+  },
+  "347": {
+    "menu_num": 347,
+    "title": "Coût à comparer",
+    "values": {
+      "1": "Standard",
+      "2": "Actualisé",
+      "3": "Budget",
+      "4": "Simulé",
+      "5": "Prévisionnel théorique",
+      "6": "Prévisionnel lancement",
+      "7": "Prévisionnel production",
+      "8": "Prix de revient fabrication"
+    }
+  },
+  "348": {
+    "menu_num": 348,
+    "title": "Type lien",
+    "values": {
+      "1": "Ordre complet",
+      "2": "Article lancé"
+    }
+  },
+  "349": {
+    "menu_num": 349,
+    "title": "Type allocation",
+    "values": {
+      "1": "Allocation globale",
+      "2": "Allocation détaillée"
+    }
+  },
+  "350": {
+    "menu_num": 350,
+    "title": "Type Charge",
+    "values": {
+      "1": "Opération de fabrication",
+      "2": "Macro-opération"
+    }
+  },
+  "351": {
+    "menu_num": 351,
+    "title": "Code charge - no translation !",
+    "values": {
+      "1": "OW",
+      "2": "OR"
+    }
+  },
+  "352": {
+    "menu_num": 352,
+    "title": "Type jalon",
+    "values": {
+      "1": "Non",
+      "2": "Suivi normal",
+      "3": "Borne"
+    }
+  },
+  "353": {
+    "menu_num": 353,
+    "title": "Type transaction",
+    "values": {
+      "1": "Lancement fabrication",
+      "2": "Suivi fabrication"
+    }
+  },
+  "354": {
+    "menu_num": 354,
+    "title": "Mode de consommation matière",
+    "values": {
+      "1": "Suivant qté prévue immédiate",
+      "2": "Suivant qté produite bornée",
+      "3": "Suivant qté produite"
+    }
+  },
+  "355": {
+    "menu_num": 355,
+    "title": "Filtre opérations",
+    "values": {
+      "1": "Non soldées",
+      "2": "Soldées",
+      "3": "Toutes"
+    }
+  },
+  "356": {
+    "menu_num": 356,
+    "title": "Contrôle suivi opé précédente",
+    "values": {
+      "1": "Non",
+      "2": "Oui sans blocage",
+      "3": "Oui avec blocage"
+    }
+  },
+  "357": {
+    "menu_num": 357,
+    "title": "Compression temps morts",
+    "values": {
+      "1": "Aucun",
+      "2": "Attente",
+      "3": "Préparation + Post-opératoire",
+      "4": "Tous les temps morts",
+      "5": "Préparation",
+      "6": "Post-opératoire",
+      "7": "Préparation + Attente",
+      "8": "Post-opératoire + Attente"
+    }
+  },
+  "358": {
+    "menu_num": 358,
+    "title": "Validité jalonnement",
+    "values": {
+      "1": "Jalonnements à compléter",
+      "2": "Jalonnements Valides"
+    }
+  },
+  "359": {
+    "menu_num": 359,
+    "title": "Tris allocations",
+    "values": {
+      "1": "Article",
+      "2": "Type allocation",
+      "3": "Lot",
+      "4": "Emplacement",
+      "5": "Statut de stock"
+    }
+  },
+  "360": {
+    "menu_num": 360,
+    "title": "Type allocation (dans l'ordre)",
+    "values": {
+      "1": "Manquants/global",
+      "2": "Globale",
+      "3": "Manquants/détail",
+      "4": "Détaillée"
+    }
+  },
+  "361": {
+    "menu_num": 361,
+    "title": "Mode désallocation",
+    "values": {
+      "1": "Complète",
+      "2": "Par type allocation"
+    }
+  },
+  "362": {
+    "menu_num": 362,
+    "title": "Tri des matières",
+    "values": {
+      "1": "Par article/séquence",
+      "2": "Par opération/article",
+      "3": "Par date de réservation/article",
+      "4": "Par séquence/article"
+    }
+  },
+  "363": {
+    "menu_num": 363,
+    "title": "Statut fabrication",
+    "values": {
+      "1": "En attente",
+      "2": "En cours",
+      "3": "Soldée",
+      "4": "Exclue"
+    }
+  },
+  "364": {
+    "menu_num": 364,
+    "title": "Tye application paramètre",
+    "values": {
+      "1": "Non",
+      "2": "Oui (non exclusif)",
+      "3": "Oui (exclusif)"
+    }
+  },
+  "365": {
+    "menu_num": 365,
+    "title": "Priorité",
+    "values": {
+      "1": "Normal",
+      "2": "Urgent",
+      "3": "Très urgent"
+    }
+  },
+  "366": {
+    "menu_num": 366,
+    "title": "Ordre de sélection",
+    "values": {
+      "1": "Date début",
+      "2": "Code priorité"
+    }
+  },
+  "367": {
+    "menu_num": 367,
+    "title": "Origine calcul écart",
+    "values": {
+      "1": "Données standard",
+      "2": "Données de l'O.F."
+    }
+  },
+  "368": {
+    "menu_num": 368,
+    "title": "O.F. traités",
+    "values": {
+      "1": "En cours",
+      "2": "Soldés"
+    }
+  },
+  "369": {
+    "menu_num": 369,
+    "title": "Type ordre",
+    "values": {
+      "1": "Suggestion de fabrication",
+      "2": "Ordre de fabrication",
+      "3": "Tous les types"
+    }
+  },
+  "370": {
+    "menu_num": 370,
+    "title": "Statuts autorisés",
+    "values": {
+      "1": "Planifié",
+      "2": "Ferme",
+      "3": "Au choix"
+    }
+  },
+  "371": {
+    "menu_num": 371,
+    "title": "Type mode",
+    "values": {
+      "1": "A compléter",
+      "2": "Mode définitif"
+    }
+  },
+  "372": {
+    "menu_num": 372,
+    "title": "Mode traitement",
+    "values": {
+      "1": "Manuel",
+      "2": "Automatique"
+    }
+  },
+  "373": {
+    "menu_num": 373,
+    "title": "Classement",
+    "values": {
+      "1": "Par site",
+      "2": "Par article",
+      "3": "Par type d'ordre",
+      "4": "Par type de pièce",
+      "5": "Par date",
+      "6": "Par date besoin",
+      "7": "Par tiers"
+    }
+  },
+  "374": {
+    "menu_num": 374,
+    "title": "Détail d'impression PRF",
+    "values": {
+      "1": "Entête",
+      "2": "Détail matière",
+      "3": "Détail opération",
+      "4": "Sous-totaux",
+      "5": "Récap frais généraux",
+      "6": "Total",
+      "7": "Récap ordres lancés",
+      "8": "Récap ordres fermés + lancés"
+    }
+  },
+  "375": {
+    "menu_num": 375,
+    "title": "Classement charge",
+    "values": {
+      "1": "Par date début",
+      "2": "Par centre",
+      "3": "Par poste",
+      "4": "Par ordre de fabrication",
+      "5": "Par type de charge",
+      "6": "Par statut"
+    }
+  },
+  "376": {
+    "menu_num": 376,
+    "title": "Mode cumul matières",
+    "values": {
+      "1": "Pas de cumul",
+      "2": "Cumul au lancement",
+      "3": "Cumul au suivi"
+    }
+  },
+  "377": {
+    "menu_num": 377,
+    "title": "Quantité par défaut",
+    "values": {
+      "1": "Aucune",
+      "2": "Lot technique",
+      "3": "Lot économique"
+    }
+  },
+  "378": {
+    "menu_num": 378,
+    "title": "Initialisation WORKLOAD",
+    "values": {
+      "1": "Initialisation charges",
+      "2": "Calcul charges P/F",
+      "3": "Calcul complet (S/P/F)"
+    }
+  },
+  "379": {
+    "menu_num": 379,
+    "title": "Intitulés détails PRF",
+    "values": {
+      "1": "Total matière",
+      "2": "Sous-tot machine composants",
+      "3": "Total machine",
+      "4": "Sous-tot m. d'oeuvre composants",
+      "5": "Total main d'oeuvre",
+      "6": "Sous-tot sous-traitance composants",
+      "7": "Total sous-traitance",
+      "8": "F.G. matière",
+      "9": "F.G. machine",
+      "10": "F.G. main d'oeuvre",
+      "11": "F.G. sous-traitance",
+      "12": "F.G. composants",
+      "13": "Total frais généraux",
+      "14": "Coût total fabrication",
+      "15": "Sous-tot matière composants",
+      "16": "F.G. service",
+      "17": "Coût total s-traitance",
+      "18": "Total éléments de facturation"
+    }
+  },
+  "380": {
+    "menu_num": 380,
+    "title": "Impression PRF",
+    "values": {
+      "1": "Non",
+      "2": "Détail",
+      "3": "Récapitulatifs"
+    }
+  },
+  "381": {
+    "menu_num": 381,
+    "title": "Traitement jalonnement",
+    "values": {
+      "1": "Jalonnement",
+      "2": "Rejalonnement",
+      "3": "Tout"
+    }
+  },
+  "382": {
+    "menu_num": 382,
+    "title": "Type déjalonnement",
+    "values": {
+      "1": "Déjalonner",
+      "2": "Marquer à rejalonner"
+    }
+  },
+  "383": {
+    "menu_num": 383,
+    "title": "Edition dossier de fabrication",
+    "values": {
+      "1": "Optionnelle",
+      "2": "Obligatoire"
+    }
+  },
+  "384": {
+    "menu_num": 384,
+    "title": "Statuts à traiter",
+    "values": {
+      "1": "Planifié + ferme",
+      "2": "Tous les statuts"
+    }
+  },
+  "385": {
+    "menu_num": 385,
+    "title": "Mise à jour",
+    "values": {
+      "1": "Non",
+      "2": "Différée",
+      "3": "Immédiate"
+    }
+  },
+  "386": {
+    "menu_num": 386,
+    "title": "Axes d'analyse",
+    "values": {
+      "1": "Ressources",
+      "2": "Produits",
+      "3": "Tout"
+    }
+  },
+  "387": {
+    "menu_num": 387,
+    "title": "Prix valorisation mat. prévue",
+    "values": {
+      "1": "Prix standard",
+      "2": "Prix std actualisé",
+      "3": "Dernier prix",
+      "4": "Prix moyen pondéré"
+    }
+  },
+  "388": {
+    "menu_num": 388,
+    "title": "Analyse produits",
+    "values": {
+      "1": "Analyse des retards",
+      "2": "Analyse des délais",
+      "3": "Analyse des temps",
+      "4": "Rendement opératoire",
+      "5": "Rendement matière"
+    }
+  },
+  "389": {
+    "menu_num": 389,
+    "title": "Analyse ressources",
+    "values": {
+      "1": "Utilisation des ressources",
+      "2": "Rendement des ressources"
+    }
+  },
+  "390": {
+    "menu_num": 390,
+    "title": "Etat charge",
+    "values": {
+      "1": "Non jalonnée",
+      "2": "Jalonnée"
+    }
+  },
+  "391": {
+    "menu_num": 391,
+    "title": "Mode étiquetage",
+    "values": {
+      "1": "Manuel",
+      "2": "Automatique (production)"
+    }
+  },
+  "392": {
+    "menu_num": 392,
+    "title": "Type histo. PEC",
+    "values": {
+      "1": "Commande fournisseur",
+      "2": "Ordre de fabrication",
+      "3": "Commande client",
+      "4": "Dem. achat inter-site",
+      "5": "Dem. fab. inter-site"
+    }
+  },
+  "393": {
+    "menu_num": 393,
+    "title": "Choix mode",
+    "values": {
+      "1": "Non",
+      "2": "Manuelle",
+      "3": "Automatique"
+    }
+  },
+  "394": {
+    "menu_num": 394,
+    "title": "Rôle utilisateur",
+    "values": {
+      "1": "Planificateur production",
+      "2": "Approvisionneur",
+      "3": "Acheteur",
+      "4": "Planificateur sous-traitance"
+    }
+  },
+  "395": {
+    "menu_num": 395,
+    "title": "Mode traitement",
+    "values": {
+      "1": "Mise à jour",
+      "2": "Simulation",
+      "3": "Consultation"
+    }
+  },
+  "396": {
+    "menu_num": 396,
+    "title": "Tri allocations",
+    "values": {
+      "1": "Date besoin",
+      "2": "Priorité",
+      "3": "Article",
+      "4": "Type",
+      "5": "Lot",
+      "6": "Emplacement",
+      "7": "Statut"
+    }
+  },
+  "397": {
+    "menu_num": 397,
+    "title": "Contrôles en clôture",
+    "values": {
+      "1": "Pas de blocage",
+      "2": "Matières en attente bloquantes",
+      "3": "Opérations en attente bloquantes",
+      "4": "Matières et opérations en attente bloquantes"
+    }
+  },
+  "398": {
+    "menu_num": 398,
+    "title": "Mode allocation lancement",
+    "values": {
+      "1": "Manuel",
+      "2": "Automatique (globale)",
+      "3": "Automatique (détaillée)"
+    }
+  },
+  "399": {
+    "menu_num": 399,
+    "title": "Type de temps",
+    "values": {
+      "1": "OF",
+      "2": "Article",
+      "3": "Divers"
+    }
+  },
+  "401": {
+    "menu_num": 401,
+    "title": "Type de client",
+    "values": {
+      "1": "Normal",
+      "2": "Divers",
+      "3": "Intra-Société",
+      "4": "Prospect"
+    }
+  },
+  "402": {
+    "menu_num": 402,
+    "title": "Facturation du port",
+    "values": {
+      "1": "Facturé",
+      "2": "Franco",
+      "3": "Jusqu'à seuil 1",
+      "4": "Jusqu'à seuil 2",
+      "5": "Jusqu'à seuil 3",
+      "6": "Jusqu'à seuil 4",
+      "7": "Jusqu'à seuil 5"
+    }
+  },
+  "404": {
+    "menu_num": 404,
+    "title": "Période de relevé",
+    "values": {
+      "1": "A la demande",
+      "2": "Semaine",
+      "3": "Décade",
+      "4": "Quinzaine",
+      "5": "Mois"
+    }
+  },
+  "405": {
+    "menu_num": 405,
+    "title": "Base commission représentant",
+    "values": {
+      "1": "% sur prix Net",
+      "2": "% sur Marge",
+      "3": "% sur Formule calcul"
+    }
+  },
+  "406": {
+    "menu_num": 406,
+    "title": "Périodicité facturation",
+    "values": {
+      "1": "A la demande",
+      "2": "Jour",
+      "3": "Semaine",
+      "4": "Décade",
+      "5": "Quinzaine",
+      "6": "Mois"
+    }
+  },
+  "407": {
+    "menu_num": 407,
+    "title": "Date origine calcul échéance",
+    "values": {
+      "1": "Date facture",
+      "2": "Date livraison"
+    }
+  },
+  "408": {
+    "menu_num": 408,
+    "title": "Mode de facturation",
+    "values": {
+      "1": "1 fac / BL",
+      "2": "1 fac/cde soldé",
+      "3": "1 fac/cde",
+      "4": "1 fac/cli livré",
+      "5": "1 fac/période",
+      "6": "Fac manuelle"
+    }
+  },
+  "409": {
+    "menu_num": 409,
+    "title": "Code tournée",
+    "values": {
+      "1": "Tournée 1",
+      "2": "Tournée 2",
+      "3": "Tournée 3",
+      "4": "Tournée 4"
+    }
+  },
+  "410": {
+    "menu_num": 410,
+    "title": "Priorité livraison",
+    "values": {
+      "1": "Normal",
+      "2": "Urgent",
+      "3": "Très urgent"
+    }
+  },
+  "411": {
+    "menu_num": 411,
+    "title": "Mode allocation",
+    "values": {
+      "1": "Automatique",
+      "2": "Manuelle",
+      "3": "Au choix"
+    }
+  },
+  "412": {
+    "menu_num": 412,
+    "title": "Catégorie de commande",
+    "values": {
+      "1": "Normale",
+      "2": "Prêt",
+      "3": "Factur.directe",
+      "4": "Cde ouverte"
+    }
+  },
+  "413": {
+    "menu_num": 413,
+    "title": "Origine facture",
+    "values": {
+      "1": "Direct",
+      "2": "Commande",
+      "3": "Livraison",
+      "4": "Facture",
+      "5": "Devis",
+      "6": "Retour",
+      "7": "Contrat de service",
+      "8": "Demande de service",
+      "9": "Transfert",
+      "10": "Echéance"
+    }
+  },
+  "414": {
+    "menu_num": 414,
+    "title": "Liv.partielle",
+    "values": {
+      "1": "Autorisée",
+      "2": "Ligne complète",
+      "3": "Cde complète"
+    }
+  },
+  "415": {
+    "menu_num": 415,
+    "title": "Etat commande",
+    "values": {
+      "1": "Non soldée",
+      "2": "Soldée"
+    }
+  },
+  "417": {
+    "menu_num": 417,
+    "title": "Etat livraison",
+    "values": {
+      "1": "Non livrée",
+      "2": "Partiel livrée",
+      "3": "Livrée"
+    }
+  },
+  "418": {
+    "menu_num": 418,
+    "title": "Etat facture",
+    "values": {
+      "1": "Non facturée",
+      "2": "Partiel facturé",
+      "3": "Facturée"
+    }
+  },
+  "419": {
+    "menu_num": 419,
+    "title": "Etat crédit",
+    "values": {
+      "1": "OK",
+      "2": "Bloqué",
+      "3": "Dépas. en-cours",
+      "4": "Acpte non versé",
+      "5": "Sage Exchange"
+    }
+  },
+  "420": {
+    "menu_num": 420,
+    "title": "Type étiquette",
+    "values": {
+      "1": "maNutention",
+      "2": "maItresse"
+    }
+  },
+  "421": {
+    "menu_num": 421,
+    "title": "Etat étiquette",
+    "values": {
+      "1": "Production",
+      "2": "Départ"
+    }
+  },
+  "422": {
+    "menu_num": 422,
+    "title": "Format étiquette",
+    "values": {
+      "1": "Grande",
+      "2": "Petite"
+    }
+  },
+  "423": {
+    "menu_num": 423,
+    "title": "Type de ligne",
+    "values": {
+      "1": "Normale",
+      "2": "Composé kit",
+      "3": "Composant kit",
+      "4": "Option kit",
+      "5": "Variante kit.",
+      "6": "Composé nomenclature",
+      "7": "Composant nomenclat.",
+      "8": "Option nomenclature",
+      "9": "Variante nomenclat.",
+      "10": "Sous-Traité",
+      "11": "Service",
+      "12": "Matière fournie",
+      "13": "Service forfaitaire"
+    }
+  },
+  "424": {
+    "menu_num": 424,
+    "title": "Facture/Avoir",
+    "values": {
+      "1": "Facture",
+      "2": "Avoir",
+      "3": "Proforma"
+    }
+  },
+  "425": {
+    "menu_num": 425,
+    "title": "Flux livraison",
+    "values": {
+      "1": "Livraison",
+      "2": "Retour"
+    }
+  },
+  "426": {
+    "menu_num": 426,
+    "title": "Type livraison",
+    "values": {
+      "1": "Commande",
+      "2": "Commande prêt",
+      "3": "Cde ouverte",
+      "4": "Directe",
+      "5": "Directe prêt"
+    }
+  },
+  "427": {
+    "menu_num": 427,
+    "title": "Type traitement livraison aut.",
+    "values": {
+      "1": "Commande",
+      "2": "Préparation"
+    }
+  },
+  "428": {
+    "menu_num": 428,
+    "title": "Mode de gestion de l'avance",
+    "values": {
+      "1": "Maj cumul avance/retard",
+      "2": "Maj demande livraison suivante"
+    }
+  },
+  "429": {
+    "menu_num": 429,
+    "title": "Etat de la facture",
+    "values": {
+      "1": "Non imprimée",
+      "2": "Imprimée",
+      "3": "Validée"
+    }
+  },
+  "430": {
+    "menu_num": 430,
+    "title": "Etat du devis",
+    "values": {
+      "1": "Non commandé",
+      "2": "Partiellem.cdé",
+      "3": "Totalement cdé"
+    }
+  },
+  "431": {
+    "menu_num": 431,
+    "title": "Type de contact",
+    "values": {
+      "1": "Sans type",
+      "2": "Téléphone",
+      "3": "Visite",
+      "4": "Message électronique",
+      "5": "Courrier",
+      "6": "Publipostage"
+    }
+  },
+  "432": {
+    "menu_num": 432,
+    "title": "Type de document ventes",
+    "values": {
+      "1": "Devis",
+      "2": "Livraison",
+      "3": "Retour",
+      "4": "Facture",
+      "5": "Avoir",
+      "6": "Proforma",
+      "7": "Livraison prêt",
+      "8": "Retour prêt",
+      "9": "Fiche tarifs",
+      "10": "Cde normale",
+      "11": "Cde prêt",
+      "12": "Cde facture directe",
+      "13": "Cde ouverte",
+      "14": "Livraison définitive",
+      "15": "Livraison pour sous-traitance",
+      "16": "Livraison Intra-société/Inter-société",
+      "17": "Retour Intra-société/Inter-société",
+      "18": "Retour matière sous traitance",
+      "19": "Echéance de facturation"
+    }
+  },
+  "433": {
+    "menu_num": 433,
+    "title": "Origine avoir",
+    "values": {
+      "1": "Direct",
+      "2": "Facture",
+      "3": "Retour"
+    }
+  },
+  "434": {
+    "menu_num": 434,
+    "title": "Type de montant",
+    "values": {
+      "1": "Positif",
+      "2": "Négatif"
+    }
+  },
+  "435": {
+    "menu_num": 435,
+    "title": "Type de transaction",
+    "values": {
+      "1": "Devis",
+      "2": "Commande",
+      "3": "Commande ouverte",
+      "4": "Livraison",
+      "5": "Facture",
+      "6": "Retour client",
+      "7": "Retour prêt",
+      "8": "Retour matière ss-trt"
+    }
+  },
+  "436": {
+    "menu_num": 436,
+    "title": "Type article",
+    "values": {
+      "1": "Article normal",
+      "2": "Composé nomenclature",
+      "3": "Composé kit"
+    }
+  },
+  "437": {
+    "menu_num": 437,
+    "title": "Origine proforma",
+    "values": {
+      "1": "Directe",
+      "2": "Devis"
+    }
+  },
+  "438": {
+    "menu_num": 438,
+    "title": "Type composant",
+    "values": {
+      "1": "Normal",
+      "2": "Option",
+      "3": "Variante",
+      "4": "Sous-produit",
+      "5": "Texte",
+      "6": "Valorisation",
+      "7": "Service",
+      "8": "Option multiple",
+      "9": "Normal (avec formule)"
+    }
+  },
+  "439": {
+    "menu_num": 439,
+    "title": "Gratuit",
+    "values": {
+      "1": "Non",
+      "2": "Origine",
+      "3": "Oui"
+    }
+  },
+  "440": {
+    "menu_num": 440,
+    "title": "Mode allocation",
+    "values": {
+      "1": "Automatique",
+      "2": "Manuel"
+    }
+  },
+  "441": {
+    "menu_num": 441,
+    "title": "Prise en compte Emp picking",
+    "values": {
+      "1": "Emp picking prioritaire",
+      "2": "Emp picking exclusif",
+      "3": "Non"
+    }
+  },
+  "442": {
+    "menu_num": 442,
+    "title": "Trf élts fac -Cde vers liv/fac",
+    "values": {
+      "1": "Première",
+      "2": "Toutes"
+    }
+  },
+  "443": {
+    "menu_num": 443,
+    "title": "Origine proforma",
+    "values": {
+      "1": "Devis",
+      "2": "Commande",
+      "3": "Livraison"
+    }
+  },
+  "444": {
+    "menu_num": 444,
+    "title": "Répercution sur le détail",
+    "values": {
+      "1": "Non",
+      "2": "Oui",
+      "3": "Seulement si Même valeur"
+    }
+  },
+  "445": {
+    "menu_num": 445,
+    "title": "Méthode d'obtention de la liv",
+    "values": {
+      "1": "Normale",
+      "2": "Contremarque directe",
+      "3": "Contremarque récept",
+      "4": "Ordre de transfert",
+      "5": "Ordre de fabrication"
+    }
+  },
+  "446": {
+    "menu_num": 446,
+    "title": "Catég. cdes dans transactions",
+    "values": {
+      "1": "Normale",
+      "2": "Prêt",
+      "3": "Facturation directe",
+      "4": "Toutes catégories"
+    }
+  },
+  "447": {
+    "menu_num": 447,
+    "title": "Type livraison transactions",
+    "values": {
+      "1": "Normale",
+      "2": "Prêt",
+      "3": "Sous-traitance",
+      "4": "Tous types",
+      "5": "Non facturable"
+    }
+  },
+  "448": {
+    "menu_num": 448,
+    "title": "Types factures ds transactions",
+    "values": {
+      "1": "Facture",
+      "2": "Avoir",
+      "3": "Proforma",
+      "4": "Tous les types"
+    }
+  },
+  "449": {
+    "menu_num": 449,
+    "title": "Origine avoir",
+    "values": {
+      "1": "Direct",
+      "2": "Facture"
+    }
+  },
+  "451": {
+    "menu_num": 451,
+    "title": "Etat retour",
+    "values": {
+      "1": "Non retournée",
+      "2": "Partiel retournée",
+      "3": "Retournée"
+    }
+  },
+  "452": {
+    "menu_num": 452,
+    "title": "Suivi des textes clients",
+    "values": {
+      "1": "Sur texte entête",
+      "2": "Sur texte pied"
+    }
+  },
+  "453": {
+    "menu_num": 453,
+    "title": "Suivi des textes article",
+    "values": {
+      "1": "Sur la commande",
+      "2": "Sur la livraison",
+      "3": "Sur la facture",
+      "4": "Sur livr. et fact.",
+      "5": "Sur cde, liv,fac"
+    }
+  },
+  "454": {
+    "menu_num": 454,
+    "title": "Augmentation des tarifs",
+    "values": {
+      "1": "Duplication fiche",
+      "2": "Modification fiche",
+      "3": "Changement devise"
+    }
+  },
+  "455": {
+    "menu_num": 455,
+    "title": "Type d'augmentation",
+    "values": {
+      "1": "Non modifié",
+      "2": "Variation en %",
+      "3": "Variation en valeur",
+      "4": "Affectation"
+    }
+  },
+  "456": {
+    "menu_num": 456,
+    "title": "Tri consultation",
+    "values": {
+      "1": "Numéro",
+      "2": "Date"
+    }
+  },
+  "457": {
+    "menu_num": 457,
+    "title": "Devise d'impression",
+    "values": {
+      "1": "Devise du document",
+      "2": "Devise société"
+    }
+  },
+  "458": {
+    "menu_num": 458,
+    "title": "Bon de livraison",
+    "values": {
+      "1": "Normal",
+      "2": "Prêt"
+    }
+  },
+  "459": {
+    "menu_num": 459,
+    "title": "Tri des factures",
+    "values": {
+      "1": "Numéro",
+      "2": "Date / Client facturé"
+    }
+  },
+  "460": {
+    "menu_num": 460,
+    "title": "Mode de facturation",
+    "values": {
+      "1": "1 fac/échéance",
+      "2": "1 fac/contrat",
+      "3": "1 fac/commande",
+      "4": "1 fac/client"
+    }
+  },
+  "461": {
+    "menu_num": 461,
+    "title": "Date des factures",
+    "values": {
+      "1": "Date de référence",
+      "2": "Date prochaine facture contrat"
+    }
+  },
+  "462": {
+    "menu_num": 462,
+    "title": "Date origine pour facturation",
+    "values": {
+      "1": "Date expédition",
+      "2": "Date livraison"
+    }
+  },
+  "463": {
+    "menu_num": 463,
+    "title": "Règles div. (standard)",
+    "values": {
+      "1": "Non",
+      "2": "Remise sur taxe"
+    }
+  },
+  "464": {
+    "menu_num": 464,
+    "title": "Règles div. (personnalisation)",
+    "values": {
+      "1": "Non"
+    }
+  },
+  "465": {
+    "menu_num": 465,
+    "title": "Types factures ds transactions",
+    "values": {
+      "1": "Facture",
+      "2": "Proforma",
+      "3": "Tous les types"
+    }
+  },
+  "466": {
+    "menu_num": 466,
+    "title": "Date de facture",
+    "values": {
+      "1": "Date de référence",
+      "2": "Date de clôture de la demande"
+    }
+  },
+  "467": {
+    "menu_num": 467,
+    "title": "Mode de facturation",
+    "values": {
+      "1": "Echéance unique",
+      "2": "1 fac/échéance",
+      "3": "1 fac/contrat",
+      "4": "1 fac/client"
+    }
+  },
+  "468": {
+    "menu_num": 468,
+    "title": "Type désignation article",
+    "values": {
+      "1": "Désignation traduite",
+      "2": "Echéance facturée"
+    }
+  },
+  "469": {
+    "menu_num": 469,
+    "title": "Catégorie de ligne",
+    "values": {
+      "1": "Normale & Composé",
+      "2": "Composant & Option & Variante"
+    }
+  },
+  "470": {
+    "menu_num": 470,
+    "title": "Catégorie ligne de composé",
+    "values": {
+      "1": "Ligne nomale",
+      "2": "Ligne kit",
+      "3": "Ligne nomenclature"
+    }
+  },
+  "471": {
+    "menu_num": 471,
+    "title": "Catégorie ligne de composant",
+    "values": {
+      "1": "Composant",
+      "2": "Option",
+      "3": "Variante"
+    }
+  },
+  "472": {
+    "menu_num": 472,
+    "title": "Règles regroupement",
+    "values": {
+      "1": "1er Devis",
+      "2": "1ère Commande",
+      "3": "1ère Livraison",
+      "4": "1ère Facture",
+      "5": "Somme Montants devis",
+      "6": "Somme Montants commande",
+      "7": "Somme Montants livraison",
+      "8": "Somme Montants facture",
+      "9": "Montant Mini",
+      "10": "Montant Maxi",
+      "11": "Pourcentage Mini",
+      "12": "Pourcentage Maxi",
+      "13": "Pourcentage Moyen",
+      "14": "1er Retour",
+      "15": "Somme Montants retour",
+      "16": "1er Contrat de service",
+      "17": "Somme Montants contrats de service"
+    }
+  },
+  "473": {
+    "menu_num": 473,
+    "title": "Règles éclatement",
+    "values": {
+      "1": "1ère Commande",
+      "2": "1ère Livraison",
+      "3": "1ère Facture",
+      "4": "1er Avoir",
+      "5": "Toutes les commandes",
+      "6": "Toutes les livraisons",
+      "7": "Toutes les factures",
+      "8": "Tous les avoirs",
+      "9": "Prorata des Montants",
+      "10": "Prorata des Quantités",
+      "11": "Prorata des Poids",
+      "12": "Prorata des Volumes"
+    }
+  },
+  "474": {
+    "menu_num": 474,
+    "title": "Regroupement",
+    "values": {
+      "1": "Oui",
+      "2": "Non si différence"
+    }
+  },
+  "475": {
+    "menu_num": 475,
+    "title": "Répartition sur lignes",
+    "values": {
+      "1": "Non",
+      "2": "Prorata Qtés",
+      "3": "Prorata Mnts",
+      "4": "Prorata Poids",
+      "5": "Prorata Volumes"
+    }
+  },
+  "476": {
+    "menu_num": 476,
+    "title": "Type de document ventes",
+    "values": {
+      "1": "Devis",
+      "2": "Livraison",
+      "3": "Retour",
+      "4": "Facture",
+      "5": "Avoir",
+      "6": "Proforma",
+      "7": "Livraison prêt",
+      "8": "Retour prêt",
+      "9": "Fiche tarifs",
+      "10": "Cde normale",
+      "11": "Cde prêt",
+      "12": "Cde facture directe",
+      "13": "Cde ouverte",
+      "14": "Livraison définitive",
+      "15": "Livraison pour sous-traitance",
+      "16": "Livraison Intra-société",
+      "17": "Retour Intra-société",
+      "18": "Facture de commandes",
+      "19": "Facture de livraisons",
+      "20": "Commande",
+      "21": "Retour matière sous traitance",
+      "22": "Note de transport",
+      "23": "Contrats de service"
+    }
+  },
+  "478": {
+    "menu_num": 478,
+    "title": "Type de pièces achats",
+    "values": {
+      "1": "Facture",
+      "2": "Avoir",
+      "3": "Retour",
+      "4": "Réception",
+      "5": "Commande ouverte",
+      "6": "Commande",
+      "7": "Ordre sous-traitance",
+      "8": "Demande d'achat",
+      "9": "Appel d'offre",
+      "10": "Pièce"
+    }
+  },
+  "480": {
+    "menu_num": 480,
+    "title": "Mode de valorisation",
+    "values": {
+      "1": "Coût standard",
+      "2": "Coût standard actualisé",
+      "3": "Dernier prix",
+      "4": "Prix moyen pondéré",
+      "5": "Prix FIFO",
+      "6": "Prix moyen lot",
+      "7": "Prix ordre",
+      "8": "Prix LIFO",
+      "9": "Méthode sortie principale",
+      "10": "Coût budgétaire",
+      "11": "Prix simulé",
+      "12": "Tarifs",
+      "13": "Méthode sortie secondaire"
+    }
+  },
+  "481": {
+    "menu_num": 481,
+    "title": "Choix niveau coûts",
+    "values": {
+      "1": "Mono-niveau",
+      "2": "Multi-niveaux"
+    }
+  },
+  "485": {
+    "menu_num": 485,
+    "title": "Signature",
+    "values": {
+      "1": "Non",
+      "2": "Oui Facultative",
+      "3": "Oui Obligatoire"
+    }
+  },
+  "486": {
+    "menu_num": 486,
+    "title": "Type URL",
+    "values": {
+      "1": "Test",
+      "2": "Production"
+    }
+  },
+  "487": {
+    "menu_num": 487,
+    "title": "Status de la facture",
+    "values": {
+      "1": "Non validée",
+      "2": "Validée"
+    }
+  },
+  "489": {
+    "menu_num": 489,
+    "title": "Type de visualisation tournées",
+    "values": {
+      "1": "Commande",
+      "2": "Livraison"
+    }
+  },
+  "490": {
+    "menu_num": 490,
+    "title": "Catégorie de livraison",
+    "values": {
+      "1": "Normale",
+      "2": "Prêt",
+      "3": "Pour sous-traitance",
+      "4": "Non facturable"
+    }
+  },
+  "491": {
+    "menu_num": 491,
+    "title": "Etat blocage",
+    "values": {
+      "1": "OK",
+      "2": "Bloqué"
+    }
+  },
+  "492": {
+    "menu_num": 492,
+    "title": "Messages code blocage",
+    "values": {
+      "1": "Impossible de mettre à jour l'état du blocage de la commande.",
+      "2": "Code blocage commande non valide.",
+      "3": "Impossible de lire le code du blocage de la commande.",
+      "4": "Blocage levé.",
+      "5": "Commande partiellement expédiée ou facturée. Poursuivre le blocage ?",
+      "6": "Blocage annulé par utilisateur.",
+      "7": "Désallocation automatique due au blocage de la commande.",
+      "8": "Impossible de lire la commande de vente.",
+      "9": "Erreur réécriture SOH",
+      "10": "Bloqué le",
+      "11": "Débloqué le",
+      "12": "Levée du blocage commande",
+      "13": "Blocage manuel commande. Allocation impossible.",
+      "14": "Blocage manuel commande.",
+      "15": "Blocage manuel commande. Expédition impossible.",
+      "16": "Blocage manuel commande. Facturation impossible.",
+      "17": "Blocage manuel commande. Document pro forma interdit.",
+      "18": "Blocage manuel commande. Préparation interdite.",
+      "19": "Levée du blocage en-cours",
+      "20": "Impossible de mettre à jour l'état des en-cours de la commande.",
+      "21": "Etat en-cours mis à jour.",
+      "22": "Vous ne disposez pas des droits d'accès nécessaires pour débloquer cette commande.",
+      "23": "Cette commande n'est pas bloquée",
+      "24": "Cette commande n'est pas bloquée pour dépassement d'en-cours",
+      "25": "Cette commande n'est pas bloquée pour acompte non versé"
+    }
+  },
+  "493": {
+    "menu_num": 493,
+    "title": "Catégorie de retour",
+    "values": {
+      "1": "Normal",
+      "2": "Prêt",
+      "3": "Pour sous-traitance"
+    }
+  },
+  "494": {
+    "menu_num": 494,
+    "title": "Initialisation date expédition",
+    "values": {
+      "1": "Date du jour",
+      "2": "Date expédition document origine"
+    }
+  },
+  "501": {
+    "menu_num": 501,
+    "title": "Type de fournisseur",
+    "values": {
+      "1": "Normal",
+      "2": "Prospect",
+      "3": "Divers"
+    }
+  },
+  "502": {
+    "menu_num": 502,
+    "title": "Base calcul date d'échéance",
+    "values": {
+      "1": "Date Réception",
+      "2": "Date Facture"
+    }
+  },
+  "503": {
+    "menu_num": 503,
+    "title": "Date recherche taux devise",
+    "values": {
+      "1": "Date Commande",
+      "2": "Date Réception",
+      "3": "Date Facture"
+    }
+  },
+  "504": {
+    "menu_num": 504,
+    "title": "Conversion quantités réception",
+    "values": {
+      "1": "Recalcul quantité en modification",
+      "2": "Pas de recalcul des quantités",
+      "3": "Recalcul sauf UC-UA"
+    }
+  },
+  "505": {
+    "menu_num": 505,
+    "title": "Origine de la demande",
+    "values": {
+      "1": "Achats",
+      "2": "Contremarque directe",
+      "3": "Contremarque réceptionnée",
+      "4": "Transfert",
+      "5": "Production"
+    }
+  },
+  "506": {
+    "menu_num": 506,
+    "title": "Type de commande",
+    "values": {
+      "1": "Commande standard",
+      "2": "Commande ouverte"
+    }
+  },
+  "507": {
+    "menu_num": 507,
+    "title": "Type d'achat",
+    "values": {
+      "1": "Commercial",
+      "2": "Général"
+    }
+  },
+  "508": {
+    "menu_num": 508,
+    "title": "Motif de retour",
+    "values": {
+      "1": "Non conforme",
+      "2": "Endommagé",
+      "3": "Non commandé",
+      "4": "Autre"
+    }
+  },
+  "509": {
+    "menu_num": 509,
+    "title": "Statut de la facture",
+    "values": {
+      "1": "En attente",
+      "2": "A valider",
+      "3": "Validée"
+    }
+  },
+  "511": {
+    "menu_num": 511,
+    "title": "Origine facture",
+    "values": {
+      "1": "Commande",
+      "2": "Réception",
+      "3": "Retour",
+      "4": "Facture",
+      "5": "Divers",
+      "6": "Expédition"
+    }
+  },
+  "512": {
+    "menu_num": 512,
+    "title": "Type règle signature",
+    "values": {
+      "1": "Demande d'achat",
+      "2": "Commande",
+      "3": "Commande ouverte"
+    }
+  },
+  "513": {
+    "menu_num": 513,
+    "title": "Motif tarif achats",
+    "values": {
+      "1": "Prix Standard",
+      "2": "Manuel",
+      "3": "Nouveau Prix"
+    }
+  },
+  "514": {
+    "menu_num": 514,
+    "title": "Mode de saisie quantité",
+    "values": {
+      "1": "Saisi avec unité",
+      "2": "Saisi sans unité",
+      "3": "Affiché",
+      "4": "Invisible"
+    }
+  },
+  "515": {
+    "menu_num": 515,
+    "title": "Format saisie réf. article",
+    "values": {
+      "1": "De l'Article",
+      "2": "Du Fournisseur"
+    }
+  },
+  "516": {
+    "menu_num": 516,
+    "title": "Litige",
+    "values": {
+      "1": "Non",
+      "2": "Avertissement",
+      "3": "Bloquant"
+    }
+  },
+  "517": {
+    "menu_num": 517,
+    "title": "Type de document achats",
+    "values": {
+      "1": "Appel d'offre",
+      "2": "Demande d'achat",
+      "3": "Commande standard",
+      "4": "Commande de sous-traitance",
+      "5": "Commande ouverte",
+      "6": "Réception",
+      "7": "Retour",
+      "8": "Facture/avoir",
+      "9": "Ordre de sous-traitance (EO)"
+    }
+  },
+  "518": {
+    "menu_num": 518,
+    "title": "Consommation des suggestions",
+    "values": {
+      "1": "Automatique",
+      "2": "Manuelle"
+    }
+  },
+  "519": {
+    "menu_num": 519,
+    "title": "Soldées/Non soldées/Toutes",
+    "values": {
+      "1": "Non soldées",
+      "2": "Soldées",
+      "3": "Toutes"
+    }
+  },
+  "520": {
+    "menu_num": 520,
+    "title": "Répartition",
+    "values": {
+      "1": "Non",
+      "2": "Prorata Qtés",
+      "3": "Prorata Mts",
+      "4": "Prorata Poids",
+      "5": "Prorata Volume"
+    }
+  },
+  "521": {
+    "menu_num": 521,
+    "title": "Transfert commande sur facture",
+    "values": {
+      "1": "Première",
+      "2": "Toutes"
+    }
+  },
+  "522": {
+    "menu_num": 522,
+    "title": "Soumission",
+    "values": {
+      "1": "Fin soumission",
+      "2": "Hierarchique",
+      "3": "Parallèle"
+    }
+  },
+  "523": {
+    "menu_num": 523,
+    "title": "Référence article fournisseur",
+    "values": {
+      "1": "Obligatoire",
+      "2": "Facultative",
+      "3": "Inutile"
+    }
+  },
+  "524": {
+    "menu_num": 524,
+    "title": "Type de soumission",
+    "values": {
+      "1": "Mixte",
+      "2": "Hierarchique",
+      "3": "Parallèle"
+    }
+  },
+  "525": {
+    "menu_num": 525,
+    "title": "Type de pièce",
+    "values": {
+      "1": "Demande d'achat",
+      "2": "Commande",
+      "3": "Commande ouverte",
+      "4": "Toutes"
+    }
+  },
+  "526": {
+    "menu_num": 526,
+    "title": "Type de traitement",
+    "values": {
+      "1": "Signature",
+      "2": "Annulation"
+    }
+  },
+  "527": {
+    "menu_num": 527,
+    "title": "Action",
+    "values": {
+      "1": "Aucune",
+      "2": "Signature",
+      "3": "Refus",
+      "4": "Refus total"
+    }
+  },
+  "528": {
+    "menu_num": 528,
+    "title": "Signataire-suppléant",
+    "values": {
+      "1": "Signataire",
+      "2": "Suppléant"
+    }
+  },
+  "529": {
+    "menu_num": 529,
+    "title": "Type de commande",
+    "values": {
+      "1": "Std",
+      "2": "Ouv",
+      "3": "S/t"
+    }
+  },
+  "530": {
+    "menu_num": 530,
+    "title": "Aucun/Solde/Annulation",
+    "values": {
+      "1": "Aucun",
+      "2": "Solde",
+      "3": "Annulation"
+    }
+  },
+  "531": {
+    "menu_num": 531,
+    "title": "Signature",
+    "values": {
+      "1": "Non",
+      "2": "Oui Facultative",
+      "3": "Oui Obligatoire"
+    }
+  },
+  "532": {
+    "menu_num": 532,
+    "title": "Date d'engagement",
+    "values": {
+      "1": "Date commande",
+      "2": "Date réception"
+    }
+  },
+  "533": {
+    "menu_num": 533,
+    "title": "Type de facture achat",
+    "values": {
+      "1": "Facture",
+      "2": "Fac. Complément.",
+      "3": "Avoir",
+      "4": "Avoir / Retour"
+    }
+  },
+  "534": {
+    "menu_num": 534,
+    "title": "Solde ligne de commande",
+    "values": {
+      "1": "Si égalité ou supérieur",
+      "2": "A la demande",
+      "3": "Jamais",
+      "4": "Suivant tolérance",
+      "5": "Tolérance et reste à la demande"
+    }
+  },
+  "535": {
+    "menu_num": 535,
+    "title": "Type document pour compteur",
+    "values": {
+      "1": "Appel d'offre",
+      "2": "Demande d'achat",
+      "3": "Commande standard",
+      "4": "Cde sous-traitance",
+      "5": "Commande ouverte",
+      "6": "Réception",
+      "7": "Retour",
+      "8": "Facture",
+      "9": "Fact. complémentaire",
+      "10": "Avoir",
+      "11": "Avoir sur retour",
+      "12": "Fiche tarif",
+      "13": "Réception intra-société",
+      "14": "Retour intra-société",
+      "15": "Ordre sous-traitance",
+      "16": "Conteneur",
+      "17": "Transport",
+      "18": "Expédition"
+    }
+  },
+  "536": {
+    "menu_num": 536,
+    "title": "Critère de choix fournisseur",
+    "values": {
+      "1": "Premier fournisseur",
+      "2": "Meilleur Prix",
+      "3": "Meilleur délai"
+    }
+  },
+  "537": {
+    "menu_num": 537,
+    "title": "Base de calcul",
+    "values": {
+      "1": "Aucune",
+      "2": "Montant HT",
+      "3": "Montant TTC",
+      "4": "Action"
+    }
+  },
+  "538": {
+    "menu_num": 538,
+    "title": "Règle taxe",
+    "values": {
+      "1": "Taux produit",
+      "2": "Taux fixe"
+    }
+  },
+  "539": {
+    "menu_num": 539,
+    "title": "Réception sur ligne commande",
+    "values": {
+      "1": "si qté restante",
+      "2": "Totalement reçue"
+    }
+  },
+  "540": {
+    "menu_num": 540,
+    "title": "Réintégration en commande",
+    "values": {
+      "1": "Non",
+      "2": "Oui même ligne",
+      "3": "Oui autre ligne",
+      "4": "Oui autre commande"
+    }
+  },
+  "541": {
+    "menu_num": 541,
+    "title": "Mode de saisie quantité",
+    "values": {
+      "1": "Saisi avec unité",
+      "2": "Saisi sans unité"
+    }
+  },
+  "542": {
+    "menu_num": 542,
+    "title": "Choix article-contrat",
+    "values": {
+      "1": "Suivant",
+      "2": "Précédent",
+      "3": "Premier",
+      "4": "Dernier",
+      "5": "Ajout ligne",
+      "6": "Annulation ligne"
+    }
+  },
+  "543": {
+    "menu_num": 543,
+    "title": "Action",
+    "values": {
+      "1": "Prise en compte",
+      "2": "Annulation"
+    }
+  },
+  "544": {
+    "menu_num": 544,
+    "title": "Type de document",
+    "values": {
+      "1": "Commande",
+      "2": "Réception"
+    }
+  },
+  "545": {
+    "menu_num": 545,
+    "title": "Répartition",
+    "values": {
+      "1": "Prorata Qtés",
+      "2": "Prorata Mts",
+      "3": "Prorata Poids",
+      "4": "Prorata Volume"
+    }
+  },
+  "546": {
+    "menu_num": 546,
+    "title": "Quantité facturable",
+    "values": {
+      "1": "Qté A",
+      "2": "Qté A+Q",
+      "3": "Qté A+Q+R"
+    }
+  },
+  "547": {
+    "menu_num": 547,
+    "title": "Suivi des textes fournisseur",
+    "values": {
+      "1": "Sur texte entête",
+      "2": "Sur texte pied"
+    }
+  },
+  "548": {
+    "menu_num": 548,
+    "title": "Valorisation ligne DA",
+    "values": {
+      "1": "Prix standard",
+      "2": "Recherche tarif"
+    }
+  },
+  "549": {
+    "menu_num": 549,
+    "title": "Type de contrôle",
+    "values": {
+      "1": "Non bloquant",
+      "2": "Bloquant"
+    }
+  },
+  "550": {
+    "menu_num": 550,
+    "title": "Etat Quantités",
+    "values": {
+      "1": "Attente détail",
+      "2": "Détaillées"
+    }
+  },
+  "551": {
+    "menu_num": 551,
+    "title": "Choix",
+    "values": {
+      "1": "Non",
+      "2": "Oui",
+      "3": "Toutes"
+    }
+  },
+  "552": {
+    "menu_num": 552,
+    "title": "Contrôle code taxe",
+    "values": {
+      "1": "Aucun",
+      "2": "Non bloquant",
+      "3": "Bloquant"
+    }
+  },
+  "553": {
+    "menu_num": 553,
+    "title": "Date cours devise facture",
+    "values": {
+      "1": "Date comptable",
+      "2": "Date fournisseur"
+    }
+  },
+  "554": {
+    "menu_num": 554,
+    "title": "Calcul des taxes",
+    "values": {
+      "1": "A la ligne uniquement",
+      "2": "Recalcul par base"
+    }
+  },
+  "555": {
+    "menu_num": 555,
+    "title": "Type de génération",
+    "values": {
+      "1": "Réelle",
+      "2": "Simulation"
+    }
+  },
+  "556": {
+    "menu_num": 556,
+    "title": "Début/Fin de ligne",
+    "values": {
+      "1": "Début ligne",
+      "2": "Fin ligne",
+      "3": "Après réf. article"
+    }
+  },
+  "557": {
+    "menu_num": 557,
+    "title": "Suivi texte lg DA",
+    "values": {
+      "1": "Non",
+      "2": "Sur ligne de commande"
+    }
+  },
+  "558": {
+    "menu_num": 558,
+    "title": "Sélection des besoins",
+    "values": {
+      "1": "Sur date début",
+      "2": "Sur date fin"
+    }
+  },
+  "559": {
+    "menu_num": 559,
+    "title": "Sélection des besoins",
+    "values": {
+      "1": "Sans contremarque",
+      "2": "Avec contremarque",
+      "3": "Contremarque seule"
+    }
+  },
+  "560": {
+    "menu_num": 560,
+    "title": "Contrôle FAR",
+    "values": {
+      "1": "Bloquant par période",
+      "2": "Bloquant par exercice",
+      "3": "Non bloquant"
+    }
+  },
+  "561": {
+    "menu_num": 561,
+    "title": "Régularisation prix facture",
+    "values": {
+      "1": "Sans coefficient d'approche",
+      "2": "Avec coefficient d'approche"
+    }
+  },
+  "562": {
+    "menu_num": 562,
+    "title": "Utilisateur pour appel d'offre",
+    "values": {
+      "1": "Demandeur",
+      "2": "Acheteur"
+    }
+  },
+  "563": {
+    "menu_num": 563,
+    "title": "Articles à traiter",
+    "values": {
+      "1": "Articles gérés en stock",
+      "2": "Articles non gérés",
+      "3": "Tous les articles"
+    }
+  },
+  "564": {
+    "menu_num": 564,
+    "title": "Date minimum réception",
+    "values": {
+      "1": "Date commande",
+      "2": "Date commande + délai"
+    }
+  },
+  "565": {
+    "menu_num": 565,
+    "title": "Type information fournisseur",
+    "values": {
+      "1": "Dernier appel d'offre",
+      "2": "Dernière demande d'achat",
+      "3": "Dernière commande",
+      "4": "Dernière réception",
+      "5": "Dernier retour",
+      "6": "Dernière facture",
+      "7": "Dernier avoir",
+      "8": "Dernier règlement"
+    }
+  },
+  "566": {
+    "menu_num": 566,
+    "title": "Type mouvement fournisseur",
+    "values": {
+      "1": "Appel d'offre",
+      "2": "Demande d'achat",
+      "3": "Commande",
+      "4": "Réception",
+      "5": "Retour",
+      "6": "Facture",
+      "7": "Règlement"
+    }
+  },
+  "567": {
+    "menu_num": 567,
+    "title": "Transfert cde vers facture",
+    "values": {
+      "1": "Prorata montants",
+      "2": "Prorata quantités",
+      "3": "Prorata poids",
+      "4": "Prorata Volumes",
+      "5": "Premier document",
+      "6": "Tous documents"
+    }
+  },
+  "569": {
+    "menu_num": 569,
+    "title": "Référencement article client",
+    "values": {
+      "1": "Obligatoire",
+      "2": "Facultative",
+      "3": "Inutile"
+    }
+  },
+  "570": {
+    "menu_num": 570,
+    "title": "Type de ligne de commande",
+    "values": {
+      "1": "Normale",
+      "2": "Nomenclature composé",
+      "3": "Service sous-traitance",
+      "4": "Matière fournie"
+    }
+  },
+  "571": {
+    "menu_num": 571,
+    "title": "Gestion besoins inter-sites",
+    "values": {
+      "1": "Par défaut sur cdes directes",
+      "2": "Par défaut sur cdes ouvertes"
+    }
+  },
+  "572": {
+    "menu_num": 572,
+    "title": "Mise à jour pré-engagements",
+    "values": {
+      "1": "A la première signature",
+      "2": "A la dernière signature",
+      "3": "A la création"
+    }
+  },
+  "573": {
+    "menu_num": 573,
+    "title": "Origine calcul écart",
+    "values": {
+      "1": "Données standard",
+      "2": "Données de l'OS"
+    }
+  },
+  "574": {
+    "menu_num": 574,
+    "title": "Catégorie de mouvement",
+    "values": {
+      "1": "Standard",
+      "2": "Pour sous-traitance"
+    }
+  },
+  "575": {
+    "menu_num": 575,
+    "title": "Echelle notation fournisseurs",
+    "values": {
+      "1": "5",
+      "2": "10",
+      "3": "15",
+      "4": "20"
+    }
+  },
+  "576": {
+    "menu_num": 576,
+    "title": "Date désengagement facture",
+    "values": {
+      "1": "Date d'engagement",
+      "2": "Date facture"
+    }
+  },
+  "577": {
+    "menu_num": 577,
+    "title": "Fournisseur origine",
+    "values": {
+      "1": "Fournisseur commande",
+      "2": "Fournisseur facture"
+    }
+  },
+  "578": {
+    "menu_num": 578,
+    "title": "Type d'engagement",
+    "values": {
+      "1": "Montant HT",
+      "2": "Mt HT+TVA non déductible"
+    }
+  },
+  "579": {
+    "menu_num": 579,
+    "title": "Type d'arrondi",
+    "values": {
+      "1": "Arrondi au plus proche",
+      "2": "Arrondi à la décimale inférieure",
+      "3": "Arrondi à l'entier inférieur",
+      "4": "Arrondi à la décimale supérieure",
+      "5": "Arrondi à l'entier supérieur"
+    }
+  },
+  "580": {
+    "menu_num": 580,
+    "title": "Import éléments facturation",
+    "values": {
+      "1": "Auto équilibrage",
+      "2": "Contrôle"
+    }
+  },
+  "581": {
+    "menu_num": 581,
+    "title": "Contrôle quantité commandée",
+    "values": {
+      "1": "Bloquant",
+      "2": "Avertissement",
+      "3": "Pas de contrôle"
+    }
+  },
+  "583": {
+    "menu_num": 583,
+    "title": "Facture d'achat - Contrôle fac",
+    "values": {
+      "1": "Pas de restriction",
+      "2": "Pré-chargement de commande si pas de réception",
+      "3": "Pré-chargement de réception uniquement"
+    }
+  },
+  "585": {
+    "menu_num": 585,
+    "title": "Statut rapprochement",
+    "values": {
+      "1": "Non appliqué",
+      "2": "Abouti",
+      "3": "Avertissement",
+      "4": "Bloqué",
+      "5": "Débloqué"
+    }
+  },
+  "586": {
+    "menu_num": 586,
+    "title": "Régularisation prix facture",
+    "values": {
+      "1": "Sans frais d'approche",
+      "2": "Avec frais d'approche"
+    }
+  },
+  "587": {
+    "menu_num": 587,
+    "title": "Facture fournisseur",
+    "values": {
+      "1": "Toutes",
+      "2": "Sans règlement",
+      "3": "Avec règlements"
+    }
+  },
+  "588": {
+    "menu_num": 588,
+    "title": "Besoins de sous-traitance",
+    "values": {
+      "1": "Article sous-traité",
+      "2": "Service"
+    }
+  },
+  "590": {
+    "menu_num": 590,
+    "title": "Alim charges réception cdes",
+    "values": {
+      "1": "Par calcul",
+      "2": "Par proratisation"
+    }
+  },
+  "591": {
+    "menu_num": 591,
+    "title": "Statut",
+    "values": {
+      "1": "Créé",
+      "2": "En cours",
+      "3": "Arrivé"
+    }
+  },
+  "592": {
+    "menu_num": 592,
+    "title": "Gestion expédition",
+    "values": {
+      "1": "Ligne de commande",
+      "2": "Multi contenants",
+      "3": "Mono contenant"
+    }
+  },
+  "593": {
+    "menu_num": 593,
+    "title": "Statut étape",
+    "values": {
+      "1": "A faire",
+      "2": "En cours",
+      "3": "Terminé"
+    }
+  },
+  "701": {
+    "menu_num": 701,
+    "title": "Type pièce",
+    "values": {
+      "1": "Client",
+      "2": "Commande vente",
+      "3": "Préparation",
+      "4": "Livraison",
+      "5": "Facture vente",
+      "6": "Réception",
+      "7": "Transfert (inactif)",
+      "8": "Retour fournisseur",
+      "9": "Inventaire",
+      "10": "Ordre de fabrication",
+      "11": "Suggestion",
+      "12": "Suivi matière",
+      "13": "Retour client",
+      "14": "Commande achat",
+      "15": "Déclaration production",
+      "16": "Divers stocks (inactif)",
+      "17": "Facture achat",
+      "18": "Avoir vente",
+      "19": "Entrée diverse",
+      "20": "Sortie diverse",
+      "21": "Changement d'emplacement (inactif)",
+      "22": "Transfert inter-sites (inactif)",
+      "23": "Réception transfert inter-sites (inactif)",
+      "24": "Transfert pour sous-traitance (inactif)",
+      "25": "Réception pour sous-traitance (inactif)",
+      "26": "Réintégration de stock (inactif)",
+      "27": "Plan de rangement",
+      "28": "Contrôle qualité",
+      "29": "Changement stock",
+      "30": "Changement de valeur",
+      "31": "Assemblage",
+      "32": "Désassemblage",
+      "33": "Demande de service",
+      "34": "Plan réapprovisionnement",
+      "35": "Modification des lots",
+      "36": "Ordre de sous-traitance",
+      "37": "Suivi sans OF",
+      "38": "Expédition",
+      "39": "Transport",
+      "40": "Affaire"
+    }
+  },
+  "702": {
+    "menu_num": 702,
+    "title": "Gestion palettes/contenants",
+    "values": {
+      "1": "Pas de gestion",
+      "2": "Saisie libre",
+      "3": "Saisie contrôlée",
+      "4": "Attribution auto"
+    }
+  },
+  "703": {
+    "menu_num": 703,
+    "title": "Code Occupation",
+    "values": {
+      "1": "Libre",
+      "2": "Occupé",
+      "3": "Libre + occupé"
+    }
+  },
+  "704": {
+    "menu_num": 704,
+    "title": "Type mouvement de stock",
+    "values": {
+      "1": "Entrée diverse",
+      "2": "Sortie diverse",
+      "3": "Réception fournisseur",
+      "4": "Livraison client",
+      "5": "Entrée OF",
+      "6": "Sortie OF",
+      "7": "Changement emplacement",
+      "8": "Contrôle qualité",
+      "9": "Changement statut",
+      "10": "Réception transfert inter-sites (inactif)",
+      "11": "Retour réception",
+      "12": "Retour livraison",
+      "13": "Inventaire",
+      "14": "Transfert inter-sites",
+      "15": "Transfert pour sous-traitance (inactif)",
+      "16": "Réception pour sous-traitance",
+      "17": "Livraison prêt",
+      "18": "Retour livraison prêt",
+      "19": "Réintégration stock",
+      "20": "Livraison pour sous-traitance",
+      "21": "Refractionnement",
+      "22": "Plan de rangement",
+      "23": "Changement de valeur",
+      "24": "Demande de service",
+      "25": "Réapprovisionnement",
+      "26": "Changement de stock",
+      "27": "Sortie transfert interne",
+      "28": "Entrée transfert interne",
+      "29": "Sortie ordre sous-traitance",
+      "30": "Réception prêt (inactif)",
+      "31": "Retour réception prêt (inactif)",
+      "32": "Retour rcp pour sous-traitance",
+      "33": "Retour liv pour sous-traitance",
+      "34": "Demande d'analyse",
+      "35": "Régularisation valeur stock",
+      "36": "Changement identifiant contenant"
+    }
+  },
+  "705": {
+    "menu_num": 705,
+    "title": "Nature Prix",
+    "values": {
+      "1": "Saisi",
+      "2": "Prix standard",
+      "3": "Prix std actualisé",
+      "4": "Dernier prix",
+      "5": "Prix moyen pondéré",
+      "6": "Prix FIFO",
+      "7": "Prix moyen lot",
+      "8": "Prix ordre",
+      "9": "Prix LIFO",
+      "10": "Dernier prix d'achat"
+    }
+  },
+  "706": {
+    "menu_num": 706,
+    "title": "Gestion Lots Transaction",
+    "values": {
+      "1": "Libre",
+      "2": "Nouveau lot",
+      "3": "Lot fournisseur",
+      "4": "No réception / No OF",
+      "5": "FIFO tous lots",
+      "6": "FIFO lots non périmés",
+      "7": "FIFO lots périmés",
+      "8": "FEFO tous lots",
+      "9": "FEFO lots non périmés",
+      "10": "FEFO lots périmés",
+      "11": "Selon article"
+    }
+  },
+  "707": {
+    "menu_num": 707,
+    "title": "Gestion Emplac. Transaction",
+    "values": {
+      "1": "Pas de saisie",
+      "2": "Saisie libre",
+      "3": "Contrôlée selon article",
+      "4": "Contrôlée selon transac",
+      "5": "Automatique"
+    }
+  },
+  "708": {
+    "menu_num": 708,
+    "title": "Impression Etiquette",
+    "values": {
+      "1": "Pas Impression",
+      "2": "Etiquette stock",
+      "3": ".",
+      "4": "Document transfert",
+      "5": "Document analyse",
+      "6": "Etiquette contenant créé",
+      "7": "Etiquette stock et contenant créé"
+    }
+  },
+  "709": {
+    "menu_num": 709,
+    "title": "Mouvements combinés",
+    "values": {
+      "1": "Non",
+      "2": "Article+comp. sans pertes",
+      "3": "Article+comp. avec pertes",
+      "4": "Comp. seuls sans pertes",
+      "5": "Comp. seuls avec pertes"
+    }
+  },
+  "710": {
+    "menu_num": 710,
+    "title": "Type rangement",
+    "values": {
+      "1": "Dédié monocasier",
+      "2": "Dédié multicasier",
+      "3": "Dynam.mono-art",
+      "4": "Dynam.multi-art",
+      "5": "Rangem.illimité",
+      "6": "Stock chez tiers",
+      "7": "Sous traitance"
+    }
+  },
+  "711": {
+    "menu_num": 711,
+    "title": "Mode Gestion Libération",
+    "values": {
+      "1": "Libé.immédiate",
+      "2": "Libé.temporisée",
+      "3": "Statut bloqué"
+    }
+  },
+  "712": {
+    "menu_num": 712,
+    "title": "Statuts transaction",
+    "values": {
+      "1": "Selon article/commande",
+      "2": "St 'A'",
+      "3": "St 'Q'",
+      "4": "St 'A'+'Q'",
+      "5": "St 'R'",
+      "6": "St 'A'+'R'",
+      "7": "St 'Q'+'R'",
+      "8": "St 'A'+'Q'+'R'"
+    }
+  },
+  "713": {
+    "menu_num": 713,
+    "title": "Statuts stocks",
+    "values": {
+      "1": "Accepté",
+      "2": "Contrôle qualité",
+      "3": "Rejeté"
+    }
+  },
+  "714": {
+    "menu_num": 714,
+    "title": "Emplacement suggéré",
+    "values": {
+      "1": "Non",
+      "2": "Lieu stockage",
+      "3": "Lieu réception",
+      "4": "Zone picking",
+      "5": "Empl atelier",
+      "6": "Empl tiers"
+    }
+  },
+  "715": {
+    "menu_num": 715,
+    "title": "Etat ligne saisie stock",
+    "values": {
+      "1": "Nouvelle ligne",
+      "2": "Ancienne ligne",
+      "3": "Unité changée",
+      "4": "Non contrôlée",
+      "5": "Contrôlée",
+      "6": "Analyse demandée",
+      "7": "En attente"
+    }
+  },
+  "716": {
+    "menu_num": 716,
+    "title": "Validation mvt stock",
+    "values": {
+      "1": "Pas de validation",
+      "2": "Sans récapitulatif",
+      "3": "Avec récapitulatif"
+    }
+  },
+  "717": {
+    "menu_num": 717,
+    "title": "Unité mesure par défaut",
+    "values": {
+      "1": "Unité stock",
+      "2": "Unité achat art",
+      "3": "Unité achat four",
+      "4": "Unité cond art 1",
+      "5": "Unité cond art 2",
+      "6": "Unité cond four",
+      "7": "Unité vente art",
+      "8": "Unite ligne document"
+    }
+  },
+  "718": {
+    "menu_num": 718,
+    "title": "Statut mouvement stock",
+    "values": {
+      "1": "Mis à jour",
+      "2": "En attente"
+    }
+  },
+  "719": {
+    "menu_num": 719,
+    "title": "Classement des lots",
+    "values": {
+      "1": "Par lot",
+      "2": "FIFO",
+      "3": "FEFO"
+    }
+  },
+  "720": {
+    "menu_num": 720,
+    "title": "Type quantité",
+    "values": {
+      "1": "Qté physique",
+      "2": "Qté active"
+    }
+  },
+  "721": {
+    "menu_num": 721,
+    "title": "Compteurs stocks",
+    "values": {
+      "1": "Chrono stock",
+      "2": "Analyses qualité",
+      "3": "Chrono FIFO",
+      "4": "Compteur identifiant 1",
+      "5": "Compteur identifiant 2",
+      "6": "Modification lot",
+      "7": "Listes inventaires",
+      "8": "Numéro lot global",
+      "9": "Chrono encours",
+      "10": "Pièce mvts divers entrées",
+      "11": "Pièce mvts divers sorties",
+      "12": "Configurateur",
+      "13": "Numéro série",
+      "14": "Session inventaires",
+      "15": "Changements stock",
+      "16": "Liste à ranger plan rangement",
+      "17": "Assemblage",
+      "18": "Désassemblage",
+      "19": "Liste à ranger plan réappro.",
+      "20": "Réappro. zone consommation",
+      "21": "Suggestions",
+      "22": "Changement valeur",
+      "23": "Liste préparations",
+      "24": "Bon préparation",
+      "25": "Colisage (numéro de colis)"
+    }
+  },
+  "722": {
+    "menu_num": 722,
+    "title": "Choix transferts",
+    "values": {
+      "1": "Site",
+      "2": "Client",
+      "3": "Fournisseur"
+    }
+  },
+  "723": {
+    "menu_num": 723,
+    "title": "Interrogations stocks",
+    "values": {
+      "1": "Stocks par sites",
+      "2": "Stocks par lots",
+      "3": "Détail lot",
+      "4": "Emplacement-articles",
+      "5": "Emplacements dédiés",
+      "6": "Article-emplacements",
+      "7": ".",
+      "8": ".",
+      "9": "Stocks périmés",
+      "10": "Numéros de séries",
+      "11": "Mouvements de stocks",
+      "12": "Stocks à date",
+      "13": "Stocks projetés",
+      "14": "Tracabilité amont",
+      "15": "Tracabilité aval",
+      "16": "Mouvements en attente",
+      "17": "Articles bloqués inventaire",
+      "18": "Stock disponible",
+      "19": "Traçabilité pièces",
+      "20": "Versions majeures",
+      "21": "Versions mineures"
+    }
+  },
+  "724": {
+    "menu_num": 724,
+    "title": "Code destockage",
+    "values": {
+      "1": "Par lot",
+      "2": "FIFO",
+      "3": "FEFO"
+    }
+  },
+  "725": {
+    "menu_num": 725,
+    "title": "Sélection types de pièces",
+    "values": {
+      "1": "Tous types",
+      "2": "Client",
+      "3": "Commande vente",
+      "4": "Préparation",
+      "5": "Livraison",
+      "6": "Facture vente",
+      "7": "Réception",
+      "8": "Transfert (inactif)",
+      "9": "Retour fournisseur",
+      "10": "Inventaire",
+      "11": "Ordre de fabrication",
+      "12": "Suggestion de fabrication",
+      "13": "Suivi matière",
+      "14": "Retour client",
+      "15": "Commande achat",
+      "16": "Déclaration production",
+      "17": "Divers stocks (inactif)",
+      "18": "Facture achat",
+      "19": "Avoir vente",
+      "20": "Entrée diverse",
+      "21": "Sortie diverse",
+      "22": "Changement d'emplacement (inactif)",
+      "23": "Transfert inter-sites (inactif)",
+      "24": "Réception transfert inter-sites (inactif)",
+      "25": "Transfert sous-traitance (inactif)",
+      "26": "Réception sous-traitance (inactif)",
+      "27": "Réintégration de stock",
+      "28": "Plan de rangement",
+      "29": "Contrôle qualité",
+      "30": "Changement stock",
+      "31": "Changement de valeur",
+      "32": "Assemblage",
+      "33": "Désassemblage",
+      "34": "Demande de service",
+      "35": "Plan réappro consommation",
+      "36": "Modification des lots",
+      "37": "Ordre de sous-traitance",
+      "38": "Suivi sans OF"
+    }
+  },
+  "726": {
+    "menu_num": 726,
+    "title": "Rubriques utilisateurs stocks",
+    "values": {
+      "1": "Lot texte libre 1",
+      "2": "Lot texte libre 2",
+      "3": "Lot numéro libre",
+      "4": "Lot date libre"
+    }
+  },
+  "727": {
+    "menu_num": 727,
+    "title": "Modes réapprovisionnement",
+    "values": {
+      "1": "Pas de gestion",
+      "2": "Réappro CBN",
+      "3": "Réappro PDP",
+      "4": "Réappro sur seuil",
+      "5": "Recompl périodique"
+    }
+  },
+  "728": {
+    "menu_num": 728,
+    "title": "Sélection type transaction",
+    "values": {
+      "1": "Tous types",
+      "2": "Entrée diverse",
+      "3": "Sortie diverse",
+      "4": "Réception four.",
+      "5": "Livraison client",
+      "6": "Entrée OF",
+      "7": "Sortie OF",
+      "8": "Chgt emplacement",
+      "9": "Contrôle qualité",
+      "10": "Changement statut",
+      "11": "Réception transfert",
+      "12": "Retour réception",
+      "13": "Retour livraison",
+      "14": "Inventaire"
+    }
+  },
+  "729": {
+    "menu_num": 729,
+    "title": "Calcul classe ABC",
+    "values": {
+      "1": "Calcul sans MAJ",
+      "2": "Calcul avec MAJ",
+      "3": "MAJ seule"
+    }
+  },
+  "730": {
+    "menu_num": 730,
+    "title": "Mode calcul réappro",
+    "values": {
+      "1": "Fichier",
+      "2": "Calcul"
+    }
+  },
+  "731": {
+    "menu_num": 731,
+    "title": "Erreurs calcul données stocks",
+    "values": {
+      "1": "Résultat calcul nul",
+      "2": "Historique insuffisant",
+      "3": "Historique traitement non défini",
+      "4": "Taux service non défini",
+      "5": "Taux service absent",
+      "6": "Cout passation cde nul",
+      "7": "Taux possession stock nul",
+      "8": "Cout std article nul"
+    }
+  },
+  "732": {
+    "menu_num": 732,
+    "title": "Sélection réappro hors CBN",
+    "values": {
+      "1": "Non",
+      "2": "Oui",
+      "3": "Calcul seul"
+    }
+  },
+  "733": {
+    "menu_num": 733,
+    "title": "Choix liste inventaire",
+    "values": {
+      "1": "Sélection manuelle",
+      "2": "Inventaire tournant",
+      "3": "Inventaire annuel",
+      "4": "Inventaire stocks nuls"
+    }
+  },
+  "734": {
+    "menu_num": 734,
+    "title": "Régul différences inventaire",
+    "values": {
+      "1": "Anciens prix",
+      "2": "Nouveaux prix"
+    }
+  },
+  "735": {
+    "menu_num": 735,
+    "title": "Différences d'inventaire & PMP",
+    "values": {
+      "1": "Pas de modification PMP",
+      "2": "Régularisation",
+      "3": "Régul différences > 0",
+      "4": "Régul différences < 0"
+    }
+  },
+  "736": {
+    "menu_num": 736,
+    "title": "Inventaire séries",
+    "values": {
+      "1": "Néant",
+      "2": "Non contrôlé",
+      "3": "Validé"
+    }
+  },
+  "737": {
+    "menu_num": 737,
+    "title": "Calcul besoins nets",
+    "values": {
+      "1": "Plan directeur production",
+      "2": "Calcul besoins nets"
+    }
+  },
+  "738": {
+    "menu_num": 738,
+    "title": "Choix replanification",
+    "values": {
+      "1": "Pas de traitement",
+      "2": "Messages seuls",
+      "3": "Simulation"
+    }
+  },
+  "739": {
+    "menu_num": 739,
+    "title": "Fractionnement suggest.",
+    "values": {
+      "1": "Pas de fractionnement",
+      "2": "Fractionnement parallèle",
+      "3": "Fractionnement successif"
+    }
+  },
+  "740": {
+    "menu_num": 740,
+    "title": "Tri ordres à replanifier",
+    "values": {
+      "1": "Par articles",
+      "2": "Par types d'ordres",
+      "3": "Par types de messages",
+      "4": "Par date"
+    }
+  },
+  "741": {
+    "menu_num": 741,
+    "title": "Initialisation P.M.P.",
+    "values": {
+      "1": "Mensuel",
+      "2": "Annuel",
+      "3": "Mobile"
+    }
+  },
+  "743": {
+    "menu_num": 743,
+    "title": "Classement encours",
+    "values": {
+      "1": "Par article",
+      "2": "Par type d'ordre",
+      "3": "Par type de pièce"
+    }
+  },
+  "744": {
+    "menu_num": 744,
+    "title": "Phases calcul besoins",
+    "values": {
+      "1": "Initialisation",
+      "2": "Purge traitement précédent",
+      "3": "Extraction articles",
+      "4": "Inutilisé",
+      "5": "Extraction encours",
+      "6": "Calcul suggestions",
+      "7": "Mise à jour encours",
+      "8": "Impression",
+      "9": "Durée totale"
+    }
+  },
+  "745": {
+    "menu_num": 745,
+    "title": "Regroupement prévisions",
+    "values": {
+      "1": "Semaine par semaine",
+      "2": "Total sur semaine 1",
+      "3": "Total sur semaine 2",
+      "4": "Total sur semaine 3",
+      "5": "Total sur dernière semaine"
+    }
+  },
+  "746": {
+    "menu_num": 746,
+    "title": "Arrondi prévisions conso.",
+    "values": {
+      "1": "Pas d'arrondi",
+      "2": "Arrondi plus proche",
+      "3": "Arrondi inférieur",
+      "4": "Arrondi supérieur"
+    }
+  },
+  "747": {
+    "menu_num": 747,
+    "title": "Délais fabrication CBN+PDP",
+    "values": {
+      "1": "Délais articles",
+      "2": "Délais gammes / article",
+      "3": "Délais gammes toujours"
+    }
+  },
+  "748": {
+    "menu_num": 748,
+    "title": "Contrôle trait mensuel stocks",
+    "values": {
+      "1": "Pas de contrôle",
+      "2": "Contrôle non bloquant",
+      "3": "Contrôle bloquant"
+    }
+  },
+  "749": {
+    "menu_num": 749,
+    "title": "Classement consult. stocks",
+    "values": {
+      "1": "Site",
+      "2": "Article",
+      "3": "Lot",
+      "4": "Emplacement",
+      "5": "Statut",
+      "6": "Unité",
+      "7": "Date imputation (-)",
+      "8": "Numéro série",
+      "9": "Date imputation (+)",
+      "10": "Date création (-)",
+      "11": "Date création (+)",
+      "12": "Identifiant 1"
+    }
+  },
+  "750": {
+    "menu_num": 750,
+    "title": "Chap 750",
+    "values": {
+      "1": "Entrée 1",
+      "2": "Entrée 2"
+    }
+  },
+  "751": {
+    "menu_num": 751,
+    "title": "Pièce pour étiquettes",
+    "values": {
+      "1": "Réception",
+      "2": "Ordre de fabrication",
+      "3": "Retour client",
+      "4": "Déclaration de production",
+      "5": "Divers stock",
+      "6": "Réintégration"
+    }
+  },
+  "752": {
+    "menu_num": 752,
+    "title": "Type action configurateur",
+    "values": {
+      "1": "Question",
+      "2": "Variable",
+      "3": "Scénario",
+      "4": "Sélection",
+      "5": "Options/variantes",
+      "6": "Lien table",
+      "7": "Procédure",
+      "8": "Message",
+      "9": "Formes/modèles",
+      "10": "Abaque",
+      "11": "Commentaire",
+      "12": "Point d'entrée",
+      "13": "Article maitre",
+      "14": "Article site",
+      "15": "Articles cumuls",
+      "16": "Article ventes",
+      "17": "Entête nomenclature",
+      "18": "Détail nomenclature",
+      "19": "Entête gamme",
+      "20": "Opération gamme",
+      "21": "Article client",
+      "22": "Jalonnement opération",
+      "23": "Article coûts",
+      "24": "Coût matière",
+      "25": "Coût machine",
+      "26": "Coût main d'oeuvre",
+      "27": "Côut sous traitance",
+      "28": "Article fournisseur",
+      "29": "Libre",
+      "30": "Formule"
+    }
+  },
+  "753": {
+    "menu_num": 753,
+    "title": "Transactions planning",
+    "values": {
+      "1": "Planning global",
+      "2": "Plan de travail",
+      "3": "Regroupements",
+      "4": "Plan suivi temps",
+      "5": "Plan sortie des matières",
+      "6": "Plan production",
+      "7": "Plan de réintégration",
+      "8": "Plan de pesée",
+      "9": "Pilotage des plans de suivi",
+      "10": "Plan des fiches techniques"
+    }
+  },
+  "754": {
+    "menu_num": 754,
+    "title": "Gestion traçabilité",
+    "values": {
+      "1": "Pas de traçabilité",
+      "2": "Traçabilité détaillée",
+      "3": "Traçabilité agrégée"
+    }
+  },
+  "755": {
+    "menu_num": 755,
+    "title": "Etat appro. inter-site",
+    "values": {
+      "1": "En attente",
+      "2": "Alloué",
+      "3": "En livraison"
+    }
+  },
+  "756": {
+    "menu_num": 756,
+    "title": "Choix liste inventaire",
+    "values": {
+      "1": "Sélection manuelle",
+      "2": "Inventaire tournant",
+      "3": "Inventaire annuel"
+    }
+  },
+  "757": {
+    "menu_num": 757,
+    "title": "Code Occupation",
+    "values": {
+      "1": "Vide",
+      "2": "Occupé",
+      "3": "Plein"
+    }
+  },
+  "758": {
+    "menu_num": 758,
+    "title": "Mode de valorisation",
+    "values": {
+      "1": "Aucun",
+      "2": "Contrôle de gestion",
+      "3": "Spécifique"
+    }
+  },
+  "759": {
+    "menu_num": 759,
+    "title": "Comptabilisation stock",
+    "values": {
+      "1": "Non",
+      "2": "Oui",
+      "3": "Oui (auto en suppression)"
+    }
+  },
+  "760": {
+    "menu_num": 760,
+    "title": "Intitulés champs lignes prod.",
+    "values": {
+      "1": "Non défini",
+      "2": "Metal",
+      "3": "Size",
+      "4": "Ground",
+      "5": "Finishing",
+      "6": "Gears",
+      "7": "Chain-sets",
+      "8": "Avec décimale"
+    }
+  },
+  "761": {
+    "menu_num": 761,
+    "title": "Classement sélection",
+    "values": {
+      "1": "Numéro article",
+      "2": "Désignation article",
+      "3": "Clé de recherche",
+      "4": "Ligne de produit",
+      "5": "Numéro pièce cfg"
+    }
+  },
+  "762": {
+    "menu_num": 762,
+    "title": "Mode de saisie champs config.",
+    "values": {
+      "1": "Saisie obligatoire",
+      "2": "Saisie facultative",
+      "3": "Affichage",
+      "4": "Invisible"
+    }
+  },
+  "763": {
+    "menu_num": 763,
+    "title": "Paramètre action configurateur",
+    "values": {
+      "1": "Pas de paramètre",
+      "2": "Pas de sélection",
+      "3": "Sélec. 0 ou 1 ligne",
+      "4": "Sélec. 1 ligne",
+      "5": "Sélec. 0 à n lignes",
+      "6": "Sélec. 1 à n lignes",
+      "7": "Réactualisation",
+      "8": "Information",
+      "9": "Bloquant"
+    }
+  },
+  "764": {
+    "menu_num": 764,
+    "title": "Type ligne scénario",
+    "values": {
+      "1": "Sélection composé",
+      "2": "Création composé",
+      "3": "Sélection composants",
+      "4": "Liste composants",
+      "5": "Création composants",
+      "6": "Inutilisé",
+      "7": "Liste opérations",
+      "8": "Création opérations",
+      "9": "Contrôles finaux"
+    }
+  },
+  "765": {
+    "menu_num": 765,
+    "title": "Type sélection configurateur",
+    "values": {
+      "1": "Sélection articles",
+      "2": "Sélection options/variantes"
+    }
+  },
+  "766": {
+    "menu_num": 766,
+    "title": "Saisie qté options/variantes",
+    "values": {
+      "1": "Saisie 0 ou 1",
+      "2": "Saisie libre",
+      "3": "Pas de saisie"
+    }
+  },
+  "767": {
+    "menu_num": 767,
+    "title": "Choix colonne quantité",
+    "values": {
+      "1": "Non",
+      "2": "Colonne Unité stock",
+      "3": "Colonne Unité vente"
+    }
+  },
+  "768": {
+    "menu_num": 768,
+    "title": "Choix traitement standard",
+    "values": {
+      "1": "Pour sélections",
+      "2": "Pour scénarios",
+      "3": "Scénario maître"
+    }
+  },
+  "769": {
+    "menu_num": 769,
+    "title": "Abréviations menu 252",
+    "values": {
+      "1": "(x)",
+      "2": "(#)",
+      "3": "(D)",
+      "4": "(B)",
+      "5": "(X)"
+    }
+  },
+  "770": {
+    "menu_num": 770,
+    "title": "Contrôles symboles",
+    "values": {
+      "1": "Pas de contrôle",
+      "2": "Liste de valeurs",
+      "3": "Table",
+      "4": "Formes / modèles",
+      "5": "Bornes",
+      "6": "Table diverse"
+    }
+  },
+  "771": {
+    "menu_num": 771,
+    "title": "Origine symboles configurateur",
+    "values": {
+      "1": "Utilisateur",
+      "2": "Système(2)",
+      "3": "Système(3)",
+      "4": "Système(4)"
+    }
+  },
+  "772": {
+    "menu_num": 772,
+    "title": "Variables système config.",
+    "values": {
+      "1": "Site",
+      "2": "Date traitement",
+      "3": "Devise",
+      "4": "Trace",
+      "5": "No tiers",
+      "6": "Référence tiers",
+      "7": "Date purge",
+      "8": "Quantité composé",
+      "9": "Pas d'historique",
+      "10": "Liste composés",
+      "11": "Liste composants",
+      "12": "Composé",
+      "13": "Gamme",
+      "14": "Coût total",
+      "15": "Coût matière",
+      "16": "Coût machine",
+      "17": "Coût main d'oeuvre",
+      "18": "Coût sous traitance",
+      "19": "Coût frais généraux",
+      "20": "Coût unit. calculé",
+      "21": "Numéro article",
+      "22": "Désignation article",
+      "23": "Ligne de produit",
+      "24": "Champ num. 1",
+      "25": "Champ num. 2",
+      "26": "Champ num. 3",
+      "27": "Champ num. 4",
+      "28": "Champ num. 5",
+      "29": "Champ num. 6",
+      "30": "Champ alpha 1",
+      "31": "Champ alpha 2",
+      "32": "Champ alpha 3",
+      "33": "Champ alpha 4",
+      "34": "Champ alpha 5",
+      "35": "Champ alpha 6",
+      "36": "Lien table OK",
+      "37": "Arrondi calcul variables",
+      "38": "Gestion mise à niveau",
+      "39": "Scénario maître",
+      "40": "Filtre sélection tables",
+      "41": "Composé référence",
+      "42": "Désig. générique 1",
+      "43": "Désig. générique 2",
+      "44": "Désig. générique 3",
+      "45": "Délai purge mémo",
+      "46": "Montant dynamique",
+      "47": "Abaque dynamique",
+      "48": "Descente nomenclature",
+      "49": "Alt. nomenclature",
+      "50": "Alt. nomenclature référence",
+      "51": "Alt. gamme",
+      "52": "Alt. gamme référence",
+      "53": "Article-Fournisseur",
+      "54": "Article-Client",
+      "55": "Désignation Article-Fournisseur",
+      "56": "Désignation Article-Client",
+      "57": "Filtrer pour table des réponses"
+    }
+  },
+  "773": {
+    "menu_num": 773,
+    "title": "Contraintes options/variantes",
+    "values": {
+      "1": "Choix obligatoire",
+      "2": "Liée avec",
+      "3": "Interdite avec"
+    }
+  },
+  "774": {
+    "menu_num": 774,
+    "title": "Colonne prix",
+    "values": {
+      "1": "Pas de calcul",
+      "2": "Formule",
+      "3": "Prix de base",
+      "4": "Prix tarif",
+      "5": "Prix standard",
+      "6": "Prix std actualisé",
+      "7": "Derniers prix",
+      "8": "Evaluation de formules",
+      "9": "Budget"
+    }
+  },
+  "775": {
+    "menu_num": 775,
+    "title": "Recherche équivalence",
+    "values": {
+      "1": "Pas de recherche",
+      "2": "Recherche équivalence",
+      "3": "Créer toujours",
+      "4": "Recherche + sélection automatique"
+    }
+  },
+  "776": {
+    "menu_num": 776,
+    "title": "Type coût calculé",
+    "values": {
+      "1": "Pas de calcul",
+      "2": "Coût article",
+      "3": "Coût article référence",
+      "4": "Coût nul",
+      "5": "Prix non trouvé",
+      "6": "Calculé",
+      "7": "Calculé nul",
+      "8": "Calcul intermédiaire"
+    }
+  },
+  "777": {
+    "menu_num": 777,
+    "title": "Régul. stocks manquants",
+    "values": {
+      "1": "Pas de traitement",
+      "2": "Mouvements en attente",
+      "3": "Manquants / sorties matières",
+      "4": "Manquants / livraisons ventes"
+    }
+  },
+  "778": {
+    "menu_num": 778,
+    "title": "Sélection No série",
+    "values": {
+      "1": "Ajouter",
+      "2": "Enlever"
+    }
+  },
+  "779": {
+    "menu_num": 779,
+    "title": "Absorption écarts valorisation",
+    "values": {
+      "1": "Non",
+      "2": "Absorption base site",
+      "3": "Absorp. base site/lot"
+    }
+  },
+  "780": {
+    "menu_num": 780,
+    "title": "EDI Type de segment",
+    "values": {
+      "1": "MOA : Montant monétaire",
+      "2": "PCD : Pourcentage",
+      "3": "QTY : Quantité",
+      "4": "CUX : Monnaie",
+      "5": "DTM : Date",
+      "6": "RFF : Référence",
+      "7": "NAD/CTA/COM : Adresse",
+      "8": "FTX : Texte",
+      "9": "CCI/CAV : Organisme OGA",
+      "10": "Non géré"
+    }
+  },
+  "781": {
+    "menu_num": 781,
+    "title": "Regroupement ligne",
+    "values": {
+      "1": "Pas de regroupement",
+      "2": "Regroup. ligne à l'écran",
+      "3": "St 'A'",
+      "4": "St 'Q'",
+      "5": "St 'A'+'Q'",
+      "6": "St 'R'",
+      "7": "St 'A'+'R'",
+      "8": "St 'Q'+'R'",
+      "9": "St 'A'+'Q'+'R'"
+    }
+  },
+  "784": {
+    "menu_num": 784,
+    "title": "Type abaque",
+    "values": {
+      "1": "Abaque simple",
+      "2": "Table de conversion",
+      "3": "Abaque double"
+    }
+  },
+  "785": {
+    "menu_num": 785,
+    "title": "Prise en compte stock qualité",
+    "values": {
+      "1": "Non",
+      "2": "Oui dans stock départ",
+      "3": "Oui à date fin contrôle"
+    }
+  },
+  "786": {
+    "menu_num": 786,
+    "title": "Choix date mouvement stock",
+    "values": {
+      "1": "Date de création",
+      "2": "Date d'imputation"
+    }
+  },
+  "787": {
+    "menu_num": 787,
+    "title": "Classement besoins composants",
+    "values": {
+      "1": "Par article",
+      "2": "Par niveau + article",
+      "3": "Par niveau + composé",
+      "4": "Par nomenclature"
+    }
+  },
+  "788": {
+    "menu_num": 788,
+    "title": "Traitement mensuel stocks",
+    "values": {
+      "1": "Pas de correction mouvements postérieurs",
+      "2": "Correction mouvements postérieurs"
+    }
+  },
+  "789": {
+    "menu_num": 789,
+    "title": "Mode saisie scénarios config.",
+    "values": {
+      "1": "Standard",
+      "2": "Assisté",
+      "3": "Question par question"
+    }
+  },
+  "790": {
+    "menu_num": 790,
+    "title": "Catégorie document",
+    "values": {
+      "1": "Non",
+      "2": "Négoce",
+      "3": "Production",
+      "4": "Interne"
+    }
+  },
+  "791": {
+    "menu_num": 791,
+    "title": "Régul. stocks manquants",
+    "values": {
+      "1": "Pas de traitement",
+      "2": "Mouvements en attente",
+      "3": "Ruptures sur sorties non validées",
+      "4": "Ruptures sur cde et OF"
+    }
+  },
+  "792": {
+    "menu_num": 792,
+    "title": "Choix destination",
+    "values": {
+      "1": "Interne",
+      "2": "Inter-sites",
+      "3": "Client",
+      "4": "Transfert sous-traitant",
+      "5": "Retour sous-traitant"
+    }
+  },
+  "793": {
+    "menu_num": 793,
+    "title": "Classement sélection",
+    "values": {
+      "1": "Numéro article",
+      "2": "Numéro ordre",
+      "3": "Sous-traitant"
+    }
+  },
+  "794": {
+    "menu_num": 794,
+    "title": "Sélection détail stock",
+    "values": {
+      "1": "Lot",
+      "2": "Série",
+      "3": "Unité/quantité"
+    }
+  },
+  "795": {
+    "menu_num": 795,
+    "title": "Choix date mouvement stock",
+    "values": {
+      "1": "Date de création",
+      "2": "Date d'imputation",
+      "3": "Date de comptabilisation"
+    }
+  },
+  "796": {
+    "menu_num": 796,
+    "title": "Classement inventaire",
+    "values": {
+      "1": "Article emplacement",
+      "2": "Emplacement article"
+    }
+  },
+  "797": {
+    "menu_num": 797,
+    "title": "Type Catalogue",
+    "values": {
+      "1": "Tables (ATABLE)",
+      "2": "Fonctions (AFONCTION)",
+      "3": "Objets (AOBJET)",
+      "4": "Ecrans (AMSK)",
+      "5": "Sous-Programme (ASUBPROG)",
+      "6": "Programmes (APROG)",
+      "7": "Etats (AREPORT)",
+      "8": "Fenêtres (AWINDOW)",
+      "9": "Consultations (ACONSULT)"
+    }
+  },
+  "798": {
+    "menu_num": 798,
+    "title": "Elément",
+    "values": {
+      "1": "Programme (src+adx)",
+      "2": "Etat (rpt)",
+      "3": "Ecran (dico)",
+      "4": "Fonction (dico)",
+      "5": "Objet (dico)",
+      "6": "Fenetre (dico)",
+      "7": "Consultation (dico)",
+      "8": "Action (dico)",
+      "9": "Report (dico)"
+    }
+  },
+  "799": {
+    "menu_num": 799,
+    "title": "Menu local",
+    "values": {
+      "1": "Menu local",
+      "2": "Menu local"
+    }
+  },
+  "2069": {
+    "menu_num": 2069,
+    "title": "Correction method",
+    "values": {
+      "1": "Rectificación íntegra",
+      "2": "Rectificación por diferencias",
+      "3": "Rectificación por descuento por volumen de operaciones durante un periodo",
+      "4": "Autorizadas por la Agencia Tributaria"
+    }
+  },
+  "2071": {
+    "menu_num": 2071,
+    "title": "Rôle division",
+    "values": {
+      "1": "Service comptable",
+      "2": "Organe de gestion",
+      "3": "Unité de traitement",
+      "4": "Organe de proposition"
+    }
+  },
+  "2217": {
+    "menu_num": 2217,
+    "title": "BI : Type de ligne MFG",
+    "values": {
+      "1": "Entête",
+      "2": "Article lancé",
+      "3": "Composant",
+      "4": "Opération"
+    }
+  },
+  "2228": {
+    "menu_num": 2228,
+    "title": "Mode de gestion des EO",
+    "values": {
+      "1": "Pas de modification",
+      "2": "Modification matières",
+      "3": "Modification service",
+      "4": "Modif matières et service"
+    }
+  },
+  "2229": {
+    "menu_num": 2229,
+    "title": "Contrôles en clôture",
+    "values": {
+      "1": "Pas de blocage",
+      "2": "Matières en attente bloquantes",
+      "3": "Service en attente bloquant",
+      "4": "Matières et service en attente bloquants"
+    }
+  },
+  "2281": {
+    "menu_num": 2281,
+    "title": "Crystal report - ventes",
+    "values": {
+      "1": "gratuit",
+      "2": "option",
+      "3": "kit",
+      "4": "Montant Net HT",
+      "5": "Montant Net TTC",
+      "6": "Prix Net HT",
+      "7": "Prix Net TTC",
+      "8": "Total HT",
+      "9": "Total TTC",
+      "10": "HT PRODUIT",
+      "11": "TTC PRODUIT",
+      "12": "FACTURE",
+      "13": "AVOIR",
+      "14": "PROFORMA",
+      "15": "TOTAL H.T.",
+      "16": "TOTAL T.T.C.",
+      "17": "Jusqu'au",
+      "18": "A partir de",
+      "19": "Du",
+      "20": "au",
+      "21": "Prix Brut HT",
+      "22": "Prix Brut TTC",
+      "23": "Tel",
+      "24": "Fax",
+      "25": "N°TVA Intracommunautaire",
+      "26": "N° pièce",
+      "27": "Date",
+      "28": "Client",
+      "29": "Référence",
+      "30": "Commande n°",
+      "31": "Mode de livraison",
+      "32": "Transporteur",
+      "33": "Article",
+      "34": "Quantité",
+      "35": "Taxe",
+      "36": "Report",
+      "37": "Livraison n°",
+      "38": "Livrée le",
+      "39": "A reporter",
+      "40": "Montant TVA",
+      "41": "Acomptes versés",
+      "42": "Net à payer",
+      "43": "Echéance",
+      "44": "Mode de réglement",
+      "45": "Reste à régler",
+      "46": "Montant réglé",
+      "47": "Montant",
+      "48": "Base TVA",
+      "49": "Taux",
+      "50": "Voir les conditions générales de ventes",
+      "51": "Pénalités de retard de paiement (taux annuel) : ~~%",
+      "52": "Escompte pour paiement anticipé (taux mensuel) : ~~%",
+      "53": "ACCUSE DE RECEPTION COMMANDE",
+      "54": "Conditions de règlement",
+      "55": "Date livraison",
+      "56": "BON DE LIVRAISON",
+      "57": "Date expédition",
+      "58": "exonération de TVA, article 262 ter-1 du code général des impôts",
+      "59": "au capital social de",
+      "60": "pas d'escompte en cas de paiement anticipé",
+      "61": "Nombre de colis",
+      "62": "Poids brut total",
+      "63": "Poids net total",
+      "64": "DEVIS",
+      "65": "Date de validité",
+      "66": "ACCUSE DE RECEPTION COMMANDE OUVERTE",
+      "67": "Article - Client",
+      "68": "Quantité prévue",
+      "69": "Montant prévu",
+      "70": "Lieu de consommation",
+      "71": "Livré à",
+      "72": "NAF",
+      "73": "Quantité cdée",
+      "74": "Quantité reçue",
+      "75": "Date réception",
+      "76": "Conditions tarifaires",
+      "77": "Programme de livraison",
+      "78": "Dates d'application du tarif",
+      "79": "Début",
+      "80": "Fin",
+      "81": "Prix brut",
+      "82": "Prix net",
+      "83": "Dates de livraison",
+      "84": "Demandée",
+      "85": "Prévue",
+      "86": "Statut",
+      "87": "Etat",
+      "88": "Destinataire",
+      "89": "Expéditeur",
+      "90": "Votre réf",
+      "91": "Type de colis",
+      "92": "Colis n°",
+      "93": "Poids brut total",
+      "94": "DEMANDE D'ACOMPTE",
+      "95": "du",
+      "96": "à",
+      "97": "Au titre de la commande",
+      "98": "Payable le",
+      "99": "Acomptes demandés",
+      "100": "Frais/Rem",
+      "101": "Total lignes HT",
+      "102": "Total lignes TTC",
+      "103": "Dont TVA",
+      "104": "Lot",
+      "105": "Sous-Lot",
+      "106": "Numéro de série",
+      "107": "Fact. origine",
+      "108": "Base taxe",
+      "109": "Montant taxe",
+      "110": "Montant taxes",
+      "111": "Montant taxes soumises",
+      "112": "Montant TVA en Euros",
+      "113": "Montant taxes non soumises",
+      "114": "Dont taxes soumises",
+      "115": "Dont taxes non soumises",
+      "116": "Dont TVA en Euros",
+      "117": "autres échéances",
+      "118": "Id Créancier SEPA",
+      "119": "Réf mandat",
+      "120": "Facture de taxes",
+      "121": "Généré par ordinateur",
+      "122": "Série fin",
+      "123": "Numéro REX"
+    }
+  },
+  "2282": {
+    "menu_num": 2282,
+    "title": "Crystal report - achats",
+    "values": {
+      "1": "Jusqu'au",
+      "2": "A partir de",
+      "3": "Du",
+      "4": "au",
+      "5": "Prix",
+      "6": "Qté",
+      "7": "BON DE COMMANDE",
+      "8": "Fournisseur",
+      "9": "Site de réception",
+      "10": "Code adresse",
+      "11": "Réf.fournisseur",
+      "12": "Désignation",
+      "13": "Date récept.",
+      "14": "Qté commandée",
+      "15": "Mode livraison",
+      "16": "Condition paiement",
+      "17": "Prix net",
+      "18": "Montant HT",
+      "19": "Lieu conso",
+      "20": "BON DE RETOUR",
+      "21": "N°d'autorisation",
+      "22": "Qté retournée",
+      "23": "Lot fournisseur",
+      "24": "N°série",
+      "25": "Attente d'avoir",
+      "26": "COMMANDE OUVERTE",
+      "27": "Début validité",
+      "28": "Fin validité",
+      "29": "Devise",
+      "30": "Paiment",
+      "31": "Article fournisseur",
+      "32": "Site de réception",
+      "33": "Code adresse",
+      "34": "Quantité UA",
+      "35": "Site",
+      "36": "Adresse",
+      "37": "HT PRODUIT",
+      "38": "TOTAL HT",
+      "39": "TOTAL TAXE",
+      "40": "NET A PAYER",
+      "41": "Base TVA",
+      "42": "Taux",
+      "43": "Montant Taxe",
+      "44": "TOTAL TTC",
+      "45": "A ce jour, les appels d'offre suivants, pour lesquels vous avez été consultés,",
+      "46": "n'ont pas donné lieu de votre part à une proposition commerciale.",
+      "47": "Nous espérons que vous nous ferez parvenir votre offre le plus tôt possible.",
+      "48": "Le service achat",
+      "49": "Les articles suivants, bien que promis pour les dates indiquées, ne nous ont toujours pas été livrés",
+      "50": "Nous espérons que vous nous ferez parvenir ces articles le plus tôt possible.",
+      "51": "APPEL D'OFFRE",
+      "52": "Délai",
+      "53": "Date limite réponse",
+      "54": "APPEL DE LIVRAISON",
+      "55": "RELANCE APPEL D'OFFRE",
+      "56": "Réception",
+      "57": "Quantité attendue",
+      "58": "RELANCE",
+      "59": "Série début",
+      "60": "Qté"
+    }
+  },
+  "2284": {
+    "menu_num": 2284,
+    "title": "Crystal report - GPAO",
+    "values": {
+      "1": "Surcharge"
+    }
+  },
+  "2295": {
+    "menu_num": 2295,
+    "title": "Crystal Reports - Etat OF",
+    "values": {
+      "1": "En attente",
+      "2": "En cours",
+      "3": "Tous"
+    }
+  },
+  "2301": {
+    "menu_num": 2301,
+    "title": "Type produit",
+    "values": {
+      "1": "Produit",
+      "2": "Sous-produit"
+    }
+  },
+  "2302": {
+    "menu_num": 2302,
+    "title": "Critères de tri opé",
+    "values": {
+      "1": "Date de réalisation prévue",
+      "2": "OF",
+      "3": "Article lancé",
+      "4": "Poste"
+    }
+  },
+  "2303": {
+    "menu_num": 2303,
+    "title": "Saisie matricule",
+    "values": {
+      "1": "Obligatoire",
+      "2": "Facultative",
+      "3": "Interdite"
+    }
+  },
+  "2304": {
+    "menu_num": 2304,
+    "title": "Type traitement",
+    "values": {
+      "1": "OF complet",
+      "2": "Opération d'OF seule",
+      "3": "Article lancé d'OF seul",
+      "4": "Consommation matière d'OF seule",
+      "5": "Gamme",
+      "6": "Opération de gamme seule",
+      "7": "Article lancé de gamme seul",
+      "8": "Matière de nomenclature seule",
+      "9": "Temps divers",
+      "10": "Suivi sur OF d'une opération non prévue",
+      "11": "Suivi sur gamme d'une opération non prévue",
+      "12": "Suivi sur OF d'une matière non prévue",
+      "13": "Suivi sur nomenclature d'une matière non prévue",
+      "14": "Réintégration sur une matière d'OF",
+      "15": "Réintégration sur une matière non prévue",
+      "16": "Réintégration sur nomenclature",
+      "17": "Réintégration nom. sur matière non prévue"
+    }
+  },
+  "2305": {
+    "menu_num": 2305,
+    "title": "Libellés périodicité",
+    "values": {
+      "1": "jour(s)",
+      "2": "semaine(s)",
+      "3": "mois"
+    }
+  },
+  "2306": {
+    "menu_num": 2306,
+    "title": "Type suivi",
+    "values": {
+      "1": "OF",
+      "2": "Nomenclature",
+      "3": "Réintégration OF",
+      "4": "Réintégration nom."
+    }
+  },
+  "2307": {
+    "menu_num": 2307,
+    "title": "Consommation matière",
+    "values": {
+      "1": "Non",
+      "2": "Oui manuelle",
+      "3": "Oui automatique",
+      "4": "Oui automatique et manuelle"
+    }
+  },
+  "2308": {
+    "menu_num": 2308,
+    "title": "Critères de tri mat",
+    "values": {
+      "1": "Par date",
+      "2": "Par composant",
+      "3": "Par ordre de fabrication",
+      "4": "Par article fabriqué",
+      "5": "Lot"
+    }
+  },
+  "2309": {
+    "menu_num": 2309,
+    "title": "Critères de tri art",
+    "values": {
+      "1": "Par date",
+      "2": "Par ordre de fabrication",
+      "3": "Par article"
+    }
+  },
+  "2310": {
+    "menu_num": 2310,
+    "title": "Mode traitement optimisation",
+    "values": {
+      "1": "Préparation données + Gantt",
+      "2": "Préparation données",
+      "3": "Gantt",
+      "4": "Mise à jour des résultats"
+    }
+  },
+  "2311": {
+    "menu_num": 2311,
+    "title": "Type quantité",
+    "values": {
+      "1": "Active",
+      "2": "Physique"
+    }
+  },
+  "2312": {
+    "menu_num": 2312,
+    "title": "Origine suggestions",
+    "values": {
+      "1": "PDP",
+      "2": "CBN",
+      "3": "Toutes"
+    }
+  },
+  "2313": {
+    "menu_num": 2313,
+    "title": "Type modification gamme",
+    "values": {
+      "1": "Modification opération",
+      "2": "Modification opération standard",
+      "3": "Ajout opération",
+      "4": "Suppression opération"
+    }
+  },
+  "2314": {
+    "menu_num": 2314,
+    "title": "Unité de saisie",
+    "values": {
+      "1": "Unité de l'opération",
+      "2": "Unité de stock"
+    }
+  },
+  "2315": {
+    "menu_num": 2315,
+    "title": "Stop bit",
+    "values": {
+      "1": "1 bit de stop",
+      "2": "2 bits de stop"
+    }
+  },
+  "2316": {
+    "menu_num": 2316,
+    "title": "Parité",
+    "values": {
+      "1": "Pas de parité",
+      "2": "Parité impaire",
+      "3": "Parité paire"
+    }
+  },
+  "2317": {
+    "menu_num": 2317,
+    "title": "Code étalonnage",
+    "values": {
+      "1": "Pas d étalonnage",
+      "2": "Nombre de jours",
+      "3": "Nombre de pesées",
+      "4": "Nbre jours et pesées",
+      "5": "A chaque pesée"
+    }
+  },
+  "2318": {
+    "menu_num": 2318,
+    "title": "Type de récipient",
+    "values": {
+      "1": "Interne",
+      "2": "Fournisseur"
+    }
+  },
+  "2319": {
+    "menu_num": 2319,
+    "title": "Mode de pesée",
+    "values": {
+      "1": "Par écart",
+      "2": "Cumulé"
+    }
+  },
+  "2320": {
+    "menu_num": 2320,
+    "title": "Type de phrase",
+    "values": {
+      "1": "Risque",
+      "2": "Sécurité",
+      "3": "Environnement"
+    }
+  },
+  "2321": {
+    "menu_num": 2321,
+    "title": "Status pesée OF (WOF)",
+    "values": {
+      "1": "Non pesée",
+      "2": "En cours de pesée en box",
+      "3": "Fin de pesée en box",
+      "4": "En cours de pesée en fabrication",
+      "5": "En fabrication",
+      "6": "Fin de fabrication",
+      "7": "En réconciliation",
+      "8": "Fin de pesée totale",
+      "9": "Ordre bloqué en pesée",
+      "10": "Ordre Bloqué en réconciliation",
+      "11": "Ordre Bloqué en engagement"
+    }
+  },
+  "2322": {
+    "menu_num": 2322,
+    "title": "Status pesée matiere (MWF)",
+    "values": {
+      "1": "Non pesée",
+      "2": "En cours de pesée",
+      "3": "Pesée",
+      "4": "En reconciliation",
+      "5": "Reconcilié",
+      "6": "En Engagement",
+      "7": "Engagé",
+      "8": "Consommée"
+    }
+  },
+  "2323": {
+    "menu_num": 2323,
+    "title": "Emballage fournisseur",
+    "values": {
+      "1": "Emballage interne",
+      "2": "Emballage fournisseur",
+      "3": "Mixte"
+    }
+  },
+  "2324": {
+    "menu_num": 2324,
+    "title": "Message Centrales de pesée",
+    "values": {
+      "1": "Vanne déja affectée",
+      "2": "Portée minimum > ou = à la portée maximum",
+      "3": "Tare maximum > Portée maximum",
+      "4": "Elément déja présent",
+      "5": "Type recipient <> emballage fiche ISM",
+      "6": "Phrase inexistante ou incorrecte",
+      "7": "Facultative",
+      "8": "Obligatoire",
+      "9": "Procédure de Box",
+      "10": "Phases",
+      "11": "Composants",
+      "12": "Historique pesées",
+      "13": "Réconciliation interdite",
+      "14": "En cours de réconciliation",
+      "15": "En cours de pesée",
+      "16": "Elément inexistant",
+      "17": "Une ou plusieurs matière(s) ne sont pas pesée(s)",
+      "18": "Réconciliation terminée pour la phase. Oui =Valider Non = Supprimer",
+      "19": "Plusieurs enregisrements avec le meme lot = poids obligatoire",
+      "20": "Suppression de toutes les réconciliations de la phase ?",
+      "21": "Réconciliation de la phase non terminée : suppression des réconciliations de la phase",
+      "22": "Réconciliation terminée pour la phase",
+      "23": "Transaction de suivi inexistante (paramètre WEITRSNUM)",
+      "24": "Compteur suivi inexistant",
+      "25": "message en cours de pesée",
+      "26": "No. d'ordre déja réconcilié",
+      "27": "Phase déja réconciliée",
+      "28": "Une matière est en rupture et interdit la prise en compte dans le plan de pesée",
+      "29": "Annulation sans réintégration",
+      "30": "Annulation avec réintégration",
+      "31": "Confirmation de l'annulation ligne :",
+      "32": "OF clos : annulation pesée interdite",
+      "33": "Pesée deja annulée",
+      "34": "Incompatibilité entre emballage et mode de pesée",
+      "35": "Désolde de la ligne",
+      "36": "Fin de contenant",
+      "37": "Retour de cet OF dans le plan de pesée ?",
+      "38": "Réactivation de l'OF dans le plan de pesé correctement effectuée",
+      "39": "Des matières exclues existent pour cet OF. Continuer ?",
+      "40": "Redressement",
+      "41": "Code à servir interdit sur cette phase",
+      "42": "Choix Pesée",
+      "43": "Numéro de pesée déjà existant en ligne",
+      "44": "Engagement interdit",
+      "45": "No. d'ordre déjà engagé",
+      "46": "Phase déjà engagée",
+      "47": "Engagement terminé pour la phase",
+      "48": "Engagement de la phase non terminé : suppression des engagements de la phase",
+      "49": "Suppression de tous les engagements de la phase ?",
+      "50": "Engagement terminé pour la phase. Oui =Valider Non = Supprimer",
+      "51": "En cours d'engagement",
+      "52": "Nombre de matières restantes à réconcilier",
+      "53": "Nombre de matières restantes à engager",
+      "54": "OF non réconcilié",
+      "55": "Choix opération",
+      "56": "Choix article",
+      "57": "Le box Saisie est lié à un poste de travail, le lancement depuis le poste courant n'est pas autorisé",
+      "58": "Une ou plusieurs matière(s) ne sont pas réconciliée(s)",
+      "59": "Vous devez mettre votre client X3 à jour afin de pouvoir utiliser cette fonctionnalité",
+      "60": "Nombre de pesées",
+      "61": "supérieur à la taille du tableau",
+      "62": "Modification interdite : ordre de fabrication en cours de pesée",
+      "63": "Matière ayant déjà fait l'objet d'une réconciliation,\\ annulation impossible",
+      "64": "Matière ayant déjà fait l'objet d'un engagement,\\ annulation impossible",
+      "65": "Annulation terminée",
+      "66": "Nombre de pesée restant à saisir :",
+      "67": "Continuer l'annulation ? Oui = Valider Non = Abandonner",
+      "68": "Annulation abandonnée",
+      "69": "Annulation impossible : la maille minimum d'annulation est la phase.\\ La valeur du paramètre ENGAGE",
+      "70": "OF non engagé : aucune annulation à traiter",
+      "71": "Phase non engagée : aucune annulation à traiter",
+      "72": "Resynchronisation du flag 'Plan de pesée'",
+      "73": "Mise à jour de l'OF",
+      "74": "Engagement terminé pour la pesée",
+      "75": "Engagement terminé pour la pesée. Oui = Valider Non = Supprimer",
+      "76": "Engagement de la pesée non terminé : suppression de l'engagement de la pesée",
+      "77": "Engagement par pesée : traitement d'une seule pesée à la fois",
+      "78": "Réactivation terminée",
+      "79": "Réconciliation effectuée pour le conteneur",
+      "80": "Conteneur déjà réconcilié",
+      "81": "Réconciliation effectuée pour l'ordre de fabrication",
+      "82": "Réconciliation interrompue pour l'ordre de fabrication. Oui =Valider Non = Supprimer",
+      "83": "Réconciliation interrompue pour le conteneur. Oui = Valider Non = Supprimer",
+      "84": "Supprimer toutes les réconciliations de la phase ?",
+      "85": "Supprimer toutes les réconciliations du conteneur ?",
+      "86": "Supprimer toutes les réconciliations de l'ordre de fabrication ?",
+      "87": "Réconciliations non terminées : suppresion des réconciliations",
+      "88": "Conteneur déjà engagé",
+      "89": "Numéro de pesée déjà traité",
+      "90": "Numéro de pesée",
+      "91": "Opérateur de pesée",
+      "92": "Désactivation impossible. L'enregistrement de nomenclature existe déjà pour ce container",
+      "93": "Désactivation impossible. L'enregistrement d'OF existe déjà pour ce container"
+    }
+  },
+  "2325": {
+    "menu_num": 2325,
+    "title": "Type de pesée",
+    "values": {
+      "1": "Centre du plateau",
+      "2": "Coin haut droit",
+      "3": "Coin haut gauche",
+      "4": "Coin bas droit",
+      "5": "Coin bas gauche"
+    }
+  },
+  "2326": {
+    "menu_num": 2326,
+    "title": "Séparateur",
+    "values": {
+      "1": "Point",
+      "2": "Virgule"
+    }
+  },
+  "2327": {
+    "menu_num": 2327,
+    "title": "Niveau affichage",
+    "values": {
+      "1": "Niveau 1",
+      "2": "Niveau 2",
+      "3": "Niveau 3"
+    }
+  },
+  "2328": {
+    "menu_num": 2328,
+    "title": "Code à servir",
+    "values": {
+      "1": "Composant non pesé en centrale",
+      "2": "Composant pesé en centrale",
+      "3": "Composant pesé en fabrication",
+      "4": "Excipient de fin de phase en centrale",
+      "5": "Excipient de fin de phase en fabrication",
+      "6": "Excipient fin d'OF en centrale",
+      "7": "Excipient fin d'OF en fabrication",
+      "8": "MP ajustement/rectification centrale",
+      "9": "MP ajustement/rectification fabrication",
+      "10": "QSP de fin de fabrication"
+    }
+  },
+  "2329": {
+    "menu_num": 2329,
+    "title": "Prise en compte plan de pesée",
+    "values": {
+      "1": "Non",
+      "2": "A peser",
+      "3": "Plan de pesée",
+      "4": "En cours de pesée",
+      "5": "Fin pesée",
+      "6": "Réconcilié",
+      "7": "Engagé",
+      "8": "En cours de pesée par article"
+    }
+  },
+  "2330": {
+    "menu_num": 2330,
+    "title": "Classement plan de pesée",
+    "values": {
+      "1": "Site",
+      "2": "Article",
+      "3": "Date début"
+    }
+  },
+  "2331": {
+    "menu_num": 2331,
+    "title": "Disponibilité balance",
+    "values": {
+      "1": "Disponible",
+      "2": "Indisponible",
+      "3": "En cours de pesage",
+      "4": "En cours d étalonnage",
+      "5": "Défectueuse"
+    }
+  },
+  "2332": {
+    "menu_num": 2332,
+    "title": "Etat de la balance",
+    "values": {
+      "1": "En service",
+      "2": "Hors service"
+    }
+  },
+  "2333": {
+    "menu_num": 2333,
+    "title": "Résultat etalonnage",
+    "values": {
+      "1": "Correcte",
+      "2": "Incorrecte"
+    }
+  },
+  "2334": {
+    "menu_num": 2334,
+    "title": "Impression étiquette",
+    "values": {
+      "1": "Pas impression",
+      "2": "Non imprimée",
+      "3": "Imprimée",
+      "4": "Ré-imprimée"
+    }
+  },
+  "2335": {
+    "menu_num": 2335,
+    "title": "Options de pesée",
+    "values": {
+      "1": "Pesée par OF",
+      "2": "Pesée par Article",
+      "3": "Pesée en Fabrication"
+    }
+  },
+  "2336": {
+    "menu_num": 2336,
+    "title": "Types procedures Box",
+    "values": {
+      "1": "Ouverture de box",
+      "2": "Vide de box fin of",
+      "3": "Vide de box fin phase"
+    }
+  },
+  "2337": {
+    "menu_num": 2337,
+    "title": "Rôle de la transaction",
+    "values": {
+      "1": "Sortie matière",
+      "2": "Réintégration matière"
+    }
+  },
+  "2338": {
+    "menu_num": 2338,
+    "title": "Choix mode de gestion",
+    "values": {
+      "1": "Sur stock",
+      "2": "A la commande",
+      "3": "Tous"
+    }
+  },
+  "2339": {
+    "menu_num": 2339,
+    "title": "Choix délai",
+    "values": {
+      "1": "Article",
+      "2": "Gamme"
+    }
+  },
+  "2340": {
+    "menu_num": 2340,
+    "title": "Tri situation pesee composant",
+    "values": {
+      "1": "Ordre de fabrication",
+      "2": "Phase",
+      "3": "Composant",
+      "4": "Situation de pesée"
+    }
+  },
+  "2341": {
+    "menu_num": 2341,
+    "title": "Tri situation pesee historique",
+    "values": {
+      "1": "Ordre de fabrication",
+      "2": "Phase",
+      "3": "Composant",
+      "4": "Date pesée",
+      "5": "Lieu pesage"
+    }
+  },
+  "2342": {
+    "menu_num": 2342,
+    "title": "Tri temps passés",
+    "values": {
+      "1": "Par n° de suivi",
+      "2": "Par date suivi",
+      "3": "Par n° OF",
+      "4": "Par poste"
+    }
+  },
+  "2343": {
+    "menu_num": 2343,
+    "title": "Tri consommations matière",
+    "values": {
+      "1": "Par n° de suivi",
+      "2": "Par date suivi",
+      "3": "Par n° OF",
+      "4": "Par article"
+    }
+  },
+  "2344": {
+    "menu_num": 2344,
+    "title": "Pesée",
+    "values": {
+      "1": "Non",
+      "2": "Partielle",
+      "3": "Complète",
+      "4": "Solde emballage",
+      "5": "Redressement"
+    }
+  },
+  "2345": {
+    "menu_num": 2345,
+    "title": "Mode Annulation",
+    "values": {
+      "1": "Avec réintégration",
+      "2": "Sans réintégration"
+    }
+  },
+  "2346": {
+    "menu_num": 2346,
+    "title": "Utilisation gamme",
+    "values": {
+      "1": "Fabrication",
+      "2": "Coût",
+      "3": "PGC"
+    }
+  },
+  "2347": {
+    "menu_num": 2347,
+    "title": "Consolidation charge",
+    "values": {
+      "1": "Par Site",
+      "2": "Par Centre",
+      "3": "Par Poste"
+    }
+  },
+  "2348": {
+    "menu_num": 2348,
+    "title": "Choix mode jalonnement",
+    "values": {
+      "1": "Amont",
+      "2": "Aval",
+      "3": "Au choix"
+    }
+  },
+  "2349": {
+    "menu_num": 2349,
+    "title": "Mélange lots",
+    "values": {
+      "1": "Oui",
+      "2": "Non en pesée",
+      "3": "Non en fabrication"
+    }
+  },
+  "2350": {
+    "menu_num": 2350,
+    "title": "Mode solde sous-traitance",
+    "values": {
+      "1": "Production",
+      "2": "Achat"
+    }
+  },
+  "2351": {
+    "menu_num": 2351,
+    "title": "Tri sous-traitance",
+    "values": {
+      "1": "Par N° OF",
+      "2": "Par poste",
+      "3": "Par article",
+      "4": "Par N° de commande",
+      "5": "Par date de commande"
+    }
+  },
+  "2352": {
+    "menu_num": 2352,
+    "title": "Code article",
+    "values": {
+      "1": "Gamme",
+      "2": "Article"
+    }
+  },
+  "2353": {
+    "menu_num": 2353,
+    "title": "Choix RELUPD",
+    "values": {
+      "1": "Non",
+      "2": "Gamme",
+      "3": "Nomenclature",
+      "4": "Gamme et Nomenclature"
+    }
+  },
+  "2354": {
+    "menu_num": 2354,
+    "title": "Tri OF",
+    "values": {
+      "1": "Par date début",
+      "2": "Par A/R"
+    }
+  },
+  "2355": {
+    "menu_num": 2355,
+    "title": "Type de coût de fabrication",
+    "values": {
+      "1": "Prévisionnel théorique",
+      "2": "Prévisionnel lancement",
+      "3": "Prévisionnel production",
+      "4": "Prix de revient réel",
+      "5": "Prix de revient réel pour qté prévue",
+      "6": "Prévisonnel production pour qté réalisée"
+    }
+  },
+  "2356": {
+    "menu_num": 2356,
+    "title": "Calcul coûts prévisionnels OF",
+    "values": {
+      "1": "Non",
+      "2": "En création OF",
+      "3": "En création et modification OF"
+    }
+  },
+  "2357": {
+    "menu_num": 2357,
+    "title": "Choix taux main d'oeuvre",
+    "values": {
+      "1": "Section de valorisation",
+      "2": "Table matricule",
+      "3": "Les deux"
+    }
+  },
+  "2358": {
+    "menu_num": 2358,
+    "title": "Type transaction En-cours",
+    "values": {
+      "1": "Coût matière",
+      "2": "Coût main d'oeuvre",
+      "3": "Coût machine",
+      "4": "Coût sous-traitance",
+      "5": "Frais matière",
+      "6": "Frais main d'oeuvre",
+      "7": "Frais machine",
+      "8": "Frais sous-traitance",
+      "9": "Ecart matière",
+      "10": "Ecart main d'oeuvre",
+      "11": "Ecart machine",
+      "12": "Ecart sous-traitance",
+      "13": "Ecart frais généraux",
+      "14": "Déclaration production",
+      "15": "Solde d'encours",
+      "16": "Rebut opératoire",
+      "17": "Régularisation",
+      "18": "Solde suivi sans OF",
+      "19": "Elément facturation",
+      "20": "Variation élément facturation"
+    }
+  },
+  "2359": {
+    "menu_num": 2359,
+    "title": "Type lignes encours",
+    "values": {
+      "1": "Nouveau",
+      "2": "Modifié",
+      "3": "Supprimé"
+    }
+  },
+  "2360": {
+    "menu_num": 2360,
+    "title": "Base formule de calcul frais",
+    "values": {
+      "1": "Montant",
+      "2": "Heures (opérations) ou Quantité"
+    }
+  },
+  "2361": {
+    "menu_num": 2361,
+    "title": "Intitulés en-cours d'OF",
+    "values": {
+      "1": "Matière",
+      "2": "Main d'oeuvre",
+      "3": "Machine",
+      "4": "Sous-traitance",
+      "5": "Frais généraux",
+      "6": "Totaux",
+      "7": "Solde",
+      "8": "Coût réel",
+      "9": "Coût théorique",
+      "10": "Rebut",
+      "11": "Ecart",
+      "12": "Ecart (%)",
+      "13": "Détail PRF",
+      "14": "Produit",
+      "15": "Régularisation",
+      "16": "Détail coût matière",
+      "17": "Détail coût main d'oeuvre",
+      "18": "Détail coût machine",
+      "19": "Détail coût sous-traitance",
+      "20": "Dépense",
+      "21": "Frais généraux",
+      "22": "Pièce compta",
+      "23": "Coût niveau std",
+      "24": "Coût niveau actualisé",
+      "25": "Coût niveau budget",
+      "26": "Coût niveau simulé"
+    }
+  },
+  "2362": {
+    "menu_num": 2362,
+    "title": "Choix en-cours",
+    "values": {
+      "1": "PRF non calculé",
+      "2": "PRF calculé",
+      "3": "Les 2"
+    }
+  },
+  "2364": {
+    "menu_num": 2364,
+    "title": "Types de composants",
+    "values": {
+      "1": "Composant prévu",
+      "2": "Composant non prévu"
+    }
+  },
+  "2365": {
+    "menu_num": 2365,
+    "title": "Mode lotification",
+    "values": {
+      "1": "Non (règles stock appliquées)",
+      "2": "En planification",
+      "3": "Au lancement",
+      "4": "A la première déclaration"
+    }
+  },
+  "2366": {
+    "menu_num": 2366,
+    "title": "Impression coût prévisionnel",
+    "values": {
+      "1": "Non",
+      "2": "Etat",
+      "3": "Trace",
+      "4": "Etat et trace"
+    }
+  },
+  "2367": {
+    "menu_num": 2367,
+    "title": "Type approvisionnement",
+    "values": {
+      "1": "Externe",
+      "2": "Interne (Inter site)",
+      "3": "Externe + Interne"
+    }
+  },
+  "2368": {
+    "menu_num": 2368,
+    "title": "Choix lots",
+    "values": {
+      "1": "Non",
+      "2": "Oui avec contrôle",
+      "3": "Oui"
+    }
+  },
+  "2369": {
+    "menu_num": 2369,
+    "title": "Type de coût prévisionnel",
+    "values": {
+      "1": "Prévisionnel théorique",
+      "2": "Prévisionnel lancement",
+      "3": "Prévisionnel production"
+    }
+  },
+  "2370": {
+    "menu_num": 2370,
+    "title": "Critères de tri",
+    "values": {
+      "1": "Par date",
+      "2": "Par ordre de fabrication"
+    }
+  },
+  "2371": {
+    "menu_num": 2371,
+    "title": "Mode de lancement",
+    "values": {
+      "1": "Complet",
+      "2": "Matières seules",
+      "3": "Opérations seules",
+      "4": "Tous"
+    }
+  },
+  "2372": {
+    "menu_num": 2372,
+    "title": "Filtre",
+    "values": {
+      "1": "Non soldés",
+      "2": "Soldés",
+      "3": "Tous"
+    }
+  },
+  "2373": {
+    "menu_num": 2373,
+    "title": "Traitement des OF",
+    "values": {
+      "1": "Solde ou clôture",
+      "2": "Solde",
+      "3": "Clôture"
+    }
+  },
+  "2374": {
+    "menu_num": 2374,
+    "title": "Priorités optimisation",
+    "values": {
+      "1": "Code priorité OF",
+      "2": "Opération forcée",
+      "3": "Opération déplacée",
+      "4": "Statut ferme",
+      "5": "Statut planifié",
+      "6": "Statut suggéré"
+    }
+  },
+  "2375": {
+    "menu_num": 2375,
+    "title": "Application de l'efficience",
+    "values": {
+      "1": "Temps de réglage + opératoire",
+      "2": "Temps opératoire"
+    }
+  },
+  "2376": {
+    "menu_num": 2376,
+    "title": "Type de saisie",
+    "values": {
+      "1": "Création",
+      "2": "Modification",
+      "3": "Toutes"
+    }
+  },
+  "2377": {
+    "menu_num": 2377,
+    "title": "Mode de redressement",
+    "values": {
+      "1": "Lot",
+      "2": "Allocation"
+    }
+  },
+  "2378": {
+    "menu_num": 2378,
+    "title": "OF / Eléments non prévus",
+    "values": {
+      "1": "Ignorer",
+      "2": "Conserver les éléments non prévus",
+      "3": "Ne pas conserver les éléments non prévus"
+    }
+  },
+  "2379": {
+    "menu_num": 2379,
+    "title": "Code affaire",
+    "values": {
+      "1": "Affaire",
+      "2": "Pièce"
+    }
+  },
+  "2380": {
+    "menu_num": 2380,
+    "title": "Message affectation",
+    "values": {
+      "1": "Annulée"
+    }
+  },
+  "2382": {
+    "menu_num": 2382,
+    "title": "Type proposition",
+    "values": {
+      "1": "Annule et remplace",
+      "2": "Complément",
+      "3": "Virtuelle"
+    }
+  },
+  "2383": {
+    "menu_num": 2383,
+    "title": "Date fin suggestions en retard",
+    "values": {
+      "1": "Première date possible",
+      "2": "Première date possible + délai"
+    }
+  },
+  "2384": {
+    "menu_num": 2384,
+    "title": "Type de FG",
+    "values": {
+      "1": "Selon contexte",
+      "2": "Matière",
+      "3": "Machine",
+      "4": "Main d'oeuvre",
+      "5": "Sous-traitance"
+    }
+  },
+  "2385": {
+    "menu_num": 2385,
+    "title": "Application arrondi qté lien",
+    "values": {
+      "1": "Non",
+      "2": "Selon nomenclature"
+    }
+  },
+  "2386": {
+    "menu_num": 2386,
+    "title": "Type de temps",
+    "values": {
+      "1": "Préparation",
+      "2": "Opératoire",
+      "3": "Post opératoire",
+      "4": "Réglage"
+    }
+  },
+  "2387": {
+    "menu_num": 2387,
+    "title": "Contrôle fiche technique",
+    "values": {
+      "1": "Non",
+      "2": "Oui sans blocage",
+      "3": "Oui avec blocage",
+      "4": "Oui sans blocage premier suivi",
+      "5": "Oui avec blocage premier suivi"
+    }
+  },
+  "2388": {
+    "menu_num": 2388,
+    "title": "Tri réseau MTO",
+    "values": {
+      "1": "Par OF",
+      "2": "Par site",
+      "3": "Par date fin"
+    }
+  },
+  "2390": {
+    "menu_num": 2390,
+    "title": "Ordre de tri OF",
+    "values": {
+      "1": "N° OF",
+      "2": "Date de début de l'OF",
+      "3": "Date de fin de L'OF"
+    }
+  },
+  "2391": {
+    "menu_num": 2391,
+    "title": "Ordre de tri OF",
+    "values": {
+      "1": "Site de production / N° OF",
+      "2": "Site de production / Date de début de l'OF",
+      "3": "Site de production / Date de fin de l'OF",
+      "4": "N° OF",
+      "5": "Date de début de l'OF",
+      "6": "Date de fin de l'OF"
+    }
+  },
+  "2392": {
+    "menu_num": 2392,
+    "title": "Re-contrôle cuve",
+    "values": {
+      "1": "Non",
+      "2": "Cuve"
+    }
+  },
+  "2393": {
+    "menu_num": 2393,
+    "title": "Re-contrôle article (pesée)",
+    "values": {
+      "1": "Non",
+      "2": "Lot",
+      "3": "Code article + Lot",
+      "4": "Lot + Sous-lot",
+      "5": "Code article + Lot + Sous-lot"
+    }
+  },
+  "2394": {
+    "menu_num": 2394,
+    "title": "Niveau paramétrage tolérance",
+    "values": {
+      "1": "",
+      "2": "Fiche ISM",
+      "3": "Article-site",
+      "4": "Nomenclature"
+    }
+  },
+  "2395": {
+    "menu_num": 2395,
+    "title": "Type CAB",
+    "values": {
+      "1": "Séparateur de champs",
+      "2": "Longueur fixe"
+    }
+  },
+  "2396": {
+    "menu_num": 2396,
+    "title": "Tri liste des OF",
+    "values": {
+      "1": "Par N° OF",
+      "2": "Par poste",
+      "3": "Par article",
+      "4": "Par N° de commande",
+      "5": "Par N° d'affaire",
+      "6": "Par composant"
+    }
+  },
+  "2397": {
+    "menu_num": 2397,
+    "title": "Priorité des allocations",
+    "values": {
+      "1": "Priorité OF",
+      "2": "Priorité box de pesée"
+    }
+  },
+  "2398": {
+    "menu_num": 2398,
+    "title": "Motif de réimpression",
+    "values": {
+      "1": "Imprimante indisponible",
+      "2": "Fin de rouleau",
+      "3": "Erreur de format",
+      "4": "Etiquette illisible"
+    }
+  },
+  "2399": {
+    "menu_num": 2399,
+    "title": "Valorisation en-cours",
+    "values": {
+      "1": "Prix de revient non calculé",
+      "2": "Prix de revient calculé",
+      "3": "Tous"
+    }
+  },
+  "2400": {
+    "menu_num": 2400,
+    "title": "Statut ordre fabrication",
+    "values": {
+      "1": "Ferme",
+      "2": "Clos"
+    }
+  },
+  "2401": {
+    "menu_num": 2401,
+    "title": "Type de coût de sous-traitance",
+    "values": {
+      "1": "Prévisionnel théorique",
+      "2": "Prévisionnel lancement",
+      "3": "Prévisionnel production",
+      "4": "Prix de revient réel",
+      "5": "Prix de revient réel pour qté prévue",
+      "6": "Prévisonnel production pour qté réalisée"
+    }
+  },
+  "2402": {
+    "menu_num": 2402,
+    "title": "Choix EOMUPD",
+    "values": {
+      "1": "Pas de mise à jour",
+      "2": "Service",
+      "3": "Nomenclature",
+      "4": "Service et Nomenclature"
+    }
+  },
+  "2403": {
+    "menu_num": 2403,
+    "title": "Origine calcul écart",
+    "values": {
+      "1": "Données standard",
+      "2": "Ordre de ss-traitance"
+    }
+  },
+  "2404": {
+    "menu_num": 2404,
+    "title": "Ordre de tri Ventes",
+    "values": {
+      "1": "N° pièce",
+      "2": "Date",
+      "3": "Client"
+    }
+  },
+  "2405": {
+    "menu_num": 2405,
+    "title": "Ordre de tri Ventes",
+    "values": {
+      "1": "Site/N° pièce",
+      "2": "Site/Date",
+      "3": "Site/Client",
+      "4": "N° pièce",
+      "5": "Date",
+      "6": "Client"
+    }
+  },
+  "2406": {
+    "menu_num": 2406,
+    "title": "saut de page",
+    "values": {
+      "1": "Non",
+      "2": "Oui",
+      "3": "Oui avec saut de page"
+    }
+  },
+  "2407": {
+    "menu_num": 2407,
+    "title": "Ordre de tri Ventes",
+    "values": {
+      "1": "Site/N° pièce",
+      "2": "Site/Date",
+      "3": "Site/Date de validité",
+      "4": "Site/Client",
+      "5": "N° pièce",
+      "6": "Date",
+      "7": "Date de validité",
+      "8": "Client"
+    }
+  },
+  "2408": {
+    "menu_num": 2408,
+    "title": "Ordre de tri Ventes",
+    "values": {
+      "1": "N° pièce",
+      "2": "Date",
+      "3": "Date de validité",
+      "4": "Client"
+    }
+  },
+  "2409": {
+    "menu_num": 2409,
+    "title": "Ordre de tri",
+    "values": {
+      "1": "N° pièce",
+      "2": "Date",
+      "3": "Demandeur"
+    }
+  },
+  "2410": {
+    "menu_num": 2410,
+    "title": "Ordre de tri",
+    "values": {
+      "1": "Site/N° pièce",
+      "2": "Site/Date",
+      "3": "Site/Demandeur",
+      "4": "N° pièce",
+      "5": "Date",
+      "6": "Demandeur"
+    }
+  },
+  "2411": {
+    "menu_num": 2411,
+    "title": "Catég cdes (hors ouvertes)",
+    "values": {
+      "1": "Normale",
+      "2": "Prêt",
+      "3": "Factur.directe"
+    }
+  },
+  "2412": {
+    "menu_num": 2412,
+    "title": "Chargement liste des matières",
+    "values": {
+      "1": "A l'entrée de la fonction pesée par matière",
+      "2": "Avant chaque chargement"
+    }
+  },
+  "2413": {
+    "menu_num": 2413,
+    "title": "Contrôle des factures d'avoir",
+    "values": {
+      "1": "Pas de contrôle",
+      "2": "Contrôle non bloquant",
+      "3": "Contrôle bloquant"
+    }
+  },
+  "2414": {
+    "menu_num": 2414,
+    "title": "Status échéance",
+    "values": {
+      "1": "Non réglée",
+      "2": "Partiellement réglée",
+      "3": "Totalement réglée"
+    }
+  },
+  "2415": {
+    "menu_num": 2415,
+    "title": "Type de ligne",
+    "values": {
+      "1": "Ligne document",
+      "2": "Elément de facturation",
+      "3": "Echéance"
+    }
+  },
+  "2416": {
+    "menu_num": 2416,
+    "title": "Activités atelier",
+    "values": {
+      "1": "Pointeuse",
+      "2": "Indirect",
+      "3": "Pause",
+      "4": "Préparation",
+      "5": "Exécution"
+    }
+  },
+  "2417": {
+    "menu_num": 2417,
+    "title": "Codes exclusifs",
+    "values": {
+      "1": "Congé",
+      "2": "Pause",
+      "3": "Main d'oeuvre non exclusive",
+      "4": "Main d'oeuvre exclusive",
+      "5": "Pause auto"
+    }
+  },
+  "2418": {
+    "menu_num": 2418,
+    "title": "Accès indirect",
+    "values": {
+      "1": "Utilisateur",
+      "2": "Superviseur"
+    }
+  },
+  "2419": {
+    "menu_num": 2419,
+    "title": "Statut",
+    "values": {
+      "1": "A facturer",
+      "2": "Facturé",
+      "3": "Avoir",
+      "4": "Soldé",
+      "5": "Facturé non comptabilisé",
+      "6": "Pris en compte avoir"
+    }
+  },
+  "2420": {
+    "menu_num": 2420,
+    "title": "Type échéancier",
+    "values": {
+      "1": "Normal",
+      "2": "Pourcentage fixe",
+      "3": "Périodicité"
+    }
+  },
+  "2421": {
+    "menu_num": 2421,
+    "title": "Modification",
+    "values": {
+      "1": "Non",
+      "2": "Prix/Montant",
+      "3": "Quantité",
+      "4": "Eclatement",
+      "5": "Regroupement",
+      "6": "Génération"
+    }
+  },
+  "2422": {
+    "menu_num": 2422,
+    "title": "Suivi atelier",
+    "values": {
+      "1": "Le collaborateur est déjà affecté à une tâche",
+      "2": "Échec des opérations de démarrage de préparation/exécution.",
+      "3": "Échec d'opération de démarrage.",
+      "4": "Échec d'opération de démarrage.",
+      "5": "Échec des opérations de redémarrage.",
+      "6": "Erreur de mise à jour du nombre de travaux",
+      "7": "Les opérations sélectionnées ont une préparation active. Arrêter la préparation et démarrer l'activ",
+      "8": "Temps hors production",
+      "9": "Pauses",
+      "10": "Erreur de création de la transaction $1$",
+      "11": "Une seule transaction de pause ou de main exclusive autorisée à la fois.",
+      "12": "Pointage d'entrée du collaborateur non effectué",
+      "13": "Erreur d'arrêt de la transaction $1$.",
+      "14": "Pointage d'entrée du collaborateur déjà effectué",
+      "15": "Les transactions de pointage d'entrée doivent être réalisées par l'employé.",
+      "16": "La transaction a déjà été terminée",
+      "17": "Erreur de création de transactions de pause auto.",
+      "18": "Employé en pause ou sur une tâche exclusive.",
+      "19": "Enregistrement omis pour cause de pause.",
+      "20": "Erreur de validation",
+      "21": "Erreur de lecture de l'enregistrement",
+      "22": "L'ordre de fabrication n'est pas ferme",
+      "23": "Erreur d'écriture de l'enregistrement",
+      "24": "Erreur de mise à jour de l'enregistrement",
+      "25": "La quantité rejetée ne peut pas être supérieure à la quantité réalisée",
+      "26": "Le site n'est pas valide pour le poste de charge ou groupe de postes de charge sélectionné",
+      "27": "Le groupe de postes de charge n'est pas valide poue le site ou poste sélectionné",
+      "28": "Le poste de charge n'est pas valide pour le site ou groupe de postes sélectionné",
+      "29": "Type de poste de charge invalide",
+      "30": "Machine incluse nécessaire pour cette opération.",
+      "31": "L'opération $1$ n'est pas ouverte. Le statut est exclu ou commandé",
+      "32": "Erreur de création de suivi",
+      "33": "Fiche de suivi non générée",
+      "34": "Aucun temps de réglage ou opératoire n'a été saisi. Continuer?",
+      "35": "La date de schéma horaire est supérieure à la date de début",
+      "36": "L'ordre de fabrication n'est pas alloué",
+      "37": "Limite d'affichage atteinte $1$",
+      "38": "La date de prise de poste est supérieure à la date de fin",
+      "39": "Date de début ou de fin obligatoire",
+      "40": "Utilisateur déjà utilisé par code d'employé $1$.",
+      "41": "Temps hors production invalides.",
+      "42": "Validation de saisie de main d'oeuvre",
+      "43": "Enregistrement omis dû à échec antérieur.",
+      "44": "Le poste de main d'oeuvre n'existe pas au site.",
+      "45": "Les transactions associées à cette activité sont en attente. Réouvrir ces transactions ?",
+      "46": "n'est pas un poste de main d'oeuvre.",
+      "47": "n'est pas du même type que le poste de charge d'origine.",
+      "48": "Le poste de main d'oeuvre est requis.",
+      "49": "Le poste de charge ne peut pas être saisi quand la valeur précédente est vide",
+      "50": "Le statut de l'opération ne peut pas être clos, exclu ou commandé",
+      "51": "L'ordre de fabrication n'existe pas sur le site",
+      "52": "Le poste de charge ne peut pas être de type sous-traitance",
+      "53": "Le collaborateur est inactif. La date courante est postérieure à la date d'inactivité du collaborate",
+      "54": "Le collaborateur est inactif",
+      "55": "Le poste de charge ne doit pas être de type sous-traitance",
+      "56": "La date d'activité doit être postérieure ou égale à la date d'inactivité",
+      "57": "La date d'inactivité est antérieure ou égale à la date d'activité",
+      "58": "Attribuez une date de fin au schéma horaire",
+      "59": "Attribuez une date de début au schéma horaire",
+      "60": "La pause ne peut pas se terminer avant la prise de poste",
+      "61": "La pause ne peut pas se terminer après le schéma horaire",
+      "62": "La fin de la pause doit être postérieure au début",
+      "63": "Ce n'est pas une pause auto.",
+      "64": "La pause ne peut pas commencer avant la prise de poste",
+      "65": "La pause ne peut pas commencer une fois le schéma horaire terminé",
+      "66": "L'heure de début de la pause doit être inférieure à l'heure de fin",
+      "67": "Erreur de suppression de la fiche",
+      "68": "Recharger le tableau et annuler les modifications ?",
+      "69": "Pause invalide",
+      "70": "Certaines activités de suivi d'atelier du collaborateur ne sont pas finalisées",
+      "71": "$1$ : Site non-production",
+      "72": "La pause ne peut pas débuter pendant la pause précédente.",
+      "73": "Pointage démarré pour $1$ à $2$",
+      "74": "Pointage terminé pour $1$ à $2$",
+      "75": "Le pointage d'arrivée/départ de collaborateurs n'est pas activé sur ce site",
+      "76": "Le collaborateur est une équipe.",
+      "77": "$1$ démarré(e) à $2$",
+      "78": "$1$ terminé(e) à $2$",
+      "79": "$1$ : temps hors production déjà en cours",
+      "80": "$1$ : le collaborateur n'est pas lié au temps hors production sélectionné",
+      "81": "$1$ : type de temps hors production invalide",
+      "82": "$1$ : n'est pas en cours",
+      "83": "L'opération a déjà commencé",
+      "84": "L'opération est close",
+      "85": "Exécution en cours pour l'opération sélectionnée",
+      "86": "Ouvrir hors production",
+      "87": "$1$ : le collaborateur n'est pas en pause",
+      "88": "Paramétrage en cours pour l'opération sélectionnée",
+      "89": "n'a pas accès aux heures passées",
+      "90": "Temps $1$ passé créé",
+      "91": "La durée ou la qté réalisée sont obligatoires sur les enregistrements passés",
+      "92": "La durée est obligatoire sur les enregistrements passés",
+      "93": "$1$ heures passées créées",
+      "94": "Quand une transaction de suivi d'atelier existe, le type de collaborateur ne peut pas être modifié",
+      "95": "L'équipe a des transactions d'atelier. Modifier le nombre de collaborateurs n'affecte pas les transa",
+      "96": "$1$ : le type de collaborateur doit être Equipe détaillée",
+      "97": "$1$ : doit être de type collaborateur pour être ajouté",
+      "98": "$1$ : le collaborateur appartient déjà à une équipe",
+      "99": "Le code équipe du collaborateur ne correspond pas à celui de l'équipe",
+      "100": "Le type de collaborateur ne peut pas être modifié lorsque des enregistrements d'équipe existent",
+      "101": "Le type de collaborateur ne peut pas être modifié lorsque le collaborateur appartient à une équipe",
+      "102": "Le code équipe ne peut pas être modifié lorsque le collaborateur appartient à une équipe",
+      "103": "Le code équipe a été mis à jour au niveau de l'équipe et des collaborateurs associés",
+      "104": "Le collaborateur a démarré des activités individuelles. Arrêter toutes les activités de ce collabora",
+      "105": "Le collaborateur ne peut pas être ajouté à l'équipe",
+      "106": "Le collaborateur appartient à l'équipe $1$. Le retirer de l'équipe $2$ ?",
+      "107": "Le collaborateur a démarré des activités d'équipe. Arrêter toutes les activités de ce collaborateur",
+      "108": "Le collaborateur appartient déjà à une équipe",
+      "109": "Des transactions de suivi d'atelier existent. Continuer ?",
+      "110": "Aucun membre d'équipe disponible dans l'équipe $1$",
+      "111": "Le paramètre pointage arrivée/départ $1$ du site doit être actif pour les collaborateurs en équipe d",
+      "112": "Les activités en cours ont été arrêtées. Les transactions sont réouvertes avec un nouveau nombre de",
+      "113": "La suppression d'un enregistrement de machine entraîne la suppression des enregistrements MO liés à",
+      "114": "Le nombre de machines doit être à zéro quand le poste de charge principal est de type main d'oeuvre",
+      "115": "Seuls des enregistrements Collaborateur et Equipe générale peuvent être saisis",
+      "116": "Le collaborateur $1$ a été inclus dans les activités de l'équipe $2$",
+      "117": "La suppression d'un enregistrement machine entraîne la suppression des enregistrements MO et machine",
+      "118": "Le collaborateur $1$ n'appartient pas à l'équipe $2$",
+      "119": "$1$ : le type de collaborateur doit être équipe détaillée ou équipe générale",
+      "120": "Le site affecté au collaborateur ne correspond pas au site de l'équipe",
+      "121": "Equipe générale en pause ou sur une tâche exclusive",
+      "122": "Equipe détaillée en pause ou sur une tâche exclusive"
+    }
+  },
+  "2423": {
+    "menu_num": 2423,
+    "title": "Type de poste de charge",
+    "values": {
+      "1": "Main d'oeuvre seulement",
+      "2": "Machine seulement",
+      "3": "Main d'oeuvre et machine"
+    }
+  },
+  "2424": {
+    "menu_num": 2424,
+    "title": "Tri activité collaborateur",
+    "values": {
+      "1": "ID collaborateur",
+      "2": "Type d'activité",
+      "3": "Date de début",
+      "4": "Date de fin",
+      "5": "Ordre de fabrication",
+      "6": "Références indirectes",
+      "7": "Nombre de travaux"
+    }
+  },
+  "2429": {
+    "menu_num": 2429,
+    "title": "Mode de facturation",
+    "values": {
+      "1": "1 facture par date de facture",
+      "2": "1 facture par commande",
+      "3": "1 facture par client",
+      "4": "1 facture par affaire"
+    }
+  },
+  "2501": {
+    "menu_num": 2501,
+    "title": "Ordre de tri Achats",
+    "values": {
+      "1": "N° pièce",
+      "2": "Date",
+      "3": "Fournisseur"
+    }
+  },
+  "2502": {
+    "menu_num": 2502,
+    "title": "Ordre de tri Achats",
+    "values": {
+      "1": "Site/N° pièce",
+      "2": "Site/Date",
+      "3": "Site/Fournisseur",
+      "4": "N° pièce",
+      "5": "Date",
+      "6": "Fournisseur"
+    }
+  },
+  "2503": {
+    "menu_num": 2503,
+    "title": "Contrôle",
+    "values": {
+      "1": "Contrôle",
+      "2": "Pas de contrôle"
+    }
+  },
+  "2504": {
+    "menu_num": 2504,
+    "title": "Type de Montant",
+    "values": {
+      "1": "Ajusté",
+      "2": "Calculé"
+    }
+  },
+  "2505": {
+    "menu_num": 2505,
+    "title": "Type coûts prévisionnels",
+    "values": {
+      "1": "Théorique attendu",
+      "2": "Prévisionnel lancement",
+      "3": "Sous-traitance prévisionnelle"
+    }
+  },
+  "2506": {
+    "menu_num": 2506,
+    "title": "Menu param. avenant",
+    "values": {
+      "1": "Non géré",
+      "2": "Géré à la demande",
+      "3": "Géré automatiquement"
+    }
+  },
+  "2508": {
+    "menu_num": 2508,
+    "title": "Statut de l'expédition",
+    "values": {
+      "1": "Créé",
+      "2": "Expédié",
+      "3": "Pré-réceptionné",
+      "4": "Réceptionné",
+      "5": "Soldé"
+    }
+  },
+  "2510": {
+    "menu_num": 2510,
+    "title": "Type d'enregistrement SHIPMENT",
+    "values": {
+      "1": "Expédition",
+      "2": "Commande pré-réceptionnée"
+    }
+  },
+  "2511": {
+    "menu_num": 2511,
+    "title": "Sélection des transports",
+    "values": {
+      "1": "Sur date départ",
+      "2": "Sur date arrivée prévue"
+    }
+  },
+  "2512": {
+    "menu_num": 2512,
+    "title": "Origine documents",
+    "values": {
+      "1": "Non applicable",
+      "2": "Aérien",
+      "3": "Maritime",
+      "4": "Routier",
+      "5": "Ferroviaire"
+    }
+  },
+  "2513": {
+    "menu_num": 2513,
+    "title": "Type d'article",
+    "values": {
+      "1": "Standard",
+      "2": "Sous-traitance",
+      "3": "Service"
+    }
+  },
+  "2701": {
+    "menu_num": 2701,
+    "title": "Filtre qualité",
+    "values": {
+      "1": "Statut 'A'",
+      "2": "Statut 'Q'",
+      "3": "Statut 'A'+'Q'",
+      "4": "Statut 'R'",
+      "5": "Statut 'A'+'R'",
+      "6": "Statut 'Q'+'R'",
+      "7": "Statut 'A'+'Q'+'R'"
+    }
+  },
+  "2702": {
+    "menu_num": 2702,
+    "title": "Filtre coefficient",
+    "values": {
+      "1": "Pas de filtre",
+      "2": "Coefficient =",
+      "3": "Coefficient <=",
+      "4": "Coefficient >="
+    }
+  },
+  "2703": {
+    "menu_num": 2703,
+    "title": "Tri par coef",
+    "values": {
+      "1": "Non",
+      "2": "Décroissant",
+      "3": "Croissant"
+    }
+  },
+  "2704": {
+    "menu_num": 2704,
+    "title": "Filtre emplacement",
+    "values": {
+      "1": "Pas de filtre",
+      "2": "Emplacement local",
+      "3": "Emplacement 1 article",
+      "4": "Emplacement 2 article",
+      "5": "Emplacement 3 article"
+    }
+  },
+  "2705": {
+    "menu_num": 2705,
+    "title": "Saisie lot",
+    "values": {
+      "1": "Non",
+      "2": "Libre",
+      "3": "Nouveau lot"
+    }
+  },
+  "2706": {
+    "menu_num": 2706,
+    "title": "Règle déstockage UC",
+    "values": {
+      "1": "Déconditionnement",
+      "2": "Rompu (recalcul coeff UC)",
+      "3": "Fractionnement (recalcul nb UC)"
+    }
+  },
+  "2707": {
+    "menu_num": 2707,
+    "title": "Intitulé d'emplacement",
+    "values": {
+      "1": "Réception",
+      "2": "Stockage",
+      "3": "Picking",
+      "4": "Poste de travail",
+      "5": "Livraison",
+      "6": "Magasin",
+      "7": "Retour client",
+      "8": "Retour de retour",
+      "9": "A définir",
+      "10": "A définir",
+      "11": "A définir"
+    }
+  },
+  "2708": {
+    "menu_num": 2708,
+    "title": "Lot par défaut",
+    "values": {
+      "1": "Aucun",
+      "2": "Lot fournisseur",
+      "3": "No document"
+    }
+  },
+  "2709": {
+    "menu_num": 2709,
+    "title": "Ordre des lots",
+    "values": {
+      "1": "Par lot",
+      "2": "FIFO",
+      "3": "FEFO",
+      "4": "LIFO"
+    }
+  },
+  "2710": {
+    "menu_num": 2710,
+    "title": "Catégorie emplacement",
+    "values": {
+      "1": "Interne",
+      "2": "Attente rangement",
+      "3": "Client",
+      "4": "Sous-traitant"
+    }
+  },
+  "2711": {
+    "menu_num": 2711,
+    "title": "Gestion lot",
+    "values": {
+      "1": "Pas de gestion",
+      "2": "Lot facultatif",
+      "3": "Lot (obligatoire)",
+      "4": "Lot et sous-lot"
+    }
+  },
+  "2712": {
+    "menu_num": 2712,
+    "title": "Type Mouvement Stock",
+    "values": {
+      "1": "Tous mouvements d'entrée",
+      "2": "Tous mouvements de sortie",
+      "3": "Entrée diverse",
+      "4": "Sortie diverse",
+      "5": "Réception Fournisseur",
+      "6": "Livraison Client",
+      "7": "Entrée OF",
+      "8": "Sortie OF",
+      "9": "Changement emplacement",
+      "10": "Contrôle qualité",
+      "11": "Changement statut",
+      "12": "Réception transfert inter-sites",
+      "13": "Retour réception",
+      "14": "Retour livraison",
+      "15": "Inventaire",
+      "16": "Transfert inter-sites",
+      "17": "Transfert pour sous-traitance",
+      "18": "Réception pour sous-traitance",
+      "19": "Livraison prêt",
+      "20": "Retour prêt",
+      "21": "Réintégration stock"
+    }
+  },
+  "2713": {
+    "menu_num": 2713,
+    "title": "Intitulé d'emplacement",
+    "values": {
+      "1": "",
+      "2": "Réception",
+      "3": "Stockage",
+      "4": "Picking",
+      "5": "Poste de travail",
+      "6": "Livraison",
+      "7": "Magasin",
+      "8": "Retour client",
+      "9": "Retour de retour",
+      "10": "A définir",
+      "11": "A définir",
+      "12": "A définir"
+    }
+  },
+  "2714": {
+    "menu_num": 2714,
+    "title": "Origine mvt stock",
+    "values": {
+      "1": "Ligne détail (STOENT)",
+      "2": "Document origine",
+      "3": "Ligne document (LABR)",
+      "4": "Ligne détail (STOENTW)",
+      "5": "Document"
+    }
+  },
+  "2715": {
+    "menu_num": 2715,
+    "title": "Séquence types emplacements",
+    "values": {
+      "1": "Type + remplacements",
+      "2": "Tous types + remplacements"
+    }
+  },
+  "2716": {
+    "menu_num": 2716,
+    "title": "Situation plan de rangement",
+    "values": {
+      "1": "Attente de rangement",
+      "2": "Plan de rangement"
+    }
+  },
+  "2717": {
+    "menu_num": 2717,
+    "title": "Type d inventaire",
+    "values": {
+      "1": "Article",
+      "2": "Emplacement"
+    }
+  },
+  "2718": {
+    "menu_num": 2718,
+    "title": "Choix date plan de rangement",
+    "values": {
+      "1": "De création",
+      "2": "D'imputation"
+    }
+  },
+  "2719": {
+    "menu_num": 2719,
+    "title": "Tri plan de rangement",
+    "values": {
+      "1": "(Aucun)",
+      "2": "Date imputation",
+      "3": "Article",
+      "4": "Emplacement",
+      "5": "Type / Numéro pièce"
+    }
+  },
+  "2720": {
+    "menu_num": 2720,
+    "title": "Origine plan de rangement",
+    "values": {
+      "1": "Attente de rangement",
+      "2": "Réapprovisionnement"
+    }
+  },
+  "2721": {
+    "menu_num": 2721,
+    "title": "Type de transaction stock",
+    "values": {
+      "1": "Entrée diverse",
+      "2": "Sortie diverse",
+      "3": "Changement stock",
+      "4": "Modification lot",
+      "5": "Plan de rangement",
+      "6": "Inventaires",
+      "7": "Assemblage/désassemblage",
+      "8": "Contrôle qualité",
+      "9": "Plan réapprovisionnement",
+      "10": "Plan préparation d'expéditions",
+      "11": "Colisage",
+      "12": "Bons de préparation"
+    }
+  },
+  "2722": {
+    "menu_num": 2722,
+    "title": "Etat session inventaire",
+    "values": {
+      "1": "En création",
+      "2": "A Compter",
+      "3": "Cloturée"
+    }
+  },
+  "2723": {
+    "menu_num": 2723,
+    "title": "Statut inventaire liste",
+    "values": {
+      "1": "A compter",
+      "2": "Annulée",
+      "3": "Comptée",
+      "4": "Validée partielle",
+      "5": "Validée",
+      "6": "Cloturée"
+    }
+  },
+  "2724": {
+    "menu_num": 2724,
+    "title": "Stock verrouillé",
+    "values": {
+      "1": "Non",
+      "2": "Oui",
+      "3": "Partiel"
+    }
+  },
+  "2725": {
+    "menu_num": 2725,
+    "title": "Etat regroupement inventaire",
+    "values": {
+      "1": "A compter",
+      "2": "Compté",
+      "3": "Abandon",
+      "4": "Validé",
+      "5": "--",
+      "6": "--",
+      "7": "*Ajout nul*",
+      "8": "Cpt. partiel",
+      "9": "--",
+      "10": "Val. partiel"
+    }
+  },
+  "2726": {
+    "menu_num": 2726,
+    "title": "Arrondi composant",
+    "values": {
+      "1": "Au plus proche",
+      "2": "Supérieur",
+      "3": "Inférieur"
+    }
+  },
+  "2727": {
+    "menu_num": 2727,
+    "title": "Arrondi composant",
+    "values": {
+      "1": "Au plus proche",
+      "2": "Supérieur",
+      "3": "Inférieur"
+    }
+  },
+  "2728": {
+    "menu_num": 2728,
+    "title": "Arrondi composant",
+    "values": {
+      "1": "Au plus proche",
+      "2": "Supérieur",
+      "3": "Inférieur"
+    }
+  },
+  "2729": {
+    "menu_num": 2729,
+    "title": "Statut inventaire détail",
+    "values": {
+      "1": "A compter",
+      "2": "Comptée",
+      "3": "Abandonnée",
+      "4": "Validée"
+    }
+  },
+  "2730": {
+    "menu_num": 2730,
+    "title": "Type assemblage",
+    "values": {
+      "1": "Assemblage",
+      "2": "Désassemblage"
+    }
+  },
+  "2731": {
+    "menu_num": 2731,
+    "title": "Type ligne",
+    "values": {
+      "1": "Composé",
+      "2": "Composant"
+    }
+  },
+  "2732": {
+    "menu_num": 2732,
+    "title": "Qté assemblage /désassemblage",
+    "values": {
+      "1": "Sans pertes",
+      "2": "Avec pertes"
+    }
+  },
+  "2733": {
+    "menu_num": 2733,
+    "title": "Filtre qualité",
+    "values": {
+      "1": "'A'",
+      "2": "'Q'",
+      "3": "'A'+'Q'",
+      "4": "'R'",
+      "5": "'A'+'R'",
+      "6": "'Q'+'R'",
+      "7": "'A'+'Q'+'R'"
+    }
+  },
+  "2734": {
+    "menu_num": 2734,
+    "title": "Ordres à replanifier",
+    "values": {
+      "1": "WOF",
+      "2": "WOP",
+      "3": "POF",
+      "4": "POP",
+      "5": "TRF",
+      "6": "TRP",
+      "7": "EOF",
+      "8": "EOP"
+    }
+  },
+  "2735": {
+    "menu_num": 2735,
+    "title": "Replanification des quantités",
+    "values": {
+      "1": "Aucune",
+      "2": "Diminution",
+      "3": "Augmentation",
+      "4": "Diminution/Augmentation"
+    }
+  },
+  "2736": {
+    "menu_num": 2736,
+    "title": "Replanification des dates",
+    "values": {
+      "1": "Aucune",
+      "2": "Avancer",
+      "3": "Retarder",
+      "4": "Avancer/Retarder"
+    }
+  },
+  "2737": {
+    "menu_num": 2737,
+    "title": "Situation réapprovisionnement",
+    "values": {
+      "1": "Attente réapprovisionnement",
+      "2": "Plan réapprovisionnement"
+    }
+  },
+  "2738": {
+    "menu_num": 2738,
+    "title": "Tri plan réappro consommation",
+    "values": {
+      "1": "Emplacement",
+      "2": "Article",
+      "3": "Origine / Emplacement",
+      "4": "Origine / Article"
+    }
+  },
+  "2739": {
+    "menu_num": 2739,
+    "title": "Type modif lot",
+    "values": {
+      "1": "Modification caractéristiques d'un lot",
+      "2": "Renumérotation et mélange"
+    }
+  },
+  "2740": {
+    "menu_num": 2740,
+    "title": "Protection en cours",
+    "values": {
+      "1": "Non",
+      "2": "Toujours",
+      "3": "Selon article"
+    }
+  },
+  "2741": {
+    "menu_num": 2741,
+    "title": "Reconstitution stock sécurité",
+    "values": {
+      "1": "Toujours",
+      "2": "Au premier besoin"
+    }
+  },
+  "2742": {
+    "menu_num": 2742,
+    "title": "Niveau de définition",
+    "values": {
+      "1": "Dossier",
+      "2": "Catégorie",
+      "3": "Catégorie avec code mouvement",
+      "4": "Catégorie-site",
+      "5": "Catégorie-site avec code mouvement"
+    }
+  },
+  "2743": {
+    "menu_num": 2743,
+    "title": "Niveau de trace en maj stock",
+    "values": {
+      "1": "Pas de trace",
+      "2": "Trace standard (messages)",
+      "3": "Trace détaillée (tables maj)",
+      "4": "Trace détaillée (champs maj)"
+    }
+  },
+  "2744": {
+    "menu_num": 2744,
+    "title": "Inter-société",
+    "values": {
+      "1": "Tout afficher",
+      "2": "N'afficher que les ordres inter-sociétés",
+      "3": "Ne pas afficher les ordres inter-sociétés"
+    }
+  },
+  "2745": {
+    "menu_num": 2745,
+    "title": "Type modification lot",
+    "values": {
+      "1": "Renumérotation",
+      "2": "Mélange"
+    }
+  },
+  "2746": {
+    "menu_num": 2746,
+    "title": "Non/Oui/Indifférent",
+    "values": {
+      "1": "Non",
+      "2": "Oui",
+      "3": "Indifférent"
+    }
+  },
+  "2747": {
+    "menu_num": 2747,
+    "title": "Origine préparation",
+    "values": {
+      "1": "Commande",
+      "2": "Commande de prêt",
+      "3": "Réappro s-traitant",
+      "4": "Manquant s-traitant"
+    }
+  },
+  "2748": {
+    "menu_num": 2748,
+    "title": "Qté préchargée en chgt emp",
+    "values": {
+      "1": "Toute (non allouée + allouée)",
+      "2": "Non allouée",
+      "3": "Allouée"
+    }
+  },
+  "2749": {
+    "menu_num": 2749,
+    "title": "Paramétrage code préparation",
+    "values": {
+      "1": "",
+      "2": "Article",
+      "3": "Catégorie article",
+      "4": "Famille article 1",
+      "5": "Famille article 2",
+      "6": "Famille article 3",
+      "7": "Famille article 4",
+      "8": "Famille article 5",
+      "9": "Client",
+      "10": "Catégorie client",
+      "11": "Famille client 1",
+      "12": "Famille client 2",
+      "13": "Famille client 3",
+      "14": "Famille client 4",
+      "15": "Famille client 5"
+    }
+  },
+  "2750": {
+    "menu_num": 2750,
+    "title": "Origine réapprovisionnement",
+    "values": {
+      "1": "Réapprovision.",
+      "2": "Consommation",
+      "3": "Rupture"
+    }
+  },
+  "2751": {
+    "menu_num": 2751,
+    "title": "Origine bon préparation",
+    "values": {
+      "1": "Commande",
+      "2": "Commande de prêt",
+      "3": "Besoin sous-traitant"
+    }
+  },
+  "2752": {
+    "menu_num": 2752,
+    "title": "Type Sous-traitant",
+    "values": {
+      "1": "Site",
+      "2": "Fournisseur"
+    }
+  },
+  "2753": {
+    "menu_num": 2753,
+    "title": "Type colisage",
+    "values": {
+      "1": "Déclaratif",
+      "2": "Post-colisage"
+    }
+  },
+  "2754": {
+    "menu_num": 2754,
+    "title": "Etat du bon de préparation",
+    "values": {
+      "1": "En cours",
+      "2": "Livrable",
+      "3": "Livré",
+      "4": "Annulé"
+    }
+  },
+  "2769": {
+    "menu_num": 2769,
+    "title": "Origine des données",
+    "values": {
+      "1": "Art,Lot,Slo",
+      "2": "Art,Lot",
+      "3": "Lot,Slo",
+      "4": "Lot",
+      "5": "Art,Série",
+      "6": "Série",
+      "7": "Art,Emp",
+      "8": "Emp",
+      "9": "Art,Ident1",
+      "10": "Identifiant1",
+      "11": "Art,NoCnt",
+      "12": "NoCnt"
+    }
+  },
+  "2770": {
+    "menu_num": 2770,
+    "title": "Prise en compte péremption",
+    "values": {
+      "1": "Non",
+      "2": "Oui",
+      "3": "Oui avec marge"
+    }
+  },
+  "2771": {
+    "menu_num": 2771,
+    "title": "Doc. origine état FICLOTVCR",
+    "values": {
+      "1": "Livraison",
+      "2": "Demande analyse"
+    }
+  },
+  "2772": {
+    "menu_num": 2772,
+    "title": "Tri colisage",
+    "values": {
+      "1": "Document",
+      "2": "Colis",
+      "3": "Client livré",
+      "4": "Préparateur"
+    }
+  },
+  "2773": {
+    "menu_num": 2773,
+    "title": "Niveau caractéristiques Lot",
+    "values": {
+      "1": "Sous-lot",
+      "2": "Lot"
+    }
+  },
+  "2774": {
+    "menu_num": 2774,
+    "title": "Tri bons de préparation",
+    "values": {
+      "1": "Date d'expédition",
+      "2": "Num bon de préparation",
+      "3": "Client livré",
+      "4": "Préparateur"
+    }
+  },
+  "2775": {
+    "menu_num": 2775,
+    "title": "Emplacements suggérés",
+    "values": {
+      "1": "Tous les emplacements",
+      "2": "Selon paramétrage article"
+    }
+  },
+  "2776": {
+    "menu_num": 2776,
+    "title": "Statut version",
+    "values": {
+      "1": "Prototype",
+      "2": "Active",
+      "3": "Arrêtée",
+      "4": "A activer"
+    }
+  },
+  "2777": {
+    "menu_num": 2777,
+    "title": "Gestion de version stock",
+    "values": {
+      "1": "Non",
+      "2": "Majeure",
+      "3": "Majeure et mineure"
+    }
+  },
+  "2778": {
+    "menu_num": 2778,
+    "title": "Niveau de traçabilité",
+    "values": {
+      "1": "Par défaut",
+      "2": "Lot",
+      "3": "Sous-Lot",
+      "4": "Série"
+    }
+  },
+  "2780": {
+    "menu_num": 2780,
+    "title": "Tri plan de préparation",
+    "values": {
+      "1": "Numéro document",
+      "2": "Date d'expédition",
+      "3": "Article"
+    }
+  },
+  "2781": {
+    "menu_num": 2781,
+    "title": "Nature Prix",
+    "values": {
+      "1": "Prix standard",
+      "2": "Prix standard actualisé"
+    }
+  },
+  "2782": {
+    "menu_num": 2782,
+    "title": "Version prototype ou active",
+    "values": {
+      "1": "Non",
+      "2": "Oui sauf suspension",
+      "3": "Oui"
+    }
+  },
+  "2783": {
+    "menu_num": 2783,
+    "title": "Version arrêtée",
+    "values": {
+      "1": "Non",
+      "2": "Non sauf dérogation",
+      "3": "Oui"
+    }
+  },
+  "2784": {
+    "menu_num": 2784,
+    "title": "Version saisie",
+    "values": {
+      "1": "Exclusive",
+      "2": "Prioritaire"
+    }
+  },
+  "2785": {
+    "menu_num": 2785,
+    "title": "Sélection lignes inventaire",
+    "values": {
+      "1": "Toutes",
+      "2": "Comptées",
+      "3": "A compter",
+      "4": "Comptées avec écarts",
+      "5": "Comptées 1",
+      "6": "Comptées 2"
+    }
+  },
+  "2786": {
+    "menu_num": 2786,
+    "title": "Changement de valeur",
+    "values": {
+      "1": "Global",
+      "2": "FIFO",
+      "3": "Lot"
+    }
+  },
+  "2787": {
+    "menu_num": 2787,
+    "title": "Statut contenant",
+    "values": {
+      "1": "Libre",
+      "2": "En stock"
+    }
+  },
+  "2788": {
+    "menu_num": 2788,
+    "title": "Saisie identifiant contenant",
+    "values": {
+      "1": "Facultatif",
+      "2": "Obligatoire"
+    }
+  },
+  "2789": {
+    "menu_num": 2789,
+    "title": "Mode d'affectation",
+    "values": {
+      "1": "Simple",
+      "2": "Multiple"
+    }
+  },
+  "2790": {
+    "menu_num": 2790,
+    "title": "Mode d'opération",
+    "values": {
+      "1": "Regrouper",
+      "2": "Eclater",
+      "3": "Désaffecter"
+    }
+  },
+  "2791": {
+    "menu_num": 2791,
+    "title": "Accès changement de stock",
+    "values": {
+      "1": "Ligne de stock",
+      "2": "Numéro contenant"
+    }
+  },
+  "2792": {
+    "menu_num": 2792,
+    "title": "Type de flux ADC",
+    "values": {
+      "1": "Flux de sortie",
+      "2": "Changement de stock",
+      "3": "Opération contenant"
+    }
+  },
+  "2793": {
+    "menu_num": 2793,
+    "title": "Filtre pour recherche du stock",
+    "values": {
+      "1": "Aucun",
+      "2": "Emplacement",
+      "3": "Lot",
+      "4": "Sous-lot",
+      "5": "Série",
+      "6": "Statut",
+      "7": "Unité conditionnement",
+      "8": "Coeff conversion UC/US",
+      "9": "Identifiant 1",
+      "10": "Identifiant 2",
+      "11": "Identifiant contenant interne",
+      "12": "Champ personnalisé 1",
+      "13": "Champ personnalisé 2"
+    }
+  },
+  "2818": {
+    "menu_num": 2818,
+    "title": "Code état",
+    "values": {
+      "1": "Client",
+      "2": "Produit"
+    }
+  },
+  "2819": {
+    "menu_num": 2819,
+    "title": "Catégorie commandes",
+    "values": {
+      "1": "Normale",
+      "2": "Factur.directe"
+    }
+  },
+  "3400": {
+    "menu_num": 3400,
+    "title": "Calcul coûts prévisionnels EO",
+    "values": {
+      "1": "Non",
+      "2": "En création EO",
+      "3": "En création et modification EO"
+    }
+  },
+  "3501": {
+    "menu_num": 3501,
+    "title": "Allergènes",
+    "values": {
+      "1": "Cumul d'allergènes alimentaires",
+      "2": "Mise à jour des allergènes à",
+      "3": "Vous devez saisir un allergène valide.",
+      "4": "Impossible de saisir le même allergène plus d'une fois.",
+      "5": "Le nombre d'allergènes dépasse la limite de $1$ pour la table.",
+      "6": "Impossible de mettre à jour les allergènes sur l'article $1$.",
+      "7": "Voulez-vous exécuter le cumul d'allergènes sur cette nomenclature?"
+    }
+  },
+  "3502": {
+    "menu_num": 3502,
+    "title": "Champs OF Production Scheduler",
+    "values": {
+      "1": "Nom, numéro client",
+      "2": "Nom du client",
+      "3": "Numéro tâche et affaire",
+      "4": "Catégorie article",
+      "5": "Ligne article",
+      "6": "Analyse statistique 1",
+      "7": "Analyse statistique 2",
+      "8": "Analyse statistique 3",
+      "9": "Numéro commande de vente"
+    }
+  },
+  "3503": {
+    "menu_num": 3503,
+    "title": "Champs opération PS",
+    "values": {
+      "1": "Poste main d'oeuvre",
+      "2": "Fiche technique",
+      "3": "Numéro plan opération",
+      "4": "Fixation",
+      "5": "Programme",
+      "6": "Critères de regroupement",
+      "7": "Critères de différentiation"
+    }
+  },
+  "3504": {
+    "menu_num": 3504,
+    "title": "Recalcul 1e date dispo mat PS",
+    "values": {
+      "1": "Pour OFs avec statut 'A l'étude'",
+      "2": "Pour OFs avec statut 'Optimisé'",
+      "3": "Pour OFs avec statut 'En cours'"
+    }
+  },
+  "3506": {
+    "menu_num": 3506,
+    "title": "Champs OF ordonnanceur",
+    "values": {
+      "1": "Nom et numéro de client",
+      "2": "Nom du client",
+      "3": "Numéro d'affaire/tâche",
+      "4": "Catégorie d'article",
+      "5": "Ligne d'article",
+      "6": "Analyse statistique 1",
+      "7": "Analyse statistique 2",
+      "8": "Analyse statistique 3",
+      "9": "Numéro de commande de vente"
+    }
+  },
+  "3507": {
+    "menu_num": 3507,
+    "title": "Champs opération ordonnanceur",
+    "values": {
+      "1": "Poste de main d'oeuvre",
+      "2": "Fiche technique",
+      "3": "Numéro du plan d'opération",
+      "4": "Fixation",
+      "5": "Programme",
+      "6": "Critère de regroupement",
+      "7": "Critères de distinction"
+    }
+  },
+  "3508": {
+    "menu_num": 3508,
+    "title": "Recalcul date première dispo.",
+    "values": {
+      "1": "Pour les ordres de fabrication avec statut 'A l'étude'",
+      "2": "Pour les ordres de fabrication avec statut 'Optimisé'",
+      "3": "Pour les ordres de fabrication avec statut 'En cours'"
+    }
+  },
+  "3509": {
+    "menu_num": 3509,
+    "title": "Statut lien numéro série",
+    "values": {
+      "1": "Nouveau",
+      "2": "En cours",
+      "3": "Réalisé"
+    }
+  },
+  "3550": {
+    "menu_num": 3550,
+    "title": "Type temps réglage",
+    "values": {
+      "1": "Cumulatif",
+      "2": "Maximum"
+    }
+  },
+  "3591": {
+    "menu_num": 3591,
+    "title": "Tris allocations état",
+    "values": {
+      "1": "Article",
+      "2": "Lot",
+      "3": "Emplacement",
+      "4": "Identifiant 1",
+      "5": "Identifiant 2",
+      "6": "Par défaut"
+    }
+  },
+  "9154": {
+    "menu_num": 9154,
+    "title": "",
+    "values": {
+      "1": "Automatique",
+      "2": "Manuel",
+      "3": "Non"
+    }
+  },
+  "9155": {
+    "menu_num": 9155,
+    "title": "Application de la tolérance",
+    "values": {
+      "1": "au poids restant à peser",
+      "2": "au poids total attendu"
+    }
+  },
+  "9639": {
+    "menu_num": 9639,
+    "title": "Réconciliation",
+    "values": {
+      "1": "Par OF",
+      "2": "Par Phase",
+      "3": "Par conteneur"
+    }
+  },
+  "9640": {
+    "menu_num": 9640,
+    "title": "Engagé en prod",
+    "values": {
+      "1": "Par OF",
+      "2": "Par Phase",
+      "3": "Par Pesée"
+    }
+  },
+  "9641": {
+    "menu_num": 9641,
+    "title": "Saisie",
+    "values": {
+      "1": "Par N° pesée",
+      "2": "Détaillée"
+    }
+  },
+  "10991": {
+    "menu_num": 10991,
+    "title": "Ctrl",
+    "values": {
+      "1": "1-Inactif",
+      "2": "2-Tout",
+      "3": "3-Infbox encours"
+    }
+  }
+}
