@@ -65,9 +65,9 @@ Configuration Claude Desktop (stdio):
     "mcpServers": {
       "sage-x3": {
         "command": "npx",
-        "args": ["@arthurdev/sage-x3-mcp"],
+        "args": ["@arthurfranckpat/sage-x3-mcp"],
         "env": {
-          "SAGE_DATA_PATH": "/path/to/sage_x3_knowledge_base"
+          "SAGE_DATA_PATH": "/path/to/your/sage_x3_knowledge_base"
         }
       }
     }
@@ -85,7 +85,7 @@ Configuration Claude Desktop (HTTP):
 Variables d'environnement:
   SAGE_DATA_PATH    Chemin vers les données (requis)
 
-Documentation: https://github.com/arthurdev/sage-x3-mcp
+Documentation: https://github.com/arthurfranckpat/sage-x3-mcp
   `);
 }
 

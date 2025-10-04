@@ -1,4 +1,4 @@
-# @arthurdev/sage-x3-mcp
+# @arthurfranckpat/sage-x3-mcp
 
 > 🚀 Serveur MCP (Model Context Protocol) pour base de connaissance Sage X3
 
@@ -10,16 +10,16 @@ Permet à Claude et autres LLM d'accéder à une base de connaissance Sage X3 co
 
 ```bash
 # Mode stdio pour Claude Desktop
-npx @arthurdev/sage-x3-mcp
+npx @arthurfranckpat/sage-x3-mcp
 
 # Mode serveur HTTP
-npx @arthurdev/sage-x3-mcp server --port 3000
+npx @arthurfranckpat/sage-x3-mcp server --port 3000
 ```
 
 ### Installation globale
 
 ```bash
-npm install -g @arthurdev/sage-x3-mcp
+npm install -g @arthurfranckpat/sage-x3-mcp
 
 # Puis utiliser
 sage-x3-mcp
@@ -39,9 +39,9 @@ Pour une utilisation avec Claude Desktop en local :
   "mcpServers": {
     "sage-x3": {
       "command": "npx",
-      "args": ["@arthurdev/sage-x3-mcp"],
+      "args": ["@arthurfranckpat/sage-x3-mcp"],
       "env": {
-        "SAGE_DATA_PATH": "/chemin/vers/sage_x3_knowledge_base"
+        "SAGE_DATA_PATH": "/path/to/your/sage_x3_knowledge_base"
       }
     }
   }
@@ -58,10 +58,10 @@ Pour un accès distant ou via un serveur web :
 
 ```bash
 # Démarrer le serveur
-npx @arthurdev/sage-x3-mcp server --port 3000 --host 0.0.0.0
+npx @arthurfranckpat/sage-x3-mcp server --port 3000 --host 0.0.0.0
 
 # Ou avec données personnalisées
-npx @arthurdev/sage-x3-mcp server --data-path /path/to/data
+npx @arthurfranckpat/sage-x3-mcp server --data-path /path/to/data
 ```
 
 **Configuration Claude Desktop (HTTP) :**
@@ -229,7 +229,7 @@ export SAGE_DATA_PATH=/chemin/vers/sage_x3_knowledge_base
 ### Erreur "Python dependencies not installed"
 
 ```bash
-cd node_modules/@arthurdev/sage-x3-mcp
+cd node_modules/@arthurfranckpat/sage-x3-mcp
 pip install -r requirements.txt
 ```
 
@@ -247,13 +247,13 @@ MIT
 
 ## 🔗 Liens
 
-- [Documentation complète](https://github.com/arthurdev/sage-x3-mcp)
+- [Documentation complète](https://github.com/arthurfranckpat/sage-x3-mcp)
 - [Model Context Protocol](https://modelcontextprotocol.io)
-- [Issues](https://github.com/arthurdev/sage-x3-mcp/issues)
+- [Issues](https://github.com/arthurfranckpat/sage-x3-mcp/issues)
 
 ## 👤 Auteur
 
-Arthur
+Arthur Franck-Pat
 
 ---
 

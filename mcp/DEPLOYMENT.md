@@ -19,6 +19,9 @@ npm login
 # 2. Vérifier le package
 npm pack --dry-run
 
+# Vérifier que le nom est correct
+npm view @arthurfranckpat/sage-x3-mcp
+
 # 3. Publier (première fois)
 npm publish --access public
 
@@ -29,18 +32,14 @@ npm publish
 
 ### Nom du package
 
-Le nom actuel est `@arthurdev/sage-x3-mcp`. Pour changer :
-
-1. Modifier `package.json` : `"name": "@votre-org/sage-x3-mcp"`
-2. Créer l'organisation sur npm si nécessaire
-3. Republier
+Le nom du package est `@arthurfranckpat/sage-x3-mcp`.
 
 ## 🐙 Publication sur GitHub
 
 ### Initialiser le repository
 
 ```bash
-cd /Users/arthur/Desktop/Apps/sage_x3_knowledge_base/mcp
+cd /path/to/mcp
 
 # Initialiser git
 git init
@@ -51,7 +50,7 @@ git commit -m "Initial commit: Sage X3 MCP Server"
 gh repo create sage-x3-mcp --public --source=. --remote=origin
 
 # Ou manuellement sur github.com puis:
-git remote add origin https://github.com/votre-username/sage-x3-mcp.git
+git remote add origin https://github.com/arthurfranckpat/sage-x3-mcp.git
 
 # Push
 git branch -M main
@@ -321,7 +320,7 @@ pip install -r requirements.txt
 ```bash
 # Vérifier le nom du package
 npm whoami
-npm view @arthurdev/sage-x3-mcp
+npm view @arthurfranckpat/sage-x3-mcp
 
 # Se reconnecter
 npm logout
@@ -330,4 +329,4 @@ npm login
 
 ---
 
-**Pour plus d'aide :** https://github.com/votre-username/sage-x3-mcp/issues
+**Pour plus d'aide :** https://github.com/arthurfranckpat/sage-x3-mcp/issues

@@ -1,6 +1,6 @@
 # 🚀 Serveur MCP pour Base de Connaissance Sage X3
 
-[![npm version](https://badge.fury.io/js/@arthurdev%2Fsage-x3-mcp.svg)](https://www.npmjs.com/package/@arthurdev/sage-x3-mcp)
+[![npm version](https://badge.fury.io/js/@arthurfranckpat%2Fsage-x3-mcp.svg)](https://www.npmjs.com/package/@arthurfranckpat/sage-x3-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Serveur [Model Context Protocol (MCP)](https://modelcontextprotocol.io) permettant à Claude et autres LLM d'accéder à une base de connaissance Sage X3 complète.
@@ -9,10 +9,10 @@ Serveur [Model Context Protocol (MCP)](https://modelcontextprotocol.io) permetta
 
 ```bash
 # Avec npx (recommandé)
-npx @arthurdev/sage-x3-mcp
+npx @arthurfranckpat/sage-x3-mcp
 
 # Ou installation globale
-npm install -g @arthurdev/sage-x3-mcp
+npm install -g @arthurfranckpat/sage-x3-mcp
 ```
 
 ## 📋 Fonctionnalités
@@ -68,17 +68,17 @@ Ajouter :
 {
   "mcpServers": {
     "sage-x3": {
-      "command": "python3",
-      "args": ["/Users/arthur/Desktop/Apps/sage_x3_knowledge_base/mcp/server.py"],
+      "command": "npx",
+      "args": ["@arthurfranckpat/sage-x3-mcp"],
       "env": {
-        "SAGE_DATA_PATH": "/Users/arthur/Desktop/Apps/sage_x3_knowledge_base"
+        "SAGE_DATA_PATH": "/path/to/your/sage_x3_knowledge_base"
       }
     }
   }
 }
 ```
 
-**Important** : Remplacer les chemins par vos chemins absolus réels.
+**Important** : Remplacer le chemin SAGE_DATA_PATH par votre chemin absolu réel.
 
 ### Pour autres clients MCP
 
@@ -150,7 +150,7 @@ Tester le serveur directement :
 
 ```bash
 cd mcp
-export SAGE_DATA_PATH=/Users/arthur/Desktop/Apps/sage_x3_knowledge_base
+export SAGE_DATA_PATH=/path/to/your/sage_x3_knowledge_base
 python3 server.py
 ```
 
@@ -198,8 +198,8 @@ python3 --version  # Doit être >= 3.10
 # Vérifier les dépendances
 pip list | grep mcp
 
-# Vérifier les chemins
-ls $SAGE_DATA_PATH/data/tables_X3.csv
+# Vérifier les chemins (remplacer par votre chemin)
+ls /path/to/your/sage_x3_knowledge_base/data/tables_X3.csv
 ```
 
 ### Erreur "module mcp not found"
@@ -225,7 +225,7 @@ Pour Claude Desktop en local via stdio.
 Pour accès via serveur web ou à distance.
 
 ```bash
-npx @arthurdev/sage-x3-mcp server --port 3000
+npx @arthurfranckpat/sage-x3-mcp server --port 3000
 ```
 
 Voir [DEPLOYMENT.md](./DEPLOYMENT.md) pour plus de détails.
@@ -248,7 +248,7 @@ Voir [DEPLOYMENT.md](./DEPLOYMENT.md) pour plus de détails.
 - [Model Context Protocol](https://modelcontextprotocol.io)
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)
 - [Claude Desktop](https://claude.ai/download)
-- [npm package](https://www.npmjs.com/package/@arthurdev/sage-x3-mcp)
+- [npm package](https://www.npmjs.com/package/@arthurfranckpat/sage-x3-mcp)
 
 ## 📄 License
 

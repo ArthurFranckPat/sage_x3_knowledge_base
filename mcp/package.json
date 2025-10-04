@@ -1,6 +1,6 @@
 {
   "name": "@arthurfranckpat/sage-x3-mcp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP Server pour base de connaissance Sage X3 - Accès aux tables, champs et menus locaux",
   "main": "bin/sage-x3-mcp.js",
   "bin": {
@@ -19,7 +19,7 @@
     "claude",
     "llm"
   ],
-  "author": "Arthur",
+  "author": "Arthur Franck-Pat",
   "license": "MIT",
   "repository": {
     "type": "git",

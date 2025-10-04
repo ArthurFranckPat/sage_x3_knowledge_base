@@ -1,12 +1,12 @@
 {
   "mcpServers": {
     "sage-x3": {
-      "command": "python3",
+      "command": "npx",
       "args": [
-        "/Users/arthur/Desktop/Apps/sage_x3_knowledge_base/mcp/server.py"
+        "@arthurfranckpat/sage-x3-mcp"
       ],
       "env": {
-        "SAGE_DATA_PATH": "/Users/arthur/Desktop/Apps/sage_x3_knowledge_base"
+        "SAGE_DATA_PATH": "/path/to/your/sage_x3_knowledge_base"
       }
     }
   }
