@@ -63,12 +63,15 @@ export default class PlaygroundController {
       // Retour Unpoly : fragments HTML multiples
       if (isUnpoly) {
         // Unpoly attend des fragments séparés avec leurs IDs
+        const validationHtml = await view.render('playground/partials/validation', { validation })
+        const resultsHtml = await view.render('playground/partials/results', { result })
+        
         const html = `
           <div id="validation" up-hungry up-keep>
-            ${await view.renderRaw('playground/partials/validation', { validation })}
+            ${validationHtml}
           </div>
           <div id="results" up-hungry>
-            ${await view.renderRaw('playground/partials/results', { result })}
+            ${resultsHtml}
           </div>
         `
         return response.header('Content-Type', 'text/html').send(html)
@@ -86,17 +89,19 @@ export default class PlaygroundController {
       const isUnpoly = request.header('X-Up-Target') !== undefined
       
       if (isUnpoly) {
+        const validationHtml = await view.render('playground/partials/validation', {
+          validation: {
+            valid: false,
+            score: 0,
+            errors: [error.message || 'Erreur lors de l\'exécution de la requête'],
+            warnings: [],
+            suggestions: []
+          }
+        })
+        
         const html = `
           <div id="validation" up-hungry up-keep>
-            ${await view.renderRaw('playground/partials/validation', {
-              validation: {
-                valid: false,
-                score: 0,
-                errors: [error.message || 'Erreur lors de l\'exécution de la requête'],
-                warnings: [],
-                suggestions: []
-              }
-            })}
+            ${validationHtml}
           </div>
           <div id="results" up-hungry></div>
         `
