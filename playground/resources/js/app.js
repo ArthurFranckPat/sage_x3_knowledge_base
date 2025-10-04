@@ -1,6 +1,5 @@
-// Import Unpoly
+// Import Unpoly (no default export, just side effects)
 import 'unpoly'
-import * as up from 'unpoly'
 
 // Import Monaco Editor
 import * as monaco from 'monaco-editor'
@@ -8,19 +7,40 @@ import * as monaco from 'monaco-editor'
 // Import SQL Formatter
 import { format } from 'sql-formatter'
 
-// Configure Monaco Workers
+// Configure Monaco Workers for Vite
 self.MonacoEnvironment = {
-  getWorker(_, label) {
-    // Use CDN workers for Monaco
-    const workerPath = `https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs`
-    if (label === 'sql') {
-      return new Worker(`${workerPath}/language/sql/sql.worker.js`)
+  getWorker: function (workerId, label) {
+    const getWorkerModule = (moduleUrl, label) => {
+      return new Worker(self.MonacoEnvironment.getWorkerUrl(moduleUrl), {
+        name: label,
+        type: 'module'
+      })
     }
-    return new Worker(`${workerPath}/base/worker/workerMain.js`)
+
+    switch (label) {
+      case 'json':
+        return getWorkerModule('/node_modules/monaco-editor/esm/vs/language/json/json.worker?worker', label)
+      case 'css':
+      case 'scss':
+      case 'less':
+        return getWorkerModule('/node_modules/monaco-editor/esm/vs/language/css/css.worker?worker', label)
+      case 'html':
+      case 'handlebars':
+      case 'razor':
+        return getWorkerModule('/node_modules/monaco-editor/esm/vs/language/html/html.worker?worker', label)
+      case 'typescript':
+      case 'javascript':
+        return getWorkerModule('/node_modules/monaco-editor/esm/vs/language/typescript/ts.worker?worker', label)
+      case 'sql':
+        return getWorkerModule('/node_modules/monaco-editor/esm/vs/basic-languages/monaco.contribution?worker', label)
+      default:
+        return getWorkerModule('/node_modules/monaco-editor/esm/vs/editor/editor.worker?worker', label)
+    }
   }
 }
 
-// Configure Unpoly
+// Configure Unpoly (access via global window.up)
+const up = window.up
 up.log.config.enabled = true
 up.fragment.config.mainTargets = ['#main-content']
 up.layer.config.drawer.position = 'right'
