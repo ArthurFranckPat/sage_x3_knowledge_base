@@ -11,7 +11,7 @@ const pythonDir = isDev ? path.join(__dirname, '..') : __dirname;
 
 // Chemin par défaut pour les données (dans le home de l'utilisateur)
 const DEFAULT_DATA_DIR = path.join(os.homedir(), '.sage-x3-data');
-const GITHUB_REPO = 'https://github.com/arthurfranckpat/sage-x3-knowledge-base.git';
+const GITHUB_REPO = 'https://github.com/arthurfranckpat/sage_x3_knowledge_base.git';
 
 // Arguments
 const args = process.argv.slice(2);
