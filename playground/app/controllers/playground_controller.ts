@@ -60,9 +60,18 @@ export default class PlaygroundController {
       
       result.executionTime = executionTime
 
-      // Retour Unpoly : fragment HTML
+      // Retour Unpoly : fragments HTML multiples
       if (isUnpoly) {
-        return view.render('playground/partials/results', { result })
+        // Unpoly attend des fragments séparés avec leurs IDs
+        const html = `
+          <div id="validation" up-hungry up-keep>
+            ${await view.renderRaw('playground/partials/validation', { validation })}
+          </div>
+          <div id="results" up-hungry>
+            ${await view.renderRaw('playground/partials/results', { result })}
+          </div>
+        `
+        return response.header('Content-Type', 'text/html').send(html)
       }
 
       // Retour API : JSON
@@ -77,15 +86,21 @@ export default class PlaygroundController {
       const isUnpoly = request.header('X-Up-Target') !== undefined
       
       if (isUnpoly) {
-        return view.render('playground/partials/validation', {
-          validation: {
-            valid: false,
-            score: 0,
-            errors: [error.message || 'Erreur lors de l\'exécution de la requête'],
-            warnings: [],
-            suggestions: []
-          }
-        })
+        const html = `
+          <div id="validation" up-hungry up-keep>
+            ${await view.renderRaw('playground/partials/validation', {
+              validation: {
+                valid: false,
+                score: 0,
+                errors: [error.message || 'Erreur lors de l\'exécution de la requête'],
+                warnings: [],
+                suggestions: []
+              }
+            })}
+          </div>
+          <div id="results" up-hungry></div>
+        `
+        return response.header('Content-Type', 'text/html').send(html)
       }
       
       return response.badRequest({
