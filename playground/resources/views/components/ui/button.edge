@@ -1,0 +1,62 @@
+{{--
+  Button Component (shadcn-inspired)
+  
+  Props:
+  - variant: primary | secondary | destructive | success | outline | ghost (default: primary)
+  - size: sm | default | lg | icon (default: default)
+  - class: Additional CSS classes
+  - type: button | submit | reset (default: button)
+  - disabled: boolean
+  - ...rest: Any other HTML button attributes
+  
+  Usage:
+  @component('components.ui.button', { variant: 'primary' })
+    Click me
+  @end
+--}}
+
+@set('variant', variant ?? 'primary')
+@set('size', size ?? 'default')
+@set('btnType', type ?? 'button')
+
+@set('baseClasses', 'btn')
+
+@set('variantClasses', {
+  primary: 'btn-primary',
+  secondary: 'btn-secondary',
+  destructive: 'btn-destructive',
+  success: 'btn-success',
+  outline: 'btn-outline',
+  ghost: 'btn-ghost'
+})
+
+@set('sizeClasses', {
+  sm: 'btn-sm',
+  default: '',
+  lg: 'btn-lg',
+  icon: 'btn-icon'
+})
+
+@set('classes', [
+  baseClasses,
+  variantClasses[variant] ?? variantClasses.primary,
+  sizeClasses[size] ?? '',
+  class ?? ''
+].join(' ').trim())
+
+<button
+  type="{{ btnType }}"
+  class="{{ classes }}"
+  @if(disabled)
+    disabled
+  @end
+  @if(id)
+    id="{{ id }}"
+  @end
+  @if(onclick)
+    onclick="{{ onclick }}"
+  @end
+  {{{ $slots.attributes() }}}
+>
+  {{{ await $slots.main() }}}
+</button>

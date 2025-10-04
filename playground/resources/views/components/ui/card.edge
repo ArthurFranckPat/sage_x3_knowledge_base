@@ -1,0 +1,41 @@
+{{--
+  Card Component (shadcn-inspired)
+  
+  Props:
+  - class: Additional CSS classes
+  
+  Slots:
+  - header: Card header content
+  - main: Card body/content
+  - footer: Card footer content
+  
+  Usage:
+  @component('components.ui.card')
+    @slot('header')
+      <h3 class="card-title">Title</h3>
+    @end
+    @slot('main')
+      Content here
+    @end
+  @end
+--}}
+
+<div class="card {{ class ?? '' }}">
+  @if($slots.hasNamed('header'))
+    <div class="card-header">
+      {{{ await $slots.named('header') }}}
+    </div>
+  @end
+
+  @if($slots.hasMain())
+    <div class="card-content">
+      {{{ await $slots.main() }}}
+    </div>
+  @end
+
+  @if($slots.hasNamed('footer'))
+    <div class="card-footer">
+      {{{ await $slots.named('footer') }}}
+    </div>
+  @end
+</div>

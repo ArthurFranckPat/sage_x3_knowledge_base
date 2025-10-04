@@ -1,0 +1,52 @@
+{{--
+  Alert Component (shadcn-inspired)
+  
+  Props:
+  - variant: info | success | warning | destructive (default: info)
+  - class: Additional CSS classes
+  
+  Slots:
+  - title: Alert title (optional)
+  - main: Alert description/content
+  
+  Usage:
+  @component('components.ui.alert', { variant: 'success' })
+    @slot('title')
+      Success!
+    @end
+    @slot('main')
+      Your operation completed successfully.
+    @end
+  @end
+--}}
+
+@set('variant', variant ?? 'info')
+
+@set('baseClasses', 'alert')
+
+@set('variantClasses', {
+  info: 'alert-info',
+  success: 'alert-success',
+  warning: 'alert-warning',
+  destructive: 'alert-destructive'
+})
+
+@set('classes', [
+  baseClasses,
+  variantClasses[variant] ?? variantClasses.info,
+  class ?? ''
+].join(' ').trim())
+
+<div class="{{ classes }}">
+  <div>
+    @if($slots.hasNamed('title'))
+      <div class="alert-title">
+        {{{ await $slots.named('title') }}}
+      </div>
+    @end
+    
+    <div class="alert-description">
+      {{{ await $slots.main() }}}
+    </div>
+  </div>
+</div>

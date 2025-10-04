@@ -1,0 +1,31 @@
+{{--
+  Separator Component (shadcn-inspired)
+  
+  Props:
+  - orientation: horizontal | vertical (default: horizontal)
+  - class: Additional CSS classes
+  
+  Usage:
+  @component('components.ui.separator')
+  @end
+  
+  @component('components.ui.separator', { orientation: 'vertical' })
+  @end
+--}}
+
+@set('orientation', orientation ?? 'horizontal')
+
+@set('baseClasses', 'separator')
+
+@set('orientationClasses', {
+  horizontal: 'separator-horizontal',
+  vertical: 'separator-vertical'
+})
+
+@set('classes', [
+  baseClasses,
+  orientationClasses[orientation] ?? orientationClasses.horizontal,
+  class ?? ''
+].join(' ').trim())
+
+<div class="{{ classes }}" role="separator"></div>

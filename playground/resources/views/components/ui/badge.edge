@@ -1,0 +1,35 @@
+{{--
+  Badge Component (shadcn-inspired)
+  
+  Props:
+  - variant: primary | secondary | success | warning | destructive | outline (default: primary)
+  - class: Additional CSS classes
+  
+  Usage:
+  @component('components.ui.badge', { variant: 'success' })
+    Active
+  @end
+--}}
+
+@set('variant', variant ?? 'primary')
+
+@set('baseClasses', 'badge')
+
+@set('variantClasses', {
+  primary: 'badge-primary',
+  secondary: 'badge-secondary',
+  success: 'badge-success',
+  warning: 'badge-warning',
+  destructive: 'badge-destructive',
+  outline: 'badge-outline'
+})
+
+@set('classes', [
+  baseClasses,
+  variantClasses[variant] ?? variantClasses.primary,
+  class ?? ''
+].join(' ').trim())
+
+<span class="{{ classes }}">
+  {{{ await $slots.main() }}}
+</span>
