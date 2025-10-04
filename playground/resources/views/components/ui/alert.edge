@@ -37,12 +37,12 @@
   <div>
     @if($slots.hasNamed('title'))
       <div class="alert-title">
-        {{{ await $slots.named('title') }}}
+        {{ await $slots.named('title') }}
       </div>
     @end
     
     <div class="alert-description">
-      {{{ await $slots.main() }}}
+      {{ await $slots.main() }}
     </div>
   </div>
 </div>

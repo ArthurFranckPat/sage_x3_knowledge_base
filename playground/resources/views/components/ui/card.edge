@@ -23,19 +23,19 @@
 <div class="card {{ class ?? '' }}">
   @if($slots.hasNamed('header'))
     <div class="card-header">
-      {{{ await $slots.named('header') }}}
+      {{ await $slots.named('header') }}
     </div>
   @end
 
   @if($slots.hasMain())
     <div class="card-content">
-      {{{ await $slots.main() }}}
+      {{ await $slots.main() }}
     </div>
   @end
 
   @if($slots.hasNamed('footer'))
     <div class="card-footer">
-      {{{ await $slots.named('footer') }}}
+      {{ await $slots.named('footer') }}
     </div>
   @end
 </div>
