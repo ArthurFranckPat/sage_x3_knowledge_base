@@ -106,7 +106,8 @@
       up-target="#results, #validation" 
       up-fail-target="#validation"
       method="POST" 
-      action="/api/playground/execute">
+      action="/api/playground/execute"
+      onsubmit="return copyEditorToInput()">
       
       {{ csrfField() }}
       <input type="hidden" name="sql" id="sql-input">

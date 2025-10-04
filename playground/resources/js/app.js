@@ -119,24 +119,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-// Form submission hook: copy SQL from Monaco to hidden input
-up.on('up:form:submit', 'form#sql-form', (event) => {
+// Global function to copy editor content to hidden input (called on form submit)
+window.copyEditorToInput = function() {
+  console.log('📤 copyEditorToInput called')
+  const input = document.getElementById('sql-input')
+  
   if (window.sqlEditor) {
     const sql = window.sqlEditor.getValue()
-    const input = event.form.querySelector('#sql-input')
+    console.log('📝 Copying from Monaco Editor:', sql.substring(0, 50) + '...')
     if (input) {
       input.value = sql
+      console.log('✅ SQL copied to hidden input from Monaco')
     }
   } else {
     // Fallback: get SQL from textarea if Monaco isn't loaded
     const fallback = document.getElementById('sql-fallback-editor')
     if (fallback) {
-      const input = event.form.querySelector('#sql-input')
+      console.log('📝 Copying from fallback textarea:', fallback.value.substring(0, 50) + '...')
       if (input) {
         input.value = fallback.value
+        console.log('✅ SQL copied to hidden input from textarea')
       }
     }
   }
+  
+  console.log('🔍 Final input value:', input ? input.value.substring(0, 50) + '...' : 'NO INPUT FOUND')
+  return true // Allow form submission
+}
+
+// Also hook into Unpoly's submit event (as backup)
+up.on('up:form:submit', 'form#sql-form', (event) => {
+  console.log('🚀 Unpoly form submit event')
+  copyEditorToInput()
 })
 
 // Toast notifications
