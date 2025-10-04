@@ -99,12 +99,12 @@
         placeholder="Loading Monaco Editor...">SELECT * FROM itmmaster LIMIT 10</textarea>
     </div>
     
-    <!-- Actions -->
+    <!-- Actions (kept outside Unpoly target zones) -->
     <form 
       id="sql-form"
       up-submit 
-      up-target="#results, #validation" 
-      up-fail-target="#validation"
+      up-target="#results-container, #validation-container" 
+      up-fail-target="#validation-container"
       method="POST" 
       action="/api/playground/execute"
       onsubmit="return copyEditorToInput()">
@@ -112,7 +112,7 @@
       {{ csrfField() }}
       <input type="hidden" name="sql" id="sql-input">
       
-      <div class="actions">
+      <div class="actions" up-keep>
         <button type="submit" class="btn btn-primary" up-disable-with="⏳ Executing...">
           ▶️ Execute (Ctrl+Enter)
         </button>
@@ -121,7 +121,7 @@
           type="button" 
           class="btn btn-secondary"
           up-validate 
-          up-target="#validation"
+          up-target="#validation-container"
           up-method="POST"
           up-url="/api/playground/validate"
           onclick="document.querySelector('#sql-input').value = window.sqlEditor?.getValue() || ''">
@@ -138,18 +138,22 @@
     </form>
   </section>
 
-  <!-- Zone de validation -->
-  <div id="validation" up-hungry up-keep>
-    @if(validation)
-      @include('playground/partials/validation')
-    @end
+  <!-- Zone de validation (container prevents button removal) -->
+  <div id="validation-container">
+    <div id="validation" up-hungry up-keep>
+      @if(validation)
+        @include('playground/partials/validation')
+      @end
+    </div>
   </div>
 
-  <!-- Résultats -->
-  <div id="results" up-hungry>
-    @if(result)
-      @include('playground/partials/results')
-    @end
+  <!-- Résultats (container prevents button removal) -->
+  <div id="results-container">
+    <div id="results" up-hungry>
+      @if(result)
+        @include('playground/partials/results')
+      @end
+    </div>
   </div>
 
 </div>

@@ -62,16 +62,20 @@ export default class PlaygroundController {
 
       // Retour Unpoly : fragments HTML multiples
       if (isUnpoly) {
-        // Unpoly attend des fragments séparés avec leurs IDs
+        // Unpoly attend des fragments séparés avec leurs IDs (avec containers)
         const validationHtml = await view.render('playground/partials/validation', { validation })
         const resultsHtml = await view.render('playground/partials/results', { result })
         
         const html = `
-          <div id="validation" up-hungry up-keep>
-            ${validationHtml}
+          <div id="validation-container">
+            <div id="validation" up-hungry up-keep>
+              ${validationHtml}
+            </div>
           </div>
-          <div id="results" up-hungry>
-            ${resultsHtml}
+          <div id="results-container">
+            <div id="results" up-hungry>
+              ${resultsHtml}
+            </div>
           </div>
         `
         return response.header('Content-Type', 'text/html').send(html)
@@ -100,10 +104,14 @@ export default class PlaygroundController {
         })
         
         const html = `
-          <div id="validation" up-hungry up-keep>
-            ${validationHtml}
+          <div id="validation-container">
+            <div id="validation" up-hungry up-keep>
+              ${validationHtml}
+            </div>
           </div>
-          <div id="results" up-hungry></div>
+          <div id="results-container">
+            <div id="results" up-hungry></div>
+          </div>
         `
         return response.header('Content-Type', 'text/html').send(html)
       }
