@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{ darkMode: localStorage.getItem('theme') === 'dark' }" :class="{ 'dark': darkMode }" x-init="$watch('darkMode', value => localStorage.setItem('theme', value ? 'dark' : 'light'))">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SQL Playground - Sage X3</title>
   
   @vite(['resources/css/app.css', 'resources/js/app.js'])
-  
-  <style>
-    [x-cloak] { display: none !important; }
-  </style>
 </head>
 <body>
   <!-- App Shell -->
@@ -22,18 +18,11 @@
         <span>SQL Playground - Sage X3</span>
       </div>
       <div class="app-header-actions">
-        <button 
-          class="btn btn-ghost btn-icon" 
-          @click="darkMode = !darkMode" 
-          title="Toggle theme">
-          <span x-show="!darkMode">🌙</span>
-          <span x-show="darkMode" x-cloak>☀️</span>
+        <button class="btn btn-ghost btn-icon" onclick="toggleTheme()" title="Toggle theme">
+          <span class="dark-hidden">🌙</span>
+          <span class="light-hidden">☀️</span>
         </button>
-        
-        <button 
-          class="btn btn-ghost btn-icon" 
-          onclick="showShortcuts()" 
-          title="Keyboard shortcuts (?)">
+        <button class="btn btn-ghost btn-icon" onclick="showShortcuts()" title="Keyboard shortcuts (?)">
           ⌨️
         </button>
       </div>
@@ -115,7 +104,7 @@
               <input type="hidden" name="sql" id="sql-input">
               
               <div class="editor-actions" up-keep>
-                <button type="submit" class="btn btn-success">
+                <button type="submit" class="btn btn-success" up-disable-with="⏳ Executing...">
                   ▶️ Execute Query
                 </button>
                 
@@ -150,7 +139,7 @@
             <div class="results-header">
               <h2 class="results-title">Query Results</h2>
               <div class="results-metrics">
-                <!-- Metrics badges will be added via Alpine.js or partials -->
+                <!-- Metrics badges will be added here -->
               </div>
             </div>
 
@@ -179,11 +168,11 @@
 
   </div>
 
-  <script>
-    // Show shortcuts modal (to be implemented with modal component)
-    function showShortcuts() {
-      alert('Keyboard shortcuts:\nCtrl+Enter - Execute query\nCtrl+Shift+F - Format SQL')
-    }
-  </script>
+  <style>
+    .dark-hidden { display: none; }
+    .dark .dark-hidden { display: inline; }
+    .dark .light-hidden { display: none; }
+    .light-hidden { display: inline; }
+  </style>
 </body>
 </html>

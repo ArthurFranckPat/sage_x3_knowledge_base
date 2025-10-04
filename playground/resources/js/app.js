@@ -1,11 +1,18 @@
 // Import Unpoly (no default export, just side effects)
 import 'unpoly'
 
+// Import Alpine.js
+import Alpine from 'alpinejs'
+
 // Import Monaco Editor
 import * as monaco from 'monaco-editor'
 
 // Import SQL Formatter
 import { format } from 'sql-formatter'
+
+// Initialize Alpine.js
+window.Alpine = Alpine
+Alpine.start()
 
 // Configure Monaco Workers for Vite
 self.MonacoEnvironment = {

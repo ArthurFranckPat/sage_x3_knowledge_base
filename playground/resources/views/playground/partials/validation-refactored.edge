@@ -1,0 +1,61 @@
+@if(validation)
+  <div class="animate-slide-in">
+    @if(validation.valid)
+      {{-- Success Validation using Alert component --}}
+      @component('components.ui.alert', { variant: 'success' })
+        @slot('title')
+          ✓ Valid SQL Query
+        @end
+        @slot('main')
+          <div class="flex items-center gap-2">
+            <span>Score:</span>
+            @component('components.ui.badge', { 
+              variant: validation.score >= 80 ? 'success' : validation.score >= 50 ? 'warning' : 'destructive'
+            })
+              {{ validation.score }}/100
+            @end
+          </div>
+          
+          @if(validation.warnings && validation.warnings.length > 0)
+            <div style="margin-top: 0.75rem;">
+              <strong>Warnings:</strong>
+              <ul style="margin: 0.5rem 0 0 1.5rem; list-style: disc;">
+                @each(warning in validation.warnings)
+                  <li>{{ warning }}</li>
+                @end
+              </ul>
+            </div>
+          @end
+        @end
+      @end
+    @else
+      {{-- Error Validation using Alert component --}}
+      @component('components.ui.alert', { variant: 'destructive' })
+        @slot('title')
+          ✗ Invalid SQL Query
+        @end
+        @slot('main')
+          @if(validation.errors && validation.errors.length > 0)
+            <strong>Errors:</strong>
+            <ul style="margin: 0.5rem 0 0 1.5rem; list-style: disc;">
+              @each(error in validation.errors)
+                <li>{{ error }}</li>
+              @end
+            </ul>
+          @end
+          
+          @if(validation.suggestions && validation.suggestions.length > 0)
+            <div style="margin-top: 0.75rem;">
+              <strong>Suggestions:</strong>
+              <ul style="margin: 0.5rem 0 0 1.5rem; list-style: disc;">
+                @each(suggestion in validation.suggestions)
+                  <li>{{ suggestion }}</li>
+                @end
+              </ul>
+            </div>
+          @end
+        @end
+      @end
+    @end
+  </div>
+@end

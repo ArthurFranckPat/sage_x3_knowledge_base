@@ -27,14 +27,11 @@
       <span class="badge badge-primary">
         {{ result.rowCount }} rows
       </span>
-      
       <span class="badge badge-secondary">
         {{ result.executionTime }}ms
       </span>
-      
       @if(result.validation && result.validation.score !== undefined)
-        @set('scoreBadgeVariant', result.validation.score >= 80 ? 'success' : (result.validation.score >= 50 ? 'warning' : 'destructive'))
-        <span class="badge badge-{{ scoreBadgeVariant }}">
+        <span class="badge {{ result.validation.score >= 80 ? 'badge-success' : result.validation.score >= 50 ? 'badge-warning' : 'badge-destructive' }}">
           Score: {{ result.validation.score }}/100
         </span>
       @end

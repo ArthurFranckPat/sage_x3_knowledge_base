@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{ darkMode: localStorage.getItem('theme') === 'dark' }" :class="{ 'dark': darkMode }" x-init="$watch('darkMode', value => localStorage.setItem('theme', value ? 'dark' : 'light'))">
+<html lang="fr" x-data="{ darkMode: false }" :class="{ 'dark': darkMode }">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SQL Playground - Sage X3</title>
   
   @vite(['resources/css/app.css', 'resources/js/app.js'])
-  
-  <style>
-    [x-cloak] { display: none !important; }
-  </style>
 </head>
 <body>
   <!-- App Shell -->
@@ -22,20 +18,22 @@
         <span>SQL Playground - Sage X3</span>
       </div>
       <div class="app-header-actions">
-        <button 
-          class="btn btn-ghost btn-icon" 
-          @click="darkMode = !darkMode" 
-          title="Toggle theme">
+        @component('components.ui.button', {
+          variant: 'ghost',
+          size: 'icon',
+          class: 'dark-mode-toggle'
+        })
           <span x-show="!darkMode">🌙</span>
           <span x-show="darkMode" x-cloak>☀️</span>
-        </button>
+        @end
         
-        <button 
-          class="btn btn-ghost btn-icon" 
-          onclick="showShortcuts()" 
-          title="Keyboard shortcuts (?)">
+        @component('components.ui.button', {
+          variant: 'ghost',
+          size: 'icon',
+          onclick: 'showShortcuts()'
+        })
           ⌨️
-        </button>
+        @end
       </div>
     </header>
 
@@ -115,27 +113,30 @@
               <input type="hidden" name="sql" id="sql-input">
               
               <div class="editor-actions" up-keep>
-                <button type="submit" class="btn btn-success">
+                @component('components.ui.button', {
+                  type: 'submit',
+                  variant: 'success',
+                  class: 'w-full'
+                })
                   ▶️ Execute Query
-                </button>
+                @end
                 
-                <button 
-                  type="button" 
-                  class="btn btn-destructive"
-                  onclick="window.sqlEditor?.setValue('SELECT * FROM itmmaster LIMIT 10')">
+                @component('components.ui.button', {
+                  type: 'button',
+                  variant: 'destructive',
+                  class: 'w-full',
+                  onclick: "window.sqlEditor?.setValue('SELECT * FROM itmmaster LIMIT 10')"
+                })
                   🔄 Reset
-                </button>
+                @end
                 
-                <button 
-                  type="button" 
-                  class="btn btn-outline"
-                  up-validate 
-                  up-target="#validation-container"
-                  up-method="POST"
-                  up-url="/api/playground/validate"
-                  onclick="document.querySelector('#sql-input').value = window.sqlEditor?.getValue() || ''">
+                @component('components.ui.button', {
+                  type: 'button',
+                  variant: 'outline',
+                  class: 'w-full'
+                })
                   ✓ Validate
-                </button>
+                @end
               </div>
             </form>
 
@@ -180,10 +181,33 @@
   </div>
 
   <script>
+    // Alpine.js component for theme toggle
+    document.addEventListener('alpine:init', () => {
+      // Check localStorage for saved theme preference
+      const savedTheme = localStorage.getItem('theme')
+      if (savedTheme === 'dark') {
+        Alpine.store('darkMode', true)
+      }
+    })
+
+    // Watch for theme changes and save to localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+      const html = document.documentElement
+      const observer = new MutationObserver(() => {
+        const isDark = html.classList.contains('dark')
+        localStorage.setItem('theme', isDark ? 'dark' : 'light')
+      })
+      observer.observe(html, { attributes: true, attributeFilter: ['class'] })
+    })
+
     // Show shortcuts modal (to be implemented with modal component)
     function showShortcuts() {
       alert('Keyboard shortcuts:\nCtrl+Enter - Execute query\nCtrl+Shift+F - Format SQL')
     }
   </script>
+
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
 </body>
 </html>
