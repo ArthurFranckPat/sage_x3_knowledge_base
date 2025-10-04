@@ -102,7 +102,7 @@
       method="POST" 
       action="/api/playground/execute">
       
-      @csrfField()
+      {{ csrfField() }}
       <input type="hidden" name="sql" id="sql-input">
       
       <div class="actions">
