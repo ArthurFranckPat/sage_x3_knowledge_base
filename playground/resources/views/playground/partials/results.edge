@@ -24,18 +24,23 @@
 
     <!-- Results Footer with Metrics -->
     <div class="card-footer">
-      @!component('components/ui/badge', { variant: 'primary' })
+      <div class="badge badge-primary">
         {{ result.rowCount }} rows
-      @end
+      </div>
       
-      @!component('components/ui/badge', { variant: 'secondary' })
+      <div class="badge badge-secondary">
         {{ result.executionTime }}ms
-      @end
+      </div>
       
       @if(result.validation && result.validation.score !== undefined)
-        @set('scoreBadgeVariant', result.validation.score >= 80 ? 'success' : (result.validation.score >= 50 ? 'warning' : 'destructive'))
-        @!component('components/ui/badge', { variant: scoreBadgeVariant })
-          Score: {{ result.validation.score }}/100
+        @if(result.validation.score >= 80)
+          <div class="badge badge-success">
+            Score: {{ result.validation.score }}/100
+          </div>
+        @else
+          <div class="badge badge-warning">
+            Score: {{ result.validation.score }}/100
+          </div>
         @end
       @end
     </div>

@@ -2,16 +2,15 @@
   <div class="animate-slide-in">
     @if(validation.valid)
       {{-- Success Validation --}}
-      @!component('components/ui/alert', { variant: 'success' })
-        @slot('title')
-          ✓ Valid SQL Query
-        @end
-        @slot('main')
+      <div class="alert alert-success">
+        <div class="alert-title">✓ Valid SQL Query</div>
+        <div class="alert-description">
           <div class="flex items-center gap-2">
             <span>Score:</span>
-            @set('badgeVariant', validation.score >= 80 ? 'success' : (validation.score >= 50 ? 'warning' : 'destructive'))
-            @!component('components/ui/badge', { variant: badgeVariant })
-              {{ validation.score }}/100
+            @if(validation.score >= 80)
+              <span class="badge badge-success">{{ validation.score }}/100</span>
+            @else
+              <span class="badge badge-warning">{{ validation.score }}/100</span>
             @end
           </div>
           
@@ -25,15 +24,13 @@
               </ul>
             </div>
           @end
-        @end
-      @end
+        </div>
+      </div>
     @else
       {{-- Error Validation --}}
-      @!component('components/ui/alert', { variant: 'destructive' })
-        @slot('title')
-          ✗ Invalid SQL Query
-        @end
-        @slot('main')
+      <div class="alert alert-destructive">
+        <div class="alert-title">✗ Invalid SQL Query</div>
+        <div class="alert-description">
           @if(validation.errors && validation.errors.length > 0)
             <strong>Errors:</strong>
             <ul style="margin: 0.5rem 0 0 1.5rem; list-style: disc;">
@@ -53,8 +50,8 @@
               </ul>
             </div>
           @end
-        @end
-      @end
+        </div>
+      </div>
     @end
   </div>
 @end

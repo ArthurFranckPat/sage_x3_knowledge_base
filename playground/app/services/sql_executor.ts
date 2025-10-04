@@ -41,9 +41,7 @@ export default class SqlExecutor {
     const startTime = Date.now()
     
     try {
-      const result = await Database
-        .connection('sqlite')
-        .rawQuery(sqlWithLimit)
+      const result = await Database.rawQuery(sqlWithLimit)
       
       const executionTime = Date.now() - startTime
 

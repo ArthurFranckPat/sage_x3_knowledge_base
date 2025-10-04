@@ -94,27 +94,47 @@ export default class PlaygroundController {
       const isUnpoly = request.header('X-Up-Target') !== undefined
       
       if (isUnpoly) {
-        const validationHtml = await view.render('playground/partials/validation', {
-          validation: {
-            valid: false,
-            score: 0,
-            errors: [error.message || 'Erreur lors de l\'exécution de la requête'],
-            warnings: [],
-            suggestions: []
-          }
-        })
-        
-        const html = `
-          <div id="validation-container">
-            <div id="validation" up-hungry up-keep>
-              ${validationHtml}
+        try {
+          const validationHtml = await view.render('playground/partials/validation', {
+            validation: {
+              valid: false,
+              score: 0,
+              errors: [error.message || 'Erreur lors de l\'exécution de la requête'],
+              warnings: [],
+              suggestions: []
+            }
+          })
+          
+          const html = `
+            <div id="validation-container">
+              <div id="validation" up-hungry up-keep>
+                ${validationHtml}
+              </div>
             </div>
-          </div>
-          <div id="results-container">
-            <div id="results" up-hungry></div>
-          </div>
-        `
-        return response.header('Content-Type', 'text/html').send(html)
+            <div id="results-container">
+              <div id="results" up-hungry></div>
+            </div>
+          `
+          return response.header('Content-Type', 'text/html').send(html)
+        } catch (renderError) {
+          // Fallback en cas d'erreur de rendu
+          const html = `
+            <div id="validation-container">
+              <div id="validation" up-hungry up-keep>
+                <div class="alert alert-destructive">
+                  <div class="alert-title">✗ Error</div>
+                  <div class="alert-description">
+                    ${error.message || 'Erreur lors de l\'exécution de la requête'}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="results-container">
+              <div id="results" up-hungry></div>
+            </div>
+          `
+          return response.header('Content-Type', 'text/html').send(html)
+        }
       }
       
       return response.badRequest({
@@ -142,7 +162,15 @@ export default class PlaygroundController {
         }
         
         if (isUnpoly) {
-          return view.render('playground/partials/validation', { validation })
+          const validationHtml = await view.render('playground/partials/validation', { validation })
+          const html = `
+            <div id="validation-container">
+              <div id="validation" up-hungry up-keep>
+                ${validationHtml}
+              </div>
+            </div>
+          `
+          return response.header('Content-Type', 'text/html').send(html)
         }
         return response.badRequest(validation)
       }
@@ -151,7 +179,35 @@ export default class PlaygroundController {
       const validation = validator.validate(sql)
 
       if (isUnpoly) {
-        return view.render('playground/partials/validation', { validation })
+        try {
+          // Test template rendering step by step
+          console.log('Validation object:', validation)
+          const validationHtml = await view.render('playground/partials/validation', { validation })
+          const html = `
+            <div id="validation-container">
+              <div id="validation" up-hungry up-keep>
+                ${validationHtml}
+              </div>
+            </div>
+          `
+          return response.header('Content-Type', 'text/html').send(html)
+        } catch (renderError) {
+          console.error('Template render error:', renderError)
+          // Fallback: return simple HTML without template rendering
+          const html = `
+            <div id="validation-container">
+              <div id="validation" up-hungry up-keep>
+                <div class="alert alert-destructive">
+                  <div class="alert-title">✗ Error</div>
+                  <div class="alert-description">
+                    ${validation.errors[0] || 'Validation failed'}
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+          return response.header('Content-Type', 'text/html').send(html)
+        }
       }
       return response.ok(validation)
 
@@ -166,7 +222,15 @@ export default class PlaygroundController {
       }
       
       if (isUnpoly) {
-        return view.render('playground/partials/validation', { validation })
+        const validationHtml = await view.render('playground/partials/validation', { validation })
+        const html = `
+          <div id="validation-container">
+            <div id="validation" up-hungry up-keep>
+              ${validationHtml}
+            </div>
+          </div>
+        `
+        return response.header('Content-Type', 'text/html').send(html)
       }
       return response.badRequest(validation)
     }
