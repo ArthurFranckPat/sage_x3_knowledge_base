@@ -22,17 +22,11 @@
         <span>SQL Playground - Sage X3</span>
       </div>
       <div class="app-header-actions">
-        @component('components/ui/button', { 
-          variant: 'ghost', 
-          size: 'icon',
-          '@click': 'darkMode = !darkMode',
-          title: 'Toggle theme'
-        })
-          <span x-show="!darkMode">🌙</span>
-          <span x-show="darkMode" x-cloak>☀️</span>
+        @!ui.button({ variant: 'ghost', size: 'icon' })
+          TEST BUTTON
         @end
         
-        @component('components/ui/button', {
+        @!component('components/ui/button', {
           variant: 'ghost',
           size: 'icon',
           onclick: 'showShortcuts()',
@@ -119,14 +113,14 @@
               <input type="hidden" name="sql" id="sql-input">
               
               <div class="editor-actions" up-keep>
-                @component('components/ui/button', {
+                @!component('components/ui/button', {
                   type: 'submit',
                   variant: 'success'
                 })
                   ▶️ Execute Query
                 @end
                 
-                @component('components/ui/button', {
+                @!component('components/ui/button', {
                   type: 'button',
                   variant: 'destructive',
                   onclick: "window.sqlEditor?.setValue('SELECT * FROM itmmaster LIMIT 10')"
@@ -134,7 +128,7 @@
                   🔄 Reset
                 @end
                 
-                @component('components/ui/button', {
+                @!component('components/ui/button', {
                   type: 'button',
                   variant: 'outline',
                   'up-validate': true,

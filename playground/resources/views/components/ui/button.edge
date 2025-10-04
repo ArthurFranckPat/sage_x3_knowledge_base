@@ -1,41 +1,28 @@
-{{--
-  Button Component (shadcn-inspired)
-  
-  Props:
-  - variant: primary | secondary | destructive | success | outline | ghost (default: primary)
-  - size: sm | default | lg | icon (default: default)
-  - class: Additional CSS classes
-  - type: button | submit | reset (default: button)
-  - All other HTML button attributes
-  
-  Usage:
-  @component('components/ui/button', { variant: 'success', type: 'submit' })
-    Click me
-  @end
---}}
+@let(variant = $props.get('variant', 'primary'))
+@let(size = $props.get('size', 'default'))
+@let(btnType = $props.get('type', 'button'))
 
-@set('variant', $props.get('variant', 'primary'))
-@set('size', $props.get('size', 'default'))
-@set('btnType', $props.get('type', 'button'))
-
-@set('variantClass', {
+@let(variantClass = {
   primary: 'btn-primary',
   secondary: 'btn-secondary',
   destructive: 'btn-destructive',
   success: 'btn-success',
   outline: 'btn-outline',
   ghost: 'btn-ghost'
-}[variant])
+}[variant] || 'btn-primary')
 
-@set('sizeClass', {
+@let(sizeClass = {
   sm: 'btn-sm',
   default: '',
   lg: 'btn-lg',
   icon: 'btn-icon'
-}[size])
+}[size] || '')
 
-@set('classes', 'btn ' + variantClass + (sizeClass ? ' ' + sizeClass : ''))
+@let(finalClass = 'btn ' + variantClass + (sizeClass ? ' ' + sizeClass : ''))
 
-<button type="{{ btnType }}" {{ $props.except(['variant', 'size', 'type']).merge({ class: classes }).toAttrs() }}>
-  {{ await $slots.main() }}
+<button {{ $props.except(['variant', 'size', 'class']).merge({ 
+  type: btnType, 
+  class: finalClass 
+}).toAttrs() }}>
+  {{{ await $slots.main() }}}
 </button>

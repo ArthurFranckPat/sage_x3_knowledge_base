@@ -11,21 +11,19 @@
   @end
 --}}
 
-@set('variant', $props.get('variant', 'primary'))
+@let(variant = $props.get('variant', 'primary'))
 
-@set('variantClass', {
+@let(variantClass = {
   primary: 'badge-primary',
   secondary: 'badge-secondary',
   success: 'badge-success',
   warning: 'badge-warning',
   destructive: 'badge-destructive',
   outline: 'badge-outline'
-}[variant])
+}[variant] || 'badge-primary')
 
-@set('badgeProps', $props.except(['variant']).merge({
+<span {{ $props.except(['variant']).merge({
   class: ['badge', variantClass].join(' ')
-}))
-
-<span {{ badgeProps.toAttrs() }}>
-  {{ await $slots.main() }}
+}).toAttrs() }}>
+  {{{ await $slots.main() }}}
 </span>

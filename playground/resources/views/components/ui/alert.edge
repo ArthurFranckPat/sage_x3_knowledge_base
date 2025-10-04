@@ -20,29 +20,27 @@
   @end
 --}}
 
-@set('variant', $props.get('variant', 'info'))
+@let(variant = $props.get('variant', 'info'))
 
-@set('variantClass', {
+@let(variantClass = {
   info: 'alert-info',
   success: 'alert-success',
   warning: 'alert-warning',
   destructive: 'alert-destructive'
-}[variant])
+}[variant] || 'alert-info')
 
-@set('alertProps', $props.except(['variant']).merge({
+<div {{ $props.except(['variant']).merge({
   class: ['alert', variantClass].join(' ')
-}))
-
-<div {{ alertProps.toAttrs() }}>
+}).toAttrs() }}>
   <div>
     @if($slots.hasNamed('title'))
       <div class="alert-title">
-        {{ await $slots.named('title') }}
+        {{{ await $slots.named('title') }}}
       </div>
     @end
     
     <div class="alert-description">
-      {{ await $slots.main() }}
+      {{{ await $slots.main() }}}
     </div>
   </div>
 </div>
