@@ -31,8 +31,19 @@ window.sqlEditor = null
 
 // Function to initialize Monaco Editor
 function initMonacoEditor(element) {
-  const editor = monaco.editor.create(element, {
-    value: localStorage.getItem('lastSQL') || 'SELECT * FROM itmmaster LIMIT 10',
+  console.log('🚀 Initializing Monaco Editor on element:', element)
+  
+  // Remove fallback textarea if exists
+  const fallback = element.querySelector('#sql-fallback-editor')
+  const fallbackValue = fallback ? fallback.value : 'SELECT * FROM itmmaster LIMIT 10'
+  if (fallback) {
+    console.log('📝 Removing fallback textarea, value:', fallbackValue)
+    fallback.remove()
+  }
+  
+  try {
+    const editor = monaco.editor.create(element, {
+    value: localStorage.getItem('lastSQL') || fallbackValue,
     language: 'sql',
     theme: document.documentElement.classList.contains('dark') ? 'vs-dark' : 'vs',
     automaticLayout: true,
@@ -48,6 +59,7 @@ function initMonacoEditor(element) {
   })
 
   window.sqlEditor = editor
+  console.log('✅ Monaco Editor initialized successfully!')
 
   // Ctrl+Enter to execute
   editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, () => {
@@ -73,7 +85,13 @@ function initMonacoEditor(element) {
     localStorage.setItem('lastSQL', editor.getValue())
   })
 
-  return editor
+    return editor
+  } catch (error) {
+    console.error('❌ Monaco Editor initialization failed:', error)
+    // Restore fallback textarea on error
+    element.innerHTML = `<textarea id="sql-fallback-editor" style="width: 100%; height: 300px; font-family: monospace; padding: 10px; border: none; resize: vertical;">${fallbackValue}</textarea>`
+    return null
+  }
 }
 
 // Monaco Editor Compiler for Unpoly
@@ -89,9 +107,15 @@ up.compiler('#monaco-editor', function(element) {
 
 // Initialize Monaco Editor on page load (for initial page load, not Unpoly navigation)
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('📄 DOMContentLoaded event fired')
   const editorElement = document.getElementById('monaco-editor')
+  console.log('🔍 Monaco editor element:', editorElement)
+  
   if (editorElement && !window.sqlEditor) {
+    console.log('🎯 Attempting to initialize Monaco Editor...')
     window.sqlEditor = initMonacoEditor(editorElement)
+  } else {
+    console.warn('⚠️ Cannot initialize Monaco:', { editorElement, sqlEditor: window.sqlEditor })
   }
 })
 
@@ -102,6 +126,15 @@ up.on('up:form:submit', 'form#sql-form', (event) => {
     const input = event.form.querySelector('#sql-input')
     if (input) {
       input.value = sql
+    }
+  } else {
+    // Fallback: get SQL from textarea if Monaco isn't loaded
+    const fallback = document.getElementById('sql-fallback-editor')
+    if (fallback) {
+      const input = event.form.querySelector('#sql-input')
+      if (input) {
+        input.value = fallback.value
+      }
     }
   }
 })
