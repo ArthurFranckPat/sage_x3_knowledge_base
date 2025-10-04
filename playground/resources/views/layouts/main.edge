@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="{{ csrfToken }}">
+  <title>{{ title || 'Playground SQL - Sage X3' }}</title>
+  
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body>
+  <div id="app">
+    <!-- Header persistant -->
+    <header id="header">
+      <h1>🚀 Playground SQL - Sage X3</h1>
+      <nav>
+        <a href="/playground" up-target="#main-content" up-history="true">Playground</a>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+          <span class="dark-hidden">🌙</span>
+          <span class="light-hidden">☀️</span>
+        </button>
+        <button class="btn-icon" onclick="showShortcuts()" title="Keyboard shortcuts (?)">
+          ⌨️
+        </button>
+      </nav>
+    </header>
+
+    <!-- Contenu principal (remplacé par Unpoly) -->
+    <main id="main-content" up-main>
+      @!section('content')
+    </main>
+  </div>
+
+  <style>
+    .dark-hidden { display: none; }
+    .dark .dark-hidden { display: inline; }
+    .dark .light-hidden { display: none; }
+    .light-hidden { display: inline; }
+  </style>
+</body>
+</html>

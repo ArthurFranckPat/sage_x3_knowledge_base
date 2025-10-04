@@ -18,8 +18,32 @@ router.on('/').render('pages/home').as('home')
 router
   .group(() => {
     router
-      .get('/sql', [PlaygroundController, 'index'])
-      .as('playground.sql')
+      .get('/', [PlaygroundController, 'index'])
+      .as('playground.index')
+    
+    router
+      .get('/schema', [PlaygroundController, 'schemaView'])
+      .as('playground.schema')
+    
+    router
+      .get('/history', [PlaygroundController, 'historyView'])
+      .as('playground.history')
+    
+    router
+      .get('/favorites', [PlaygroundController, 'favoritesView'])
+      .as('playground.favorites')
+    
+    router
+      .get('/examples', [PlaygroundController, 'examplesView'])
+      .as('playground.examples')
+    
+    router
+      .get('/shortcuts', [PlaygroundController, 'shortcutsView'])
+      .as('playground.shortcuts')
+    
+    router
+      .get('/export', [PlaygroundController, 'export'])
+      .as('playground.export')
   })
   .prefix('/playground')
 

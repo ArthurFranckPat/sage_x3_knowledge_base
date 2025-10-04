@@ -16,4 +16,7 @@ export default defineConfig({
       reload: ['resources/views/**/*.edge'],
     }),
   ],
+  optimizeDeps: {
+    include: ['unpoly', 'monaco-editor']
+  }
 })

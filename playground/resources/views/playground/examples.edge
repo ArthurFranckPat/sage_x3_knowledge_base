@@ -1,0 +1,36 @@
+<div class="modal-header">
+  <h2>💡 SQL Examples</h2>
+  <button class="btn-icon" up-dismiss>✕</button>
+</div>
+
+<div class="modal-content">
+  @if(examples)
+    <div style="display: grid; gap: 1rem;">
+      @each(example in examples)
+        <div class="example-card" style="border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); padding: 1rem;">
+          <h3 style="margin-bottom: 0.5rem; font-size: 1rem;">{{ example.title }}</h3>
+          <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 0.75rem;">{{ example.description }}</p>
+          <pre style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--border-radius-sm); overflow-x: auto; font-size: 0.875rem; margin-bottom: 0.75rem;">{{ example.sql }}</pre>
+          <button 
+            class="btn btn-primary" 
+            onclick="loadExample(`{{ example.sql.replace('`', '\\`') }}`)"
+            style="font-size: 0.875rem;">
+            📝 Use this query
+          </button>
+        </div>
+      @end
+    </div>
+  @else
+    <p style="text-align: center; color: var(--text-secondary);">Loading examples...</p>
+  @end
+</div>
+
+<script>
+  function loadExample(sql) {
+    if (window.sqlEditor) {
+      window.sqlEditor.setValue(sql)
+      up.layer.dismiss()
+      showToast('✓ Example loaded', 'success')
+    }
+  }
+</script>

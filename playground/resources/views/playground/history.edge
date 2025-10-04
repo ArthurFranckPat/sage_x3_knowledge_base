@@ -1,0 +1,81 @@
+<div class="drawer-header">
+  <h2>📝 Query History</h2>
+  <div style="display: flex; gap: 0.5rem;">
+    <button class="btn-icon" onclick="clearHistory()" title="Clear all">
+      🗑️
+    </button>
+    <button class="btn-icon" up-dismiss>✕</button>
+  </div>
+</div>
+
+<div class="drawer-content">
+  <div id="history-list">
+    <!-- Will be populated by JavaScript from localStorage -->
+  </div>
+</div>
+
+<script>
+  function loadHistory() {
+    const history = JSON.parse(localStorage.getItem('sqlHistory') || '[]')
+    const container = document.getElementById('history-list')
+    
+    if (history.length === 0) {
+      container.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">No query history yet</p>'
+      return
+    }
+    
+    container.innerHTML = history.map((entry, index) => {
+      const date = new Date(entry.timestamp)
+      const dateStr = date.toLocaleString()
+      const sqlPreview = entry.sql.substring(0, 100) + (entry.sql.length > 100 ? '...' : '')
+      
+      return `
+        <div class="history-entry" style="border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); padding: 1rem; margin-bottom: 0.75rem;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <small style="color: var(--text-secondary);">${dateStr}</small>
+            <span style="background: var(--color-primary); color: white; padding: 0.125rem 0.5rem; border-radius: 12px; font-size: 0.75rem;">${entry.rowCount} rows</span>
+          </div>
+          <pre style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--border-radius-sm); overflow-x: auto; margin: 0.5rem 0; font-size: 0.875rem;">${entry.sql}</pre>
+          <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+            <button class="btn btn-secondary" onclick="loadQueryFromHistory(${index})" style="font-size: 0.875rem;">
+              📝 Load
+            </button>
+            <button class="btn btn-tertiary" onclick="removeFromHistory(${index})" style="font-size: 0.875rem;">
+              🗑️ Remove
+            </button>
+          </div>
+        </div>
+      `
+    }).join('')
+  }
+  
+  function loadQueryFromHistory(index) {
+    const history = JSON.parse(localStorage.getItem('sqlHistory') || '[]')
+    const entry = history[index]
+    
+    if (entry && window.sqlEditor) {
+      window.sqlEditor.setValue(entry.sql)
+      up.layer.dismiss()
+      showToast('✓ Query loaded', 'success')
+    }
+  }
+  
+  function removeFromHistory(index) {
+    let history = JSON.parse(localStorage.getItem('sqlHistory') || '[]')
+    history.splice(index, 1)
+    localStorage.setItem('sqlHistory', JSON.stringify(history))
+    loadHistory()
+    showToast('✓ Removed from history', 'success')
+  }
+  
+  function clearHistory() {
+    if (confirm('Clear all history?')) {
+      localStorage.setItem('sqlHistory', '[]')
+      loadHistory()
+      showToast('✓ History cleared', 'success')
+    }
+  }
+  
+  // Load history on page load
+  loadHistory()
+</script>

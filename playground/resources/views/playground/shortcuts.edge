@@ -1,0 +1,88 @@
+<div class="modal-header">
+  <h2>⌨️ Keyboard Shortcuts</h2>
+  <button class="btn-icon" up-dismiss>✕</button>
+</div>
+
+<div class="modal-content">
+  <div style="display: grid; gap: 1rem;">
+    <div class="shortcut-section">
+      <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--text-primary);">Editor</h3>
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Ctrl</kbd> + 
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Enter</kbd>
+          </td>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">Execute query</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Ctrl</kbd> + 
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Shift</kbd> + 
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">F</kbd>
+          </td>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">Format SQL</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Ctrl</kbd> + 
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Space</kbd>
+          </td>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">Trigger autocomplete</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Ctrl</kbd> + 
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">F</kbd>
+          </td>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">Find in editor</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem;">
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Ctrl</kbd> + 
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">H</kbd>
+          </td>
+          <td style="padding: 0.5rem; color: var(--text-secondary);">Find and replace</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="shortcut-section">
+      <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--text-primary);">Navigation</h3>
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">?</kbd>
+          </td>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">Show this help</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Esc</kbd>
+          </td>
+          <td style="padding: 0.5rem; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">Close drawer/modal</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem;">
+            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.875rem;">Backspace</kbd>
+          </td>
+          <td style="padding: 0.5rem; color: var(--text-secondary);">Go back (browser)</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="shortcut-section">
+      <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--text-primary);">Tips</h3>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="padding: 0.5rem 0; color: var(--text-secondary);">💡 Click on column names in Schema Explorer to copy them</li>
+        <li style="padding: 0.5rem 0; color: var(--text-secondary);">💡 All queries are automatically saved in history</li>
+        <li style="padding: 0.5rem 0; color: var(--text-secondary);">💡 Use ⭐ button to save your favorite queries</li>
+        <li style="padding: 0.5rem 0; color: var(--text-secondary);">💡 The editor supports SQL syntax highlighting and validation</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-primary" up-dismiss>Got it!</button>
+</div>

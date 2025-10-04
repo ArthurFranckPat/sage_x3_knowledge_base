@@ -1,11 +1,15 @@
 import { test } from '@japa/runner'
 
 test.group('PlaygroundController', () => {
-  test('GET /playground/sql should render the playground page', async ({ client }) => {
-    const response = await client.get('/playground/sql')
+  test('GET /playground/ should render the playground page', async ({ client }) => {
+    const response = await client.get('/playground/')
     
     response.assertStatus(200)
-    response.assertTextIncludes('Playground SQL')
+    // Check for layout or content elements
+    const body = response.text()
+    // Edge templates are compiled, so we check for presence of key elements
+    // The response should contain either the layout structure or monaco-editor div
+    response.assertTextIncludes('monaco-editor')
   })
 
   test('POST /api/playground/execute should execute a valid SELECT query', async ({ client, assert }) => {

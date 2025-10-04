@@ -1,0 +1,68 @@
+<div class="drawer-header">
+  <h2>⭐ Favorites</h2>
+  <button class="btn-icon" up-dismiss>✕</button>
+</div>
+
+<div class="drawer-content">
+  <div id="favorites-list">
+    <!-- Will be populated by JavaScript from localStorage -->
+  </div>
+</div>
+
+<script>
+  function loadFavorites() {
+    const favorites = JSON.parse(localStorage.getItem('sqlFavorites') || '[]')
+    const container = document.getElementById('favorites-list')
+    
+    if (favorites.length === 0) {
+      container.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">No favorites yet<br><small>Click ⭐ in the editor to add a favorite</small></p>'
+      return
+    }
+    
+    container.innerHTML = favorites.map((fav) => {
+      const date = new Date(fav.createdAt)
+      const dateStr = date.toLocaleDateString()
+      const sqlPreview = fav.sql.substring(0, 100) + (fav.sql.length > 100 ? '...' : '')
+      
+      return `
+        <div class="favorite-entry" style="border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); padding: 1rem; margin-bottom: 0.75rem;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <strong>${fav.name}</strong>
+            <small style="color: var(--text-secondary);">${dateStr}</small>
+          </div>
+          <pre style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--border-radius-sm); overflow-x: auto; margin: 0.5rem 0; font-size: 0.875rem;">${fav.sql}</pre>
+          <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+            <button class="btn btn-secondary" onclick="loadFavorite('${fav.id}')" style="font-size: 0.875rem;">
+              📝 Load
+            </button>
+            <button class="btn btn-tertiary" onclick="removeFavorite('${fav.id}')" style="font-size: 0.875rem;">
+              🗑️ Remove
+            </button>
+          </div>
+        </div>
+      `
+    }).join('')
+  }
+  
+  function loadFavorite(id) {
+    const favorites = JSON.parse(localStorage.getItem('sqlFavorites') || '[]')
+    const fav = favorites.find(f => f.id == id)
+    
+    if (fav && window.sqlEditor) {
+      window.sqlEditor.setValue(fav.sql)
+      up.layer.dismiss()
+      showToast('✓ Favorite loaded', 'success')
+    }
+  }
+  
+  function removeFavorite(id) {
+    let favorites = JSON.parse(localStorage.getItem('sqlFavorites') || '[]')
+    favorites = favorites.filter(f => f.id != id)
+    localStorage.setItem('sqlFavorites', JSON.stringify(favorites))
+    loadFavorites()
+    showToast('✓ Removed from favorites', 'success')
+  }
+  
+  // Load favorites on page load
+  loadFavorites()
+</script>
