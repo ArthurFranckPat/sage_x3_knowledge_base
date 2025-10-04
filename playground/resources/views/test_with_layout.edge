@@ -1,0 +1,6 @@
+@layout('layouts/test_layout')
+
+@slot('main')
+  <p>This is content from child template!</p>
+  <p>Time: {{ new Date().toISOString() }}</p>
+@endslot

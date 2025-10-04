@@ -1,9 +1,32 @@
-@layout('layouts/main')
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Playground - Sage X3</title>
+  
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body>
+  <div id="app">
+    <!-- Header persistant -->
+    <header id="header">
+      <h1>🚀 Playground SQL - Sage X3</h1>
+      <nav>
+        <a href="/playground" up-target="#main-content" up-history="true">Playground</a>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+          <span class="dark-hidden">🌙</span>
+          <span class="light-hidden">☀️</span>
+        </button>
+        <button class="btn-icon" onclick="showShortcuts()" title="Keyboard shortcuts (?)">
+          ⌨️
+        </button>
+      </nav>
+    </header>
 
-@set('title', 'SQL Playground - Sage X3')
-
-@section('content')
-<div class="playground-container">
+    <!-- Contenu principal (remplacé par Unpoly) -->
+    <main id="main-content" up-main>
+      <div class="playground-container">
   
   <!-- Sidebar avec boutons d'action -->
   <aside class="sidebar">
@@ -111,14 +134,14 @@
   <!-- Zone de validation -->
   <div id="validation" up-hungry up-keep>
     @if(validation)
-      @!component('playground/partials/validation', { validation })
+      @include('playground/partials/validation')
     @end
   </div>
 
   <!-- Résultats -->
   <div id="results" up-hungry>
     @if(result)
-      @!component('playground/partials/results', { result })
+      @include('playground/partials/results')
     @end
   </div>
 
@@ -134,4 +157,15 @@
     }
   }
 </script>
-@end
+      </div>
+    </main>
+  </div>
+
+  <style>
+    .dark-hidden { display: none; }
+    .dark .dark-hidden { display: inline; }
+    .dark .light-hidden { display: none; }
+    .light-hidden { display: inline; }
+  </style>
+</body>
+</html>

@@ -27,7 +27,7 @@
 
     <!-- Contenu principal (remplacé par Unpoly) -->
     <main id="main-content" up-main>
-      @!section('content')
+      {{{ await $slots.main() }}}
     </main>
   </div>
 

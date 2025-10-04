@@ -14,6 +14,10 @@ const PlaygroundController = () => import('#controllers/playground_controller')
 // Page d'accueil
 router.on('/').render('pages/home').as('home')
 
+// Test Edge
+router.on('/test').render('test').as('test')
+router.on('/test2').render('test_with_layout').as('test2')
+
 // Routes Web du Playground SQL
 router
   .group(() => {
