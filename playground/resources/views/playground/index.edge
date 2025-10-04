@@ -22,20 +22,24 @@
         <span>SQL Playground - Sage X3</span>
       </div>
       <div class="app-header-actions">
-        <button 
-          class="btn btn-ghost btn-icon" 
-          @click="darkMode = !darkMode" 
-          title="Toggle theme">
+        @component('components/ui/button', { 
+          variant: 'ghost', 
+          size: 'icon',
+          '@click': 'darkMode = !darkMode',
+          title: 'Toggle theme'
+        })
           <span x-show="!darkMode">🌙</span>
           <span x-show="darkMode" x-cloak>☀️</span>
-        </button>
+        @end
         
-        <button 
-          class="btn btn-ghost btn-icon" 
-          onclick="showShortcuts()" 
-          title="Keyboard shortcuts (?)">
+        @component('components/ui/button', {
+          variant: 'ghost',
+          size: 'icon',
+          onclick: 'showShortcuts()',
+          title: 'Keyboard shortcuts (?)'
+        })
           ⌨️
-        </button>
+        @end
       </div>
     </header>
 
@@ -115,27 +119,32 @@
               <input type="hidden" name="sql" id="sql-input">
               
               <div class="editor-actions" up-keep>
-                <button type="submit" class="btn btn-success">
+                @component('components/ui/button', {
+                  type: 'submit',
+                  variant: 'success'
+                })
                   ▶️ Execute Query
-                </button>
+                @end
                 
-                <button 
-                  type="button" 
-                  class="btn btn-destructive"
-                  onclick="window.sqlEditor?.setValue('SELECT * FROM itmmaster LIMIT 10')">
+                @component('components/ui/button', {
+                  type: 'button',
+                  variant: 'destructive',
+                  onclick: "window.sqlEditor?.setValue('SELECT * FROM itmmaster LIMIT 10')"
+                })
                   🔄 Reset
-                </button>
+                @end
                 
-                <button 
-                  type="button" 
-                  class="btn btn-outline"
-                  up-validate 
-                  up-target="#validation-container"
-                  up-method="POST"
-                  up-url="/api/playground/validate"
-                  onclick="document.querySelector('#sql-input').value = window.sqlEditor?.getValue() || ''">
+                @component('components/ui/button', {
+                  type: 'button',
+                  variant: 'outline',
+                  'up-validate': true,
+                  'up-target': '#validation-container',
+                  'up-method': 'POST',
+                  'up-url': '/api/playground/validate',
+                  onclick: "document.querySelector('#sql-input').value = window.sqlEditor?.getValue() || ''"
+                })
                   ✓ Validate
-                </button>
+                @end
               </div>
             </form>
 

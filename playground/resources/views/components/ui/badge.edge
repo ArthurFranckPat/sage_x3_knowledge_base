@@ -6,30 +6,26 @@
   - class: Additional CSS classes
   
   Usage:
-  @component('components.ui.badge', { variant: 'success' })
+  @component('components/ui/badge', { variant: 'success' })
     Active
   @end
 --}}
 
-@set('variant', variant ?? 'primary')
+@set('variant', $props.get('variant', 'primary'))
 
-@set('baseClasses', 'badge')
-
-@set('variantClasses', {
+@set('variantClass', {
   primary: 'badge-primary',
   secondary: 'badge-secondary',
   success: 'badge-success',
   warning: 'badge-warning',
   destructive: 'badge-destructive',
   outline: 'badge-outline'
-})
+}[variant])
 
-@set('classes', [
-  baseClasses,
-  variantClasses[variant] ?? variantClasses.primary,
-  class ?? ''
-].join(' ').trim())
+@set('badgeProps', $props.except(['variant']).merge({
+  class: ['badge', variantClass].join(' ')
+}))
 
-<span class="{{ classes }}">
+<span {{ badgeProps.toAttrs() }}>
   {{{ await $slots.main() }}}
 </span>

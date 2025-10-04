@@ -10,7 +10,7 @@
   - main: Alert description/content
   
   Usage:
-  @component('components.ui.alert', { variant: 'success' })
+  @component('components/ui/alert', { variant: 'success' })
     @slot('title')
       Success!
     @end
@@ -20,24 +20,20 @@
   @end
 --}}
 
-@set('variant', variant ?? 'info')
+@set('variant', $props.get('variant', 'info'))
 
-@set('baseClasses', 'alert')
-
-@set('variantClasses', {
+@set('variantClass', {
   info: 'alert-info',
   success: 'alert-success',
   warning: 'alert-warning',
   destructive: 'alert-destructive'
-})
+}[variant])
 
-@set('classes', [
-  baseClasses,
-  variantClasses[variant] ?? variantClasses.info,
-  class ?? ''
-].join(' ').trim())
+@set('alertProps', $props.except(['variant']).merge({
+  class: ['alert', variantClass].join(' ')
+}))
 
-<div class="{{ classes }}">
+<div {{ alertProps.toAttrs() }}>
   <div>
     @if($slots.hasNamed('title'))
       <div class="alert-title">

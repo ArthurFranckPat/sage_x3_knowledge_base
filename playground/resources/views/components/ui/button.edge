@@ -6,57 +6,36 @@
   - size: sm | default | lg | icon (default: default)
   - class: Additional CSS classes
   - type: button | submit | reset (default: button)
-  - disabled: boolean
-  - ...rest: Any other HTML button attributes
+  - All other HTML button attributes
   
   Usage:
-  @component('components.ui.button', { variant: 'primary' })
+  @component('components/ui/button', { variant: 'success', type: 'submit' })
     Click me
   @end
 --}}
 
-@set('variant', variant ?? 'primary')
-@set('size', size ?? 'default')
-@set('btnType', type ?? 'button')
+@set('variant', $props.get('variant', 'primary'))
+@set('size', $props.get('size', 'default'))
+@set('btnType', $props.get('type', 'button'))
 
-@set('baseClasses', 'btn')
-
-@set('variantClasses', {
+@set('variantClass', {
   primary: 'btn-primary',
   secondary: 'btn-secondary',
   destructive: 'btn-destructive',
   success: 'btn-success',
   outline: 'btn-outline',
   ghost: 'btn-ghost'
-})
+}[variant])
 
-@set('sizeClasses', {
+@set('sizeClass', {
   sm: 'btn-sm',
   default: '',
   lg: 'btn-lg',
   icon: 'btn-icon'
-})
+}[size])
 
-@set('classes', [
-  baseClasses,
-  variantClasses[variant] ?? variantClasses.primary,
-  sizeClasses[size] ?? '',
-  class ?? ''
-].join(' ').trim())
+@set('classes', 'btn ' + variantClass + (sizeClass ? ' ' + sizeClass : ''))
 
-<button
-  type="{{ btnType }}"
-  class="{{ classes }}"
-  @if(disabled)
-    disabled
-  @end
-  @if(id)
-    id="{{ id }}"
-  @end
-  @if(onclick)
-    onclick="{{ onclick }}"
-  @end
-  {{{ $slots.attributes() }}}
->
+<button type="{{ btnType }}" {{ $props.except(['variant', 'size', 'type']).merge({ class: classes }).toAttrs() }}>
   {{{ await $slots.main() }}}
 </button>
