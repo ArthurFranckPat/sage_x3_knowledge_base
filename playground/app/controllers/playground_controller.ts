@@ -90,6 +90,7 @@ export default class PlaygroundController {
       })
 
     } catch (error) {
+      // Check if request is from Unpoly
       const isUnpoly = request.header('X-Up-Target') !== undefined
       
       if (isUnpoly) {
