@@ -8,168 +8,164 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-  <div id="app">
-    <!-- Header persistant -->
-    <header id="header">
-      <h1>🚀 Playground SQL - Sage X3</h1>
-      <nav>
-        <a href="/playground" up-target="#main-content" up-history="true">Playground</a>
-        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+  <!-- App Shell -->
+  <div class="app-shell">
+    
+    <!-- Header -->
+    <header class="app-header">
+      <div class="app-header-title">
+        <span class="app-header-logo">🚀</span>
+        <span>SQL Playground - Sage X3</span>
+      </div>
+      <div class="app-header-actions">
+        <button class="btn btn-ghost btn-icon" onclick="toggleTheme()" title="Toggle theme">
           <span class="dark-hidden">🌙</span>
           <span class="light-hidden">☀️</span>
         </button>
-        <button class="btn-icon" onclick="showShortcuts()" title="Keyboard shortcuts (?)">
+        <button class="btn btn-ghost btn-icon" onclick="showShortcuts()" title="Keyboard shortcuts (?)">
           ⌨️
         </button>
-      </nav>
+      </div>
     </header>
 
-    <!-- Contenu principal (remplacé par Unpoly) -->
-    <main id="main-content" up-main>
-      <div class="playground-container">
-  
-  <!-- Sidebar avec boutons d'action -->
-  <aside class="sidebar">
-    <button 
-      class="btn-icon" 
-      up-layer="new drawer" 
-      up-href="/playground/schema" 
-      up-size="large"
-      up-accept-location="/playground/schema*"
-      title="Schema Explorer">
-      📊
-    </button>
-    
-    <button 
-      class="btn-icon"
-      up-layer="new drawer" 
-      up-href="/playground/history"
-      up-size="large"
-      title="History">
-      📝
-    </button>
-    
-    <button 
-      class="btn-icon"
-      up-layer="new drawer" 
-      up-href="/playground/favorites"
-      up-size="large"
-      title="Favorites">
-      ⭐
-    </button>
-    
-    <div style="flex: 1"></div>
-    
-    <button 
-      class="btn-icon"
-      up-layer="new modal" 
-      up-href="/playground/examples"
-      up-size="medium"
-      title="SQL Examples">
-      💡
-    </button>
-  </aside>
-
-  <!-- Section Éditeur SQL -->
-  <section id="editor-section">
-    <div class="editor-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-      <h2 style="font-size: 1.125rem; color: var(--text-primary);">📝 SQL Editor</h2>
-      <div style="display: flex; gap: 0.5rem;">
-        <button class="btn-icon" onclick="window.sqlEditor?.setValue('')" title="Clear editor">
-          🗑️
-        </button>
-        <button class="btn-icon" onclick="formatSQL()" title="Format SQL (Ctrl+Shift+F)">
-          ✨
-        </button>
+    <!-- Main Content -->
+    <div class="app-main">
+      
+      <!-- Sidebar -->
+      <aside class="app-sidebar">
         <button 
-          class="btn-icon"
-          onclick="addToFavorites(window.sqlEditor?.getValue() || '')"
-          title="Add to favorites">
+          class="sidebar-icon-btn" 
+          up-layer="new drawer" 
+          up-href="/playground/schema" 
+          up-size="large"
+          title="Schema Explorer">
+          📊
+        </button>
+        
+        <button 
+          class="sidebar-icon-btn"
+          up-layer="new drawer" 
+          up-href="/playground/history"
+          up-size="large"
+          title="History">
+          📝
+        </button>
+        
+        <button 
+          class="sidebar-icon-btn"
+          up-layer="new drawer" 
+          up-href="/playground/favorites"
+          up-size="large"
+          title="Favorites">
           ⭐
         </button>
-      </div>
-    </div>
-    
-    <!-- Monaco Editor Container -->
-    <div id="monaco-editor" style="min-height: 300px; border: 1px solid var(--border-color);">
-      <!-- Fallback textarea while Monaco loads -->
-      <textarea 
-        id="sql-fallback-editor" 
-        style="width: 100%; height: 300px; font-family: monospace; padding: 10px; border: none; resize: vertical;"
-        placeholder="Loading Monaco Editor...">SELECT * FROM itmmaster LIMIT 10</textarea>
-    </div>
-    
-    <!-- Actions (kept outside Unpoly target zones) -->
-    <form 
-      id="sql-form"
-      up-submit 
-      up-target="#results-container, #validation-container" 
-      up-fail-target="#validation-container"
-      method="POST" 
-      action="/api/playground/execute"
-      onsubmit="return copyEditorToInput()">
-      
-      {{ csrfField() }}
-      <input type="hidden" name="sql" id="sql-input">
-      
-      <div class="actions" up-keep>
-        <button type="submit" class="btn btn-primary" up-disable-with="⏳ Executing...">
-          ▶️ Execute (Ctrl+Enter)
-        </button>
+      </aside>
+
+      <!-- Content Area (Split View) -->
+      <div class="app-content">
         
-        <button 
-          type="button" 
-          class="btn btn-secondary"
-          up-validate 
-          up-target="#validation-container"
-          up-method="POST"
-          up-url="/api/playground/validate"
-          onclick="document.querySelector('#sql-input').value = window.sqlEditor?.getValue() || ''">
-          ✓ Validate
-        </button>
-        
-        <button 
-          type="button" 
-          class="btn btn-tertiary"
-          onclick="window.sqlEditor?.setValue('SELECT * FROM itmmaster LIMIT 10')">
-          🔄 Reset
-        </button>
+        <!-- Editor Panel (Left) -->
+        <div class="editor-panel">
+          <div class="editor-container">
+            
+            <!-- Monaco Editor -->
+            <div class="editor-wrapper">
+              <div id="monaco-editor">
+                <!-- Fallback textarea -->
+                <textarea 
+                  id="sql-fallback-editor" 
+                  style="width: 100%; height: 100%; font-family: monospace; padding: 10px; border: none; resize: none;"
+                  placeholder="Loading Monaco Editor...">SELECT * FROM itmmaster LIMIT 10</textarea>
+              </div>
+            </div>
+
+            <!-- Validation Section -->
+            <div class="validation-section">
+              <div id="validation-container">
+                <div id="validation" up-hungry up-keep>
+                  @if(validation)
+                    @include('playground/partials/validation')
+                  @end
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <form 
+              id="sql-form"
+              up-submit 
+              up-target="#results-container, #validation-container" 
+              up-fail-target="#validation-container"
+              method="POST" 
+              action="/api/playground/execute"
+              onsubmit="return copyEditorToInput()">
+              
+              {{ csrfField() }}
+              <input type="hidden" name="sql" id="sql-input">
+              
+              <div class="editor-actions" up-keep>
+                <button type="submit" class="btn btn-success" up-disable-with="⏳ Executing...">
+                  ▶️ Execute Query
+                </button>
+                
+                <button 
+                  type="button" 
+                  class="btn btn-destructive"
+                  onclick="window.sqlEditor?.setValue('SELECT * FROM itmmaster LIMIT 10')">
+                  🔄 Reset
+                </button>
+                
+                <button 
+                  type="button" 
+                  class="btn btn-outline"
+                  up-validate 
+                  up-target="#validation-container"
+                  up-method="POST"
+                  up-url="/api/playground/validate"
+                  onclick="document.querySelector('#sql-input').value = window.sqlEditor?.getValue() || ''">
+                  ✓ Validate
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Results Panel (Right) -->
+        <div class="results-panel">
+          <div class="results-container">
+            
+            <!-- Results Header -->
+            <div class="results-header">
+              <h2 class="results-title">Query Results</h2>
+              <div class="results-metrics">
+                <!-- Metrics badges will be added here -->
+              </div>
+            </div>
+
+            <!-- Results Content -->
+            <div id="results-container">
+              <div id="results" up-hungry>
+                @if(result)
+                  @include('playground/partials/results')
+                @else
+                  <div class="results-empty">
+                    <div class="results-empty-icon">📊</div>
+                    <div class="results-empty-title">No results yet</div>
+                    <div class="results-empty-description">
+                      Execute a SQL query to see results here
+                    </div>
+                  </div>
+                @end
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-    </form>
-  </section>
-
-  <!-- Zone de validation (container prevents button removal) -->
-  <div id="validation-container">
-    <div id="validation" up-hungry up-keep>
-      @if(validation)
-        @include('playground/partials/validation')
-      @end
     </div>
-  </div>
 
-  <!-- Résultats (container prevents button removal) -->
-  <div id="results-container">
-    <div id="results" up-hungry>
-      @if(result)
-        @include('playground/partials/results')
-      @end
-    </div>
-  </div>
-
-</div>
-
-<script>
-  // Helper function for SQL formatting
-  function formatSQL() {
-    if (window.sqlEditor) {
-      const sql = window.sqlEditor.getValue()
-      // Trigger Ctrl+Shift+F command
-      window.sqlEditor.trigger('keyboard', 'editor.action.formatDocument')
-    }
-  }
-</script>
-      </div>
-    </main>
   </div>
 
   <style>

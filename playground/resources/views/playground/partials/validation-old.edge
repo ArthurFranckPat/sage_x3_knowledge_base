@@ -1,0 +1,46 @@
+@set('cssClass', validation.score >= 80 ? 'success' : (validation.score >= 50 ? 'warning' : 'error'))
+
+<div class="validation-box {{ cssClass }}">
+  <div class="validation-score">
+    @if(validation.score >= 80)
+      ✅ Score: {{ validation.score }}/100
+    @elseif(validation.score >= 50)
+      ⚠️ Score: {{ validation.score }}/100
+    @else
+      ❌ Score: {{ validation.score }}/100
+    @end
+  </div>
+
+  @if(validation.valid)
+    <p><strong>✓ Valid SQL query</strong></p>
+  @else
+    <p><strong>✗ Invalid SQL query</strong></p>
+  @end
+
+  @if(validation.errors && validation.errors.length > 0)
+    <p style="margin-top: 0.5rem;"><strong>Errors:</strong></p>
+    <ul class="validation-list">
+      @each(error in validation.errors)
+        <li>{{ error }}</li>
+      @end
+    </ul>
+  @end
+
+  @if(validation.warnings && validation.warnings.length > 0)
+    <p style="margin-top: 0.5rem;"><strong>Warnings:</strong></p>
+    <ul class="validation-list">
+      @each(warning in validation.warnings)
+        <li>{{ warning }}</li>
+      @end
+    </ul>
+  @end
+
+  @if(validation.suggestions && validation.suggestions.length > 0)
+    <p style="margin-top: 0.5rem;"><strong>Suggestions:</strong></p>
+    <ul class="validation-list">
+      @each(suggestion in validation.suggestions)
+        <li>{{ suggestion }}</li>
+      @end
+    </ul>
+  @end
+</div>

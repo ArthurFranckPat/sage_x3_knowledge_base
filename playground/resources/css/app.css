@@ -1,4 +1,8 @@
-/* ==================== DESIGN SYSTEM ==================== */
+/* ==================== IMPORTS ==================== */
+@import './design-system.css';
+@import './layout.css';
+
+/* ==================== LEGACY DESIGN SYSTEM (to be removed) ==================== */
 :root {
   /* Colors */
   --color-primary: #3498db;
