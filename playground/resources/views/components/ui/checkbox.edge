@@ -1,0 +1,35 @@
+{{--
+  Checkbox Component (Basecoat UI)
+  
+  Props:
+  - checked: Whether checkbox is checked
+  - disabled: Whether checkbox is disabled
+  - required: Whether checkbox is required
+  - id: Checkbox ID
+  - name: Checkbox name
+  - value: Checkbox value
+  - indeterminate: Whether checkbox is in indeterminate state
+  - class: Additional CSS classes
+  
+  Usage:
+  @component('components.ui.checkbox', { checked: true })
+  @end
+--}}
+
+@let(checked = $props.get('checked', false))
+@let(disabled = $props.get('disabled', false))
+
+<label class="label gap-3">
+  <input
+    type="checkbox"
+    {{ $props.except(['checked']).merge({
+      class: 'input',
+      checked: checked,
+      disabled: disabled
+    }).toAttrs() }}
+  >
+  @let(hasLabel = !!$slots.main)
+  @if(hasLabel)
+    {{{ await $slots.main() }}}
+  @end
+</label>

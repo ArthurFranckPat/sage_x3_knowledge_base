@@ -1,28 +1,79 @@
-@let(variant = $props.get('variant', 'primary'))
-@let(size = $props.get('size', 'default'))
-@let(btnType = $props.get('type', 'button'))
+{{--
+  Button Component (shadcn-inspired)
+  
+  Props:
+  - variant: default | destructive | outline | secondary | ghost | link (default: default)
+  - size: sm | md | lg | icon (default: md)
+  - disabled: Whether button is disabled
+  - loading: Whether button is in loading state
+  - type: button | submit | reset (default: button)
+  - asChild: Whether to render as child element (for links)
+  - class: Additional CSS classes
+  
+  Usage:
+  @component('components.ui.button', { variant: 'destructive', size: 'lg' })
+    Delete Item
+  @end
+  
+  @component('components.ui.button', { variant: 'outline', asChild: true })
+    <a href="/login">Login</a>
+  @end
+--}}
 
-@let(variantClass = {
-  primary: 'btn-primary',
-  secondary: 'btn-secondary',
-  destructive: 'btn-destructive',
-  success: 'btn-success',
-  outline: 'btn-outline',
-  ghost: 'btn-ghost'
-}[variant] || 'btn-primary')
+@let(variant = $props.get('variant', 'default'))
+@let(size = $props.get('size', 'md'))
+@let(disabled = $props.get('disabled', false))
+@let(loading = $props.get('loading', false))
+@let(asChild = $props.get('asChild', false))
 
-@let(sizeClass = {
+@let(variantClasses = {
+  default: 'btn btn-primary',
+  destructive: 'btn btn-destructive',
+  outline: 'btn btn-outline',
+  secondary: 'btn btn-secondary',
+  ghost: 'btn btn-ghost',
+  link: 'btn btn-link',
+  // Legacy support
+  primary: 'btn btn-primary',
+  success: 'btn btn-success',
+  warning: 'btn btn-warning'
+}[variant] || 'btn btn-primary')
+
+@let(sizeClasses = {
   sm: 'btn-sm',
-  default: '',
+  md: '',
   lg: 'btn-lg',
-  icon: 'btn-icon'
+  icon: 'btn-icon',
+  // Legacy support
+  default: '',
+  'btn-sm': 'btn-sm',
+  'btn-lg': 'btn-lg',
+  'btn-icon': 'btn-icon'
 }[size] || '')
 
-@let(finalClass = 'btn ' + variantClass + (sizeClass ? ' ' + sizeClass : ''))
-
-<button {{ $props.except(['variant', 'size', 'class']).merge({ 
-  type: btnType, 
-  class: finalClass 
-}).toAttrs() }}>
-  {{{ await $slots.main() }}}
-</button>
+@if(asChild)
+  @let(hasMain = !!$slots.main)
+  @if(hasMain)
+    {{ await $slots.main() }}
+  @end
+@else
+  <button
+    type="{{ $props.get('type', 'button') }}"
+    {{ $props.merge({
+      class: [
+        variantClasses,
+        sizeClasses
+      ].filter(Boolean).join(' '),
+      disabled: disabled || loading
+    }).toAttrs() }}
+  >
+    @if(loading)
+      <svg style="margin-right: 0.5rem; height: 1rem; width: 1rem;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle style="opacity: 0.25;" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path style="opacity: 0.75;" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+    @end
+    
+    {{{ await $slots.main() }}}
+  </button>
+@end

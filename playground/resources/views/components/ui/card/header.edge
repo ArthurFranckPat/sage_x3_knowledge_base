@@ -1,0 +1,19 @@
+{{--
+  Card Header Component (shadcn/ui-inspired)
+
+  Props:
+  - class: Additional CSS classes
+
+  Usage:
+  @component('components.ui.card-header')
+    Card header content
+  @end
+--}}
+
+<div
+  {{ $props.merge({
+    class: 'card-header'
+  }).toAttrs() }}
+>
+  {{{ await $slots.main() }}}
+</div>

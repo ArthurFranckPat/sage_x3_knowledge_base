@@ -1,41 +1,92 @@
 {{--
-  Card Component (shadcn-inspired)
-  
+  Card Component (shadcn/ui-inspired)
+
   Props:
   - class: Additional CSS classes
-  
+
   Slots:
-  - header: Card header content
-  - main: Card body/content
-  - footer: Card footer content
-  
+  - header: Card header with title, description, and optional action
+  - title: Card title (convenience slot, used if no header slot)
+  - description: Card description (convenience slot)
+  - content: Card main content (alias for main slot)
+  - footer: Card footer actions
+  - main: Default slot for card content
+
   Usage:
   @component('components.ui.card')
     @slot('header')
-      <h3 class="card-title">Title</h3>
+      @component('components.ui.card-title')
+        Card Title
+      @end
+      @component('components.ui.card-description')
+        Card description goes here
+      @end
+    @end
+    @slot('content')
+      <p>Card content goes here</p>
+    @end
+    @slot('footer')
+      <button>Confirm</button>
+    @end
+  @end
+
+  Simpler usage:
+  @component('components.ui.card')
+    @slot('title')
+      Simple Card Title
     @end
     @slot('main')
-      Content here
+      Card content here
     @end
   @end
 --}}
 
-<div class="card {{ class ?? '' }}">
-  @if($slots.hasNamed('header'))
+<div
+  {{ $props.merge({
+    class: 'card'
+  }).toAttrs() }}
+>
+  <!-- Card Header -->
+  @let(hasHeader = !!$slots.header)
+  @let(hasTitle = !!$slots.title)
+  @let(hasDescription = !!$slots.description)
+  @if(hasHeader || hasTitle || hasDescription)
     <div class="card-header">
-      {{ await $slots.named('header') }}
+      @if(hasHeader)
+        {{ await $slots.header() }}
+      @else
+        @if(hasTitle)
+          <div class="card-title">
+            {{ await $slots.title() }}
+          </div>
+        @end
+
+        @if(hasDescription)
+          <div class="card-description">
+            {{ await $slots.description() }}
+          </div>
+        @end
+      @end
     </div>
   @end
 
-  @if($slots.hasMain())
+  <!-- Card Content -->
+  @let(hasMain = !!$slots.main)
+  @let(hasContent = !!$slots.content)
+  @if(hasMain || hasContent)
     <div class="card-content">
-      {{ await $slots.main() }}
+      @if(hasMain)
+        {{{ await $slots.main() }}}
+      @else
+        {{ await $slots.content() }}
+      @end
     </div>
   @end
 
-  @if($slots.hasNamed('footer'))
+  <!-- Card Footer -->
+  @if(!!$slots.footer)
     <div class="card-footer">
-      {{ await $slots.named('footer') }}
+      {{ await $slots.footer() }}
     </div>
   @end
 </div>

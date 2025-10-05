@@ -1,0 +1,8 @@
+
+<div
+  {{ $props.merge({
+    class: 'card-content'
+  }).toAttrs() }}
+>
+  {{{ await $slots.main() }}}
+</div>

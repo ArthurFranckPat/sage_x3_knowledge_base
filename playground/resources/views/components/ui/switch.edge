@@ -1,0 +1,34 @@
+{{--
+  Switch Component (Basecoat UI)
+  
+  Props:
+  - checked: Whether switch is checked
+  - disabled: Whether switch is disabled
+  - id: Switch ID
+  - name: Switch name
+  - required: Whether switch is required
+  - class: Additional CSS classes
+  
+  Usage:
+  @component('components.ui.switch', { checked: true })
+  @end
+--}}
+
+@let(checked = $props.get('checked', false))
+@let(disabled = $props.get('disabled', false))
+
+<label class="label gap-3">
+  <input
+    type="checkbox"
+    role="switch"
+    {{ $props.except(['checked', 'disabled']).merge({
+      class: 'input',
+      checked: checked,
+      disabled: disabled
+    }).toAttrs() }}
+  >
+  @let(hasLabel = !!$slots.main)
+  @if(hasLabel)
+    {{{ await $slots.main() }}}
+  @end
+</label>

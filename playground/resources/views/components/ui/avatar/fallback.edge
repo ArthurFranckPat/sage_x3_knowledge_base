@@ -1,0 +1,14 @@
+
+@let(delayMs = $props.get('delayMs', 600))
+
+<span
+  {{ $props.merge({
+    class: 'avatar-fallback'
+  }).toAttrs() }}
+  x-data="{ show: false }"
+  x-init="setTimeout(() => show = true, {{ delayMs }})"
+  x-show="show"
+  x-transition
+>
+  {{{ await $slots.main() }}}
+</span>

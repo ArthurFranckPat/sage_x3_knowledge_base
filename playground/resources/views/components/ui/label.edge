@@ -1,0 +1,28 @@
+{{--
+  Label Component (shadcn-inspired)
+  
+  Props:
+  - for: Input ID this label is associated with
+  - required: Whether the associated field is required
+  - disabled: Whether the associated field is disabled
+  - class: Additional CSS classes
+  
+  Usage:
+  @component('components.ui.label', { for: 'email', required: true })
+    Email Address
+  @end
+--}}
+
+<label
+  {{ $props.merge({
+    class: 'label'
+  }).toAttrs() }}
+>
+  {{{ await $slots.main() }}}
+  @if($props.get('required', false))
+    <span class="text-destructive ml-1">*</span>
+  @end
+  @if($props.get('disabled', false))
+    <span class="sr-only">(disabled)</span>
+  @end
+</label>

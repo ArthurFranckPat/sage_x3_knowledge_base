@@ -1,0 +1,8 @@
+
+<div
+  {{ $props.merge({
+    class: 'avatar'
+  }).toAttrs() }}
+>
+  {{{ await $slots.main() }}}
+</div>

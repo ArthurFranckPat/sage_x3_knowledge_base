@@ -1,0 +1,8 @@
+
+<tfoot
+  {{ $props.merge({
+    class: 'border-t font-medium'
+  }).toAttrs() }}
+>
+  {{{ await $slots.main() }}}
+</tfoot>

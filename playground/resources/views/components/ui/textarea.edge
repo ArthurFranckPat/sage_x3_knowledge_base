@@ -1,0 +1,33 @@
+{{--
+  Textarea Component (Basecoat UI)
+  
+  Props:
+  - placeholder: Placeholder text
+  - value: Textarea value
+  - name: Textarea name
+  - id: Textarea ID
+  - rows: Number of rows (default: 3)
+  - disabled: Whether textarea is disabled
+  - readonly: Whether textarea is readonly
+  - required: Whether textarea is required
+  - resize: none | vertical | horizontal | both (default: vertical)
+  - class: Additional CSS classes
+  
+  Usage:
+  @component('components.ui.textarea', { 
+    placeholder: 'Enter your message',
+    rows: 4
+  })
+  @end
+--}}
+
+@let(rows = $props.get('rows', 3))
+
+<textarea
+  rows="{{ rows }}"
+  {{ $props.except(['rows', 'resize']).merge({
+    class: 'textarea'
+  }).toAttrs() }}
+>
+  {{{ await $slots.main() }}}
+</textarea>

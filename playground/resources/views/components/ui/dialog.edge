@@ -1,0 +1,106 @@
+{{--
+  Dialog Component (Basecoat UI)
+  
+  Props:
+  - open: Whether dialog is open (controlled)
+  - modal: Whether dialog should be modal (default: true)
+  - size: sm | md | lg | xl | full (default: md)
+  - class: Additional CSS classes
+  
+  Slots:
+  - trigger: Element that triggers the dialog
+  - title: Dialog title
+  - description: Dialog description
+  - content: Main dialog content
+  - footer: Dialog footer with actions
+  
+  Usage:
+  @component('components.ui.dialog', { size: 'lg' })
+    @slot('trigger')
+      <button>Open Dialog</button>
+    @end
+    @slot('title')
+      Dialog Title
+    @end
+    @slot('description')
+      Dialog description goes here.
+    @end
+    @slot('content')
+      <p>Main content goes here.</p>
+    @end
+    @slot('footer')
+      <button>Cancel</button>
+      <button>Save</button>
+    @end
+  @end
+--}}
+
+@let(size = $props.get('size', 'md'))
+
+@let(sizeClasses = {
+  sm: 'dialog-sm',
+  md: 'dialog-md', 
+  lg: 'dialog-lg',
+  xl: 'dialog-xl',
+  full: 'dialog-full'
+}[size] || 'dialog-md')
+
+<!-- Dialog Trigger -->
+@let(hasTrigger = !!$slots.trigger)
+@if(hasTrigger)
+  <button data-dialog-trigger class="dialog-trigger">
+    {{{ await $slots.trigger() }}} 
+  </button>
+@end
+
+<!-- Dialog -->
+<div data-dialog class="dialog {{ sizeClasses }}">
+  <!-- Dialog Overlay -->
+  <div data-dialog-overlay class="dialog-overlay"></div>
+  
+  <!-- Dialog Content -->
+  <div data-dialog-content class="dialog-content">
+    <!-- Dialog Header -->
+    @let(hasTitle = !!$slots.title)
+    @let(hasDescription = !!$slots.description)
+    @if(hasTitle || hasDescription)
+      <div class="dialog-header">
+        @if(hasTitle)
+          <h2 class="dialog-title">
+            {{{ await $slots.title() }}}
+          </h2>
+        @end
+
+        @if(hasDescription)
+          <p class="dialog-description">
+            {{{ await $slots.description() }}}
+          </p>
+        @end
+      </div>
+    @end
+
+    <!-- Dialog Content -->
+    @let(hasContent = !!$slots.content)
+    @if(hasContent)
+      <div class="dialog-body">
+        {{{ await $slots.content() }}}
+      </div>
+    @end
+
+    <!-- Dialog Footer -->
+    @let(hasFooter = !!$slots.footer)
+    @if(hasFooter)
+      <div class="dialog-footer">
+        {{{ await $slots.footer() }}}
+      </div>
+    @end
+
+    <!-- Close Button -->
+    <button data-dialog-close class="dialog-close">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.7816 4.03157C12.0745 3.73868 12.0745 3.26381 11.7816 2.97092C11.4887 2.67803 11.0139 2.67803 10.721 2.97092L7.50007 6.19185L4.27915 2.97092C3.98626 2.67803 3.51138 2.67803 3.21849 2.97092C2.9256 3.26381 2.9256 3.73868 3.21849 4.03157L6.43941 7.2525L3.21849 10.4734C2.9256 10.7663 2.9256 11.2412 3.21849 11.5341C3.51138 11.827 3.98626 11.827 4.27915 11.5341L7.50007 8.31315L10.721 11.5341C11.0139 11.827 11.4887 11.827 11.7816 11.5341C12.0745 11.2412 12.0745 10.7663 11.7816 10.4734L8.56066 7.2525L11.7816 4.03157Z" fill="currentColor"/>
+      </svg>
+      <span class="sr-only">Close</span>
+    </button>
+  </div>
+</div>

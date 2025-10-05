@@ -1,0 +1,8 @@
+
+<p
+  {{ $props.merge({
+    class: 'card-description'
+  }).toAttrs() }}
+>
+  {{{ await $slots.main() }}}
+</p>

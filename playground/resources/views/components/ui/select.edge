@@ -1,0 +1,37 @@
+{{--
+  Select Component (Basecoat UI)
+  
+  Props:
+  - placeholder: Placeholder text for empty option
+  - value: Select value
+  - name: Select name
+  - id: Select ID
+  - disabled: Whether select is disabled
+  - required: Whether select is required
+  - size: sm | md | lg (default: md)
+  - class: Additional CSS classes
+  
+  Usage:
+  @component('components.ui.select', { 
+    placeholder: 'Choose an option',
+    required: true
+  })
+    @slot('option', { value: 'option1' })
+      Option 1
+    @end
+    @slot('option', { value: 'option2' })
+      Option 2
+    @end
+  @end
+--}}
+
+@let(placeholder = $props.get('placeholder'))
+
+<select
+  {{ $props.except(['placeholder']).merge({}).toAttrs() }}
+>
+  @if(placeholder)
+    <option value="">{{ placeholder }}</option>
+  @end
+  {{{ await $slots.main() }}}
+</select>

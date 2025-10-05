@@ -1,0 +1,33 @@
+{{--
+  Input Component (Basecoat UI)
+  
+  Props:
+  - type: text | password | email | number | tel | url | search (default: text)
+  - placeholder: Placeholder text
+  - value: Input value
+  - name: Input name
+  - id: Input ID
+  - disabled: Whether input is disabled
+  - readonly: Whether input is readonly
+  - required: Whether input is required
+  - size: sm | md | lg (default: md)
+  - variant: default | outline | filled (default: default)
+  - class: Additional CSS classes
+  
+  Usage:
+  @component('components.ui.input', { 
+    type: 'email', 
+    placeholder: 'Enter your email',
+    required: true
+  })
+  @end
+--}}
+
+@let(type = $props.get('type', 'text'))
+
+<input
+  type="{{ type }}"
+  {{ $props.except(['type']).merge({
+    class: 'input'
+  }).toAttrs() }}
+/>

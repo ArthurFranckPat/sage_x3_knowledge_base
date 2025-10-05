@@ -1,0 +1,19 @@
+{{--
+  Card Title Component (shadcn/ui-inspired)
+
+  Props:
+  - class: Additional CSS classes
+
+  Usage:
+  @component('components.ui.card-title')
+    Card Title
+  @end
+--}}
+
+<h3
+  {{ $props.merge({
+    class: 'card-title'
+  }).toAttrs() }}
+>
+  {{{ await $slots.main() }}}
+</h3>

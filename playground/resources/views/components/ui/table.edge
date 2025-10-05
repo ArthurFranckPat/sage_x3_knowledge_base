@@ -1,0 +1,14 @@
+
+<div
+  {{ $props.merge({
+    class: 'table-wrapper'
+  }).toAttrs() }}
+>
+  <table
+    {{ $props.except(['class']).merge({
+      class: 'table'
+    }).toAttrs() }}
+  >
+    {{{ await $slots.main() }}}
+  </table>
+</div>
