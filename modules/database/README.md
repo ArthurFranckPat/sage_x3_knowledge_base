@@ -14,11 +14,11 @@ Les fichiers de ce dossier sont générés à partir de :
 |---------|--------|--------|-------------|
 | **VENTES_COMPLETE.md** | 17 | 1,653 | Commandes, livraisons, factures, devis, retours |
 | **ACHATS_COMPLETE.md** | 15 | 1,422 | Commandes fournisseurs, réceptions, factures |
-| **STOCKS_COMPLETE.md** | 16 | 884 | Stock, mouvements, journal, valorisation |
+| **STOCKS_COMPLETE.md** | 21 | 1,171 | Stock, mouvements, journal, valorisation, CBN/MRP |
 | **PRODUCTION_COMPLETE.md** | 26 | 1,406 | OF, gammes, nomenclatures, opérations |
 | **DONNEES_BASE_COMPLETE.md** | 38 | 2,162 | Articles, tiers, sites, comptes |
 
-**Total : 112 tables, 7,527 champs (576 KB)**
+**Total : 117 tables, 7,814 champs**
 
 ## 🎯 Utilisation
 

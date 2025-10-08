@@ -6,14 +6,18 @@
 
 ## 📊 Statistiques
 
-- **Tables documentées** : 16
-- **Champs totaux** : 884
+- **Tables documentées** : 21
+- **Champs totaux** : 1,171
 - **Source** : Données réelles de votre ERP Sage X3
 
 ---
 
 ## 📑 Tables du module
 
+- [CBNDET](#cbndet) - Calcul besoins nets détail (54 champs)
+- [CBNHEA](#cbnhea) - Calcul besoins nets (68 champs)
+- [CBNWRK](#cbnwrk) - Temporaire calcul besoins (12 champs)
+- [PARMRP](#parmrp) - Paramètres calculs besoins (138 champs)
 - [SMVTD](#smvtd) - Détail mouvement stock (41 champs)
 - [SMVTDVAL](#smvtdval) - Prix du mouvement (17 champs)
 - [SMVTH](#smvth) - En-tête mouvements (32 champs)
@@ -30,6 +34,383 @@
 - [STOSYNW](#stosynw) - Travail resynchro stocks (37 champs)
 - [STOVALCUM](#stovalcum) - Cumuls état valorisé stocks (16 champs)
 - [STOVALWRK](#stovalwrk) - Etat valorisé des stocks (50 champs)
+- [X4PARMRP](#x4parmrp) - Paramétrage CBN / Jour (15 champs)
+
+---
+
+## CBNDET
+
+**Calcul besoins nets détail**
+
+**Nombre de champs** : 54
+
+### Champs
+
+| Champ | Intitulé | Type | Long | Lien | Menu |
+|-------|----------|------|------|------|------|
+| `WIP_0` | En cours |  |  |  |  |
+| `PJT_0` | Affaire origine |  |  |  |  |
+| `WIPSTAORI_0` | Statut encours orig. |  |  |  |  |
+| `WIPNUMORI_0` | No ordre origine |  |  |  |  |
+| `BOMOFS_0` | Délai opération |  |  |  |  |
+| `WIPSEQORI_0` | Séquence origine |  |  |  |  |
+| `COVQTY_0` | Quantité couverte |  |  |  |  |
+| `WIPSTA_0` | Statut encours |  |  |  |  |
+| `SUGSTA_0` | Statut encours |  |  |  |  |
+| `MRPMES_0` | Message mrp |  |  |  |  |
+| `MRPDAT_0` | Date mrp |  |  |  |  |
+| `MRPQTY_0` | Quantité mrp |  |  |  |  |
+| `VCRTYP_0` | Type pièce |  |  |  |  |
+| `EXTQTY_0` | Quantité prévue |  |  |  |  |
+| `SUGNUM_0` | No ordre |  |  |  |  |
+| `EXPNUM_0` | Numéro export |  |  |  |  |
+| `CREUSR_0` | Opérateur création |  |  |  |  |
+| `ITMREF_0` | Article |  |  |  |  |
+| `UPDUSR_0` | Utilisateur |  |  |  |  |
+| `WIPTYP_0` | Type ordre |  |  |  |  |
+| `SUGTYP_0` | Type ordre |  |  |  |  |
+| `REQDAT_0` | Date besoin |  |  |  |  |
+| `BOMOPE_0` | Numéro opération |  |  |  |  |
+| `VCRLIN_0` | No ligne pièce |  |  |  |  |
+| `ALLQTY_0` | Quantité allouée |  |  |  |  |
+| `BUC_0` | Période |  |  |  |  |
+| `CREDAT_0` | Date création |  |  |  |  |
+| `ITMREFORI_0` | Article origine |  |  |  |  |
+| `TRCFLG_0` | Trace |  |  |  |  |
+| `BOMALTTYP_0` | Type alternative nomenclature |  |  |  |  |
+| `CREDATTIM_0` | Date heure |  |  |  |  |
+| `UPDDATTIM_0` | Date heure |  |  |  |  |
+| `MTOQTY_0` | Quantité affectée |  |  |  |  |
+| `XWBUC_0` | Variable W période |  |  |  |  |
+| `ECCVALMAJ_0` | Version majeure |  |  |  |  |
+| `ECCVALMIN_0` | Version mineure |  |  |  |  |
+| `AUUID_0` | Identifiant unique |  |  |  |  |
+| `MTOREF_0` | Réseau MTO |  |  |  |  |
+| `XQTEMANQ_0` | Qté manquante |  |  |  |  |
+| `RPLFLG_0` | Flag replanification |  |  |  |  |
+| `WIPNUM_0` | Numéro ordre |  |  |  |  |
+| `VCRNUM_0` | Numéro pièce |  |  |  |  |
+| `RMNEXTQTY_0` | Quantité restante |  |  |  |  |
+| `BOMALT_0` | Alternative nomenclature |  |  |  |  |
+| `STRDAT_0` | Date début |  |  |  |  |
+| `ENDDAT_0` | Date fin |  |  |  |  |
+| `REQQTY_0` | Besoin/Ressource |  |  |  |  |
+| `STOQTY_0` | Stock disponible |  |  |  |  |
+| `STOFCY_0` | Site stockage/récepteur |  |  |  |  |
+| `DEMBUC_0` | Période demande |  |  |  |  |
+| `VCRSEQ_0` | No séquence pièce |  |  |  |  |
+| `WIPLINORI_0` | Ligne ori. |  |  |  |  |
+| `BPRNUM_0` | Numéro tiers origine |  |  |  |  |
+| `WIPTYPORI_0` | Type ordre origine |  |  |  |  |
+
+### Exemple SQL
+
+```sql
+SELECT
+    WIP_0,
+    PJT_0,
+    WIPSTAORI_0,
+    WIPNUMORI_0,
+    BOMOFS_0
+FROM CBNDET
+WHERE -- vos conditions
+```
+
+---
+
+## CBNHEA
+
+**Calcul besoins nets**
+
+**Nombre de champs** : 68
+
+### Champs
+
+| Champ | Intitulé | Type | Long | Lien | Menu |
+|-------|----------|------|------|------|------|
+| `TOOFLG_0` | Outillage |  |  |  |  |
+| `SHR_0` | Pourcentage de perte |  |  |  |  |
+| `PHYSTO_0` | Stock interne 'A' |  |  |  |  |
+| `CTLSTO_0` | Stock interne 'Q' |  |  |  |  |
+| `REJSTO_0` | Stock interne 'R' |  |  |  |  |
+| `EXYSTOFLG_0` | Stock périmé |  |  |  |  |
+| `STU_0` | Unité stock |  |  |  |  |
+| `ORDSTO_0` | Stock en commande |  |  |  |  |
+| `LIFSTRDAT_0` | Début vie |  |  |  |  |
+| `LIFENDDAT_0` | Fin vie |  |  |  |  |
+| `REOCOD_0` | Type sugges |  |  |  |  |
+| `QUAFLG_0` | Soumis à contrôle |  |  |  |  |
+| `EXPNUM_0` | Numéro export |  |  |  |  |
+| `CREUSR_0` | Opérateur création |  |  |  |  |
+| `SCSFLG_0` | Sous-traitance |  |  |  |  |
+| `ITMREF_0` | Article |  |  |  |  |
+| `PURFLG_0` | Acheté |  |  |  |  |
+| `MFGFLG_0` | Fabriqué |  |  |  |  |
+| `SCPFLG_0` | Sous-traité |  |  |  |  |
+| `PHAFLG_0` | Fantôme |  |  |  |  |
+| `GENFLG_0` | Générique |  |  |  |  |
+| `UPDUSR_0` | Utilisateur |  |  |  |  |
+| `PLHENDDAT_0` | Horizon ferme |  |  |  |  |
+| `REOFCY_0` | Site réapprovisionnement |  |  |  |  |
+| `REOPOL_0` | Politique réapprovisionnement |  |  |  |  |
+| `SAFSTOCOD_0` | Stock sécurité |  |  |  |  |
+| `STOTIAFLG_0` | Prise en compte stock |  |  |  |  |
+| `REOQTYCOD_0` | Quantité réapprovisionnement |  |  |  |  |
+| `SPLCOD_0` | Fractionnement |  |  |  |  |
+| `QUALTI_0` | Délai contrôle qualité |  |  |  |  |
+| `FOHENDDAT_0` | Horizon demande |  |  |  |  |
+| `CREDAT_0` | Date création |  |  |  |  |
+| `DAYCOV_0` | Couverture |  |  |  |  |
+| `SALSTO_0` | En cde client |  |  |  |  |
+| `WAISTO_0` | Sorties en attente |  |  |  |  |
+| `TRFSTO_0` | Stock transit |  |  |  |  |
+| `STRSTO_0` | Stock de départ |  |  |  |  |
+| `BOMALTTYP_0` | Type alternative nomenclature |  |  |  |  |
+| `WIPPRO_0` | Protection WIP |  |  |  |  |
+| `DLVFLG_0` | Livrable |  |  |  |  |
+| `TRASTO_0` | Stock transféré |  |  |  |  |
+| `X1EXCSTO_0` | Quantité exclue |  |  |  |  |
+| `CREDATTIM_0` | Date heure |  |  |  |  |
+| `UPDDATTIM_0` | Date heure |  |  |  |  |
+| `ECCSTO_0` | Version stock |  |  |  |  |
+| `ORDVER_0` | Version saisie exclusive |  |  |  |  |
+| `AUUID_0` | Identifiant unique |  |  |  |  |
+| `INTFLG_0` | Intermédiaire |  |  |  |  |
+| `INTSTO_0` | Stock interne total |  |  |  |  |
+| `PLFSTO_0` | Stock quai total |  |  |  |  |
+| `ALLSTO_0` | Alloué total |  |  |  |  |
+| `SCOSTO_0` | Stock s-trait total |  |  |  |  |
+| `DETSHT_0` | Manquant détail |  |  |  |  |
+| `GLOSHT_0` | Manquant global |  |  |  |  |
+| `LLC_0` | Code de plus bas niveau |  |  |  |  |
+| `STUDEC_0` | Décimales |  |  |  |  |
+| `SALFLG_0` | Vendu |  |  |  |  |
+| `SUGTYP_0` | Type suggestion |  |  |  |  |
+| `BOMALT_0` | Alternative nomenclature |  |  |  |  |
+| `STOFCY_0` | Site stockage |  |  |  |  |
+| `REOMGTCOD_0` | Mode réapprovisionnement |  |  |  |  |
+| `STDFLG_0` | Mode gestion |  |  |  |  |
+| `BPRSTO_0` | Stock prêté |  |  |  |  |
+| `GLOALL_0` | Alloué global |  |  |  |  |
+| `PLNANYCOD_0` | Analyse replanification |  |  |  |  |
+| `FOHUOT_0` | Unité temps horizon demande |  |  |  |  |
+| `ORDFLG_0` | Flag optimisation |  |  |  |  |
+| `ITMDES1_0` | Désignation 1 |  |  |  |  |
+
+### Exemple SQL
+
+```sql
+SELECT
+    TOOFLG_0,
+    SHR_0,
+    PHYSTO_0,
+    CTLSTO_0,
+    REJSTO_0
+FROM CBNHEA
+WHERE -- vos conditions
+```
+
+---
+
+## CBNWRK
+
+**Temporaire calcul besoins**
+
+**Nombre de champs** : 12
+
+### Champs
+
+| Champ | Intitulé | Type | Long | Lien | Menu |
+|-------|----------|------|------|------|------|
+| `RECCOD_0` | Code |  |  |  |  |
+| `ITMREF_0` | Article |  |  |  |  |
+| `QTYSTU_0` | Quantité US |  |  |  |  |
+| `CREUSR_0` | Utilisateur |  |  |  |  |
+| `UPDUSR_0` | Utilisateur |  |  |  |  |
+| `STOFCY_0` | Site stockage |  |  |  |  |
+| `CREDATTIM_0` | Date heure |  |  |  |  |
+| `UPDDATTIM_0` | Date heure |  |  |  |  |
+| `ECCVALMAJ_0` | Version majeure |  |  |  |  |
+| `ECCVALMIN_0` | Version mineure |  |  |  |  |
+| `AUUID_0` | Identifiant unique |  |  |  |  |
+| `DAT_0` | Date |  |  |  |  |
+
+### Exemple SQL
+
+```sql
+SELECT
+    RECCOD_0,
+    ITMREF_0,
+    QTYSTU_0,
+    CREUSR_0,
+    UPDUSR_0
+FROM CBNWRK
+WHERE -- vos conditions
+```
+
+---
+
+## PARMRP
+
+**Paramètres calculs besoins**
+
+**Nombre de champs** : 138
+
+### Champs
+
+| Champ | Intitulé | Type | Long | Lien | Menu |
+|-------|----------|------|------|------|------|
+| `XHISLASTIM_0` | Heure dernière syntèse |  |  |  |  |
+| `MPSPLHDAT_0` | Sug. horiz. ferme |  |  |  |  |
+| `MRPPLHDAT_0` | Sug. horiz. ferme |  |  |  |  |
+| `MPSTPSFLG_0` | Dem. transfert sug. |  |  |  |  |
+| `MRPTPSFLG_0` | Dem. transfert sug. |  |  |  |  |
+| `MPSTPPFLG_0` | Dem. transfert plan. |  |  |  |  |
+| `MRPTPPFLG_0` | Dem. transfert plan. |  |  |  |  |
+| `MRPTRPFLG_0` | Dem. transfert plan. |  |  |  |  |
+| `MPSTRPFLG_0` | Dem. transfert plan. |  |  |  |  |
+| `MPSTPFFLG_0` | Dem. transfert ferme |  |  |  |  |
+| `MRPTPFFLG_0` | Dem. transfert ferme |  |  |  |  |
+| `MRPTRFFLG_0` | Dem. transfert ferme |  |  |  |  |
+| `MPSTRFFLG_0` | Dem. transfert ferme |  |  |  |  |
+| `XHISLASDAT_0` | Date dernière synthèse |  |  |  |  |
+| `AUUID_0` | Identifiant unique |  |  |  |  |
+| `MPSMTPFLG_0` | Tâche affaire plan. |  |  |  |  |
+| `MRPMTPFLG_0` | Tâche affaire plan. |  |  |  |  |
+| `MPSMTFFLG_0` | Tâche affaire ferme |  |  |  |  |
+| `MRPMTFFLG_0` | Tâche affaire ferme |  |  |  |  |
+| `MPSEOPFLG_0` | EO planifiés |  |  |  |  |
+| `MRPMWRPLN_0` | Replanifier besoins matière |  |  |  |  |
+| `MPSMWRPLN_0` | Replanifier besoins matière |  |  |  |  |
+| `CREDATTIM_0` | Date heure |  |  |  |  |
+| `UPDDATTIM_0` | Date heure |  |  |  |  |
+| `MRPHORDEM_0` | Solde horiz. demande |  |  |  |  |
+| `MPSHORDEM_0` | Solde horiz. demande |  |  |  |  |
+| `MPSMFGLTI_0` | Délai de fabrication |  |  |  |  |
+| `MRPMFGLTI_0` | Délai de fabrication |  |  |  |  |
+| `RPLUPDQTY_0` | Replan. qté |  |  |  |  |
+| `RPLUPDQTYS_0` | Replan. qté |  |  |  |  |
+| `MPSPRNFLG_0` | Impression journal |  |  |  |  |
+| `MRPPRNFLG_0` | Impression journal |  |  |  |  |
+| `MRPTRDFLG_0` | Demandes transferts |  |  |  |  |
+| `MPSTRDFLG_0` | Demandes transferts |  |  |  |  |
+| `UPDUSR_0` | Opérateur modif |  |  |  |  |
+| `UPDDAT_0` | Date modification |  |  |  |  |
+| `CREDAT_0` | Date création |  |  |  |  |
+| `MPSCOVRES_0` | Ressources  en couv. |  |  |  |  |
+| `MRPCOVRES_0` | Ressources  en couv. |  |  |  |  |
+| `MPSWAISTO_0` | Sorties en attente |  |  |  |  |
+| `MRPWAISTO_0` | Sorties en attente |  |  |  |  |
+| `REOPOLDIS_0` | Ignorer politique réappro |  |  |  |  |
+| `REOPOLDISS_0` | Ignorer politique réappro |  |  |  |  |
+| `RPLTYP_0` | Type ordre |  |  |  |  |
+| `RPLTYPS_0` | Type ordre |  |  |  |  |
+| `MPSALTTYP_0` | Type alternative |  |  |  |  |
+| `MRPALTTYP_0` | Type alternative |  |  |  |  |
+| `MPSCAPFCT_0` | Facteur capacité |  |  |  |  |
+| `MRPCAPFCT_0` | Facteur capacité |  |  |  |  |
+| `CREUSR_0` | Opérateur création |  |  |  |  |
+| `MRPPHYSTO_0` | Stock physique |  |  |  |  |
+| `MPSPHYSTO_0` | Stock physique |  |  |  |  |
+| `MRPREJSTO_0` | Stock rejeté |  |  |  |  |
+| `MPSREJSTO_0` | Stock rejeté |  |  |  |  |
+| `MRPCTLSTO_0` | Stock sous contrôle |  |  |  |  |
+| `MPSCTLSTO_0` | Stock sous contrôle |  |  |  |  |
+| `MPSITM_0` | Articles PDP+CBN |  |  |  |  |
+| `MRPITM_0` | Articles PDP+CBN |  |  |  |  |
+| `MPSMAXANY_0` | Analyse stock maxi |  |  |  |  |
+| `MRPMAXANY_0` | Analyse stock maxi |  |  |  |  |
+| `MPSITMCOD_0` | Sélection exclusive |  |  |  |  |
+| `MRPITMCOD_0` | Sélection exclusive |  |  |  |  |
+| `MRPSAFCOV_0` | Reconstitution stock sécurité |  |  |  |  |
+| `MPSSAFCOV_0` | Reconstitution stock sécurité |  |  |  |  |
+| `MPSBUCCOR_0` | Ajustement automatique |  |  |  |  |
+| `MRPBUCCOR_0` | Ajustement automatique |  |  |  |  |
+| `MPSBOMALT_0` | Alternative nomenclature |  |  |  |  |
+| `MRPBOMALT_0` | Alternative nomenclature |  |  |  |  |
+| `STOFCY_0` | Site stockage |  |  |  |  |
+| `MPSTWD_0` | Schéma hebdomadaire |  |  |  |  |
+| `MRPTWD_0` | Schéma hebdomadaire |  |  |  |  |
+| `MRPEOPFLG_0` | EO planifiés |  |  |  |  |
+| `MPSEOFFLG_0` | EO fermes |  |  |  |  |
+| `MRPEOFFLG_0` | EO fermes |  |  |  |  |
+| `MPSEOSFCY_0` | Gén.sug. sous-trait. |  |  |  |  |
+| `MRPEOSFCY_0` | Gén.sug. sous-trait. |  |  |  |  |
+| `MRPMONNBR_0` | Nbre groupages mois |  |  |  |  |
+| `MPSWOSFCY_0` | Gén. sug. fab. |  |  |  |  |
+| `MRPWOSFCY_0` | Gén. sug. fab. |  |  |  |  |
+| `MPSWOSFCYI_0` | Gén. sug. inter-site |  |  |  |  |
+| `MRPWOSFCYI_0` | Gén. sug. inter-site |  |  |  |  |
+| `MPSPOSFCY_0` | Commandes dachat |  |  |  |  |
+| `MRPPOSFCY_0` | Commandes dachat |  |  |  |  |
+| `MPSPOSFCYI_0` | Gén. sug. achats inter |  |  |  |  |
+| `MRPPOSFCYI_0` | Gén. sug. achats inter |  |  |  |  |
+| `MPSSOSFLG_0` | Cdes clients  sug. |  |  |  |  |
+| `MRPSOSFLG_0` | Cdes clients  sug. |  |  |  |  |
+| `MRPLASLTI_0` | Durée en minutes |  |  |  |  |
+| `MPSLASLTI_0` | Durée en minutes |  |  |  |  |
+| `MPSCAPLTI_0` | Calcul charge |  |  |  |  |
+| `MRPCAPLTI_0` | Calcul charge |  |  |  |  |
+| `MRPTRFSTO_0` | Transferts |  |  |  |  |
+| `MPSTRFSTO_0` | Transferts |  |  |  |  |
+| `RPLBWDLTI_0` | Délai amont |  |  |  |  |
+| `RPLBWDLTIS_0` | Délai amont |  |  |  |  |
+| `RPLFRWLTI_0` | Délai aval |  |  |  |  |
+| `RPLFRWLTIS_0` | Délai aval |  |  |  |  |
+| `MRPSOFFLG_0` | Cdes clients fermes |  |  |  |  |
+| `MRPWOSFLG_0` | O.F. suggérés |  |  |  |  |
+| `MRPWOPFLG_0` | OF planifiés |  |  |  |  |
+| `MPSWOPFLG_0` | OF planifiés |  |  |  |  |
+| `MRPWOFFLG_0` | OF lancés |  |  |  |  |
+| `MPSWOFFLG_0` | OF lancés |  |  |  |  |
+| `MRPPOSFLG_0` | Cdes four. sug. |  |  |  |  |
+| `MRPPOPFLG_0` | Cdes. achat planifiées |  |  |  |  |
+| `MPSPOPFLG_0` | Cdes. achat planifiées |  |  |  |  |
+| `MRPPOFFLG_0` | Cdes. achat fermes |  |  |  |  |
+| `MPSPOFFLG_0` | Cdes. achat fermes |  |  |  |  |
+| `MRPLASDAT_0` | Date dernier calcul |  |  |  |  |
+| `MPSLASDAT_0` | Date dernier calcul |  |  |  |  |
+| `MPSANYLTI_0` | Analyse replanifification |  |  |  |  |
+| `MRPANYLTI_0` | Analyse replanifification |  |  |  |  |
+| `MPSSOPFLG_0` | Cdes clients plan. |  |  |  |  |
+| `MRPSOPFLG_0` | Cdes clients plan. |  |  |  |  |
+| `MPSSOFFLG_0` | Cdes clients fermes |  |  |  |  |
+| `MPSDAYNBR_0` | Nbre groupages jours |  |  |  |  |
+| `MRPDAYNBR_0` | Nbre groupages jours |  |  |  |  |
+| `MPSWEENBR_0` | Nbre groupages semaines |  |  |  |  |
+| `MRPWEENBR_0` | Nbre groupages semaines |  |  |  |  |
+| `MPSMONNBR_0` | Nbre groupages mois |  |  |  |  |
+| `MPSSAFSTO_0` | Ignorer stock sécurité |  |  |  |  |
+| `MRPSAFSTO_0` | Ignorer stock sécurité |  |  |  |  |
+| `MPSCOV_0` | Ignorer couverture |  |  |  |  |
+| `MRPCOV_0` | Ignorer couverture |  |  |  |  |
+| `MPSSPEPAR_0` | Param. spécifique |  |  |  |  |
+| `MRPSPEPAR_0` | Param. spécifique |  |  |  |  |
+| `MPSGHOSTO_0` | Stock art. fantômes |  |  |  |  |
+| `MRPGHOSTO_0` | Stock art. fantômes |  |  |  |  |
+| `RPLUPDDAT_0` | Replan. date |  |  |  |  |
+| `RPLUPDDATS_0` | Replan. date |  |  |  |  |
+| `WIPPRO_0` | Protection WIP |  |  |  |  |
+| `WIPPROS_0` | Protection WIP |  |  |  |  |
+| `RESBLWLOT_0` | Ressource\lot |  |  |  |  |
+| `RESBLWLOTS_0` | Ressource\lot |  |  |  |  |
+| `RPLMOD_0` | Mode replanification |  |  |  |  |
+| `RPLMODS_0` | Mode replanification |  |  |  |  |
+| `MPSSHRPRC_0` | Ignorer % perte lien |  |  |  |  |
+| `MRPSHRPRC_0` | Ignorer % perte lien |  |  |  |  |
+
+### Exemple SQL
+
+```sql
+SELECT
+    XHISLASTIM_0,
+    MPSPLHDAT_0,
+    MRPPLHDAT_0,
+    MPSTPSFLG_0,
+    MRPTPSFLG_0
+FROM PARMRP
+WHERE -- vos conditions
+```
 
 ---
 
@@ -1328,6 +1709,47 @@ SELECT
     AUUID_0,
     CREDATTIM_0
 FROM STOVALWRK
+WHERE -- vos conditions
+```
+
+---
+
+## X4PARMRP
+
+**Paramétrage CBN / Jour**
+
+**Nombre de champs** : 15
+
+### Champs
+
+| Champ | Intitulé | Type | Long | Lien | Menu |
+|-------|----------|------|------|------|------|
+| `AUUID_0` | Identifiant unique |  |  |  |  |
+| `X4UVYCOD_0` | Période d'indisponibilité |  |  |  |  |
+| `UPDDATTIM_0` | Date heure |  |  |  |  |
+| `CREDATTIM_0` | Date heure |  |  |  |  |
+| `CREUSR_0` | Utilisateur |  |  |  |  |
+| `X4JOUR_0` | Jour de la semaine |  |  |  |  |
+| `MRPMFGLTI_0` | Délai de fabrication |  |  |  |  |
+| `MRPANYLTI_0` | Analyse replanifification |  |  |  |  |
+| `MRPMONNBR_0` | Nbre groupages mois |  |  |  |  |
+| `MRPWEENBR_0` | Nbre groupages semaines |  |  |  |  |
+| `MRPDAYNBR_0` | Nbre groupages jours |  |  |  |  |
+| `MRPCAPLTI_0` | Calcul charge |  |  |  |  |
+| `MRPBUCCOR_0` | Ajustement automatique |  |  |  |  |
+| `STOFCY_0` | Site expédition |  |  |  |  |
+| `UPDUSR_0` | Utilisateur |  |  |  |  |
+
+### Exemple SQL
+
+```sql
+SELECT
+    AUUID_0,
+    X4UVYCOD_0,
+    UPDDATTIM_0,
+    CREDATTIM_0,
+    CREUSR_0
+FROM X4PARMRP
 WHERE -- vos conditions
 ```
 

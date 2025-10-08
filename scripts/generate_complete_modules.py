@@ -21,7 +21,7 @@ MODULE_MAPPING = {
 MODULE_PREFIXES = {
     'VENTES': ['SORDER', 'SDELIV', 'SINVOICE', 'SQUOT', 'SRETURN'],
     'ACHATS': ['PORDER', 'PRECEI', 'PINVOICE', 'PREQ', 'PRETURN'],
-    'STOCKS': ['STOCK', 'STOJOU', 'STOVAL', 'STOCOST', 'STOPAR', 'STOPHY', 'STOADC', 'STOSYNW', 'STJTMP', 'STKTRS', 'SMVT'],
+    'STOCKS': ['STOCK', 'STOJOU', 'STOVAL', 'STOCOST', 'STOPAR', 'STOPHY', 'STOADC', 'STOSYNW', 'STJTMP', 'STKTRS', 'SMVT', 'CBN', 'PARMRP', 'X4PARMRP'],
     'PRODUCTION': ['MFG', 'ROUTING', 'BOM', 'WORKSTATIO', 'APS', 'MFGITM', 'MFGOPE'],
     'DONNEES_BASE': ['ITM', 'BPARTNER', 'BPC', 'BPS', 'BPA', 'FACILITY', 'GACCOUNT']
 }
@@ -29,7 +29,7 @@ MODULE_PREFIXES = {
 def load_menus():
     """Charge les menus locaux"""
     try:
-        with open('menus_locaux.json', 'r', encoding='utf-8') as f:
+        with open('../menus/menus_locaux.json', 'r', encoding='utf-8') as f:
             return json.load(f)
     except:
         return {}
@@ -37,7 +37,7 @@ def load_menus():
 def load_tables():
     """Charge la liste des tables"""
     tables = {}
-    with open('tables_X3.csv', 'r', encoding='latin-1') as f:
+    with open('../data/tables_X3.csv', 'r', encoding='latin-1') as f:
         reader = csv.DictReader(f, delimiter=';')
         for row in reader:
             # Chercher la clé avec différents formats
@@ -55,7 +55,7 @@ def load_fields():
     """Charge tous les champs groupés par table"""
     fields_by_table = defaultdict(list)
     
-    with open('tables_champs_X3.csv', 'r', encoding='latin-1') as f:
+    with open('../data/tables_champs_X3.csv', 'r', encoding='latin-1') as f:
         reader = csv.DictReader(f, delimiter=';')
         for row in reader:
             # Chercher la clé avec différents formats
