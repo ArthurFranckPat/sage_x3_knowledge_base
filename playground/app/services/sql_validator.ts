@@ -19,20 +19,24 @@ export default class SqlValidator {
 
     const trimmedSql = sql.trim()
 
-    // 1. Vérifier que c'est un SELECT
-    if (!trimmedSql.toUpperCase().startsWith('SELECT')) {
-      result.errors.push('Seules les requêtes SELECT sont autorisées')
+    // 1. Vérifier que c'est un SELECT ou un CTE (WITH)
+    const upperSql = trimmedSql.toUpperCase()
+    if (!upperSql.startsWith('SELECT') && !upperSql.startsWith('WITH')) {
+      result.errors.push('Seules les requêtes SELECT (y compris les CTE avec WITH) sont autorisées')
       result.valid = false
       result.score = 0
       return result
     }
 
-    // 2. Vérifier qu'il n'y a pas de commandes dangereuses
+    // 2. Vérifier qu'il n'y a pas de commandes dangereuses (en ignorant les commentaires)
     const dangerousKeywords = ['DROP', 'DELETE', 'UPDATE', 'INSERT', 'CREATE', 'ALTER', 'TRUNCATE', 'EXEC']
-    const upperSql = trimmedSql.toUpperCase()
-    
+
+    // Extraire le SQL sans commentaires pour la vérification de sécurité
+    const sqlWithoutComments = this.removeComments(trimmedSql)
+    const upperSqlNoComments = sqlWithoutComments.toUpperCase()
+
     for (const keyword of dangerousKeywords) {
-      if (upperSql.includes(keyword)) {
+      if (upperSqlNoComments.includes(keyword)) {
         result.errors.push(`Commande interdite détectée : ${keyword}`)
         result.valid = false
         result.score = 0
@@ -130,6 +134,22 @@ export default class SqlValidator {
         'Aucune clause LIMIT détectée (une sera ajoutée automatiquement à 1000 lignes)'
       )
     }
+  }
+
+  /**
+   * Supprime les commentaires SQL d'une requête
+   */
+  private removeComments(sql: string): string {
+    // Supprimer les commentaires multi-lignes (/* ... */)
+    let cleanedSql = sql.replace(/\/\*[\s\S]*?\*\//g, '')
+
+    // Supprimer les commentaires mono-ligne (--)
+    cleanedSql = cleanedSql.replace(/--.*$/gm, '')
+
+    // Nettoyer les lignes vides multiples
+    cleanedSql = cleanedSql.replace(/\n\s*\n/g, '\n')
+
+    return cleanedSql.trim()
   }
 
   /**
