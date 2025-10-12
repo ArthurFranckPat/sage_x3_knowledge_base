@@ -1,20 +1,31 @@
 @if(result && result.rows)
-  <div class="animate-fade-in">
-    <!-- Results Table -->
-    <div class="table-wrapper scrollbar">
-      <table class="table">
-        <thead>
+  @let(__page = page || 1)
+  @let(__pageSize = pageSize || 10)
+  @let(total = result.rows.length)
+  @let(pageCount = Math.max(1, Math.ceil(total / __pageSize)))
+  @let(currentPage = Math.max(1, Math.min(__page, pageCount)))
+  @let(start = (currentPage - 1) * __pageSize)
+  @let(end = Math.min(start + __pageSize, total))
+  @let(prev = Math.max(1, currentPage - 1))
+  @let(next = Math.min(pageCount, currentPage + 1))
+  @let(rows = result.rows.slice(start, end))
+  @let(columns = Object.keys(result.rows[0] || {}))
+  <div class="animate-fade-in flex h-full flex-col">
+    <!-- Table container -->
+    <div class="flex-1 overflow-auto rounded-md border">
+      <table class="table w-full">
+        <thead class="sticky top-0 z-10 bg-muted/70">
           <tr>
-            @each(column in Object.keys(result.rows[0] || {}))
-              <th>{{ column }}</th>
+            @each(column in columns)
+              <th class="whitespace-nowrap font-semibold text-foreground text-xs uppercase tracking-wide">{{ column }}</th>
             @end
           </tr>
         </thead>
         <tbody>
-          @each(row in result.rows)
-            <tr>
-              @each(column in Object.keys(row))
-                <td>{{ row[column] }}</td>
+          @each(row in rows)
+            <tr class="odd:bg-muted/40 hover:bg-muted/60 transition-colors">
+              @each(column in columns)
+                <td class="max-w-[28rem] truncate align-top" title="{{ row[column] }}">{{ row[column] }}</td>
               @end
             </tr>
           @end
@@ -22,27 +33,44 @@
       </table>
     </div>
 
-    <!-- Results Footer with Metrics -->
-    <div class="card-footer">
-      <div class="badge badge-primary">
-        {{ result.rowCount }} rows
-      </div>
-      
-      <div class="badge badge-secondary">
-        {{ result.executionTime }}ms
-      </div>
-      
-      @if(result.validation && result.validation.score !== undefined)
-        @if(result.validation.score >= 80)
-          <div class="badge badge-success">
-            Score: {{ result.validation.score }}/100
-          </div>
-        @else
-          <div class="badge badge-warning">
-            Score: {{ result.validation.score }}/100
-          </div>
+    <!-- Footer: metrics + pagination -->
+    <div class="flex items-center justify-between gap-3 border-t bg-card/60 px-3 py-2 mt-2 rounded-b-md">
+      <div class="flex items-center gap-2">
+        <div class="badge badge-primary" data-row-count="{{ result.rowCount }}">{{ result.rowCount }} rows</div>
+        <div class="badge badge-secondary" data-execution-time="{{ result.executionTime }}">{{ result.executionTime }}ms</div>
+        @if(result.validation && result.validation.score !== undefined)
+          @if(result.validation.score >= 80)
+            <div class="badge badge-success" data-validation-score="{{ result.validation.score }}">Score: {{ result.validation.score }}/100</div>
+          @else
+            <div class="badge badge-warning" data-validation-score="{{ result.validation.score }}">Score: {{ result.validation.score }}/100</div>
+          @end
         @end
-      @end
+      </div>
+
+      <form id="pager-form" class="flex items-center gap-3" method="POST" action="/api/playground/execute"
+            up-submit up-target="#results-container, #validation-container">
+        <input type="hidden" name="sql" value="{{ sql }}">
+        <input type="hidden" name="page" value="{{ currentPage }}">
+        <div class="flex items-center gap-2 text-sm text-foreground/80">
+          <span>Rows per page</span>
+          <select class="select h-8" name="pageSize" onchange="up.submit(this.form)">
+            <option value="10" {{ __pageSize === 10 ? 'selected' : '' }}>10</option>
+            <option value="25" {{ __pageSize === 25 ? 'selected' : '' }}>25</option>
+            <option value="50" {{ __pageSize === 50 ? 'selected' : '' }}>50</option>
+            <option value="100" {{ __pageSize === 100 ? 'selected' : '' }}>100</option>
+          </select>
+        </div>
+        <div class="text-sm text-foreground/80 min-w-[200px] text-center">
+          {{ start + 1 }}–{{ end }} of <span>{{ total }}</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <button class="btn btn-outline h-8 w-8 p-0" type="submit" name="page" value="1" title="First" {{ currentPage <= 1 ? 'disabled' : '' }}>{{ svg('lucide:chevrons-left', { width: 16, height: 16 }) }}</button>
+          <button class="btn btn-outline h-8 w-8 p-0" type="submit" name="page" value="{{ prev }}" title="Previous" {{ currentPage <= 1 ? 'disabled' : '' }}>{{ svg('lucide:chevron-left', { width: 16, height: 16 }) }}</button>
+          <span class="mx-1 text-sm font-medium">{{ currentPage }}</span>
+          <button class="btn btn-outline h-8 w-8 p-0" type="submit" name="page" value="{{ next }}" title="Next" {{ currentPage >= pageCount ? 'disabled' : '' }}>{{ svg('lucide:chevron-right', { width: 16, height: 16 }) }}</button>
+          <button class="btn btn-outline h-8 w-8 p-0" type="submit" name="page" value="{{ pageCount }}" title="Last" {{ currentPage >= pageCount ? 'disabled' : '' }}>{{ svg('lucide:chevrons-right', { width: 16, height: 16 }) }}</button>
+        </div>
+      </form>
     </div>
   </div>
 @else

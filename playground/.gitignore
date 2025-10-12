@@ -23,3 +23,7 @@ yarn-error.log
 
 # Platform specific
 .DS_Store
+playground/.tmp_*.log
+playground/.server.log
+playground/.DS_Store
+.DS_Store
