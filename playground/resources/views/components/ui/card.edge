@@ -51,42 +51,40 @@
   @let(hasTitle = !!$slots.title)
   @let(hasDescription = !!$slots.description)
   @if(hasHeader || hasTitle || hasDescription)
-    <div class="card-header">
-      @if(hasHeader)
-        {{ await $slots.header() }}
-      @else
+    @if(hasHeader)
+      {{ await $slots.header() }}
+    @else
+      <header>
         @if(hasTitle)
-          <div class="card-title">
+          <h2>
             {{ await $slots.title() }}
-          </div>
+          </h2>
         @end
 
         @if(hasDescription)
-          <div class="card-description">
+          <p>
             {{ await $slots.description() }}
-          </div>
+          </p>
         @end
-      @end
-    </div>
+      </header>
+    @end
   @end
 
   <!-- Card Content -->
   @let(hasMain = !!$slots.main)
   @let(hasContent = !!$slots.content)
   @if(hasMain || hasContent)
-    <div class="card-content">
-      @if(hasMain)
+    @if(hasMain)
+      <section>
         {{{ await $slots.main() }}}
-      @else
-        {{ await $slots.content() }}
-      @end
-    </div>
+      </section>
+    @else
+      {{ await $slots.content() }}
+    @end
   @end
 
   <!-- Card Footer -->
   @if(!!$slots.footer)
-    <div class="card-footer">
-      {{ await $slots.footer() }}
-    </div>
+    {{ await $slots.footer() }}
   @end
 </div>

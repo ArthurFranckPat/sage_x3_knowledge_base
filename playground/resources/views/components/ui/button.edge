@@ -27,17 +27,17 @@
 @let(asChild = $props.get('asChild', false))
 
 @let(variantClasses = {
-  default: 'btn btn-primary',
-  destructive: 'btn btn-destructive',
-  outline: 'btn btn-outline',
+  default: 'btn',
+  destructive: 'btn-destructive',
+  outline: 'btn-outline',
   secondary: 'btn btn-secondary',
   ghost: 'btn btn-ghost',
   link: 'btn btn-link',
   // Legacy support
-  primary: 'btn btn-primary',
+  primary: 'btn',
   success: 'btn btn-success',
   warning: 'btn btn-warning'
-}[variant] || 'btn btn-primary')
+}[variant] || 'btn')
 
 @let(sizeClasses = {
   sm: 'btn-sm',

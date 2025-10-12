@@ -10,10 +10,8 @@
   @end
 --}}
 
-<div
-  {{ $props.merge({
-    class: 'card-header'
-  }).toAttrs() }}
+<header
+  {{ $props.merge({}).toAttrs() }}
 >
   {{{ await $slots.main() }}}
-</div>
+</header>

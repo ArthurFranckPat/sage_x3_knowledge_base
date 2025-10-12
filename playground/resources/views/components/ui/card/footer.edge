@@ -1,8 +1,6 @@
 
-<div
-  {{ $props.merge({
-    class: 'card-footer'
-  }).toAttrs() }}
+<footer
+  {{ $props.merge({}).toAttrs() }}
 >
   {{{ await $slots.main() }}}
-</div>
+</footer>

@@ -8,46 +8,49 @@ Design system composé de composants atomiques réutilisables pour Edge.js, insp
 - **Composables** : Se combinent pour créer des interfaces complexes
 - **Personnalisables** : Props et classes CSS flexibles
 - **Accessibles** : Sémantique HTML correcte
-- **Sans JS** : Composants purement HTML/CSS (sauf interactions spécifiques)
+- **Modernes** : Inspirés des meilleures pratiques de shadcn/ui
 
 ## 📦 Composants Disponibles
 
 ### Button
-
 Bouton avec variants et tailles multiples.
 
 **Props** :
-- `variant`: `primary` | `secondary` | `destructive` | `success` | `outline` | `ghost` (défaut: `primary`)
-- `size`: `sm` | `default` | `lg` | `icon` (défaut: `default`)
-- `type`: `button` | `submit` | `reset` (défaut: `button`)
+- `variant`: `default` | `destructive` | `outline` | `secondary` | `ghost` | `link` (défaut: `default`)
+- `size`: `sm` | `md` | `lg` | `icon` (défaut: `md`)
 - `disabled`: boolean
+- `loading`: boolean
+- `asChild`: boolean - Pour rendre comme élément enfant (ex: lien)
+- `type`: `button` | `submit` | `reset` (défaut: `button`)
 - `class`: Classes CSS additionnelles
-- `id`, `onclick`, etc.
 
 **Exemples** :
-
 ```edge
-{{-- Bouton primary basique --}}
 @component('components.ui.button')
   Click me
 @end
 
-{{-- Bouton destructive small --}}
 @component('components.ui.button', { 
   variant: 'destructive',
-  size: 'sm'
+  size: 'lg'
 })
   Delete
 @end
 
-{{-- Bouton submit avec classes custom --}}
-@component('components.ui.button', {
-  type: 'submit',
-  variant: 'success',
-  class: 'w-full'
+@component('components.ui.button', { 
+  variant: 'outline',
+  loading: true
 })
-  Submit Form
+  Loading...
 @end
+
+@component('components.ui.button', { 
+  variant: 'ghost',
+  size: 'icon'
+})
+  ⚙️
+@end
+```
 
 {{-- Bouton icon --}}
 @component('components.ui.button', {
