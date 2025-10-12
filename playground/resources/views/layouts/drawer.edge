@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title || 'Playground SQL - Sage X3' }}</title>
+  
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
+  <script>
+    // Initialize theme without Alpine
+    (function(){
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      } catch (e) {}
+    })()
+  </script>
+</head>
+<body>
+  {{{ await $slots.main() }}}
+</body>
+</html>

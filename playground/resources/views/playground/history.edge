@@ -1,81 +1,250 @@
-<div class="drawer-header">
-  <h2>📝 Query History</h2>
-  <div style="display: flex; gap: 0.5rem;">
-    <button class="btn-icon" onclick="clearHistory()" title="Clear all">
-      🗑️
-    </button>
-    <button class="btn-icon" up-dismiss>✕</button>
-  </div>
-</div>
+<div up-main="drawer" class="flex flex-col h-full bg-background">
 
-<div class="drawer-content">
-  <div id="history-list">
-    <!-- Will be populated by JavaScript from localStorage -->
-  </div>
+    <!-- Header -->
+    <header class="h-16 border-b bg-card flex items-center justify-between px-6">
+      <div class="flex items-center gap-3 text-lg font-semibold">
+        {{ svg('lucide:history', { width: 20, height: 20 }) }}
+        <span>Historique des requêtes</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button
+          class="btn-ghost"
+          onclick="toggleSearch()"
+          title="Rechercher dans l'historique"
+          aria-label="Rechercher"
+        >{{ svg('lucide:search', { width: 18, height: 18 }) }}</button>
+        <button
+          class="btn-ghost"
+          onclick="clearHistory()"
+          title="Vider tout l'historique"
+          aria-label="Vider l'historique"
+        >{{ svg('lucide:trash-2', { width: 18, height: 18 }) }}</button>
+        <button
+          class="btn-ghost"
+          up-dismiss
+          title="Fermer"
+          aria-label="Fermer"
+        >{{ svg('lucide:x', { width: 18, height: 18 }) }}</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="p-4">
+
+      <!-- Search Section -->
+      <section id="history-search" class="hidden mb-4">
+        <div class="card">
+          <header>
+            <h3 class="flex items-center gap-2">{{ svg('lucide:search', { width: 16, height: 16 }) }} <span>Recherche</span></h3>
+          </header>
+          <section>
+            <div class="space-y-3">
+              <div>
+                <label for="search-input" class="label">Rechercher une requête</label>
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Rechercher dans les requêtes..."
+                  class="input w-full"
+                  onkeyup="performSearch()"
+                >
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="query-type-filter" class="label">Type de requête</label>
+                  <select id="query-type-filter" class="select w-full" onchange="performSearch()">
+                    <option value="">Tous les types</option>
+                    <option value="SELECT">SELECT</option>
+                    <option value="CTE">CTE (WITH)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="tables-filter" class="label">Table concernée</label>
+                  <select id="tables-filter" class="select w-full" onchange="performSearch()">
+                    <option value="">Toutes les tables</option>
+                    <option value="itmmaster">Articles</option>
+                    <option value="bpartner">Tiers</option>
+                    <option value="stock">Stock</option>
+                    <option value="sorder">Commandes clients</option>
+                    <option value="porder">Commandes fournisseurs</option>
+                  </select>
+                </div>
+              </div>
+
+              <button class="btn btn-outline w-full" onclick="clearSearch()">
+                {{ svg('lucide:x-circle', { width: 16, height: 16 }) }}
+                Effacer les filtres
+              </button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Loading State -->
+      <div id="history-loading" class="hidden">
+        <div class="card">
+          <section class="flex flex-col items-center justify-center py-12">
+            <div class="animate-spin mb-4">{{ svg('lucide:loader-2', { width: 32, height: 32 }) }}</div>
+            <div class="text-muted-foreground">Chargement de l'historique...</div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Debug Info -->
+      <!-- DEBUG: hasHistory={{ hasHistory }}, entries count={{ historyEntries ? historyEntries.length : 0 }} -->
+
+      <!-- History List -->
+      <div id="history-list" class="space-y-4">
+        @if(hasHistory && historyEntries && historyEntries.length > 0)
+          @each(entry in historyEntries)
+            <div class="card hover:shadow-md transition-shadow duration-200">
+              <header>
+                <div class="flex items-start justify-between">
+                  <div class="space-y-2">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <span class="inline-flex items-center rounded-full bg-primary text-primary-foreground px-2 py-1 text-xs font-medium">
+                        {{ entry.rowCount }} lignes
+                      </span>
+                      <span class="inline-flex items-center rounded-full {{ entry.executionTimeMs < 500 ? 'bg-green-500' : 'bg-yellow-500' }} text-white px-2 py-1 text-xs font-medium">
+                        {{ entry.executionTimeMs }}ms
+                      </span>
+                      <span class="inline-flex items-center rounded-full bg-blue-500 text-white px-2 py-1 text-xs font-medium">
+                        {{ entry.queryType }}
+                      </span>
+                    </div>
+                    <p class="text-xs text-muted-foreground">{{ entry.createdAt.toLocaleString('fr-FR') }}</p>
+                  </div>
+                </div>
+              </header>
+              <section>
+                @if(entry.tablesUsed && entry.tablesUsed.length > 0)
+                  <div class="flex flex-wrap gap-1 mb-3">
+                    @each(table in entry.tablesUsed)
+                      <span class="inline-flex items-center rounded-md bg-muted px-2 py-1 text-xs text-muted-foreground">
+                        {{ table }}
+                      </span>
+                    @end
+                  </div>
+                @end
+
+                <div class="rounded-lg bg-muted/50 p-3 overflow-x-auto">
+                  <pre class="text-sm font-mono leading-relaxed whitespace-pre-wrap">{{ entry.sql.length > 150 ? entry.sql.substring(0, 150) + '...' : entry.sql }}</pre>
+                </div>
+              </section>
+              <footer>
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-2">
+                    <button
+                      class="btn btn-primary text-sm"
+                      onclick="if(window.sqlEditor) { window.sqlEditor.setValue(`{{ entry.sql }}`); up.layer.dismiss(); }"
+                    >
+                      {{ svg('lucide:file-text', { width: 14, height: 14 }) }}
+                      Charger
+                    </button>
+                    <button
+                      class="btn btn-outline text-sm"
+                      onclick="navigator.clipboard.writeText(`{{ entry.sql }}`).then(() => window.toast?.success('Copié')).catch(() => window.toast?.error('Échec de la copie'))"
+                    >
+                      {{ svg('lucide:copy', { width: 14, height: 14 }) }}
+                      Copier
+                    </button>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          @end
+        @else
+          <div class="card">
+            <section class="flex flex-col items-center justify-center py-12">
+              <div class="mx-auto mb-4 size-12 rounded-full bg-muted ring-1 ring-border flex items-center justify-center text-muted-foreground">
+                {{ svg('lucide:history', { width: 20, height: 20 }) }}
+              </div>
+              <div class="text-lg font-semibold">Aucun historique</div>
+              <p class="mt-1 text-sm text-muted-foreground">Exécutez des requêtes pour voir votre historique ici.</p>
+            </section>
+          </div>
+        @end
+      </div>
+
+      <!-- Pagination -->
+      <div id="history-pagination" class="hidden mt-6">
+        <div class="card">
+          <section>
+            <div class="flex items-center justify-between">
+              <button class="btn btn-outline" onclick="loadPreviousPage()" id="prev-btn" disabled>
+                {{ svg('lucide:chevron-left', { width: 16, height: 16 }) }}
+                Précédent
+              </button>
+              <span id="page-info" class="text-sm text-muted-foreground">Page 1</span>
+              <button class="btn btn-outline" onclick="loadNextPage()" id="next-btn" disabled>
+                Suivant
+                {{ svg('lucide:chevron-right', { width: 16, height: 16 }) }}
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </main>
 </div>
 
 <script>
-  function loadHistory() {
-    const history = JSON.parse(localStorage.getItem('sqlHistory') || '[]')
-    const container = document.getElementById('history-list')
-    
-    if (history.length === 0) {
-      container.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">No query history yet</p>'
+  function toggleSearch() {
+    const searchEl = document.getElementById('history-search')
+    searchEl?.classList.toggle('hidden')
+    if (!searchEl?.classList.contains('hidden')) {
+      document.getElementById('search-input')?.focus()
+    }
+  }
+
+  function clearSearch() {
+    if (document.getElementById('search-input')) document.getElementById('search-input').value = ''
+    if (document.getElementById('query-type-filter')) document.getElementById('query-type-filter').value = ''
+    if (document.getElementById('tables-filter')) document.getElementById('tables-filter').value = ''
+    up.reload()
+  }
+
+  function performSearch() {
+    const query = document.getElementById('search-input')?.value || ''
+    const queryType = document.getElementById('query-type-filter')?.value || ''
+    const tables = document.getElementById('tables-filter')?.value || ''
+    console.log('Search:', { query, queryType, tables })
+  }
+
+  async function clearHistory() {
+    if (!confirm('Voulez-vous vraiment vider tout l\'historique ? Cette action est irréversible.')) {
       return
     }
-    
-    container.innerHTML = history.map((entry, index) => {
-      const date = new Date(entry.timestamp)
-      const dateStr = date.toLocaleString()
-      const sqlPreview = entry.sql.substring(0, 100) + (entry.sql.length > 100 ? '...' : '')
-      
-      return `
-        <div class="history-entry" style="border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); padding: 1rem; margin-bottom: 0.75rem;">
-          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-            <small style="color: var(--text-secondary);">${dateStr}</small>
-            <span style="background: var(--color-primary); color: white; padding: 0.125rem 0.5rem; border-radius: 12px; font-size: 0.75rem;">${entry.rowCount} rows</span>
-          </div>
-          <pre style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--border-radius-sm); overflow-x: auto; margin: 0.5rem 0; font-size: 0.875rem;">${entry.sql}</pre>
-          <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
-            <button class="btn btn-secondary" onclick="loadQueryFromHistory(${index})" style="font-size: 0.875rem;">
-              📝 Load
-            </button>
-            <button class="btn btn-tertiary" onclick="removeFromHistory(${index})" style="font-size: 0.875rem;">
-              🗑️ Remove
-            </button>
-          </div>
-        </div>
-      `
-    }).join('')
-  }
-  
-  function loadQueryFromHistory(index) {
-    const history = JSON.parse(localStorage.getItem('sqlHistory') || '[]')
-    const entry = history[index]
-    
-    if (entry && window.sqlEditor) {
-      window.sqlEditor.setValue(entry.sql)
-      up.layer.dismiss()
-      showToast('✓ Query loaded', 'success')
+    try {
+      const response = await fetch('/api/playground/history', {
+        method: 'DELETE',
+        headers: { 'X-Requested-With': 'XMLHttpRequest' }
+      })
+      if (response.ok) {
+        window.toast?.success('Historique vidé')
+        up.reload()
+      } else {
+        window.toast?.error('Erreur lors de la suppression')
+      }
+    } catch (error) {
+      console.error('Error clearing history:', error)
+      window.toast?.error('Erreur lors de la suppression')
     }
   }
-  
-  function removeFromHistory(index) {
-    let history = JSON.parse(localStorage.getItem('sqlHistory') || '[]')
-    history.splice(index, 1)
-    localStorage.setItem('sqlHistory', JSON.stringify(history))
-    loadHistory()
-    showToast('✓ Removed from history', 'success')
+
+  function loadPreviousPage() {
+    console.log('Load previous page')
   }
-  
-  function clearHistory() {
-    if (confirm('Clear all history?')) {
-      localStorage.setItem('sqlHistory', '[]')
-      loadHistory()
-      showToast('✓ History cleared', 'success')
-    }
+
+  function loadNextPage() {
+    console.log('Load next page')
   }
-  
-  // Load history on page load
-  loadHistory()
+
+  // Add close button handler
+  document.querySelectorAll('[up-dismiss]').forEach(btn => {
+    btn.addEventListener('click', () => up.layer.dismiss())
+  })
 </script>
+
