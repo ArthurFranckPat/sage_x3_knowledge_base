@@ -14,9 +14,6 @@ const PlaygroundController = () => import('#controllers/playground_controller')
 // Page d'accueil
 router.on('/').render('pages/home').as('home')
 
-// Test Edge
-router.on('/test').render('test').as('test')
-router.on('/test2').render('test_with_layout').as('test2')
 
 // Routes Web du Playground SQL
 router
@@ -57,17 +54,38 @@ router
     router
       .post('/execute', [PlaygroundController, 'execute'])
       .as('playground.api.execute')
-    
+
     router
       .post('/validate', [PlaygroundController, 'validate'])
       .as('playground.api.validate')
-    
+
     router
       .get('/schema', [PlaygroundController, 'schema'])
       .as('playground.api.schema')
-    
+
     router
       .get('/examples', [PlaygroundController, 'examples'])
       .as('playground.api.examples')
+
+    // Query History API endpoints
+    router
+      .get('/history', [PlaygroundController, 'history'])
+      .as('playground.api.history')
+
+    router
+      .post('/history', [PlaygroundController, 'saveToHistory'])
+      .as('playground.api.history.save')
+
+    router
+      .delete('/history', [PlaygroundController, 'clearHistory'])
+      .as('playground.api.history.clear')
+
+    router
+      .delete('/history/:id', [PlaygroundController, 'deleteFromHistory'])
+      .as('playground.api.history.delete')
+
+    router
+      .get('/history/search', [PlaygroundController, 'searchHistory'])
+      .as('playground.api.history.search')
   })
   .prefix('/api/playground')
