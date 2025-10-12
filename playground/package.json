@@ -11,7 +11,11 @@
     "test": "node ace test",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "db:fresh": "node ace migration:fresh",
+    "db:seed": "node ace db:seed",
+    "seed:ergoclick": "node ace db:seed -f database/seeders/ergoclick_master_seeder.ts",
+    "db:reset": "node ace migration:fresh && node ace db:seed -f database/seeders/ergoclick_master_seeder.ts"
   },
   "imports": {
     "#controllers/*": "./app/controllers/*.js",
@@ -61,13 +65,16 @@
     "@adonisjs/shield": "^8.2.0",
     "@adonisjs/static": "^1.1.1",
     "@adonisjs/vite": "^4.0.0",
+    "@iconify-json/lucide": "^1.2.68",
     "@vinejs/vine": "^3.0.1",
     "alpinejs": "^3.15.0",
     "basecoat-css": "^0.3.2",
     "better-sqlite3": "^12.4.1",
+    "edge-iconify": "^2.0.1",
     "edge.js": "^6.2.1",
     "luxon": "^3.7.2",
     "monaco-editor": "^0.53.0",
+    "pg": "^8.16.3",
     "reflect-metadata": "^0.2.2",
     "sql-formatter": "^15.6.10",
     "unpoly": "^3.12.0"
