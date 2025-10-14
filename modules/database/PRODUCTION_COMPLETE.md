@@ -6,8 +6,8 @@
 
 ## 📊 Statistiques
 
-- **Tables documentées** : 26
-- **Champs totaux** : 1,406
+- **Tables documentées** : 27
+- **Champs totaux** : 1,459
 - **Source** : Données réelles de votre ERP Sage X3
 
 ---
@@ -38,6 +38,7 @@
 - [MFGTRS](#mfgtrs) - Transaction  saisie production (183 champs)
 - [MFGVERSION](#mfgversion) - Changement version GPAO (9 champs)
 - [MFGWIP](#mfgwip) - Valorisation encours - entête (28 champs)
+- [ORDERS](#orders) - En-cours (53 champs)
 - [ROUTING](#routing) - Gammes - Entête (29 champs)
 - [WORKSTATIO](#workstatio) - Postes de charge (44 champs)
 
@@ -1995,6 +1996,85 @@ SELECT
     QUACPLQTY_0,
     MFGTRKFLG_0
 FROM MFGWIP
+WHERE -- vos conditions
+```
+
+---
+
+## ORDERS
+
+**En-cours**
+
+**Nombre de champs** : 53
+
+### Champs
+
+| Champ | Intitulé | Type | Long | Lien | Menu |
+|-------|----------|------|------|------|------|
+| `ATECORI_0` | Origine |  |  |  |  |
+| `CREDAT_0` | Date création |  |  |  |  |
+| `UPDDAT_0` | Date modification |  |  |  |  |
+| `WIPSTA_0` | Statut encours |  |  |  |  |
+| `MRPMES_0` | Message mrp |  |  |  |  |
+| `MRPDAT_0` | Date mrp |  |  |  |  |
+| `SHTQTY_0` | Quantité en rupture |  |  |  |  |
+| `VCRTYP_0` | Type pièce |  |  |  |  |
+| `VCRSEQORI_0` | Séq origine |  |  |  |  |
+| `BOMOFS_0` | Délai opération |  |  |  |  |
+| `RMNEXTQTY_0` | Qté restante |  |  |  |  |
+| `ITMREFORI_0` | Article origine |  |  |  |  |
+| `BOMALTTYP_0` | Type alternative nomenclature |  |  |  |  |
+| `CPLQTY_0` | Qté réalisée tot |  |  |  |  |
+| `MTOQTY_0` | Qté affectée |  |  |  |  |
+| `ORIFCY_0` | Site origine/émetteur |  |  |  |  |
+| `STRDAT_0` | Date début |  |  |  |  |
+| `ENDDAT_0` | Date fin |  |  |  |  |
+| `PIO_0` | Priorité |  |  |  |  |
+| `BOMALT_0` | Alternative nomenclature |  |  |  |  |
+| `WIPNUM_0` | Numéro ordre |  |  |  |  |
+| `PJT_0` | Affaire |  |  |  |  |
+| `CCMSTA_0` | Statut demande |  |  |  |  |
+| `MTOREF_0` | Réseau MTO |  |  |  |  |
+| `XQTEMANQ_0` | Qté manquante |  |  |  |  |
+| `ITMREF_0` | Article |  |  |  |  |
+| `CREUSR_0` | Opérateur création |  |  |  |  |
+| `BPRNUM_0` | Numéro tiers |  |  |  |  |
+| `EXPNUM_0` | Numéro export |  |  |  |  |
+| `UPDUSR_0` | Opérateur modification |  |  |  |  |
+| `VCRSEQ_0` | No séquence pièce |  |  |  |  |
+| `VCRNUMORI_0` | No pièce origine (No rec ou No OF) |  |  |  |  |
+| `VCRTYPORI_0` | Type pièce origine |  |  |  |  |
+| `VCRLINORI_0` | No ligne pièce origine |  |  |  |  |
+| `OPTFLG_0` | Flag optimisation |  |  |  |  |
+| `STOFCY_0` | Site stock |  |  |  |  |
+| `BOMOPE_0` | Numéro opération |  |  |  |  |
+| `VCRLIN_0` | No ligne pièce |  |  |  |  |
+| `ABBFIL_0` | Abréviation fichier |  |  |  |  |
+| `WIPTYP_0` | Type ordre |  |  |  |  |
+| `ALLQTY_0` | Qté allouée |  |  |  |  |
+| `ORI_0` | Origine |  |  |  |  |
+| `ECCVALMAJ_0` | Version majeure |  |  |  |  |
+| `ECCVALMIN_0` | Version mineure |  |  |  |  |
+| `EXTQTY_0` | Qté planifiée |  |  |  |  |
+| `MRPQTY_0` | Qté CBN |  |  |  |  |
+| `CREDATTIM_0` | Date heure |  |  |  |  |
+| `UPDDATTIM_0` | Date heure |  |  |  |  |
+| `CCMRID_0` | ID demande |  |  |  |  |
+| `GFSPUBTIM_0` | Date/heure optimisé |  |  |  |  |
+| `VCRNUM_0` | DA / Ordre sst |  |  |  |  |
+| `FMI_0` | Origine article |  |  |  |  |
+| `AUUID_0` | Identifiant unique |  |  |  |  |
+
+### Exemple SQL
+
+```sql
+SELECT
+    ATECORI_0,
+    CREDAT_0,
+    UPDDAT_0,
+    WIPSTA_0,
+    MRPMES_0
+FROM ORDERS
 WHERE -- vos conditions
 ```
 
