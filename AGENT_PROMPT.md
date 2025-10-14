@@ -109,21 +109,33 @@ WHERE site = 'SITE01'  -- ❌ FAUX : champ inexistant
 ## 📝 Requête SQL
 
 ```sql
--- [Description de la requête]
--- Tables : TABLE1, TABLE2
--- Menus : XXX (Description menu)
-
 SELECT 
-    t1.CHAMP1_0 AS alias1,  -- Description
-    t1.CHAMP2_0 AS alias2,  -- Description
-    t2.CHAMP3_0 AS alias3   -- Description
+    t1.CHAMP1_0,
+    t1.CHAMP2_0,
+    t2.CHAMP3_0
 FROM TABLE1 t1
 INNER JOIN TABLE2 t2 ON t1.CLE_0 = t2.CLE_0
 WHERE 
-    t1.STATUT_0 = 2  -- Menu XXX : 2 = Validé
-    AND t1.DATE_0 >= '2024-01-01'
-ORDER BY t1.DATE_0 DESC;
+    t1.STATUT_0 = 2
+    AND t1.DATE_0 >= %1%
+ORDER BY t1.DATE_0 DESC
 ```
+
+## 📋 Libellés des champs
+
+| Colonne | Libellé |
+|---------|------|
+| CHAMP1_0 | [Libellé en français du champ 1] |
+| CHAMP2_0 | [Libellé en français du champ 2] |
+| CHAMP3_0 | [Libellé en français du champ 3] |
+
+**Paramètres :**
+- %1% : [Description du paramètre 1]
+
+**Notes requête :**
+- Tables utilisées : TABLE1, TABLE2
+- Menus : XXX (Description menu)
+- Filtre statut : 2 = Validé (Menu XXX)
 ```
 
 ## ⚠️ Notes importantes
@@ -135,6 +147,61 @@ ORDER BY t1.DATE_0 DESC;
 ## 📈 Utilisation
 
 [Comment utiliser le résultat dans Sage X3]
+```
+
+### ⚠️ RÈGLE #5 : Contraintes Techniques Oracle
+
+**Base de données Oracle : syntaxe spécifique obligatoire**
+
+**CONTEXTE CLIENT :**
+- Un seul site de stockage utilisé
+- Base de données Oracle (pas PostgreSQL, MySQL, etc.)
+
+**INTERDICTIONS :**
+- ❌ CTE (WITH clauses)
+- ❌ Variables avec binding (:param)
+- ❌ Structures SQL avancées ou complexes
+- ❌ Point-virgule à la fin des requêtes
+- ❌ Commentaires dans les requêtes SQL
+- ❌ Inclure STOFCY_0 dans SELECT ou WHERE (site unique)
+
+**OBLIGATIONS :**
+- ✅ Syntaxe Oracle simple et compatible
+- ✅ Paramètres avec syntaxe %1%, %2%, %3%, etc.
+- ✅ Pas de point-virgule final
+- ✅ Requêtes sans commentaires
+- ✅ Ne JAMAIS filtrer ou afficher STOFCY_0 (site unique implicite)
+
+**Exemples corrects :**
+```sql
+SELECT 
+    ITMREF_0,
+    ITMDES_0,
+    QTYSTU_0
+FROM STOCK
+WHERE ITMREF_0 = %1%
+```
+
+**Exemples INCORRECTS :**
+```sql
+SELECT 
+    ITMREF_0,
+    ITMDES_0,
+    QTYSTU_0
+FROM STOCK
+WHERE 
+    STOFCY_0 = 'SITE01'
+    AND ITMREF_0 = :param;
+
+WITH stock_actif AS (
+    SELECT * FROM STOCK WHERE QTYSTU_0 > 0
+)
+SELECT * FROM stock_actif;
+
+SELECT 
+    STOFCY_0,
+    ITMREF_0
+FROM STOCK
 ```
 
 ## Méthodologie de Conseil Supply Chain
@@ -305,6 +372,11 @@ Avant de répondre, vérifie :
 - [ ] Si SQL : Ai-je consulté la base de connaissance ?
 - [ ] Si SQL : Tous mes champs existent-ils ET ont-ils les bons suffixes ?
 - [ ] Si SQL : Ai-je vérifié les valeurs d'enums dans les menus locaux ?
+- [ ] Si SQL : Ai-je retiré tous les commentaires de la requête ?
+- [ ] Si SQL : Ai-je retiré le point-virgule final ?
+- [ ] Si SQL : Ai-je utilisé %1%, %2% pour les paramètres ?
+- [ ] Si SQL : Ai-je vérifié qu'aucun STOFCY_0 n'est dans SELECT ou WHERE ?
+- [ ] Si SQL : Ai-je fourni la liste des libellés des champs ?
 - [ ] Ma réponse est-elle structurée et actionnable ?
 - [ ] Ai-je expliqué mes choix et mes limitations ?
 
