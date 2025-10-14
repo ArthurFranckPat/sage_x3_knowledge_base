@@ -28,11 +28,11 @@ Cette base de connaissance documente le dictionnaire des tables Sage X3 (Version
 
 | Module | Fichier | Tables | Champs |
 |--------|---------|--------|--------|
-| **Ventes** | **[VENTES_COMPLETE.md](./modules/database/VENTES_COMPLETE.md)** | 17 | 1,653 |
-| **Achats** | **[ACHATS_COMPLETE.md](./modules/database/ACHATS_COMPLETE.md)** | 15 | 1,422 |
-| **Stocks** | **[STOCKS_COMPLETE.md](./modules/database/STOCKS_COMPLETE.md)** | 16 | 884 |
-| **Production** | **[PRODUCTION_COMPLETE.md](./modules/database/PRODUCTION_COMPLETE.md)** | 26 | 1,406 |
-| **Données de base** | **[DONNEES_BASE_COMPLETE.md](./modules/database/DONNEES_BASE_COMPLETE.md)** | 38 | 2,162 |
+| **Ventes** | **[2.2_VENTES_COMPLETE.md](./modules/database/2.2_VENTES_COMPLETE.md)** | 17 | 1,653 |
+| **Achats** | **[2.1_ACHATS_COMPLETE.md](./modules/database/2.1_ACHATS_COMPLETE.md)** | 15 | 1,422 |
+| **Stocks** | **[2.3_STOCKS_COMPLETE.md](./modules/database/2.3_STOCKS_COMPLETE.md)** | 16 | 884 |
+| **Production** | **[2.4_PRODUCTION_COMPLETE.md](./modules/database/2.4_PRODUCTION_COMPLETE.md)** | 26 | 1,406 |
+| **Données de base** | **[2.5_DONNEES_BASE_COMPLETE.md](./modules/database/2.5_DONNEES_BASE_COMPLETE.md)** | 38 | 2,162 |
 
 **Total : 112 tables principales avec 7,527 champs documentés**
 
@@ -40,25 +40,25 @@ Cette base de connaissance documente le dictionnaire des tables Sage X3 (Version
 
 | Module | Fichier | Tables |
 |--------|---------|--------|
-| Ventes | [10_MODULE_VENTES.md](./modules/web/10_MODULE_VENTES.md) | 57 |
-| Achats | [11_MODULE_ACHATS.md](./modules/web/11_MODULE_ACHATS.md) | 66 |
-| Stocks | [12_MODULE_STOCKS.md](./modules/web/12_MODULE_STOCKS.md) | 103 |
-| Production | [13_MODULE_PRODUCTION.md](./modules/web/13_MODULE_PRODUCTION.md) | 86 |
-| Données de base | [14_MODULE_DONNEES_BASE.md](./modules/web/14_MODULE_DONNEES_BASE.md) | 300+ |
+| Achats | [3.1_MODULE_ACHATS.md](./modules/web/3.1_MODULE_ACHATS.md) | 66 |
+| Ventes | [3.2_MODULE_VENTES.md](./modules/web/3.2_MODULE_VENTES.md) | 57 |
+| Stocks | [3.3_MODULE_STOCKS.md](./modules/web/3.3_MODULE_STOCKS.md) | 103 |
+| Production | [3.4_MODULE_PRODUCTION.md](./modules/web/3.4_MODULE_PRODUCTION.md) | 86 |
+| Données de base | [3.5_MODULE_DONNEES_BASE.md](./modules/web/3.5_MODULE_DONNEES_BASE.md) | 300+ |
 
 ### 🤖 Guides LLM (guides/)
 
 | Guide | Fichier | Description |
 |-------|---------|-------------|
-| Guide SQL | [00_GUIDE_LLM.md](./guides/00_GUIDE_LLM.md) | Méthodologie génération SQL |
-| Glossaire | [01_GLOSSAIRE.md](./guides/01_GLOSSAIRE.md) | Conventions Sage X3 |
-| Relations | [03_RELATIONS.md](./guides/03_RELATIONS.md) | Jointures entre tables |
+| Guide SQL | [1.1_GUIDE_LLM.md](./guides/1.1_GUIDE_LLM.md) | Méthodologie génération SQL |
+| Glossaire | [1.2_GLOSSAIRE.md](./guides/1.2_GLOSSAIRE.md) | Conventions Sage X3 |
+| Relations | [1.3_RELATIONS.md](./guides/1.3_RELATIONS.md) | Jointures entre tables |
 
 ### 🎯 Menus locaux (menus/)
 
 | Fichier | Description |
 |---------|-------------|
-| [00_MENUS_LOCAUX.md](./menus/00_MENUS_LOCAUX.md) | 608 menus, 3,127 valeurs d'enums |
+| [4.1_MENUS_LOCAUX.md](./menus/4.1_MENUS_LOCAUX.md) | 608 menus, 3,127 valeurs d'enums |
 | [menus_locaux.json](./menus/menus_locaux.json) | Données structurées JSON |
 
 ### 🤖 Serveur MCP (mcp/)

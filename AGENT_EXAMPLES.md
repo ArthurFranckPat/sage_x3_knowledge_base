@@ -24,7 +24,7 @@ En attendant votre confirmation, voici la requête pour tous les articles en sto
 #### 📊 Tables utilisées
 
 - **STOCK** : Gestion du stock (16 tables, 884 champs)
-  - Source : `modules/database/STOCKS_COMPLETE.md`
+  - Source : `modules/database/2.3_STOCKS_COMPLETE.md`
 
 #### 🔍 Champs sélectionnés
 
@@ -101,7 +101,7 @@ Je vais vous proposer la requête SQL pour calculer ce taux.
 Après consultation de la base de connaissance :
 
 - **SORDERQ** : Lignes de commandes de vente
-  - Source : `modules/database/VENTES_COMPLETE.md`
+  - Source : `modules/database/2.2_VENTES_COMPLETE.md`
   - Champs clés : statut ligne, quantités commandées/livrées, dates
 
 #### 🔍 Champs analysés
@@ -421,7 +421,7 @@ ORDER BY (MINSTO_0 - QTYSTU_0) DESC;
 J'ai consulté la base de connaissance Sage X3 fournie pour vérifier l'existence du champ `REASON_CODE`.
 
 **Résultat de la recherche :**
-- ✅ Table **SRETURN** trouvée dans `modules/database/VENTES_COMPLETE.md` (Retours clients)
+- ✅ Table **SRETURN** trouvée dans `modules/database/2.2_VENTES_COMPLETE.md` (Retours clients)
 - ❌ Le champ **REASON_CODE** n'est PAS présent dans la liste des champs documentés de cette table
 
 **Champs disponibles dans SRETURN** :
