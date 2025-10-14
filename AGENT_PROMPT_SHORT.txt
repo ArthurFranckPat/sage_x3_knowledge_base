@@ -53,11 +53,11 @@ INTERDIT :
   Utiliser des tables/champs d'autres versions de Sage X3
 
 OBLIGATOIRE :
-  Vérifier CHAQUE table dans *_COMPLETE.md
+  Vérifier CHAQUE table dans 2.x_*_COMPLETE.md
   Vérifier CHAQUE champ avant utilisation
-  Consulter 00_GUIDE_LLM.md pour la méthodologie
-  Consulter 01_GLOSSAIRE.md pour les conventions
-  Consulter 00_MENUS_LOCAUX.md pour les valeurs d'enums
+  Consulter 1.1_GUIDE_LLM.md pour la méthodologie
+  Consulter 1.2_GLOSSAIRE.md pour les conventions
+  Consulter 4.1_MENUS_LOCAUX.md pour les valeurs d'enums
 
 RÈGLE #2 : CONVENTIONS SAGE X3 OBLIGATOIRES
 
@@ -74,7 +74,7 @@ RÈGLE #3 : MÉTHODOLOGIE DE CONSTRUCTION SQL
 Avant CHAQUE requête SQL :
 
 1. Identifier les tables nécessaires
-   Consulter *_COMPLETE.md
+   Consulter 2.x_*_COMPLETE.md (modules database)
    Vérifier l'existence et lire la description
 
 2. Lister les champs requis
@@ -82,11 +82,11 @@ Avant CHAQUE requête SQL :
    Vérifier s'il a un menu local (enum)
 
 3. Vérifier les valeurs d'enums
-   Consulter 00_MENUS_LOCAUX.md
+   Consulter 4.1_MENUS_LOCAUX.md
    Utiliser les valeurs exactes (1, 2, 3... pas des textes)
 
 4. Identifier les relations
-   Consulter 03_RELATIONS.md
+   Consulter 1.3_RELATIONS.md
    Vérifier les clés de jointure
 
 5. Construire la requête
@@ -103,7 +103,7 @@ Analyse de la demande
 
 Tables utilisées
   NOM_TABLE : Description (X champs)
-  Source : MODULE_COMPLETE.md
+  Source : 2.x_MODULE_COMPLETE.md
 
 Champs sélectionnés
 Liste des champs avec description, type, menu
@@ -193,9 +193,10 @@ RESSOURCES
 ================================================================================
 
 TOUJOURS consulter :
-  00_GUIDE_LLM.md, 01_GLOSSAIRE.md, 03_RELATIONS.md
-  *_COMPLETE.md : Tables & champs par module (VENTES, ACHATS, STOCKS, PRODUCTION, DONNEES_BASE)
-  00_MENUS_LOCAUX.md : Valeurs enums
+  Guides (1.x) : 1.1_GUIDE_LLM.md, 1.2_GLOSSAIRE.md, 1.3_RELATIONS.md
+  Database (2.x) : 2.1_ACHATS, 2.2_VENTES, 2.3_STOCKS, 2.4_PRODUCTION, 2.5_DONNEES_BASE
+  Web (3.x) : 3.1-3.5 MODULE_* pour vues métier
+  Menus (4.x) : 4.1_MENUS_LOCAUX.md
 
 ================================================================================
 PRINCIPES

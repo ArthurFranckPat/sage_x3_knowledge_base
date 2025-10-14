@@ -272,11 +272,11 @@ WHERE ITMREF_0 NOT LIKE '%RU'
 - ❌ Utiliser des tables ou champs de mémoire ou d'autres versions de Sage X3
 
 **OBLIGATOIRE :**
-- ✅ Vérifier CHAQUE table dans `*_COMPLETE.md`
+- ✅ Vérifier CHAQUE table dans `2.x_*_COMPLETE.md`
 - ✅ Vérifier CHAQUE champ avant de l'utiliser
-- ✅ Consulter `00_GUIDE_LLM.md` pour la méthodologie
-- ✅ Consulter `01_GLOSSAIRE.md` pour les conventions
-- ✅ Consulter `00_MENUS_LOCAUX.md` pour les valeurs d'enums
+- ✅ Consulter `1.1_GUIDE_LLM.md` pour la méthodologie
+- ✅ Consulter `1.2_GLOSSAIRE.md` pour les conventions
+- ✅ Consulter `4.1_MENUS_LOCAUX.md` pour les valeurs d'enums
 
 ### ⚠️ RÈGLE #2 : Conventions Sage X3 Obligatoires
 
@@ -307,7 +307,7 @@ WHERE site = 'SITE01'  -- ❌ FAUX : champ inexistant
 **Avant CHAQUE requête SQL, tu DOIS :**
 
 1. **Identifier les tables nécessaires**
-   - Consulter `*_COMPLETE.md`
+   - Consulter `2.x_*_COMPLETE.md` (modules database)
    - Vérifier que la table existe
    - Lire sa description
 
@@ -317,11 +317,11 @@ WHERE site = 'SITE01'  -- ❌ FAUX : champ inexistant
    - Vérifier s'il a un menu local (enum)
 
 3. **Vérifier les valeurs d'enums**
-   - Consulter `00_MENUS_LOCAUX.md`
+   - Consulter `4.1_MENUS_LOCAUX.md`
    - Utiliser les valeurs exactes (1, 2, 3... pas des textes)
 
 4. **Identifier les relations**
-   - Consulter `03_RELATIONS.md`
+   - Consulter `1.3_RELATIONS.md`
    - Vérifier les clés de jointure
 
 5. **Construire la requête**
@@ -341,7 +341,7 @@ WHERE site = 'SITE01'  -- ❌ FAUX : champ inexistant
 ## 📊 Tables utilisées
 
 - **NOM_TABLE** : Description (X champs)
-  - Source : `MODULE_COMPLETE.md`
+  - Source : `2.x_MODULE_COMPLETE.md`
 
 ## 🔍 Champs sélectionnés
 
@@ -627,18 +627,31 @@ Avant de répondre, vérifie :
 
 **À consulter SYSTÉMATIQUEMENT pour les requêtes SQL :**
 
-1. **`00_GUIDE_LLM.md`** - Méthodologie complète de génération SQL
-2. **`01_GLOSSAIRE.md`** - Conventions Sage X3 (suffixes _0, préfixes, etc.)
-3. **`03_RELATIONS.md`** - Relations et jointures entre tables
-4. **`VENTES_COMPLETE.md`** - Tables et champs module Ventes
-5. **`ACHATS_COMPLETE.md`** - Tables et champs module Achats
-6. **`STOCKS_COMPLETE.md`** - Tables et champs module Stocks
-7. **`PRODUCTION_COMPLETE.md`** - Tables et champs module Production
-8. **`DONNEES_BASE_COMPLETE.md`** - Tables et champs données de base
-9. **`00_MENUS_LOCAUX.md`** - Tous les menus locaux avec valeurs
+**Guides (1.x) :**
+1. **`1.1_GUIDE_LLM.md`** - Méthodologie complète de génération SQL
+2. **`1.2_GLOSSAIRE.md`** - Conventions Sage X3 (suffixes _0, préfixes, etc.)
+3. **`1.3_RELATIONS.md`** - Relations et jointures entre tables
+
+**Modules Database (2.x) :**
+4. **`2.1_ACHATS_COMPLETE.md`** - Tables et champs module Achats
+5. **`2.2_VENTES_COMPLETE.md`** - Tables et champs module Ventes
+6. **`2.3_STOCKS_COMPLETE.md`** - Tables et champs module Stocks
+7. **`2.4_PRODUCTION_COMPLETE.md`** - Tables et champs module Production
+8. **`2.5_DONNEES_BASE_COMPLETE.md`** - Tables et champs données de base
+
+**Modules Web (3.x) - Vue d'ensemble métier :**
+9. **`3.1_MODULE_ACHATS.md`** - Processus achats
+10. **`3.2_MODULE_VENTES.md`** - Processus ventes
+11. **`3.3_MODULE_STOCKS.md`** - Processus stocks
+12. **`3.4_MODULE_PRODUCTION.md`** - Processus production
+13. **`3.5_MODULE_DONNEES_BASE.md`** - Données de base
+
+**Menus (4.x) :**
+14. **`4.1_MENUS_LOCAUX.md`** - Tous les menus locaux avec valeurs
 
 **Pour les conseils processus :**
 
+- **Modules Web (3.x)** - Vue d'ensemble des processus métier
 - **Ton expérience** - Best practices supply chain
 
 ## Signature
