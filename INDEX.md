@@ -13,16 +13,16 @@
 **Consultez ces guides en premier pour générer des requêtes SQL précises :**
 
 ### Guides essentiels
-- **[00_GUIDE_LLM.md](./guides/00_GUIDE_LLM.md)** - Guide complet pour générer des requêtes SQL Sage X3
-- **[01_GLOSSAIRE.md](./guides/01_GLOSSAIRE.md)** - Conventions de nommage et suffixes (_0, _1, etc.)
-- **[03_RELATIONS.md](./guides/03_RELATIONS.md)** - Relations et jointures entre tables principales
-- **[00_MENUS_LOCAUX.md](./menus/00_MENUS_LOCAUX.md)** - 608 menus locaux avec 3,127 valeurs d'enums
+- **[1.1_GUIDE_LLM.md](./guides/1.1_GUIDE_LLM.md)** - Guide complet pour générer des requêtes SQL Sage X3
+- **[1.2_GLOSSAIRE.md](./guides/1.2_GLOSSAIRE.md)** - Conventions de nommage et suffixes (_0, _1, etc.)
+- **[1.3_RELATIONS.md](./guides/1.3_RELATIONS.md)** - Relations et jointures entre tables principales
+- **[4.1_MENUS_LOCAUX.md](./menus/4.1_MENUS_LOCAUX.md)** - 608 menus locaux avec 3,127 valeurs d'enums
 
 ### Checklist rapide
 - [ ] Tous les champs ont un suffixe `_0`, `_1`, etc.
-- [ ] Les valeurs enum sont vérifiées dans menus/00_MENUS_LOCAUX.md
-- [ ] Les jointures sont validées dans guides/03_RELATIONS.md
-- [ ] Les conventions de nommage sont respectées (guides/01_GLOSSAIRE.md)
+- [ ] Les valeurs enum sont vérifiées dans menus/4.1_MENUS_LOCAUX.md
+- [ ] Les jointures sont validées dans guides/1.3_RELATIONS.md
+- [ ] Les conventions de nommage sont respectées (guides/1.2_GLOSSAIRE.md)
 
 ---
 
@@ -39,11 +39,11 @@ Cette base de connaissance Sage X3 contient :
 ## 📦 Modules complets (Données réelles de votre ERP)
 
 ### Modules essentiels avec TOUS les champs (Données réelles de l'ERP)
-- **[VENTES_COMPLETE.md](./modules/database/VENTES_COMPLETE.md)** - 17 tables, 1,653 champs (Commandes, livraisons, factures, devis, retours)
-- **[ACHATS_COMPLETE.md](./modules/database/ACHATS_COMPLETE.md)** - 15 tables, 1,422 champs (Commandes fournisseurs, réceptions, factures)
-- **[STOCKS_COMPLETE.md](./modules/database/STOCKS_COMPLETE.md)** - 16 tables, 884 champs (Stock, mouvements, journal, valorisation)
-- **[PRODUCTION_COMPLETE.md](./modules/database/PRODUCTION_COMPLETE.md)** - 26 tables, 1,406 champs (OF, gammes, nomenclatures, opérations)
-- **[DONNEES_BASE_COMPLETE.md](./modules/database/DONNEES_BASE_COMPLETE.md)** - 38 tables, 2,162 champs (Articles, tiers, sites, comptes)
+- **[2.1_ACHATS_COMPLETE.md](./modules/database/2.1_ACHATS_COMPLETE.md)** - 15 tables, 1,422 champs (Commandes fournisseurs, réceptions, factures)
+- **[2.2_VENTES_COMPLETE.md](./modules/database/2.2_VENTES_COMPLETE.md)** - 17 tables, 1,653 champs (Commandes, livraisons, factures, devis, retours)
+- **[2.3_STOCKS_COMPLETE.md](./modules/database/2.3_STOCKS_COMPLETE.md)** - 16 tables, 884 champs (Stock, mouvements, journal, valorisation)
+- **[2.4_PRODUCTION_COMPLETE.md](./modules/database/2.4_PRODUCTION_COMPLETE.md)** - 26 tables, 1,406 champs (OF, gammes, nomenclatures, opérations)
+- **[2.5_DONNEES_BASE_COMPLETE.md](./modules/database/2.5_DONNEES_BASE_COMPLETE.md)** - 38 tables, 2,162 champs (Articles, tiers, sites, comptes)
 
 **Total : 112 tables principales avec 7,527 champs documentés**
 
@@ -123,7 +123,7 @@ Cette base de connaissance Sage X3 contient :
 - Relances (FUP)
 - Notes de frais
 
-### 10. [Module Ventes](./modules/web/10_MODULE_VENTES.md)
+### 10. [Module Ventes](./modules/web/3.2_MODULE_VENTES.md)
 **57 tables** - Cycle de vente complet
 - Devis et commandes
 - Livraisons et retours
@@ -131,7 +131,7 @@ Cette base de connaissance Sage X3 contient :
 - Tarifs et catalogues
 - Historiques
 
-### 11. [Module Achats](./modules/web/11_MODULE_ACHATS.md)
+### 11. [Module Achats](./modules/web/3.1_MODULE_ACHATS.md)
 **66 tables** - Cycle d'achat et approvisionnement
 - Demandes d'achat
 - Appels d'offres
@@ -141,7 +141,7 @@ Cette base de connaissance Sage X3 contient :
 - Sous-traitance
 - Expéditions et transport
 
-### 12. [Module Stocks](./modules/web/12_MODULE_STOCKS.md)
+### 12. [Module Stocks](./modules/web/3.3_MODULE_STOCKS.md)
 **103 tables** - Gestion des stocks et inventaires
 - Stocks et emplacements
 - Lots et séries
@@ -152,7 +152,7 @@ Cette base de connaissance Sage X3 contient :
 - Calcul des besoins (CBN)
 - Configurateur (CFG)
 
-### 13. [Module Production](./modules/web/13_MODULE_PRODUCTION.md)
+### 13. [Module Production](./modules/web/3.4_MODULE_PRODUCTION.md)
 **86 tables** - Gestion de la production
 - Ordres de fabrication (OF)
 - Gammes et opérations
@@ -161,7 +161,7 @@ Cette base de connaissance Sage X3 contient :
 - Gestion de pesée (MWM)
 - Ordonnancement avancé (APS)
 
-### 14. [Module Données de base](./modules/web/14_MODULE_DONNEES_BASE.md)
+### 14. [Module Données de base](./modules/web/3.5_MODULE_DONNEES_BASE.md)
 **300+ tables** - Données de référence
 - Tiers (clients, fournisseurs, transporteurs)
 - Articles et nomenclatures

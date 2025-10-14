@@ -21,10 +21,10 @@ Cette documentation combine :
 
 ### Pour un LLM générant des requêtes SQL
 
-1. **Consulter en premier** : [00_GUIDE_LLM.md](./00_GUIDE_LLM.md) - Méthodologie complète
-2. **Conventions obligatoires** : [01_GLOSSAIRE.md](./01_GLOSSAIRE.md) - Suffixes `_0`, `_1`, etc.
-3. **Valeurs d'enums** : [00_MENUS_LOCAUX.md](./00_MENUS_LOCAUX.md) - 608 menus avec valeurs
-4. **Jointures** : [03_RELATIONS.md](./03_RELATIONS.md) - Relations entre tables
+1. **Consulter en premier** : [1.1_GUIDE_LLM.md](./guides/1.1_GUIDE_LLM.md) - Méthodologie complète
+2. **Conventions obligatoires** : [1.2_GLOSSAIRE.md](./guides/1.2_GLOSSAIRE.md) - Suffixes `_0`, `_1`, etc.
+3. **Valeurs d'enums** : [4.1_MENUS_LOCAUX.md](./menus/4.1_MENUS_LOCAUX.md) - 608 menus avec valeurs
+4. **Jointures** : [1.3_RELATIONS.md](./guides/1.3_RELATIONS.md) - Relations entre tables
 
 ### Pour explorer les données
 
@@ -37,20 +37,20 @@ Cette documentation combine :
 ### Documentation LLM
 | Fichier | Taille | Description |
 |---------|--------|-------------|
-| **[guides/00_GUIDE_LLM.md](./guides/00_GUIDE_LLM.md)** | 7.3 KB | Guide complet de génération SQL |
-| **[guides/01_GLOSSAIRE.md](./guides/01_GLOSSAIRE.md)** | 7.9 KB | Conventions Sage X3 (_0, _1, préfixes) |
-| **[guides/03_RELATIONS.md](./guides/03_RELATIONS.md)** | 11 KB | Relations et jointures entre tables |
-| **[menus/00_MENUS_LOCAUX.md](./menus/00_MENUS_LOCAUX.md)** | 233 KB | 608 menus locaux, 3,127 valeurs |
+| **[guides/1.1_GUIDE_LLM.md](./guides/1.1_GUIDE_LLM.md)** | 7.3 KB | Guide complet de génération SQL |
+| **[guides/1.2_GLOSSAIRE.md](./guides/1.2_GLOSSAIRE.md)** | 7.9 KB | Conventions Sage X3 (_0, _1, préfixes) |
+| **[guides/1.3_RELATIONS.md](./guides/1.3_RELATIONS.md)** | 11 KB | Relations et jointures entre tables |
+| **[menus/4.1_MENUS_LOCAUX.md](./menus/4.1_MENUS_LOCAUX.md)** | 233 KB | 608 menus locaux, 3,127 valeurs |
 | **[menus/menus_locaux.json](./menus/menus_locaux.json)** | 156 KB | Données structurées JSON |
 
 ### Modules complets (Données réelles)
 | Module | Tables | Champs | Taille |
 |--------|--------|--------|--------|
-| **[modules/database/VENTES_COMPLETE.md](./modules/database/VENTES_COMPLETE.md)** | 17 | 1,653 | 82 KB |
-| **[modules/database/ACHATS_COMPLETE.md](./modules/database/ACHATS_COMPLETE.md)** | 15 | 1,422 | 71 KB |
-| **[modules/database/STOCKS_COMPLETE.md](./modules/database/STOCKS_COMPLETE.md)** | 16 | 884 | 47 KB |
-| **[modules/database/PRODUCTION_COMPLETE.md](./modules/database/PRODUCTION_COMPLETE.md)** | 26 | 1,406 | 76 KB |
-| **[modules/database/DONNEES_BASE_COMPLETE.md](./modules/database/DONNEES_BASE_COMPLETE.md)** | 38 | 2,162 | 115 KB |
+| **[modules/database/2.1_ACHATS_COMPLETE.md](./modules/database/2.1_ACHATS_COMPLETE.md)** | 15 | 1,422 | 71 KB |
+| **[modules/database/2.2_VENTES_COMPLETE.md](./modules/database/2.2_VENTES_COMPLETE.md)** | 17 | 1,653 | 82 KB |
+| **[modules/database/2.3_STOCKS_COMPLETE.md](./modules/database/2.3_STOCKS_COMPLETE.md)** | 16 | 884 | 47 KB |
+| **[modules/database/2.4_PRODUCTION_COMPLETE.md](./modules/database/2.4_PRODUCTION_COMPLETE.md)** | 26 | 1,406 | 76 KB |
+| **[modules/database/2.5_DONNEES_BASE_COMPLETE.md](./modules/database/2.5_DONNEES_BASE_COMPLETE.md)** | 38 | 2,162 | 115 KB |
 
 **Total : 112 tables, 7,527 champs, 391 KB de documentation**
 
@@ -61,8 +61,8 @@ Cette documentation combine :
 ### Exemple 1 : Liste des articles en rupture
 
 ```sql
--- Consultez modules/database/STOCKS_COMPLETE.md pour les champs
--- Consultez menus/00_MENUS_LOCAUX.md pour les valeurs d'enums
+-- Consultez modules/database/2.3_STOCKS_COMPLETE.md pour les champs
+-- Consultez menus/4.1_MENUS_LOCAUX.md pour les valeurs d'enums
 SELECT 
     s.ITMREF_0 AS code_article,
     i.ITMDES1_0 AS designation,
@@ -75,7 +75,7 @@ WHERE s.QTYSTU_0 <= 0
 ### Exemple 2 : Commandes en cours
 
 ```sql
--- Consultez modules/database/VENTES_COMPLETE.md et Menu 415
+-- Consultez modules/database/2.2_VENTES_COMPLETE.md et Menu 415
 SELECT 
     SOHNUM_0 AS num_commande,
     BPCORD_0 AS client,
@@ -94,28 +94,30 @@ WHERE ORDSTA_0 = 1  -- 1 = Ouverte (voir Menu 415)
 ├── 📘 README.md                       # Ce fichier
 │
 ├── 📁 guides/                         # 🤖 GUIDES LLM (26 KB)
-│   ├── 00_GUIDE_LLM.md               # Guide génération SQL
-│   ├── 01_GLOSSAIRE.md               # Conventions nommage
-│   └── 03_RELATIONS.md               # Relations tables
+│   ├── 1.1_GUIDE_LLM.md              # Guide génération SQL
+│   ├── 1.2_GLOSSAIRE.md              # Conventions nommage
+│   └── 1.3_RELATIONS.md              # Relations tables
 │
 ├── 📁 menus/                          # 🎯 MENUS LOCAUX (389 KB)
-│   ├── 00_MENUS_LOCAUX.md            # 608 menus, 3,127 valeurs
+│   ├── 4.1_MENUS_LOCAUX.md           # 608 menus, 3,127 valeurs
 │   └── menus_locaux.json             # Données structurées
 │
 ├── 📁 modules/                        # 📦 MODULES (517 KB)
 │   ├── 📁 database/                  # Données réelles de l'ERP (391 KB)
-│   │   ├── VENTES_COMPLETE.md       # 17 tables, 1,653 champs
-│   │   ├── ACHATS_COMPLETE.md       # 15 tables, 1,422 champs
-│   │   ├── STOCKS_COMPLETE.md       # 16 tables, 884 champs
-│   │   ├── PRODUCTION_COMPLETE.md   # 26 tables, 1,406 champs
-│   │   └── DONNEES_BASE_COMPLETE.md # 38 tables, 2,162 champs
+│   │   ├── 2.0_README.md            # Introduction module database
+│   │   ├── 2.1_ACHATS_COMPLETE.md   # 15 tables, 1,422 champs
+│   │   ├── 2.2_VENTES_COMPLETE.md   # 17 tables, 1,653 champs
+│   │   ├── 2.3_STOCKS_COMPLETE.md   # 16 tables, 884 champs
+│   │   ├── 2.4_PRODUCTION_COMPLETE.md # 26 tables, 1,406 champs
+│   │   └── 2.5_DONNEES_BASE_COMPLETE.md # 38 tables, 2,162 champs
 │   │
 │   └── 📁 web/                       # Documentation site web (126 KB)
-│       ├── 10_MODULE_VENTES.md
-│       ├── 11_MODULE_ACHATS.md
-│       ├── 12_MODULE_STOCKS.md
-│       ├── 13_MODULE_PRODUCTION.md
-│       └── 14_MODULE_DONNEES_BASE.md
+│       ├── 3.0_README.md            # Introduction module web
+│       ├── 3.1_MODULE_ACHATS.md
+│       ├── 3.2_MODULE_VENTES.md
+│       ├── 3.3_MODULE_STOCKS.md
+│       ├── 3.4_MODULE_PRODUCTION.md
+│       └── 3.5_MODULE_DONNEES_BASE.md
 │
 ├── 📁 data/                           # 💾 DONNÉES SOURCES (2.57 MB)
 │   ├── tables_X3.csv                 # 1,888 tables
@@ -133,10 +135,10 @@ WHERE ORDSTA_0 = 1  -- 1 = Ouverte (voir Menu 415)
 
 Avant de générer une requête, vérifiez :
 
-- [ ] Consultez **guides/00_GUIDE_LLM.md** pour la méthodologie
-- [ ] Tous les champs ont un suffixe `_0`, `_1`, etc. (voir **guides/01_GLOSSAIRE.md**)
-- [ ] Les valeurs enum sont vérifiées dans **menus/00_MENUS_LOCAUX.md**
-- [ ] Les jointures sont validées dans **guides/03_RELATIONS.md**
+- [ ] Consultez **guides/1.1_GUIDE_LLM.md** pour la méthodologie
+- [ ] Tous les champs ont un suffixe `_0`, `_1`, etc. (voir **guides/1.2_GLOSSAIRE.md**)
+- [ ] Les valeurs enum sont vérifiées dans **menus/4.1_MENUS_LOCAUX.md**
+- [ ] Les jointures sont validées dans **guides/1.3_RELATIONS.md**
 - [ ] Les noms de tables et champs sont corrects (modules **_COMPLETE.md**)
 
 ---
@@ -185,7 +187,7 @@ Consultez **[INDEX.md](./INDEX.md)** pour :
 
 ### Conventions Sage X3 (CRITIQUES)
 1. **Suffixes obligatoires** : Tous les champs se terminent par `_0`, `_1`, `_2`, etc.
-2. **Valeurs d'enums** : Toujours vérifier dans menus/00_MENUS_LOCAUX.md
+2. **Valeurs d'enums** : Toujours vérifier dans menus/4.1_MENUS_LOCAUX.md
 3. **Préfixes de tables** : SORDER*, PORDER*, STOCK*, MFGHEAD*, ITM*, BPARTNER*
 
 ### Modules essentiels
