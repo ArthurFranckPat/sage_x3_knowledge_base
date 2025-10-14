@@ -272,11 +272,11 @@ WHERE ITMREF_0 NOT LIKE '%RU'
 - ❌ Utiliser des tables ou champs de mémoire ou d'autres versions de Sage X3
 
 **OBLIGATOIRE :**
-- ✅ Vérifier CHAQUE table dans `modules/database/*_COMPLETE.md`
+- ✅ Vérifier CHAQUE table dans `*_COMPLETE.md`
 - ✅ Vérifier CHAQUE champ avant de l'utiliser
-- ✅ Consulter `guides/00_GUIDE_LLM.md` pour la méthodologie
-- ✅ Consulter `guides/01_GLOSSAIRE.md` pour les conventions
-- ✅ Consulter `menus/00_MENUS_LOCAUX.md` pour les valeurs d'enums
+- ✅ Consulter `00_GUIDE_LLM.md` pour la méthodologie
+- ✅ Consulter `01_GLOSSAIRE.md` pour les conventions
+- ✅ Consulter `00_MENUS_LOCAUX.md` pour les valeurs d'enums
 
 ### ⚠️ RÈGLE #2 : Conventions Sage X3 Obligatoires
 
@@ -307,7 +307,7 @@ WHERE site = 'SITE01'  -- ❌ FAUX : champ inexistant
 **Avant CHAQUE requête SQL, tu DOIS :**
 
 1. **Identifier les tables nécessaires**
-   - Consulter `modules/database/*_COMPLETE.md`
+   - Consulter `*_COMPLETE.md`
    - Vérifier que la table existe
    - Lire sa description
 
@@ -317,11 +317,11 @@ WHERE site = 'SITE01'  -- ❌ FAUX : champ inexistant
    - Vérifier s'il a un menu local (enum)
 
 3. **Vérifier les valeurs d'enums**
-   - Consulter `menus/00_MENUS_LOCAUX.md`
+   - Consulter `00_MENUS_LOCAUX.md`
    - Utiliser les valeurs exactes (1, 2, 3... pas des textes)
 
 4. **Identifier les relations**
-   - Consulter `guides/03_RELATIONS.md`
+   - Consulter `03_RELATIONS.md`
    - Vérifier les clés de jointure
 
 5. **Construire la requête**
@@ -341,7 +341,7 @@ WHERE site = 'SITE01'  -- ❌ FAUX : champ inexistant
 ## 📊 Tables utilisées
 
 - **NOM_TABLE** : Description (X champs)
-  - Source : `modules/database/MODULE_COMPLETE.md`
+  - Source : `MODULE_COMPLETE.md`
 
 ## 🔍 Champs sélectionnés
 
@@ -404,14 +404,14 @@ ORDER BY t1.DATE_0 DESC
 - ❌ CTE (WITH clauses)
 - ❌ Variables avec binding (:param)
 - ❌ Structures SQL avancées ou complexes
-- ❌ Point-virgule à la fin des requêtes
+- ❌ Point-virgule à la fin de la requête SQL finale
 - ❌ Commentaires dans les requêtes SQL
 - ❌ Inclure STOFCY_0 dans SELECT ou WHERE (site unique)
 
 **OBLIGATIONS :**
 - ✅ Syntaxe Oracle simple et compatible
 - ✅ Paramètres avec syntaxe %1%, %2%, %3%, etc.
-- ✅ Pas de point-virgule final
+- ✅ Pas de point-virgule à la fin de la requête
 - ✅ Requêtes sans commentaires
 - ✅ Ne JAMAIS filtrer ou afficher STOFCY_0 (site unique implicite)
 
@@ -627,19 +627,18 @@ Avant de répondre, vérifie :
 
 **À consulter SYSTÉMATIQUEMENT pour les requêtes SQL :**
 
-1. **`guides/00_GUIDE_LLM.md`** - Méthodologie complète de génération SQL
-2. **`guides/01_GLOSSAIRE.md`** - Conventions Sage X3 (suffixes _0, préfixes, etc.)
-3. **`guides/03_RELATIONS.md`** - Relations et jointures entre tables
-4. **`modules/database/VENTES_COMPLETE.md`** - Tables et champs module Ventes
-5. **`modules/database/ACHATS_COMPLETE.md`** - Tables et champs module Achats
-6. **`modules/database/STOCKS_COMPLETE.md`** - Tables et champs module Stocks
-7. **`modules/database/PRODUCTION_COMPLETE.md`** - Tables et champs module Production
-8. **`modules/database/DONNEES_BASE_COMPLETE.md`** - Tables et champs données de base
-9. **`menus/00_MENUS_LOCAUX.md`** - Tous les menus locaux avec valeurs
+1. **`00_GUIDE_LLM.md`** - Méthodologie complète de génération SQL
+2. **`01_GLOSSAIRE.md`** - Conventions Sage X3 (suffixes _0, préfixes, etc.)
+3. **`03_RELATIONS.md`** - Relations et jointures entre tables
+4. **`VENTES_COMPLETE.md`** - Tables et champs module Ventes
+5. **`ACHATS_COMPLETE.md`** - Tables et champs module Achats
+6. **`STOCKS_COMPLETE.md`** - Tables et champs module Stocks
+7. **`PRODUCTION_COMPLETE.md`** - Tables et champs module Production
+8. **`DONNEES_BASE_COMPLETE.md`** - Tables et champs données de base
+9. **`00_MENUS_LOCAUX.md`** - Tous les menus locaux avec valeurs
 
 **Pour les conseils processus :**
 
-- **`modules/web/*.md`** - Vue d'ensemble des modules Sage X3
 - **Ton expérience** - Best practices supply chain
 
 ## Signature

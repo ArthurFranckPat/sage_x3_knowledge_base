@@ -53,11 +53,11 @@ INTERDIT :
   Utiliser des tables/champs d'autres versions de Sage X3
 
 OBLIGATOIRE :
-  Vérifier CHAQUE table dans modules/database/*_COMPLETE.md
+  Vérifier CHAQUE table dans *_COMPLETE.md
   Vérifier CHAQUE champ avant utilisation
-  Consulter guides/00_GUIDE_LLM.md pour la méthodologie
-  Consulter guides/01_GLOSSAIRE.md pour les conventions
-  Consulter menus/00_MENUS_LOCAUX.md pour les valeurs d'enums
+  Consulter 00_GUIDE_LLM.md pour la méthodologie
+  Consulter 01_GLOSSAIRE.md pour les conventions
+  Consulter 00_MENUS_LOCAUX.md pour les valeurs d'enums
 
 RÈGLE #2 : CONVENTIONS SAGE X3 OBLIGATOIRES
 
@@ -74,7 +74,7 @@ RÈGLE #3 : MÉTHODOLOGIE DE CONSTRUCTION SQL
 Avant CHAQUE requête SQL :
 
 1. Identifier les tables nécessaires
-   Consulter modules/database/*_COMPLETE.md
+   Consulter *_COMPLETE.md
    Vérifier l'existence et lire la description
 
 2. Lister les champs requis
@@ -82,11 +82,11 @@ Avant CHAQUE requête SQL :
    Vérifier s'il a un menu local (enum)
 
 3. Vérifier les valeurs d'enums
-   Consulter menus/00_MENUS_LOCAUX.md
+   Consulter 00_MENUS_LOCAUX.md
    Utiliser les valeurs exactes (1, 2, 3... pas des textes)
 
 4. Identifier les relations
-   Consulter guides/03_RELATIONS.md
+   Consulter 03_RELATIONS.md
    Vérifier les clés de jointure
 
 5. Construire la requête
@@ -103,7 +103,7 @@ Analyse de la demande
 
 Tables utilisées
   NOM_TABLE : Description (X champs)
-  Source : modules/database/MODULE_COMPLETE.md
+  Source : MODULE_COMPLETE.md
 
 Champs sélectionnés
 Liste des champs avec description, type, menu
@@ -135,14 +135,14 @@ RÈGLE #5 : CONTRAINTES ORACLE
 Base Oracle, site unique - INTERDICTIONS :
   CTE (WITH clauses)
   Binding (:param)
-  Point-virgule final
+  Point-virgule à la fin de la requête SQL finale
   Commentaires dans SQL
   STOFCY_0 dans SELECT ou WHERE (site unique !)
 
 OBLIGATIONS :
   Paramètres : %1%, %2%, %3%
   Pas de commentaires SQL
-  Pas de point-virgule
+  Pas de point-virgule à la fin de la requête
   Identifier flux via codification produit (suffixes pays/XX)
 
 EXEMPLES FLUX
@@ -193,9 +193,9 @@ RESSOURCES
 ================================================================================
 
 TOUJOURS consulter :
-  guides/ : Méthodologie, glossaire, relations
-  modules/database/*_COMPLETE.md : Tables & champs par module
-  menus/00_MENUS_LOCAUX.md : Valeurs enums
+  00_GUIDE_LLM.md, 01_GLOSSAIRE.md, 03_RELATIONS.md
+  *_COMPLETE.md : Tables & champs par module (VENTES, ACHATS, STOCKS, PRODUCTION, DONNEES_BASE)
+  00_MENUS_LOCAUX.md : Valeurs enums
 
 ================================================================================
 PRINCIPES
