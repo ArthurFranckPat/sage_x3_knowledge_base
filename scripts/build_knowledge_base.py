@@ -179,7 +179,7 @@ def save_menus_catalog(menus: Dict[int, Dict]):
         json.dump(menus, f, ensure_ascii=False, indent=2)
     
     # Markdown pour consultation humaine
-    with open('00_MENUS_LOCAUX.md', 'w', encoding='utf-8') as f:
+    with open('4.1_MENUS_LOCAUX.md', 'w', encoding='utf-8') as f:
         f.write("# Catalogue des Menus Locaux Sage X3\n\n")
         f.write("[◄ Retour à l'INDEX](./INDEX.md)\n\n")
         f.write("---\n\n")
@@ -212,7 +212,7 @@ def save_menus_catalog(menus: Dict[int, Dict]):
             f.write("---\n\n")
     
     print("  ✅ menus_locaux.json créé")
-    print("  ✅ 00_MENUS_LOCAUX.md créé")
+    print("  ✅ 4.1_MENUS_LOCAUX.md créé")
 
 def main():
     print("=" * 80)
@@ -248,7 +248,7 @@ def main():
     print(f"  - {len(menus)} menus locaux")
     print(f"\n📁 Fichiers créés:")
     print(f"  - menus_locaux.json")
-    print(f"  - 00_MENUS_LOCAUX.md")
+    print(f"  - 4.1_MENUS_LOCAUX.md")
 
 if __name__ == "__main__":
     main()

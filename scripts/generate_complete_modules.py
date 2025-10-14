@@ -26,6 +26,15 @@ MODULE_PREFIXES = {
     'DONNEES_BASE': ['ITM', 'BPARTNER', 'BPC', 'BPS', 'BPA', 'FACILITY', 'GACCOUNT']
 }
 
+# Numérotation des modules (nomenclature 2.x)
+MODULE_NUMBERS = {
+    'ACHATS': '2.1',
+    'VENTES': '2.2',
+    'STOCKS': '2.3',
+    'PRODUCTION': '2.4',
+    'DONNEES_BASE': '2.5'
+}
+
 def load_menus():
     """Charge les menus locaux"""
     try:
@@ -90,13 +99,14 @@ def format_menu_ref(menu_num, menus):
     if menu_num_int and str(menu_num_int) in menus:
         menu = menus[str(menu_num_int)]
         values_count = len(menu.get('values', {}))
-        return f"[Menu {menu_num_int}](./00_MENUS_LOCAUX.md#menu-{menu_num_int}) ({values_count} valeurs)"
+        return f"[Menu {menu_num_int}](./4.1_MENUS_LOCAUX.md#menu-{menu_num_int}) ({values_count} valeurs)"
     return f"Menu {menu_num}"
 
 def generate_module_file(module_name, tables_data, fields_data, menus):
     """Génère un fichier markdown complet pour un module"""
     
-    filename = f"{module_name}_COMPLETE.md"
+    module_num = MODULE_NUMBERS.get(module_name, '2.X')
+    filename = f"{module_num}_{module_name}_COMPLETE.md"
     
     with open(filename, 'w', encoding='utf-8') as f:
         # En-tête
@@ -172,11 +182,11 @@ def generate_module_file(module_name, tables_data, fields_data, menus):
         
         # Ressources
         f.write("## 📚 Ressources\n\n")
-        f.write("- **[00_GUIDE_LLM.md](./00_GUIDE_LLM.md)** : Guide génération SQL\n")
-        f.write("- **[01_GLOSSAIRE.md](./01_GLOSSAIRE.md)** : Conventions Sage X3\n")
-        f.write("- **[03_RELATIONS.md](./03_RELATIONS.md)** : Relations entre tables\n")
-        f.write("- **[00_MENUS_LOCAUX.md](./00_MENUS_LOCAUX.md)** : Valeurs d'enums\n")
-        f.write("- **[INDEX.md](./INDEX.md)** : Navigation complète\n\n")
+        f.write("- **[1.1_GUIDE_LLM.md](../guides/1.1_GUIDE_LLM.md)** : Guide génération SQL\n")
+        f.write("- **[1.2_GLOSSAIRE.md](../guides/1.2_GLOSSAIRE.md)** : Conventions Sage X3\n")
+        f.write("- **[1.3_RELATIONS.md](../guides/1.3_RELATIONS.md)** : Relations entre tables\n")
+        f.write("- **[4.1_MENUS_LOCAUX.md](../menus/4.1_MENUS_LOCAUX.md)** : Valeurs d'enums\n")
+        f.write("- **[INDEX.md](../../INDEX.md)** : Navigation complète\n\n")
         
         f.write("---\n\n")
         f.write(f"*Documentation générée automatiquement depuis les données réelles de votre ERP*\n")
@@ -212,9 +222,11 @@ def main():
     
     # Générer les fichiers
     print("\n📝 Génération des fichiers markdown...")
-    for module in ['VENTES', 'ACHATS', 'STOCKS', 'PRODUCTION', 'DONNEES_BASE']:
+    for module in ['ACHATS', 'VENTES', 'STOCKS', 'PRODUCTION', 'DONNEES_BASE']:
         if module in tables_by_module:
-            print(f"  • Génération de {module}_COMPLETE.md...", end=" ", flush=True)
+            module_num = MODULE_NUMBERS.get(module, '2.X')
+            filename = f"{module_num}_{module}_COMPLETE.md"
+            print(f"  • Génération de {filename}...", end=" ", flush=True)
             generate_module_file(module, tables_by_module[module], fields, menus)
             table_count = len(tables_by_module[module])
             field_count = sum(len(fields.get(t, [])) for t in tables_by_module[module].keys())
@@ -224,8 +236,9 @@ def main():
     print("✅ GÉNÉRATION TERMINÉE")
     print("=" * 80)
     print("\n📊 Fichiers créés:")
-    for module in ['VENTES', 'ACHATS', 'STOCKS', 'PRODUCTION', 'DONNEES_BASE']:
-        print(f"  • {module}_COMPLETE.md")
+    for module in ['ACHATS', 'VENTES', 'STOCKS', 'PRODUCTION', 'DONNEES_BASE']:
+        module_num = MODULE_NUMBERS.get(module, '2.X')
+        print(f"  • {module_num}_{module}_COMPLETE.md")
     print("\n🎯 Tous les champs de votre ERP sont maintenant documentés !")
 
 if __name__ == "__main__":

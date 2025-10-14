@@ -127,7 +127,7 @@ def main():
         json.dump(menus, f, ensure_ascii=False, indent=2)
     
     # Markdown
-    with open('00_MENUS_LOCAUX.md', 'w', encoding='utf-8') as f:
+    with open('4.1_MENUS_LOCAUX.md', 'w', encoding='utf-8') as f:
         f.write("# 📚 Catalogue des Menus Locaux Sage X3\n\n")
         f.write("[◄ Retour à l'INDEX](./INDEX.md)\n\n")
         f.write("---\n\n")
@@ -180,7 +180,7 @@ def main():
             f.write("---\n\n")
     
     print("  ✅ menus_locaux.json créé")
-    print("  ✅ 00_MENUS_LOCAUX.md créé")
+    print("  ✅ 4.1_MENUS_LOCAUX.md créé")
     
     print("\n" + "=" * 80)
     print("✅ TÉLÉCHARGEMENT TERMINÉ")
